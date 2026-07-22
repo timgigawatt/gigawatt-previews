@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Infinite Catering — Custom Catering in Overland Park &amp; the KC Metro</title>
+<meta name="description" content="Fresh. Innovative. Personal. Full-service custom catering, live-action stations, and a customizable food truck for weddings, corporate events, and private parties across Overland Park and the Kansas City metro." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#191614;          /* grounding near-black */
+  --ink-soft:#2b2622;
+  --cream:#faf6f0;        /* warm surface */
+  --cream-2:#f2ebe1;
+  --paper:#fffdfa;
+  --accent:#c14a24;       /* burnt paprika — CTAs only */
+  --accent-dk:#9d3a1a;
+  --sage:#6c7a5f;         /* secondary: tags, dividers */
+  --sage-soft:#e6ebe1;
+  --text:#241f1b;
+  --muted:#6b615a;
+  --line:#e5dbcd;
+  --gold:#c8952b;
+  --r:10px;
+  --shadow:0 1px 2px rgba(25,22,20,.05), 0 12px 32px -18px rgba(25,22,20,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);background:var(--paper);line-height:1.6;
+  font-size:17px;-webkit-font-smoothing:antialiased;
+  padding-bottom:64px; /* room for mobile action bar */
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,.display{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:600;line-height:1.14;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sage)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55em;justify-content:center;
+  padding:15px 26px;border-radius:var(--r);font-weight:700;font-size:16px;
+  text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dk)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark{border-color:var(--ink);color:var(--ink)}
+.btn-dark:hover{background:var(--ink);color:var(--cream)}
+.btn-sm{padding:11px 18px;font-size:15px}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.94);
+  backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;padding:13px 0}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1;margin-right:auto}
+.brand b{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+.brand b i{font-style:normal;color:var(--accent)}
+.brand small{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:5px;font-weight:600}
+.nav-links{display:none;gap:24px;font-size:15px;font-weight:600}
+.nav-links a{text-decoration:none;color:var(--ink-soft);padding:4px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{border-bottom-color:var(--accent)}
+.nav-tel{display:none;text-decoration:none;font-weight:700;color:var(--ink);white-space:nowrap}
+.nav-tel span{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+@media(min-width:900px){.nav-links{display:flex}.nav-tel{display:block}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--ink)}
+.hero-art{position:absolute;inset:0;
+  background:
+    radial-gradient(58% 70% at 78% 22%, rgba(226,138,66,.55) 0%, rgba(226,138,66,0) 62%),
+    radial-gradient(52% 60% at 18% 78%, rgba(108,122,95,.45) 0%, rgba(108,122,95,0) 60%),
+    radial-gradient(70% 90% at 50% 0%, #4a3524 0%, #241a12 55%, #16110d 100%);
+  animation:drift 26s ease-in-out infinite alternate}
+.hero-art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(20,15,11,.30) 0%, rgba(20,15,11,.62) 55%, rgba(20,15,11,.86) 100%)}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero .wrap{position:relative;z-index:2;padding-top:88px;padding-bottom:84px}
+.hero .eyebrow{color:#e9c79a}
+.hero h1{font-size:clamp(36px,6.4vw,62px);margin:16px 0 0;max-width:16ch;text-wrap:balance}
+.hero h1 em{font-style:italic;color:#f0b884}
+.hero p.lede{margin:20px 0 30px;font-size:clamp(17px,2.2vw,20px);color:#ece2d6;max-width:52ch}
+.hero .actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-rating{margin-top:32px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  font-size:15px;color:#e2d6c7}
+.hero-rating .stars{color:#f2b544;letter-spacing:2px;font-size:17px}
+.hero-rating b{color:#fff}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--cream-2);border-bottom:1px solid var(--line)}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:2px 20px;padding:20px 0}
+.trust li{display:flex;gap:9px;align-items:flex-start;font-size:14.5px;font-weight:600;color:var(--ink-soft);padding:7px 0}
+.trust li svg{flex:none;margin-top:3px;color:var(--sage)}
+@media(min-width:840px){.trust ul{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.sec-head{max-width:62ch;margin-bottom:38px}
+.sec-head h2{font-size:clamp(28px,4.2vw,40px);margin:12px 0 0;color:var(--ink)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:17.5px}
+.alt{background:var(--cream)}
+
+/* ---------- three paths ---------- */
+.paths{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:760px){.paths{grid-template-columns:repeat(3,1fr)}}
+.path{position:relative;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;
+  display:flex;flex-direction:column;justify-content:flex-end;min-height:330px;
+  box-shadow:var(--shadow);transition:transform .25s ease}
+.path:hover{transform:translateY(-4px)}
+.path .art{position:absolute;inset:0}
+.path .art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(22,17,13,.10) 30%,rgba(22,17,13,.88) 100%)}
+.p1 .art{background:radial-gradient(80% 80% at 30% 25%,#8d6a4d,#3b2a1e)}
+.p2 .art{background:radial-gradient(80% 80% at 70% 25%,#5d6b57,#232b21)}
+.p3 .art{background:radial-gradient(80% 80% at 40% 20%,#a9603c,#3d2115)}
+.path .body{position:relative;z-index:2;padding:26px}
+.path h3{font-size:26px;margin-bottom:8px}
+.path p{font-size:15px;color:#e8ded2;margin-bottom:14px}
+.path .go{font-weight:700;font-size:15px;color:#f5c08c;display:inline-flex;gap:7px;align-items:center}
+.path:hover .go{gap:11px}
+.ph-tag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:10.5px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+
+/* ---------- menu cards ---------- */
+.menus{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:600px){.menus{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.menus{grid-template-columns:repeat(3,1fr)}}
+.menu-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column;transition:box-shadow .22s ease,transform .22s ease}
+.menu-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.menu-card .thumb{height:132px;position:relative;display:flex;align-items:center;justify-content:center;font-size:38px}
+.m1{background:linear-gradient(140deg,#e7d3b8,#c9a882)}
+.m2{background:linear-gradient(140deg,#dfe3d6,#aab89b)}
+.m3{background:linear-gradient(140deg,#f0dcc4,#d9b285)}
+.m4{background:linear-gradient(140deg,#e9d8cd,#c08e6f)}
+.m5{background:linear-gradient(140deg,#eccfb6,#b97345)}
+.m6{background:linear-gradient(140deg,#dfd6c6,#a89478)}
+.menu-card .body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.menu-card h3{font-size:21px;margin-bottom:7px}
+.menu-card p{font-size:14.5px;color:var(--muted);flex:1}
+.price{margin-top:15px;font-size:14px;font-weight:700;color:var(--ink);
+  border-top:1px dashed var(--line);padding-top:13px}
+.price em{font-style:normal;color:var(--muted);font-weight:600}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+
+/* ---------- gallery ---------- */
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.gallery{grid-template-columns:repeat(4,1fr)}}
+.tile{position:relative;border-radius:12px;min-height:150px;display:flex;align-items:flex-end;
+  padding:14px;color:#fff;font-size:12.5px;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.tile.tall{grid-row:span 2;min-height:312px}
+.g1{background:linear-gradient(160deg,#8a6543,#3a2718)}
+.g2{background:linear-gradient(160deg,#6f7c62,#2c3326)}
+.g3{background:linear-gradient(160deg,#b0714a,#442414)}
+.g4{background:linear-gradient(160deg,#c39a6b,#5b4229)}
+.g5{background:linear-gradient(160deg,#7d6a55,#302620)}
+.g6{background:linear-gradient(160deg,#9c8460,#463726)}
+
+/* ---------- food truck band ---------- */
+.truck{background:var(--ink);color:#fff}
+.truck .grid{display:grid;gap:34px;align-items:center;grid-template-columns:1fr}
+@media(min-width:880px){.truck .grid{grid-template-columns:1.05fr .95fr}}
+.truck h2{font-size:clamp(28px,4.2vw,40px)}
+.truck p{color:#ded2c4;margin-top:16px;font-size:17.5px}
+.truck .eyebrow{color:#e9c79a}
+.truck ul{list-style:none;margin:22px 0 28px;display:grid;gap:10px}
+.truck li{display:flex;gap:10px;font-size:15.5px;color:#efe6da}
+.truck li b{color:#fff}
+.truck-art{border-radius:16px;min-height:290px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(60% 70% at 30% 30%, rgba(226,138,66,.5), transparent 65%),
+    linear-gradient(150deg,#33261b,#1a130e);
+  display:flex;align-items:center;justify-content:center;font-size:74px;
+  border:1px solid rgba(255,255,255,.10)}
+
+/* ---------- reviews ---------- */
+.reviews-grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:820px){.reviews-grid{grid-template-columns:repeat(3,1fr)}}
+.quote{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px;
+  display:flex;flex-direction:column}
+.quote .stars{color:#f2b544;letter-spacing:2px;font-size:15px;margin-bottom:13px}
+.quote blockquote{font-size:16px;flex:1;color:var(--ink-soft)}
+.quote figcaption{margin-top:18px;font-size:14px;font-weight:700;color:var(--ink)}
+.quote figcaption span{display:block;font-weight:600;color:var(--muted);font-size:13px;margin-top:3px}
+.reviews-cta{margin-top:26px;font-size:15px}
+.reviews-cta a{color:var(--accent);font-weight:700}
+
+/* ---------- steps ---------- */
+.steps{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{counter-increment:s;position:relative;padding-top:16px;border-top:2px solid var(--sage-soft)}
+.step::before{content:"0" counter(s);font-family:'Playfair Display',serif;font-size:15px;font-weight:700;
+  color:var(--sage);letter-spacing:.1em}
+.step h3{font-size:20px;margin:8px 0 8px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* ---------- quote form ---------- */
+.quote-sec{background:var(--cream)}
+.form-grid{display:grid;gap:36px;grid-template-columns:1fr}
+@media(min-width:940px){.form-grid{grid-template-columns:.85fr 1.15fr}}
+.form-aside h2{font-size:clamp(28px,4.2vw,40px);margin:12px 0 0}
+.form-aside p{color:var(--muted);margin-top:16px}
+.form-aside .facts{list-style:none;margin-top:26px;display:grid;gap:13px}
+.form-aside .facts li{display:flex;gap:10px;font-size:15px;font-weight:600;color:var(--ink-soft)}
+.form-aside .facts svg{flex:none;margin-top:3px;color:var(--sage)}
+form.quote-form{background:var(--paper);border:1px solid var(--line);border-radius:16px;
+  padding:26px;box-shadow:var(--shadow)}
+.fields{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:600px){.fields{grid-template-columns:1fr 1fr}.span2{grid-column:1/-1}}
+.field label{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.field label .req{color:var(--accent)}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 13px;font:inherit;font-size:15.5px;color:var(--text);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:9px;transition:border-color .15s}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#cdbfa9}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(193,74,36,.16)}
+.field textarea{min-height:96px;resize:vertical}
+.field .err{display:none;font-size:13px;font-weight:600;color:#a5301b;margin-top:6px}
+.field.invalid input,.field.invalid select{border-color:#a5301b;background:#fdf4f2}
+.field.invalid .err{display:block}
+.form-foot{margin-top:22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.form-foot .btn{flex:1;min-width:200px}
+.form-foot small{color:var(--muted);font-size:13px;flex:1;min-width:220px}
+.success{display:none;text-align:center;padding:26px 6px}
+.success .mark{width:56px;height:56px;border-radius:50%;background:var(--sage-soft);color:var(--sage);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px}
+.success h3{font-size:25px;margin-bottom:10px}
+.success p{color:var(--muted);font-size:15.5px;max-width:44ch;margin:0 auto}
+form.sent .fields,form.sent .form-foot{display:none}
+form.sent .success{display:block}
+
+/* ---------- final CTA ---------- */
+.cta-band{background:linear-gradient(135deg,#2c1f16 0%,#191614 60%);color:#fff;text-align:center}
+.cta-band h2{font-size:clamp(28px,4.6vw,42px)}
+.cta-band p{color:#ded2c4;max-width:50ch;margin:16px auto 30px;font-size:18px}
+.cta-band .actions{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--ink);color:#c9bdb1;padding:56px 0 34px;font-size:14.5px;
+  border-top:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;gap:30px;grid-template-columns:1fr}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
+footer.site h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:14px;font-weight:700}
+footer.site a{color:#e2d6c7;text-decoration:none}
+footer.site a:hover{text-decoration:underline}
+footer.site .brand b{color:#fff}
+footer.site .brand small{color:#9d9186}
+.foot-list{list-style:none;display:grid;gap:9px}
+.legal{margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.10);
+  font-size:12.5px;color:#8e8377;display:grid;gap:8px}
+
+/* ---------- mobile action bar ---------- */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:9px;
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  background:rgba(255,253,250,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.mobile-bar .btn{flex:1;padding:13px 10px;font-size:15px}
+@media(min-width:900px){.mobile-bar{display:none}body{padding-bottom:0}}
+
+.badge{position:fixed;bottom:78px;right:12px;z-index:70;background:#17181b;color:#f5b518;
+  font:700 11px/1 system-ui,sans-serif;padding:9px 13px;border-radius:999px;
+  letter-spacing:.04em;box-shadow:0 6px 20px -6px rgba(0,0,0,.6)}
+@media(min-width:900px){.badge{bottom:14px}}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <b>Infinite<i>.</i></b>
+      <small>Catering &middot; Overland Park</small>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#occasions">Occasions</a>
+      <a href="#menus">Menus</a>
+      <a href="#truck">Food Truck</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a class="nav-tel" href="tel:+19134990777"><span>Call us</span>(913) 499-0777</a>
+    <a class="btn btn-primary btn-sm" href="#quote">Request a Quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero-art" role="presentation"></div>
+    <div class="wrap">
+      <p class="eyebrow">Fresh. Innovative. Personal.</p>
+      <h1 id="h1">Your event deserves a menu built <em>only</em> for you.</h1>
+      <p class="lede">Full-service custom catering for weddings, offices, and celebrations across
+        Overland Park, Leawood, Olathe, Lenexa and the greater Kansas City metro — plus a
+        food truck we'll build around your guest list.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#quote">Request a free quote</a>
+        <a class="btn btn-ghost" href="tel:+19134990777">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          (913) 499-0777
+        </a>
+      </div>
+      <p class="hero-rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b>4.6</b> average · <b>186+</b> Google reviews</span>
+        <span aria-hidden="true">·</span>
+        <span>Free tastings for wedding couples</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 4.6 ★ across 186+ Google reviews</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Custom menus &amp; dietary needs — no upcharge</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Setup &amp; breakdown included</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Free estimates · linens &amp; bartending available</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THREE PATHS -->
+  <section id="occasions">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Start here</p>
+        <h2>What are we cooking for?</h2>
+        <p>Every event gets a menu written from scratch. Tell us which one you're planning and
+          we'll shape the quote around it.</p>
+      </div>
+      <div class="paths">
+        <a class="path p1 reveal" href="#quote">
+          <div class="art" role="presentation"></div>
+          <span class="ph-tag">Photo placeholder</span>
+          <div class="body">
+            <h3>Weddings</h3>
+            <p>Plated, buffet, or stations — with a complimentary tasting for the couple before you commit.</p>
+            <span class="go">Book a tasting <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="path p2 reveal" href="#quote">
+          <div class="art" role="presentation"></div>
+          <span class="ph-tag">Photo placeholder</span>
+          <div class="body">
+            <h3>Corporate</h3>
+            <p>Business lunches, training days, and holiday parties. Per-person pricing, delivered on the clock.</p>
+            <span class="go">Get office pricing <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="path p3 reveal" href="#quote">
+          <div class="art" role="presentation"></div>
+          <span class="ph-tag">Photo placeholder</span>
+          <div class="body">
+            <h3>Private events</h3>
+            <p>Graduations, showers, reunions, backyard parties — buffet or bring in the food truck.</p>
+            <span class="go">Plan your party <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENUS -->
+  <section class="alt" id="menus">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Menus</p>
+        <h2>Start from a menu, or start from a blank page.</h2>
+        <p>These are our most-requested packages. Every one of them can be rewritten around your
+          guests — vegetarian, vegan, and gluten-free accommodations at no extra charge.</p>
+      </div>
+      <div class="menus">
+        <article class="menu-card reveal">
+          <div class="thumb m1" role="img" aria-label="Placeholder image: assorted hot and cold appetizers"><span aria-hidden="true">🧀</span></div>
+          <div class="body">
+            <h3>Appetizers</h3>
+            <p>Twenty-nine hot and cold options, from bacon-wrapped dates and mini Maryland crab cakes to charcuterie cups and a farmers-market vegetable spread.</p>
+            <p class="price">From $3.00 <em>/ person</em></p>
+          </div>
+        </article>
+        <article class="menu-card reveal">
+          <div class="thumb m2" role="img" aria-label="Placeholder image: buffet line with salad, entrée and sides"><span aria-hidden="true">🥗</span></div>
+          <div class="body">
+            <h3>Buffets</h3>
+            <p>One-entrée, Italian, and American buffets. Salad, entrée, vegetable, starch and bread included — add a second entrée any time.</p>
+            <p class="price">From $12.99 <em>/ person</em></p>
+          </div>
+        </article>
+        <article class="menu-card reveal">
+          <div class="thumb m3" role="img" aria-label="Placeholder image: brunch spread with quiche and fruit"><span aria-hidden="true">🍳</span></div>
+          <div class="body">
+            <h3>Breakfast &amp; Brunch</h3>
+            <p>Continental, biscuits and gravy, Infinite's Hearty Breakfast, quiche, tea party, and the Elegant Brunch.</p>
+            <p class="price">From $5.25 <em>/ person</em></p>
+          </div>
+        </article>
+        <article class="menu-card reveal">
+          <div class="thumb m4" role="img" aria-label="Placeholder image: chef at a live-action omelet station"><span aria-hidden="true">👨‍🍳</span></div>
+          <div class="body">
+            <h3>Live-Action Stations</h3>
+            <p>Omelets and pancakes flipped to order, grilled cheese with house-made soup, loaded mac and cheese, and a carving station. <em>$75 per chef.</em></p>
+            <p class="price">From $8.95 <em>/ person</em></p>
+          </div>
+        </article>
+        <article class="menu-card reveal">
+          <div class="thumb m5" role="img" aria-label="Placeholder image: Kansas City style barbecue platter"><span aria-hidden="true">🔥</span></div>
+          <div class="body">
+            <h3>Kansas City BBQ</h3>
+            <p>Two meats, two sides, and bread. Hand-pulled pork, BBQ chicken, brats, brisket or ribs with smokehouse beans and cheesy corn bake.</p>
+            <p class="price">$19.99 <em>/ person</em></p>
+          </div>
+        </article>
+        <article class="menu-card reveal">
+          <div class="thumb m6" role="img" aria-label="Placeholder image: food truck service window"><span aria-hidden="true">🚚</span></div>
+          <div class="body">
+            <h3>The Food Truck</h3>
+            <p>Street tacos, Philly cheesesteaks, Reubens, loaded tots, funnel cakes — built to your event, not to one cuisine.</p>
+            <p class="price">$10–$14 <em>/ person · $500 minimum</em></p>
+          </div>
+        </article>
+      </div>
+      <p class="note">Prices shown are starting points and are subject to change. Your quote is written
+        to your final menu, guest count, and service style — no surprise fees at the end.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>See the food before you book it.</h2>
+        <p>Plating, buffet lines, carving stations, and real Kansas City weddings. These tiles mark
+          where photography of Infinite Catering's own food belongs — a shoot we'd recommend as the
+          next step after this redesign.</p>
+      </div>
+      <div class="gallery reveal">
+        <div class="tile tall g1">Wedding buffet setup</div>
+        <div class="tile g2">Plated entrée</div>
+        <div class="tile g3">Carving station</div>
+        <div class="tile g4">Appetizer display</div>
+        <div class="tile g5">Corporate lunch drop-off</div>
+        <div class="tile g6">Food truck service</div>
+      </div>
+      <p class="note"><strong>Placeholder tiles.</strong> No stock photos are used in this concept —
+        every image slot is reserved for real photos of Infinite Catering's own food and events.</p>
+    </div>
+  </section>
+
+  <!-- FOOD TRUCK -->
+  <section class="truck" id="truck">
+    <div class="wrap grid">
+      <div class="reveal">
+        <p class="eyebrow">Also available</p>
+        <h2>Not just a taco truck. Not just a BBQ truck.</h2>
+        <p>Our truck runs whatever menu your event calls for — breakfast burritos at a 7am job site,
+          street tacos at a graduation party, Philly cheesesteaks at an employee appreciation day.</p>
+        <ul>
+          <li><span aria-hidden="true">🌮</span><span>Tacos al pastor, chicken tinga, carne asada</span></li>
+          <li><span aria-hidden="true">🥪</span><span>Reubens, Philly cheesesteaks, buffalo chicken, pulled pork</span></li>
+          <li><span aria-hidden="true">🍟</span><span>Loaded tots, wings, mac and cheese, funnel cakes, churros</span></li>
+          <li><span aria-hidden="true">💵</span><span><b>$10–$14 per person</b> · $500 minimum to bring the truck to you</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#quote">Check truck availability</a>
+      </div>
+      <div class="truck-art reveal" role="img" aria-label="Placeholder image: the Infinite Catering food truck at an outdoor event"><span aria-hidden="true">🚚</span></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="alt" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Reviews</p>
+        <h2>4.6 stars, 186+ times over.</h2>
+        <p>Verbatim Google reviews from real Infinite Catering clients — weddings, parties, and
+          everything in between.</p>
+      </div>
+      <div class="reviews-grid">
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Coleen was so thorough from start to finish with helping us plan our perfect
+            wedding menu. The food was delicious, her staff was friendly and efficient, and her
+            communication was always quick and detailed any time I had questions leading up to the big day.”</blockquote>
+          <figcaption>Emmalyn T.<span>Google review · wedding</span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Coleen and her crew took care of us for our wedding. They did an excellent job.
+            The food was tasty and service was great. They were even able to get some Gluten Free
+            options for my now wife.”</blockquote>
+          <figcaption>Brandon M.<span>Google review · wedding</span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Colleen made the whole process easy — she was helpful with menu planning,
+            quick to coordinate details. On the day of the event, the setup was timely and stress-free.
+            The food was delicious, and so many of my guests asked who my caterer was.”</blockquote>
+          <figcaption>Maria C. S.<span>Google review · private party</span></figcaption>
+        </figure>
+      </div>
+      <p class="reviews-cta reveal">
+        <a href="https://www.google.com/search?q=Infinite+Catering+Overland+Park" rel="noopener">
+          Read all 186+ Google reviews →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps, and you're done thinking about food.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>Tell us about your event</h3>
+          <p>Date, headcount, venue, and anything your guests can't eat. Two minutes on the form below.</p>
+        </div>
+        <div class="step reveal">
+          <h3>We write your menu</h3>
+          <p>A custom menu and a free estimate — with a complimentary tasting if you're a couple planning a wedding.</p>
+        </div>
+        <div class="step reveal">
+          <h3>We handle the day</h3>
+          <p>Delivery, setup, service, and full breakdown. Linens and bartending available if you need them.</p>
+        </div>
+        <div class="step reveal">
+          <h3>You host</h3>
+          <p>You talk to your guests instead of watching chafing dishes. That's the whole point.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="quote-sec" id="quote">
+    <div class="wrap form-grid">
+      <div class="form-aside reveal">
+        <p class="eyebrow">Free estimate</p>
+        <h2>Request a quote</h2>
+        <p>Tell us the date and the headcount and we'll come back with a menu and a real number —
+          usually within one business day.</p>
+        <ul class="facts">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Free estimates, always</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Complimentary tasting for wedding couples</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Dietary accommodations at no upcharge</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Everything priced up front — no surprise fees</li>
+        </ul>
+        <p style="margin-top:24px">Prefer to talk it through?<br>
+          <a href="tel:+19134990777" style="color:var(--accent);font-weight:700;font-size:19px;text-decoration:none">(913) 499-0777</a><br>
+          <a href="mailto:coleen@infinitecateringkc.com" style="color:var(--muted)">coleen@infinitecateringkc.com</a>
+        </p>
+      </div>
+
+      <form class="quote-form reveal" id="quoteForm" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+            <p class="err" id="e-name">Please tell us your name.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required />
+            <p class="err" id="e-phone">A phone number helps us reach you faster.</p>
+          </div>
+          <div class="field span2">
+            <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required />
+            <p class="err" id="e-email">Please enter a valid email address.</p>
+          </div>
+          <div class="field">
+            <label for="f-date">Event date <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-date" name="date" type="date" required />
+            <p class="err" id="e-date">When is your event?</p>
+          </div>
+          <div class="field">
+            <label for="f-guests">Guest count <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-guests" name="guests" type="number" min="1" inputmode="numeric" required />
+            <p class="err" id="e-guests">An approximate number is fine.</p>
+          </div>
+          <div class="field">
+            <label for="f-type">Event type</label>
+            <select id="f-type" name="type">
+              <option>Wedding</option>
+              <option>Corporate / office</option>
+              <option>Private party</option>
+              <option>Graduation</option>
+              <option>Shower or reunion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-style">Service style</label>
+            <select id="f-style" name="style">
+              <option>Buffet</option>
+              <option>Plated</option>
+              <option>Live-action stations</option>
+              <option>Drop-off</option>
+              <option>Food truck</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field span2">
+            <label for="f-diet">Dietary needs</label>
+            <input id="f-diet" name="diet" type="text" placeholder="e.g. 4 vegetarian, 2 gluten-free" />
+          </div>
+          <div class="field span2">
+            <label for="f-notes">Anything else?</label>
+            <textarea id="f-notes" name="notes" placeholder="Venue, budget range, bar or linen needs…"></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit">Send my request</button>
+          <small>We reply within one business day. Your details are never shared.</small>
+        </div>
+        <div class="success" role="status" aria-live="polite">
+          <div class="mark" aria-hidden="true">✓</div>
+          <h3>Request received.</h3>
+          <p>Coleen will follow up within one business day with a custom menu and estimate.
+            Need it sooner? Call <a href="tel:+19134990777" style="color:var(--accent);font-weight:700">(913) 499-0777</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Let's build your menu.</h2>
+      <p>Custom catering and food truck service across Overland Park and the Kansas City metro.
+        Free estimate, no obligation.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#quote">Request a quote</a>
+        <a class="btn btn-ghost" href="tel:+19134990777">Call (913) 499-0777</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand"><b style="font-family:'Playfair Display',serif;font-size:23px">Infinite Catering</b></span>
+        <p style="margin-top:12px;max-width:38ch">Fresh. Innovative. Personal. Full-service custom
+          catering, live-action stations, and a customizable food truck.</p>
+        <p style="margin-top:16px">
+          <a href="tel:+19134990777">(913) 499-0777</a><br>
+          <a href="mailto:coleen@infinitecateringkc.com">coleen@infinitecateringkc.com</a><br>
+          9500 Antioch Rd, Overland Park, KS 66212
+        </p>
+      </div>
+      <div>
+        <h4>Menus</h4>
+        <ul class="foot-list">
+          <li><a href="#menus">Appetizers</a></li>
+          <li><a href="#menus">Buffets</a></li>
+          <li><a href="#menus">Breakfast &amp; Brunch</a></li>
+          <li><a href="#menus">Live-Action Stations</a></li>
+          <li><a href="#menus">Kansas City BBQ</a></li>
+          <li><a href="#truck">Food Truck</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <p>Overland Park · Leawood · Lenexa · Olathe · Prairie Village · Shawnee · Merriam ·
+           Mission · Kansas City, MO and the surrounding metro.</p>
+        <h4 style="margin-top:22px">Also available</h4>
+        <p>Linen rental · Bartending · Setup &amp; breakdown · Free tastings for wedding couples</p>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="yr">2026</span> Infinite Catering, Overland Park, KS. All rights reserved.</span>
+      <span><strong>This is an unaffiliated design concept</strong> created by Gigawatt (Kansas City) to
+        illustrate a homepage redesign. It is not the official Infinite Catering website. Image areas
+        are placeholders; all prices, quotes, and business details were taken from public sources and
+        should be confirmed before use.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-dark" href="tel:+19134990777">Call</a>
+  <a class="btn btn-primary" href="#quote">Request a Quote</a>
+</div>
+
+<div class="badge">⚡ concept preview</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FoodEstablishment",
+  "additionalType":"https://schema.org/CateringBusiness",
+  "name":"Infinite Catering",
+  "slogan":"Fresh. Innovative. Personal.",
+  "telephone":"+1-913-499-0777",
+  "email":"coleen@infinitecateringkc.com",
+  "url":"https://infinitecateringkc.com",
+  "servesCuisine":["American","Barbecue","Italian","Breakfast"],
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"9500 Antioch Rd","addressLocality":"Overland Park","addressRegion":"KS","postalCode":"66212","addressCountry":"US"},
+  "areaServed":["Overland Park, KS","Leawood, KS","Lenexa, KS","Olathe, KS","Prairie Village, KS","Shawnee, KS","Kansas City, MO"],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"186"},
+  "hasMenu":{"@type":"Menu","hasMenuSection":[
+    {"@type":"MenuSection","name":"Appetizers"},
+    {"@type":"MenuSection","name":"Buffets"},
+    {"@type":"MenuSection","name":"Breakfast & Brunch"},
+    {"@type":"MenuSection","name":"Live-Action Stations"},
+    {"@type":"MenuSection","name":"Kansas City BBQ"},
+    {"@type":"MenuSection","name":"Food Truck"}
+  ]}
+}
+</script>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* scroll reveal */
+  var els = document.querySelectorAll('.reveal');
+  if (!window.IntersectionObserver || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  /* inline validation */
+  var form = document.getElementById('quoteForm');
+  var required = ['f-name','f-phone','f-email','f-date','f-guests'];
+
+  function check(id){
+    var input = document.getElementById(id);
+    var field = input.closest('.field');
+    var ok = input.value.trim() !== '' && input.checkValidity();
+    field.classList.toggle('invalid', !ok);
+    input.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    input.setAttribute('aria-describedby', 'e-' + id.slice(2));
+    return ok;
+  }
+
+  required.forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener('blur', function(){ check(id); });
+    el.addEventListener('input', function(){
+      if (el.closest('.field').classList.contains('invalid')) check(id);
+    });
+  });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var firstBad = null;
+    required.forEach(function(id){ if (!check(id) && !firstBad) firstBad = id; });
+    if (firstBad) { document.getElementById(firstBad).focus(); return; }
+    form.classList.add('sent');
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</body>
+</html>
