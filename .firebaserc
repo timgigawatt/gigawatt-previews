@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "gigawatt-crm"
+  },
+  "targets": {
+    "gigawatt-crm": {
+      "hosting": {
+        "previews": ["gigawatt-previews"]
+      }
+    }
+  }
+}
