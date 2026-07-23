@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Honest, no-upsell HVAC in Olathe & Johnson County. Trane Comfort Specialist for AC, furnace, heat pump & maintenance. 4.9★, family-owned since 2005.">
+<title>Air-Pro Comfort Systems — Honest HVAC for Olathe &amp; Johnson County</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f1b21;
+    --ink-2:#1c2c34;
+    --charcoal:#22333b;
+    --teal:#0fb8b8;
+    --teal-deep:#0a8c94;
+    --cyan:#3fd6e0;
+    --mist:#eef7f8;
+    --mist-2:#dcf0f1;
+    --paper:#ffffff;
+    --muted:#5d7078;
+    --line:#d7e6e8;
+    --accent:#ffd24d;
+    --star:#ffb020;
+    --shadow:0 18px 45px -22px rgba(15,60,66,.5);
+    --shadow-soft:0 10px 30px -18px rgba(15,60,66,.45);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Sora',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1140px,92vw);margin-inline:auto}
+  section{position:relative}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-weight:700;font-size:clamp(.95rem,.9rem + .3vw,1.05rem);
+    padding:.9rem 1.4rem;border-radius:999px;border:2px solid transparent;
+    cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .2s ease;
+    white-space:nowrap;line-height:1;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;box-shadow:0 12px 26px -12px rgba(10,140,148,.75)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(10,140,148,.85)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+  .btn-dark{background:var(--charcoal);color:#fff}
+  .btn-dark:hover{transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+  .btn-outline{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn-outline:hover{border-color:var(--teal);color:var(--teal-deep)}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.86);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;gap:1rem;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.65rem;font-weight:800;font-size:1.12rem;letter-spacing:-.01em}
+  .logo{
+    width:40px;height:40px;border-radius:11px;flex:none;
+    background:linear-gradient(140deg,var(--teal),var(--teal-deep));
+    display:grid;place-items:center;box-shadow:0 8px 18px -8px rgba(10,140,148,.7);
+  }
+  .brand small{display:block;font-weight:500;font-size:.66rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+  .nav{margin-left:auto;display:flex;align-items:center;gap:1.4rem}
+  .nav a.link{font-weight:500;font-size:.95rem;color:var(--charcoal)}
+  .nav a.link:hover{color:var(--teal-deep)}
+  .head-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}
+  .head-phone .lbl{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .head-phone .num{font-weight:800;font-size:1.02rem;color:var(--ink)}
+  @media(max-width:860px){.nav a.link,.head-phone{display:none}}
+
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(circle at 82% 12%,rgba(63,214,224,.22),transparent 46%),
+      radial-gradient(circle at 8% 90%,rgba(15,184,184,.16),transparent 50%),
+      linear-gradient(160deg,#0f1b21 0%,#16323a 55%,#0d262c 100%);
+    color:#eaf6f7;overflow:hidden;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2.6rem;align-items:center;padding:clamp(2.6rem,6vw,4.6rem) 0}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:rgba(63,214,224,.14);border:1px solid rgba(63,214,224,.35);
+    color:var(--cyan);font-weight:600;font-size:.78rem;letter-spacing:.05em;
+    padding:.4rem .85rem;border-radius:999px;margin-bottom:1.2rem;
+  }
+  h1{
+    font-size:clamp(2.05rem,1.4rem + 3.6vw,3.5rem);
+    line-height:1.06;font-weight:800;letter-spacing:-.025em;margin-bottom:1rem;
+  }
+  h1 .hl{color:var(--cyan)}
+  .sub{font-size:clamp(1.02rem,.98rem + .4vw,1.18rem);color:#c5dcdf;max-width:34ch;margin-bottom:1.7rem}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem}
+  .rating-line{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;font-size:.95rem;color:#d6e9eb}
+  .stars{color:var(--star);letter-spacing:2px;font-size:1.05rem}
+  .rating-line b{color:#fff}
+  .rating-line .dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.35)}
+
+  /* Hero card */
+  .hero-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:22px;padding:1.5rem;backdrop-filter:blur(6px);box-shadow:var(--shadow);
+  }
+  .hero-card h3{font-size:1.05rem;margin-bottom:.2rem}
+  .hero-card p.small{font-size:.85rem;color:#bcd6d9;margin-bottom:1.1rem}
+  .book-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.9rem}
+  .slot{
+    border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:.7rem .5rem;text-align:center;
+    background:rgba(255,255,255,.04);transition:.15s;cursor:pointer;font-size:.85rem;
+  }
+  .slot:hover{border-color:var(--cyan);background:rgba(63,214,224,.12)}
+  .slot b{display:block;font-size:.95rem}
+  .slot span{font-size:.72rem;color:#a9c8cc}
+  .hero-card .btn{width:100%;justify-content:center}
+  .hero-card .assure{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-top:.8rem;font-size:.78rem;color:#a9c8cc}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:2rem}.sub{max-width:48ch}}
+
+  /* Trust strip */
+  .trust{background:var(--charcoal);color:#dcefee}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.5rem 0}
+  .trust .item{display:flex;align-items:center;gap:.7rem;justify-content:center;text-align:left}
+  .trust .ico{width:38px;height:38px;flex:none;border-radius:10px;background:rgba(63,214,224,.16);display:grid;place-items:center;color:var(--cyan)}
+  .trust .t{font-weight:700;font-size:.98rem;color:#fff;line-height:1.15}
+  .trust .s{font-size:.72rem;color:#9fbcbc}
+  @media(max-width:760px){.trust .wrap{grid-template-columns:1fr 1fr;gap:1.1rem 1rem}}
+
+  /* Section heading */
+  .sec{padding:clamp(3rem,6vw,5rem) 0}
+  .sec-head{max-width:56ch;margin-bottom:2.3rem}
+  .kicker{color:var(--teal-deep);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
+  h2{font-size:clamp(1.7rem,1.3rem + 1.9vw,2.5rem);line-height:1.1;letter-spacing:-.02em;font-weight:800}
+  .sec-head p{color:var(--muted);margin-top:.7rem;font-size:1.05rem}
+  .center{text-align:center;margin-inline:auto}
+
+  /* Services */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.5rem;transition:transform .18s ease,box-shadow .18s ease,border-color .18s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);border-color:var(--mist-2)}
+  .card .ic{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;
+    background:linear-gradient(140deg,var(--mist),var(--mist-2));margin-bottom:1rem;
+  }
+  .card h3{font-size:1.15rem;margin-bottom:.4rem}
+  .card p{color:var(--muted);font-size:.94rem}
+
+  /* Why-us / differentiator */
+  .why{background:linear-gradient(170deg,var(--mist),#fff)}
+  .why .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.6rem;align-items:center}
+  @media(max-width:840px){.why .wrap{grid-template-columns:1fr}}
+  .why-visual{
+    border-radius:24px;padding:2rem;color:#eaf6f7;position:relative;overflow:hidden;
+    background:radial-gradient(circle at 78% 18%,rgba(63,214,224,.25),transparent 50%),linear-gradient(155deg,#12313a,#0c2329);
+    box-shadow:var(--shadow);
+  }
+  .why-visual .big{font-size:clamp(3rem,2rem + 5vw,4.4rem);font-weight:800;line-height:1;color:#fff;letter-spacing:-.03em}
+  .why-visual .big span{color:var(--cyan)}
+  .why-visual .cap{color:#bcd6d9;margin-top:.4rem;font-size:.95rem}
+  .why-visual hr{border:none;border-top:1px solid rgba(255,255,255,.14);margin:1.4rem 0}
+  .why-visual .mini{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .why-visual .mini b{display:block;font-size:1.5rem;color:#fff}
+  .why-visual .mini span{font-size:.78rem;color:#a9c8cc}
+  .checklist{list-style:none;display:grid;gap:1rem;margin-top:1.4rem}
+  .checklist li{display:flex;gap:.85rem;align-items:flex-start}
+  .checklist .ck{
+    width:26px;height:26px;flex:none;border-radius:8px;background:var(--teal);color:#fff;
+    display:grid;place-items:center;font-size:.85rem;font-weight:800;margin-top:2px;
+    box-shadow:0 6px 14px -6px rgba(10,140,148,.7);
+  }
+  .checklist b{font-size:1.02rem}
+  .checklist p{color:var(--muted);font-size:.92rem}
+
+  /* Reviews */
+  .reviews{background:var(--ink-2);color:#e9f5f6}
+  .reviews .kicker{color:var(--cyan)}
+  .reviews h2{color:#fff}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+  .quote{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;
+  }
+  .quote .stars{font-size:1rem}
+  .quote p{color:#d5e8ea;font-size:.98rem;flex:1}
+  .quote .who{display:flex;align-items:center;gap:.7rem}
+  .avatar{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:#0f1b21;background:linear-gradient(140deg,var(--cyan),var(--teal))}
+  .who b{display:block;font-size:.92rem;color:#fff}
+  .who span{font-size:.76rem;color:#9fbcbc}
+  .g-badge{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.8rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:.6rem 1rem;border-radius:999px;font-size:.9rem}
+  .g-badge b{color:#fff}
+
+  /* Final CTA */
+  .final{
+    background:
+      radial-gradient(circle at 15% 20%,rgba(63,214,224,.2),transparent 45%),
+      linear-gradient(135deg,var(--teal-deep),#0c6f76);
+    color:#fff;text-align:center;
+  }
+  .final .wrap{padding:clamp(3rem,6vw,4.8rem) 0}
+  .final h2{color:#fff;max-width:22ch;margin-inline:auto}
+  .final p{color:#d7f2f4;margin:.9rem auto 1.8rem;max-width:48ch}
+  .final .cta-row{justify-content:center}
+  .final .btn-primary{background:#fff;color:var(--teal-deep)}
+  .final .btn-primary:hover{background:#f2fbfb}
+  .final .btn-ghost{border-color:rgba(255,255,255,.6)}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:#a9c8cc;padding:2.6rem 0 6rem}
+  .foot-top{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-start;padding-bottom:1.6rem;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand{display:flex;align-items:center;gap:.65rem;color:#fff;font-weight:800;font-size:1.1rem}
+  .foot-cols{display:flex;gap:3rem;flex-wrap:wrap}
+  .foot-cols h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+  .foot-cols a,.foot-cols p{display:block;font-size:.9rem;color:#a9c8cc;margin-bottom:.4rem}
+  .foot-cols a:hover{color:var(--cyan)}
+  .foot-note{margin-top:1.4rem;font-size:.8rem;color:#7ea0a4;line-height:1.6}
+  .concept-tag{color:var(--cyan);font-weight:600}
+
+  /* Concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:100;
+    background:#0f1b21;color:#fff;border:1px solid var(--teal);
+    font-size:.75rem;font-weight:600;padding:.5rem .85rem;border-radius:999px;
+    box-shadow:0 10px 24px -10px rgba(0,0,0,.6);display:flex;align-items:center;gap:.4rem;
+  }
+  .concept-badge .z{color:var(--cyan)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <span class="logo" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.4"/></svg>
+      </span>
+      <span>Air-Pro Comfort Systems<small>Olathe · Johnson County</small></span>
+    </a>
+    <nav class="nav">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#why">Why Us</a>
+      <a class="link" href="#reviews">Reviews</a>
+      <a class="head-phone" href="tel:+19135218812">
+        <span class="lbl">Call today</span>
+        <span class="num">(913) 521-8812</span>
+      </a>
+      <a class="btn btn-primary" href="#book">Book Online</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">⚡ Trane Comfort Specialist · Family-owned since 2005</span>
+      <h1>Honest heating &amp; cooling for <span class="hl">Olathe &amp; Johnson County</span> homes.</h1>
+      <p class="sub">Upfront pricing, no upselling, and Trane-certified work — the reason Olathe, Overland Park, Lenexa &amp; Leawood neighbors keep coming back.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#book">Schedule Service</a>
+        <a class="btn btn-ghost" href="tel:+19135218812">📞 (913) 521-8812</a>
+      </div>
+      <div class="rating-line">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <b>4.9</b> on Google
+        <span class="dot"></span>
+        <span><b>459+</b> local reviews</span>
+        <span class="dot"></span>
+        <span>BBB A+ rated</span>
+      </div>
+    </div>
+
+    <div class="hero-card" id="book" aria-label="Online scheduling">
+      <h3>Book a visit in 60 seconds</h3>
+      <p class="small">Pick a window — we'll confirm by text. No call center, ever.</p>
+      <div class="book-row">
+        <div class="slot"><b>Today</b><span>2–5 PM</span></div>
+        <div class="slot"><b>Tomorrow</b><span>8–11 AM</span></div>
+        <div class="slot"><b>Thu</b><span>12–3 PM</span></div>
+        <div class="slot"><b>Fri</b><span>8–11 AM</span></div>
+      </div>
+      <a class="btn btn-primary" href="tel:+19135218812">Request This Time →</a>
+      <div class="assure">🛡️ Upfront quote before any work begins</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="item">
+      <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <div><div class="t">Trane Certified</div><div class="s">Comfort Specialist dealer</div></div>
+    </div>
+    <div class="item">
+      <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M6 8h9a3 3 0 0 1 0 6H6"/></svg></span>
+      <div><div class="t">Upfront Pricing</div><div class="s">No surprise upsells</div></div>
+    </div>
+    <div class="item">
+      <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-7 9 7v11h-6v-7H9v7H3Z"/></svg></span>
+      <div><div class="t">Locally Owned</div><div class="s">Serving KS since 2005</div></div>
+    </div>
+    <div class="item">
+      <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 6.5L22 9l-5 4.5L18.5 21 12 17.3 5.5 21 7 13.5 2 9l7-.5L12 2Z"/></svg></span>
+      <div><div class="t">4.9★ · 459+</div><div class="s">Google reviews</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">What we do</p>
+      <h2>Full-service comfort for every Kansas season.</h2>
+      <p>From July heat waves to January cold snaps, Air-Pro keeps Johnson County homes running — repair, replace, and everything in between.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ic" aria-hidden="true">❄️</div>
+        <h3>AC Repair &amp; Install</h3>
+        <p>Fast diagnostics and honest fixes — or a right-sized new system when repair no longer makes sense.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true">🔥</div>
+        <h3>Furnace &amp; Heating</h3>
+        <p>Trane furnaces, tune-ups, and no-heat emergency repairs to keep your family warm all winter.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true">♻️</div>
+        <h3>Heat Pumps</h3>
+        <p>High-efficiency heat pump systems that cut energy bills and heat &amp; cool from one unit.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true">🛠️</div>
+        <h3>Maintenance Plans</h3>
+        <p>Seasonal tune-ups from $170/yr with 15% off repairs — parts, labor, and refrigerant included.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true">🌬️</div>
+        <h3>Ductless &amp; Zoning</h3>
+        <p>Mini-split systems and damper zoning to solve hot rooms and heat those tricky additions.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true">💧</div>
+        <h3>Indoor Air Quality</h3>
+        <p>Humidifiers, filtration, and air-quality testing for cleaner, healthier air at home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why sec" id="why">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Why neighbors trust us</p>
+      <h2>The HVAC company that won't sell you what you don't need.</h2>
+      <p style="color:var(--muted);margin-top:.7rem;font-size:1.05rem;max-width:46ch">We're a smaller, family-owned team — so we'd rather earn a customer for 20 years than a big ticket today. That reputation for honesty is why so much of our work comes from referrals.</p>
+      <ul class="checklist">
+        <li><span class="ck">✓</span><div><b>Diagnose before we quote</b><p>We find the real problem and give you the honest options — repair vs. replace — with the price before any work starts.</p></div></li>
+        <li><span class="ck">✓</span><div><b>Trane Comfort Specialist</b><p>The top tier of Trane dealers, held to strict standards for training, service, and customer satisfaction.</p></div></li>
+        <li><span class="ck">✓</span><div><b>Existing customers come first</b><p>We never chase new jobs at the expense of the neighbors who already trust us.</p></div></li>
+      </ul>
+    </div>
+    <div class="why-visual">
+      <div class="big">20<span> yrs</span></div>
+      <div class="cap">Locally owned &amp; operating in Olathe since 2005.</div>
+      <hr>
+      <div class="mini">
+        <div><b>4.9★</b><span>459+ Google reviews</span></div>
+        <div><b>A+</b><span>BBB accredited</span></div>
+        <div><b>$170</b><span>Maintenance plan / yr</span></div>
+        <div><b>0</b><span>High-pressure upsells</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">What people say</p>
+      <h2 style="color:#fff">Rated 4.9★ across 459+ reviews.</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>"They came out same day and told me my AC just needed a part, not a whole new system like another company quoted. Honest to the bone — I won't call anyone else."</p>
+        <div class="who"><span class="avatar">D</span><div><b>Dana R.</b><span>Overland Park, KS</span></div></div>
+      </div>
+      <div class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>"New Trane furnace installed clean and on time. Brad walked me through every option and the price never changed. This is how a family business should run."</p>
+        <div class="who"><span class="avatar">M</span><div><b>Mark T.</b><span>Olathe, KS</span></div></div>
+      </div>
+      <div class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>"On the maintenance plan for years now. Always on time, always fair, and they actually remember us. You can tell they care about keeping customers, not just closing sales."</p>
+        <div class="who"><span class="avatar">S</span><div><b>Sheila K.</b><span>Lenexa, KS</span></div></div>
+      </div>
+    </div>
+    <span class="g-badge">⭐ <b>4.9</b> · 459+ verified Google reviews across Johnson County</span>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Ready for comfort you can trust?</h2>
+    <p>Book online or call and get an honest, upfront quote — no pressure, no surprise upsells. Serving Olathe, Overland Park, Lenexa &amp; Leawood.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#book">Schedule Online</a>
+      <a class="btn btn-ghost" href="tel:+19135218812">📞 Call (913) 521-8812</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:9px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          </span>
+          Air-Pro Comfort Systems
+        </div>
+        <p class="foot-note">Family-owned HVAC serving Olathe &amp; Johnson County, Kansas since 2005.<br>Trane Comfort Specialist · BBB A+ · 4.9★ on Google.</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>Services</h4>
+          <a href="#services">AC Repair &amp; Install</a>
+          <a href="#services">Furnace &amp; Heating</a>
+          <a href="#services">Heat Pumps</a>
+          <a href="#services">Maintenance Plans</a>
+        </div>
+        <div>
+          <h4>Service Area</h4>
+          <p>Olathe</p>
+          <p>Overland Park</p>
+          <p>Lenexa &amp; Leawood</p>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="tel:+19135218812">(913) 521-8812</a>
+          <a href="#book">Book online</a>
+        </div>
+      </div>
+    </div>
+    <p class="foot-note">
+      <span class="concept-tag">Concept preview by Gigawatt.</span> This is a design concept created to explore a redesign — it is not the official Air-Pro Comfort Systems website. Business details shown are for demonstration only; confirm current pricing and availability with the business directly.
+    </p>
+  </div>
+</footer>
+
+<div class="concept-badge"><span class="z">⚡</span> concept preview</div>
+
+</body>
+</html>

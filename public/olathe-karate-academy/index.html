@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Olathe Karate Academy — Confidence, Discipline &amp; Family in Olathe, KS</title>
+  <meta name="description" content="Family-run martial arts in Olathe, KS for 27 years. Kids, teens &amp; adults build focus, discipline and confidence. Book your free trial class today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #100c0d; --ink: #1c1516; --charcoal: #2a1f21;
+      --red: #c0192b; --red-dark: #8f0f1e; --red-glow: #e23145;
+      --gold: #e8b64c; --gold-dim: #c9992f;
+      --paper: #faf6f0; --paper-2: #f2ebe2;
+      --text: #221a1b; --muted: #6d5f60; --line: #e5dbd0;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.6; background: var(--paper); }
+    img { max-width: 100%; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .logo, .btn, .kick { font-family: 'Oswald', system-ui, sans-serif; letter-spacing: .5px; }
+
+    /* Header */
+    header { background: rgba(16,12,13,.96); position: sticky; top: 0; z-index: 20; border-bottom: 1px solid #3a2c2e; backdrop-filter: blur(6px); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo .mark { width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, var(--red-glow), var(--red-dark)); display: grid; place-items: center; color: var(--gold); font-weight: 700; font-size: 19px; border: 2px solid var(--gold); flex: none; }
+    .logo b { color: #fff; font-weight: 700; font-size: 19px; text-transform: uppercase; letter-spacing: 1px; line-height: 1; }
+    .logo b span { color: var(--gold); }
+    .logo small { display: block; color: #b9a9aa; font-family: 'Inter'; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; font-weight: 600; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--gold); }
+    .btn { display: inline-block; padding: 13px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; transition: transform .12s ease, box-shadow .12s ease; }
+    .btn-primary { background: linear-gradient(180deg, var(--red-glow), var(--red)); color: #fff; box-shadow: 0 6px 18px rgba(192,25,43,.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(192,25,43,.55); }
+    .btn-gold { background: linear-gradient(180deg, var(--gold), var(--gold-dim)); color: #201a10; box-shadow: 0 6px 18px rgba(201,153,47,.4); }
+    .btn-gold:hover { transform: translateY(-2px); }
+    .btn-ghost { border: 2px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .nav .btn { padding: 11px 20px; }
+    @media (max-width: 620px){ .nav-phone { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; color: #fff; background:
+        linear-gradient(115deg, rgba(16,12,13,.97) 0%, rgba(28,21,22,.9) 42%, rgba(143,15,30,.72) 100%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0 2px, transparent 2px 22px);
+      overflow: hidden; }
+    .hero::before { content:""; position:absolute; right:-140px; top:-120px; width:520px; height:520px; border-radius:50%;
+      background: radial-gradient(circle, rgba(226,49,69,.45), transparent 62%); filter: blur(10px); }
+    .hero::after { content:"空"; position:absolute; right:2%; bottom:-6%; font-family:'Oswald'; font-size: clamp(180px, 34vw, 420px); color: rgba(232,182,76,.06); line-height:1; pointer-events:none; }
+    .hero .wrap { position: relative; padding: 74px 22px 82px; }
+    .kick { display: inline-flex; align-items: center; gap: 9px; color: var(--gold); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 20px; }
+    .kick::before { content:""; width: 30px; height: 2px; background: var(--gold); display: inline-block; }
+    .hero h1 { font-size: clamp(34px, 6.2vw, 66px); line-height: 1.02; text-transform: uppercase; max-width: 780px; font-weight: 700; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p.lead { margin: 22px 0 30px; font-size: clamp(16px, 2vw, 19px); color: #e6d8d9; max-width: 560px; line-height: 1.65; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .stars { margin-top: 30px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 15px; color: #e6d8d9; }
+    .stars .st { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
+    .stars b { color: #fff; }
+    .stars .sep { width: 5px; height: 5px; border-radius: 50%; background: #7d6b6c; }
+
+    /* Trust strip */
+    .strip { background: var(--ink); border-top: 3px solid var(--gold); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .strip .item { text-align: center; padding: 22px 12px; color: #f0e6e6; }
+    .strip .item .n { font-family: 'Oswald'; font-size: clamp(22px, 3vw, 30px); color: var(--gold); font-weight: 700; line-height: 1; }
+    .strip .item .l { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #b9a9aa; margin-top: 7px; font-weight: 600; }
+    @media (max-width: 680px){ .strip .wrap { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Sections */
+    section { padding: 74px 0; }
+    .eyebrow { color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; font-size: 13px; font-family: 'Oswald'; }
+    h2 { font-size: clamp(28px, 4.2vw, 44px); color: var(--ink); margin: 8px 0 12px; text-transform: uppercase; line-height: 1.05; }
+    h2 em { color: var(--red); font-style: normal; }
+    .sub { color: var(--muted); max-width: 620px; font-size: 17px; margin-bottom: 40px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    /* Programs */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 20px; }
+    .prog { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px; overflow: hidden; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+    .prog::before { content:""; position:absolute; left:0; top:0; height:100%; width:5px; background: linear-gradient(180deg, var(--red-glow), var(--red-dark)); }
+    .prog:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(28,21,22,.14); border-color: var(--gold); }
+    .prog .ico { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(140deg, var(--charcoal), var(--ink)); display: grid; place-items: center; font-size: 27px; margin-bottom: 16px; border: 1px solid #3a2c2e; }
+    .prog h3 { font-size: 21px; color: var(--ink); text-transform: uppercase; margin-bottom: 4px; }
+    .prog .age { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-dark); background: #fbe9eb; border-radius: 999px; padding: 3px 11px; margin-bottom: 11px; }
+    .prog p { color: var(--muted); font-size: 15px; }
+
+    /* Story / why us */
+    .story { background: var(--ink); color: #f2e9e9; }
+    .story .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 46px; align-items: center; }
+    .story h2 { color: #fff; }
+    .story h2 em { color: var(--gold); }
+    .story p { color: #d6c8c9; margin-bottom: 16px; font-size: 16px; }
+    .story .sig { font-family: 'Oswald'; color: var(--gold); font-size: 18px; letter-spacing: 1px; margin-top: 8px; }
+    .story .sig small { display: block; color: #b9a9aa; font-family: 'Inter'; font-size: 13px; letter-spacing: 0; text-transform: none; margin-top: 3px; }
+    .belt { background: linear-gradient(155deg, var(--charcoal), #17100f); border: 1px solid #3a2c2e; border-radius: 16px; padding: 34px; }
+    .belt .row { display: flex; align-items: center; gap: 16px; padding: 15px 0; border-bottom: 1px solid #382a2c; }
+    .belt .row:last-child { border-bottom: 0; }
+    .belt .row .em { font-size: 26px; width: 44px; height: 44px; border-radius: 10px; background: rgba(232,182,76,.1); display: grid; place-items: center; flex: none; }
+    .belt .row b { display: block; color: #fff; font-size: 16px; }
+    .belt .row span { color: #b9a9aa; font-size: 13.5px; }
+    @media (max-width: 780px){ .story .grid { grid-template-columns: 1fr; gap: 30px; } }
+
+    /* Reviews */
+    .reviews { background: var(--paper-2); }
+    .quote { background: #fff; border-radius: 14px; padding: 28px 26px; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(28,21,22,.05); }
+    .quote .q { color: var(--gold-dim); font-family: 'Oswald'; font-size: 44px; line-height: .5; height: 22px; }
+    .quote .rt { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+    .quote p { font-size: 15.5px; color: var(--text); }
+    .quote footer { margin-top: 15px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+    .review-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
+    .review-head .agg { text-align: center; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 22px; flex: none; }
+    .review-head .agg .n { font-family: 'Oswald'; font-size: 34px; color: var(--red); font-weight: 700; line-height: 1; }
+    .review-head .agg .s { color: var(--gold); letter-spacing: 2px; font-size: 14px; }
+    .review-head .agg small { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+    /* CTA band */
+    .cta-band { position: relative; text-align: center; color: #fff; overflow: hidden;
+      background: linear-gradient(120deg, var(--red-dark), var(--red) 55%, #6e0b18); }
+    .cta-band::after { content:"力"; position:absolute; left:3%; top:50%; transform: translateY(-50%); font-family:'Oswald'; font-size: clamp(150px, 26vw, 300px); color: rgba(0,0,0,.1); line-height:1; }
+    .cta-band .wrap { position: relative; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #ffe3e6; margin: 12px auto 28px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+    .cta-band .btn-ghost { border-color: rgba(255,255,255,.6); }
+    .free-tag { display: inline-block; background: var(--gold); color: #201a10; font-family:'Oswald'; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; padding: 6px 16px; border-radius: 999px; margin-bottom: 18px; }
+
+    /* Footer */
+    footer.site { background: var(--black); color: #a2908f; padding: 40px 0 34px; font-size: 14px; }
+    footer.site .top { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid #2a2021; }
+    footer.site .fl b { color: #fff; font-family: 'Oswald'; text-transform: uppercase; letter-spacing: 1px; font-size: 18px; }
+    footer.site a { color: var(--gold); text-decoration: none; }
+    footer.site .note { color: #7b6a69; font-size: 12.5px; line-height: 1.6; }
+
+    .demo-tag { position: fixed; bottom: 12px; right: 12px; background: #17181b; color: var(--gold);
+      font: 700 11px/1 'Inter', system-ui; padding: 9px 13px; border-radius: 999px; opacity: .94; z-index: 40; border: 1px solid #3a2c2e; letter-spacing: .5px; }
+
+    /* Floating chat bubble */
+    .chat { position: fixed; bottom: 18px; left: 18px; z-index: 40; display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); box-shadow: 0 8px 26px rgba(28,21,22,.18); border-radius: 999px; padding: 9px 16px 9px 10px; }
+    .chat .dot { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(180deg, var(--red-glow), var(--red)); display: grid; place-items: center; color: #fff; font-size: 18px; }
+    .chat span { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .chat small { display: block; color: var(--muted); font-size: 11px; font-weight: 500; }
+    @media (max-width: 520px){ .chat span { display: none; } .chat { padding: 8px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="mark">空</span>
+        <span><b>OLATHE<span> KARATE</span></b><small>Academy · Est. 1999</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19138296873">📞 <span>(913) 829-6873</span></a>
+        <a class="btn btn-primary" href="#trial">Free Trial Class</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="kick">Family-Run Dojo · Olathe, Kansas</span>
+      <h1>Build Confidence, Discipline &amp; <em>Real Strength</em> — On the Mat in Olathe</h1>
+      <p class="lead">For 27 years, black-belt husband-and-wife team James &amp; Ashleigh Palmer have taught Olathe kids, teens and adults the focus and respect that carry far beyond the dojo. Come see it for yourself.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#trial">Claim Your Free Trial Class</a>
+        <a class="btn btn-ghost" href="tel:+19138296873">Call (913) 829-6873</a>
+      </div>
+      <div class="stars">
+        <span><span class="st">★★★★★</span> <b>5.0</b> rating</span>
+        <span class="sep"></span>
+        <span><b>300+</b> reviews · <b>100%</b> recommend</span>
+        <span class="sep"></span>
+        <span>🏆 <b>2026</b> Quality Business Award</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><div class="n">27</div><div class="l">Years in Olathe</div></div>
+      <div class="item"><div class="n">Ages 3+</div><div class="l">Kubs to Adults</div></div>
+      <div class="item"><div class="n">5.0★</div><div class="l">300+ Reviews</div></div>
+      <div class="item"><div class="n">Family</div><div class="l">Owned &amp; Operated</div></div>
+    </div>
+  </div>
+
+  <section id="programs">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Programs for Every Age</span>
+        <h2>Find Your <em>Class</em></h2>
+        <p class="sub">Traditional Okinawan Kenpo and jujitsu taught in a fun, supportive, family atmosphere — with a program built for every stage of life.</p>
+      </div>
+      <div class="cards">
+        <div class="prog">
+          <div class="ico">🐯</div>
+          <span class="age">Ages 3–4</span>
+          <h3>Karate Kubs</h3>
+          <p>Little ones build coordination, listening skills and confidence through playful, age-appropriate movement.</p>
+        </div>
+        <div class="prog">
+          <div class="ico">🥋</div>
+          <span class="age">Ages 5+</span>
+          <h3>Kids Okinawan Kenpo</h3>
+          <p>The heart of our school — respect, focus and self-control that shows up at home and in the classroom.</p>
+        </div>
+        <div class="prog">
+          <div class="ico">🤝</div>
+          <span class="age">Teens &amp; Adults</span>
+          <h3>Kenpo Jujitsu</h3>
+          <p>Practical self-defense, grappling and striking. Get fit, relieve stress, and earn your belt at any age.</p>
+        </div>
+        <div class="prog">
+          <div class="ico">🥊</div>
+          <span class="age">All Levels</span>
+          <h3>Power-Fit Kickboxing</h3>
+          <p>A high-energy cardio workout that torches calories and builds real striking power — no experience needed.</p>
+        </div>
+        <div class="prog">
+          <div class="ico">🗡️</div>
+          <span class="age">Advanced</span>
+          <h3>Kobujitsu &amp; Weapons</h3>
+          <p>Traditional Okinawan weapons and Arnis short-sticks for students ready to deepen their martial skill.</p>
+        </div>
+        <div class="prog">
+          <div class="ico">👊</div>
+          <span class="age">Competition</span>
+          <h3>Kumite Sparring</h3>
+          <p>Controlled, coached sparring that sharpens timing, courage and composure under pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="eyebrow" style="color:var(--gold)">Why Families Choose OKA</span>
+          <h2>A Real <em>Family</em> Dojo — Not a Belt Factory</h2>
+          <p>Olathe Karate Academy has been led by black belts James and Ashleigh Palmer since 1999. Nearly three decades in, they still teach on the mat every week — because they built this school on the same character, discipline and respect they teach your kids.</p>
+          <p>Students aren't numbers here. From the 3-year-old Karate Kub to the parent training alongside their child, everyone is part of the OKA family. That's why generations of Olathe families keep coming back — and why 100% of them recommend us.</p>
+          <div class="sig">— James &amp; Ashleigh Palmer
+            <small>Head Instructors &amp; Owners, Olathe Karate Academy</small>
+          </div>
+        </div>
+        <div class="belt">
+          <div class="row"><div class="em">🥇</div><div><b>27 Years, Same Family</b><span>Owner-instructors on the mat every week since 1999.</span></div></div>
+          <div class="row"><div class="em">🎯</div><div><b>Character First</b><span>Focus, respect &amp; discipline that follow kids home.</span></div></div>
+          <div class="row"><div class="em">👨‍👩‍👧</div><div><b>Train Together</b><span>Kids, teens &amp; parents welcome on the same mat.</span></div></div>
+          <div class="row"><div class="em">🏆</div><div><b>Award-Winning</b><span>2026 Quality Business Award · 5.0★ reputation.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="review-head">
+        <div>
+          <span class="eyebrow">What Olathe Says</span>
+          <h2>300+ Reviews. <em>100% Recommend.</em></h2>
+        </div>
+        <div class="agg">
+          <div class="n">5.0</div>
+          <div class="s">★★★★★</div>
+          <small>300+ reviews</small>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <div class="q">&ldquo;</div>
+          <div class="rt">★★★★★</div>
+          <p>They make it fun learning the martial arts. OKA has a family atmosphere — young or old, you really feel like you're part of the family.</p>
+          <footer>— Kevin C., Olathe</footer>
+        </div>
+        <div class="quote">
+          <div class="q">&ldquo;</div>
+          <div class="rt">★★★★★</div>
+          <p>Whether you're young or old, a family or an individual, I would recommend Olathe Karate Academy to anyone. Best decision we made for our kids.</p>
+          <footer>— Mike W., Olathe</footer>
+        </div>
+        <div class="quote">
+          <div class="q">&ldquo;</div>
+          <div class="rt">★★★★★</div>
+          <p>The discipline and confidence our son has gained here is incredible. James and Ashleigh genuinely care about every student.</p>
+          <footer>— Sarah M., Olathe</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="trial">
+    <div class="wrap">
+      <span class="free-tag">100% Free · No Obligation</span>
+      <h2>Book Your Free Trial Class</h2>
+      <p>See why Olathe families have trusted OKA for 27 years. Pick a time online or call the dojo — we'll get your first class on the calendar today.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#trial">Book My Free Trial Online</a>
+        <a class="btn btn-ghost" href="tel:+19138296873">Call (913) 829-6873</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="top">
+        <div class="fl">
+          <b>Olathe Karate Academy</b><br>
+          <span style="color:#a2908f">1461 E. 151st St, Olathe, KS 66062 · <a href="tel:+19138296873">(913) 829-6873</a></span>
+        </div>
+        <div>Kids · Teens · Adults · Family Martial Arts</div>
+      </div>
+      <p class="note">This is a concept redesign preview created by <strong style="color:#c9b8b7">Gigawatt</strong>, a Kansas City web design &amp; AI consulting agency — it is not the live Olathe Karate Academy website. Business details are shown for demonstration only. Concept preview, not an official page.</p>
+    </div>
+  </footer>
+
+  <a class="chat" href="#trial" aria-label="Chat with the dojo">
+    <span class="dot">💬</span>
+    <span>Ask us anything<small>AI dojo assistant · replies instantly</small></span>
+  </a>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

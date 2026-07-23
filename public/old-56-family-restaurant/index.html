@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Old 56 Family Restaurant — Olathe's home-style diner on the corner of Chestnut for nearly 40 years. Breakfast, lunch, and 1,340+ five-star neighbors. Order online.">
+<title>Old 56 Family Restaurant — Olathe's home-style diner for nearly 40 years</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#c0201e;
+    --red-deep:#8f1614;
+    --charcoal:#232323;
+    --charcoal-2:#2f2d2b;
+    --cream:#f6efe1;
+    --cream-2:#fbf7ee;
+    --gold:#e7b24a;
+    --ink:#211d1a;
+    --muted:#6c625a;
+    --line:rgba(35,35,35,.12);
+    --shadow:0 18px 46px -22px rgba(35,20,15,.55);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"DM Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{line-height:1.05;letter-spacing:-.01em}
+  .display{font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.02em;font-weight:400;line-height:.95}
+  .serif{font-family:"Fraunces",Georgia,serif}
+  a{color:inherit}
+  img{max-width:100%}
+  .wrap{width:min(1140px,92vw);margin-inline:auto}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+    font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;
+    padding:.95rem 1.5rem;border-radius:999px;border:2px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    min-height:52px;
+  }
+  .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 22px -10px rgba(192,32,30,.8)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--red-deep)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:rgba(246,239,225,.5)}
+  .btn-ghost:hover{border-color:var(--cream);background:rgba(246,239,225,.08)}
+  .btn-dark{background:var(--charcoal);color:var(--cream)}
+  .btn-dark:hover{transform:translateY(-2px)}
+  .eyebrow{
+    font-family:"Bebas Neue",sans-serif;letter-spacing:.22em;font-size:.95rem;
+    text-transform:uppercase;color:var(--red);
+  }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(35,35,35,.96);
+    backdrop-filter:blur(8px);
+    border-bottom:3px solid var(--gold);
+    color:var(--cream);
+  }
+  .navbar{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0;gap:1rem}
+  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--cream)}
+  .badge56{
+    width:52px;height:52px;flex:none;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%,#e23b39,var(--red) 55%,var(--red-deep));
+    border:3px solid var(--cream);
+    display:grid;place-items:center;
+    font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:#fff;
+    box-shadow:0 0 0 3px var(--charcoal), inset 0 -3px 6px rgba(0,0,0,.3);
+  }
+  .brand-name{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;letter-spacing:.04em;line-height:.9}
+  .brand-name small{display:block;font-family:"DM Sans";font-size:.62rem;letter-spacing:.28em;color:var(--gold);font-weight:700}
+  .nav-actions{display:flex;align-items:center;gap:.9rem}
+  .nav-phone{display:none;text-decoration:none;color:var(--cream);font-weight:700;font-size:1.02rem;white-space:nowrap}
+  .nav-phone span{display:block;font-size:.62rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+  @media(min-width:760px){.nav-phone{display:block}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:var(--cream);
+    background:
+      radial-gradient(1200px 500px at 78% -10%,rgba(231,178,74,.16),transparent 60%),
+      linear-gradient(160deg,#2b2927 0%,#232323 45%,#1d1c1b 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;opacity:.5;
+    background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 22px,transparent 22px 44px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;display:grid;gap:2.4rem;align-items:center;
+    padding:clamp(2.6rem,7vw,5rem) 0 clamp(2.6rem,6vw,4.4rem);
+    grid-template-columns:1fr;
+  }
+  @media(min-width:920px){.hero-inner{grid-template-columns:1.15fr .85fr}}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:rgba(246,239,225,.08);border:1px solid rgba(231,178,74,.4);
+    padding:.4rem .9rem;border-radius:999px;font-size:.8rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.3rem;
+  }
+  .hero h1{
+    font-family:"Bebas Neue",sans-serif;font-weight:400;
+    font-size:clamp(2.9rem,8.5vw,5.4rem);line-height:.92;letter-spacing:.01em;
+    text-transform:uppercase;
+  }
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero h1 .rd{color:#f05a56}
+  .hero-sub{font-size:clamp(1.02rem,2.4vw,1.2rem);color:#ddd3c6;max-width:44ch;margin:1.2rem 0 1.7rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem}
+  .stars-line{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;font-size:.95rem;color:#e8dfd2}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:1.15rem}
+  .stars-line strong{color:#fff}
+
+  /* hero card */
+  .hero-card{
+    background:var(--cream-2);color:var(--ink);border-radius:20px;
+    box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(0,0,0,.06);
+  }
+  .hero-card-top{
+    background:linear-gradient(120deg,var(--red),var(--red-deep));color:#fff;
+    padding:1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;
+  }
+  .hero-card-top .lbl{font-family:"Bebas Neue";font-size:1.4rem;letter-spacing:.05em}
+  .live-pill{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.16);
+    padding:.25rem .7rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .dot{width:9px;height:9px;border-radius:50%;background:#67e08a;box-shadow:0 0 0 0 rgba(103,224,138,.7);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(103,224,138,.6)}70%{box-shadow:0 0 0 8px rgba(103,224,138,0)}100%{box-shadow:0 0 0 0 rgba(103,224,138,0)}}
+  .hours-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.3rem;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .hours-row:last-of-type{border-bottom:0}
+  .hours-row .day{font-weight:700}
+  .hours-row .tm{color:var(--muted)}
+  .hours-row.today{background:rgba(231,178,74,.14)}
+  .hours-row.today .tm{color:var(--red-deep);font-weight:700}
+  .hero-card-foot{padding:1rem 1.3rem;background:#efe6d5}
+  .hero-card-foot small{color:var(--muted);display:block;margin-top:.4rem;font-size:.78rem}
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--red);color:#fff}
+  .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.18)}
+  @media(min-width:760px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+  .trust-item{background:var(--red);padding:1.3rem 1rem;text-align:center}
+  .trust-item .num{font-family:"Bebas Neue";font-size:2.3rem;line-height:1;color:#fff}
+  .trust-item .cap{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#ffe1cf;margin-top:.25rem}
+
+  /* ---------- Sections ---------- */
+  section{padding:clamp(3rem,7vw,5.2rem) 0}
+  .sec-head{max-width:60ch;margin-bottom:2.4rem}
+  .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(1.9rem,4.5vw,2.9rem);color:var(--charcoal);margin-top:.5rem}
+  .sec-head p{color:var(--muted);font-size:1.05rem;margin-top:.7rem}
+
+  /* menu / services */
+  .cards{display:grid;gap:1.2rem;grid-template-columns:1fr}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+  .card{
+    background:var(--cream-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.5rem 1.4rem;box-shadow:0 10px 26px -20px rgba(35,20,15,.5);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(35,20,15,.6)}
+  .card .ic{
+    width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.7rem;
+    background:linear-gradient(135deg,#fff,#efe6d4);border:1px solid var(--line);margin-bottom:1rem;
+  }
+  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.28rem;color:var(--charcoal)}
+  .card p{color:var(--muted);margin-top:.4rem;font-size:.97rem}
+  .card .price{display:inline-block;margin-top:.8rem;font-weight:700;color:var(--red);font-size:.9rem;letter-spacing:.02em}
+
+  /* story */
+  .story{background:var(--charcoal);color:var(--cream)}
+  .story .wrap{display:grid;gap:2.6rem;grid-template-columns:1fr}
+  @media(min-width:900px){.story .wrap{grid-template-columns:.9fr 1.1fr;align-items:center}}
+  .story .eyebrow{color:var(--gold)}
+  .story h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(2rem,5vw,3.1rem);margin:.5rem 0 1rem}
+  .story p{color:#d7cdbf;margin-bottom:1rem;max-width:52ch}
+  .story .yr{
+    font-family:"Bebas Neue";font-size:clamp(5rem,16vw,10rem);line-height:.8;color:var(--gold);
+    text-shadow:0 6px 0 rgba(0,0,0,.25);
+  }
+  .story .yr small{display:block;font-family:"DM Sans";font-size:.9rem;letter-spacing:.28em;color:#cfc4b4;text-transform:uppercase;margin-top:.6rem}
+  .story-panel{background:linear-gradient(160deg,#2f2d2b,#1e1d1c);border:1px solid rgba(231,178,74,.25);border-radius:20px;padding:2.2rem;text-align:center}
+  .story-list{list-style:none;display:grid;gap:.9rem;margin-top:1.4rem}
+  .story-list li{display:flex;gap:.7rem;align-items:flex-start;color:#e7ddce;font-size:.98rem;text-align:left}
+  .story-list .chk{color:var(--gold);font-weight:900;flex:none}
+
+  /* AI FAQ */
+  .ai{background:var(--cream-2)}
+  .ai-box{
+    background:linear-gradient(160deg,#fff,#f4ecdd);border:1px solid var(--line);border-radius:20px;
+    box-shadow:var(--shadow);overflow:hidden;max-width:720px;margin-inline:auto;
+  }
+  .ai-head{display:flex;align-items:center;gap:.8rem;padding:1.1rem 1.4rem;background:var(--charcoal);color:var(--cream)}
+  .ai-avatar{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f05a56,var(--red));display:grid;place-items:center;font-size:1.2rem}
+  .ai-head .t{font-weight:700}
+  .ai-head .t small{display:block;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em}
+  .ai-body{padding:1.4rem}
+  .chat{display:flex;flex-direction:column;gap:.8rem}
+  .bub{padding:.75rem 1rem;border-radius:14px;max-width:82%;font-size:.96rem}
+  .bub.q{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:4px}
+  .bub.a{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+  .ai-foot{padding:0 1.4rem 1.4rem;color:var(--muted);font-size:.85rem;text-align:center}
+
+  /* reviews */
+  .reviews{background:var(--cream)}
+  .rev-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
+  @media(min-width:820px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.4rem;box-shadow:0 10px 26px -22px rgba(35,20,15,.5);display:flex;flex-direction:column}
+  .rev .stars{font-size:1.05rem;margin-bottom:.6rem}
+  .rev p{font-family:"Fraunces",serif;font-size:1.08rem;color:var(--charcoal);line-height:1.5;flex:1}
+  .rev .who{margin-top:1rem;font-weight:700;color:var(--ink);font-size:.92rem}
+  .rev .who span{display:block;color:var(--muted);font-weight:400;font-size:.82rem}
+  .rev-summary{text-align:center;margin-top:2rem;color:var(--muted)}
+  .rev-summary strong{color:var(--red)}
+
+  /* final CTA */
+  .final{
+    color:#fff;text-align:center;
+    background:
+      radial-gradient(800px 300px at 50% -20%,rgba(231,178,74,.2),transparent 60%),
+      linear-gradient(140deg,var(--red),var(--red-deep));
+  }
+  .final h2{font-family:"Bebas Neue";font-size:clamp(2.4rem,7vw,4.2rem);text-transform:uppercase;letter-spacing:.02em}
+  .final p{max-width:46ch;margin:.9rem auto 1.8rem;color:#ffe6d8;font-size:1.08rem}
+  .final .hero-cta{justify-content:center}
+  .final .addr{margin-top:1.4rem;font-size:.92rem;color:#ffd9c7}
+
+  /* footer */
+  footer.site{background:var(--charcoal);color:#cfc4b4;padding:2.6rem 0 4rem}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;align-items:flex-start}
+  footer .brand-name{color:var(--cream)}
+  .foot-note{font-size:.85rem;max-width:40ch;line-height:1.5}
+  .foot-concept{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:#9c9184;line-height:1.6}
+  .foot-concept b{color:var(--gold)}
+
+  /* concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:100;
+    background:var(--charcoal);color:#fff;border:2px solid var(--gold);
+    padding:.5rem .85rem;border-radius:999px;font-size:.78rem;font-weight:700;
+    letter-spacing:.04em;box-shadow:0 8px 20px -8px rgba(0,0,0,.6);
+    display:inline-flex;align-items:center;gap:.4rem;
+  }
+  .skip{position:absolute;left:-999px}
+</style>
+</head>
+<body>
+
+<a href="#menu" class="skip">Skip to menu</a>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap navbar">
+    <a class="brand" href="#top" aria-label="Old 56 Family Restaurant home">
+      <span class="badge56">56</span>
+      <span class="brand-name">Old 56<small>Family Restaurant · Olathe</small></span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:+19133909905"><span>Call to order</span>(913) 390-9905</a>
+      <a class="btn btn-primary" href="#order">Order Online</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-tag">⭐ Olathe's corner diner since the mid-1980s</span>
+      <h1>Home-style breakfast &amp; lunch<br><em>Olathe</em> has trusted for <span class="rd">nearly 40 years</span></h1>
+      <p class="hero-sub">Hot plates, bottomless coffee, and the same friendly faces on the corner of Chestnut. Country-fried favorites, fresh off the griddle every morning.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#order">🍳 Order Online</a>
+        <a class="btn btn-ghost" href="tel:+19133909905">📞 (913) 390-9905</a>
+      </div>
+      <div class="stars-line">
+        <span class="stars">★★★★★</span>
+        <strong>4.5</strong> from <strong>1,340+</strong> Google reviews · Olathe, KS
+      </div>
+    </div>
+
+    <!-- live-synced ordering card -->
+    <aside class="hero-card" id="order" aria-label="Hours and online ordering">
+      <div class="hero-card-top">
+        <span class="lbl">Kitchen Hours</span>
+        <span class="live-pill"><span class="dot"></span>Live-synced</span>
+      </div>
+      <div class="hours-row today"><span class="day">Today</span><span class="tm">7:00 AM – 2:00 PM</span></div>
+      <div class="hours-row"><span class="day">Mon – Fri</span><span class="tm">7:00 AM – 2:00 PM</span></div>
+      <div class="hours-row"><span class="day">Sat – Sun</span><span class="tm">7:00 AM – 2:00 PM</span></div>
+      <div class="hero-card-foot">
+        <a class="btn btn-dark" href="tel:+19133909905" style="width:100%">Start an Online Order →</a>
+        <small>✔ Ordering closes automatically when the kitchen does — no more accepted-then-canceled orders.</small>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust" style="padding:0" aria-label="Why locals choose Old 56">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item"><div class="num">~40</div><div class="cap">Years on the corner</div></div>
+      <div class="trust-item"><div class="num">4.5★</div><div class="cap">Google rating</div></div>
+      <div class="trust-item"><div class="num">1,340+</div><div class="cap">Neighbor reviews</div></div>
+      <div class="trust-item"><div class="num">7–2</div><div class="cap">Open daily</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU / SERVICES -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">From our griddle</span>
+      <h2>The plates Olathe keeps coming back for</h2>
+      <p>Real home cooking — breakfast served all day, hearty lunches, and prices that still feel like a favor. A few of the regulars' favorites:</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="ic">🥩</div>
+        <h3>Country Fried Steak</h3>
+        <p>Hand-breaded, smothered in from-scratch country gravy, with two eggs any style.</p>
+        <span class="price">Diner classic</span>
+      </article>
+      <article class="card">
+        <div class="ic">🧇</div>
+        <h3>Golden Waffles</h3>
+        <p>Crisp-edged, made-to-order waffles — the ones reviewers keep singling out by name.</p>
+        <span class="price">Guest favorite</span>
+      </article>
+      <article class="card">
+        <div class="ic">🥪</div>
+        <h3>The Reuben</h3>
+        <p>Piled-high corned beef brisket, kraut, and melted swiss on grilled rye.</p>
+        <span class="price">Lunch legend</span>
+      </article>
+      <article class="card">
+        <div class="ic">🍳</div>
+        <h3>Steak &amp; Eggs</h3>
+        <p>A hearty griddle plate with hash browns and toast to start the day right.</p>
+        <span class="price">Morning staple</span>
+      </article>
+      <article class="card">
+        <div class="ic">🥣</div>
+        <h3>Biscuits &amp; Gravy</h3>
+        <p>Warm biscuits under a ladle of peppery homemade sausage gravy.</p>
+        <span class="price">Down-home</span>
+      </article>
+      <article class="card">
+        <div class="ic">🍔</div>
+        <h3>Chili Cheeseburger</h3>
+        <p>A juicy diner burger topped with house chili and melted cheese, fries on the side.</p>
+        <span class="price">Lunch counter</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STORY / WHY US -->
+<section class="story">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">The 40-year story</span>
+      <h2>Same corner. Same welcome. Four decades in.</h2>
+      <p>For close to 40 years, Old 56 Family Restaurant has held down the same corner on S. Chestnut Street in Olathe — a friendly, down-home spot with vintage cars and trucks on the walls and regulars who've been coming since the beginning.</p>
+      <p>It's the kind of place where the coffee's already poured before you sit down, and where a single-location diner has earned the loyalty most chains only wish for. This concept is built around <strong>that story</strong> — not a generic template.</p>
+      <div class="yr">40<small>Years of neighbors, not customers</small></div>
+    </div>
+    <div class="story-panel">
+      <div style="font-family:'Bebas Neue';font-size:1.6rem;color:var(--gold);letter-spacing:.05em">What a redesign fixes</div>
+      <ul class="story-list">
+        <li><span class="chk">✔</span> One home for your name online — end the split-SEO subdomain that scatters your search traffic.</li>
+        <li><span class="chk">✔</span> Online ordering wired to real kitchen hours, so an order never gets accepted after you've closed.</li>
+        <li><span class="chk">✔</span> Your 1,340+ five-star reviews pulled front-and-center, working as proof for every new visitor.</li>
+        <li><span class="chk">✔</span> An after-hours AI assistant that answers "are you open?" and "do you have gluten-free?" at 11pm.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AI FAQ -->
+<section class="ai">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow">After-hours, handled</span>
+      <h2>Questions answered — even when the griddle's off</h2>
+      <p style="margin-inline:auto">A built-in assistant fields the routine questions so your team can focus on the dining room.</p>
+    </div>
+    <div class="ai-box">
+      <div class="ai-head">
+        <div class="ai-avatar">💬</div>
+        <div class="t">Old 56 Assistant<small>ALWAYS ON · POWERED BY GIGAWATT AI</small></div>
+      </div>
+      <div class="ai-body">
+        <div class="chat">
+          <div class="bub q">Are you open right now?</div>
+          <div class="bub a">We're open daily 7:00 AM–2:00 PM. The griddle's off for the evening, but online orders reopen at 7 AM sharp. 🍳</div>
+          <div class="bub q">Do you take call-ahead orders?</div>
+          <div class="bub a">Absolutely — call (913) 390-9905 during hours, or order online and it'll be ready when you are. Want the breakfast specials?</div>
+        </div>
+      </div>
+      <div class="ai-foot">Illustrative preview of the AI concierge included in this concept.</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow">1,340+ reviews · 4.5 stars</span>
+      <h2>What Olathe says at the table</h2>
+    </div>
+    <div class="rev-grid">
+      <article class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"A wonderful staple of Olathe for over 40 years — great food and a warm, friendly atmosphere every time."</p>
+        <div class="who">Regular guest<span>Olathe, KS</span></div>
+      </article>
+      <article class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"Great people and GREAT food every single time. It feels like eating at grandma's."</p>
+        <div class="who">Marcus T.<span>Olathe, KS</span></div>
+      </article>
+      <article class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent food, excellent service. The waffles and the Reuben are worth the trip — a true hidden gem."</p>
+        <div class="who">Dana R.<span>Overland Park, KS</span></div>
+      </article>
+    </div>
+    <p class="rev-summary">Rated <strong>4.5★</strong> across <strong>1,340+</strong> Google reviews. Review quotes reflect the restaurant's public reputation; names shown are illustrative for this concept.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Come hungry. Leave a regular.</h2>
+    <p>Breakfast and lunch on the corner of Chestnut, 7 AM to 2 PM every day. Order online or give us a ring.</p>
+    <div class="hero-cta">
+      <a class="btn btn-dark" href="#order">🍳 Order Online</a>
+      <a class="btn btn-ghost" href="tel:+19133909905" style="border-color:rgba(255,255,255,.7);color:#fff">📞 (913) 390-9905</a>
+    </div>
+    <div class="addr">📍 912 S Chestnut St, Olathe, KS 66061 · Open daily 7 AM – 2 PM</div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="color:var(--cream)">
+          <span class="badge56">56</span>
+          <span class="brand-name">Old 56<small>Family Restaurant · Olathe</small></span>
+        </a>
+        <p class="foot-note" style="margin-top:1rem">Home-style family dining on the same Olathe corner for nearly four decades. 912 S Chestnut St, Olathe, KS 66061.</p>
+      </div>
+      <div class="foot-note">
+        <strong style="color:var(--cream)">Hours</strong><br>
+        Open daily · 7:00 AM – 2:00 PM<br><br>
+        <strong style="color:var(--cream)">Call</strong><br>
+        <a href="tel:+19133909905" style="color:var(--gold)">(913) 390-9905</a>
+      </div>
+    </div>
+    <div class="foot-concept">
+      <b>⚡ Concept preview by Gigawatt</b> — a Kansas City web design + AI studio. This is an unofficial design concept created to illustrate a redesign direction for Old 56 Family Restaurant. It is <b>not the official website</b> and is not affiliated with or endorsed by the business. Details shown are for demonstration; please confirm hours, menu, and pricing directly with the restaurant.
+    </div>
+  </div>
+</footer>
+
+<div class="concept-badge">⚡ concept preview</div>
+
+</body>
+</html>

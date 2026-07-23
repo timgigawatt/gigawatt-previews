@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="M&M Roofing — 34 years protecting Olathe, Overland Park & Kansas City homes. GAF Master Elite, 5.0★ roof replacement, storm & hail repair, insurance claims. Free quote.">
+<title>M&M Roofing Co., Inc. — Olathe & KC Metro Roofs Done Right for 34 Years</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e2a47;
+    --navy-deep:#0a1f36;
+    --navy-800:#12335a;
+    --navy-700:#1a4372;
+    --gold:#e6a92b;
+    --gold-bright:#f6c53c;
+    --gold-soft:#f7d98a;
+    --slate:#5b6b7d;
+    --ink:#0d1b2a;
+    --paper:#f5f7fa;
+    --paper-2:#eef2f7;
+    --white:#ffffff;
+    --line:rgba(14,42,71,.12);
+    --shadow:0 18px 44px -20px rgba(10,31,54,.45);
+    --shadow-sm:0 8px 22px -12px rgba(10,31,54,.35);
+    --r:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand-name{font-family:'Sora','Inter',sans-serif;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin-inline:auto}
+  .gold{color:var(--gold)}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(.95rem,1.4vw,1.02rem);
+    padding:.95rem 1.55rem;border-radius:12px;cursor:pointer;border:2px solid transparent;
+    transition:transform .15s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap;
+  }
+  .btn-gold{background:linear-gradient(180deg,#f2ba42,var(--gold));color:#3a2a05;box-shadow:0 10px 26px -12px rgba(230,169,43,.9)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(230,169,43,.95)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:var(--white);border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,31,54,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+  .mark{
+    width:44px;height:44px;border-radius:11px;flex:none;
+    background:linear-gradient(150deg,var(--navy-700),var(--navy-deep));
+    border:1px solid rgba(246,197,60,.4);
+    display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+  }
+  .brand-name{font-weight:800;font-size:1.12rem;color:#fff;letter-spacing:.01em}
+  .brand-name span{color:var(--gold)}
+  .brand-sub{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600}
+  .head-cta{display:flex;align-items:center;gap:.8rem}
+  .head-phone{display:flex;flex-direction:column;align-items:flex-end;color:#fff;line-height:1.15}
+  .head-phone small{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .head-phone b{font-family:'Sora',sans-serif;font-size:1.05rem}
+  @media(max-width:760px){.head-phone{display:none}}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(1200px 600px at 78% -10%,rgba(230,169,43,.20),transparent 55%),
+      radial-gradient(900px 500px at 10% 110%,rgba(26,67,114,.6),transparent 60%),
+      linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:
+      linear-gradient(135deg,rgba(255,255,255,.035) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.035) 50%,rgba(255,255,255,.035) 75%,transparent 75%);
+    background-size:26px 26px;
+    -webkit-mask-image:linear-gradient(180deg,transparent,black 40%,black 70%,transparent);
+            mask-image:linear-gradient(180deg,transparent,black 40%,black 70%,transparent);
+  }
+  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:clamp(3rem,7vw,5.5rem) 0 clamp(3.5rem,7vw,5.5rem)}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:2.2rem}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-family:'Sora',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold-soft);background:rgba(230,169,43,.12);border:1px solid rgba(230,169,43,.3);
+    padding:.4rem .8rem;border-radius:999px;margin-bottom:1.3rem;
+  }
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.6rem);font-weight:800;margin-bottom:1.1rem}
+  .hero h1 em{font-style:normal;color:var(--gold);position:relative;white-space:nowrap}
+  .lead{font-size:clamp(1.05rem,1.8vw,1.22rem);color:rgba(255,255,255,.82);max-width:36ch;margin-bottom:1.7rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem}
+  .stars{display:flex;align-items:center;gap:.7rem;font-size:.95rem;color:rgba(255,255,255,.9)}
+  .stars .s{color:var(--gold);letter-spacing:.1em;font-size:1.05rem}
+  .stars b{font-family:'Sora',sans-serif}
+
+  /* Hero quote card */
+  .quote-card{
+    background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+    border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:1.6rem 1.6rem 1.4rem;
+    box-shadow:var(--shadow);backdrop-filter:blur(6px);
+  }
+  .quote-card .badge-row{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.1rem}
+  .chip{font-size:.72rem;font-weight:600;letter-spacing:.04em;background:rgba(230,169,43,.16);color:var(--gold-soft);border:1px solid rgba(230,169,43,.3);padding:.32rem .6rem;border-radius:8px}
+  .quote-card .stars-lg{color:var(--gold);font-size:1.3rem;letter-spacing:.12em;margin-bottom:.6rem}
+  .quote-card p{color:#fff;font-size:1.02rem;font-weight:500;margin-bottom:.9rem}
+  .quote-card cite{font-style:normal;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:600}
+  .est-line{margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.14);display:flex;align-items:center;gap:.7rem;font-size:.88rem;color:rgba(255,255,255,.8)}
+  .est-dot{width:9px;height:9px;border-radius:50%;background:#41d67f;box-shadow:0 0 0 4px rgba(65,214,127,.2)}
+
+  /* Trust strip */
+  .trust{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06)}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07)}
+  @media(max-width:760px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+  .trust-cell{background:var(--navy-deep);padding:1.5rem 1rem;text-align:center;color:#fff}
+  .trust-cell .n{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.5rem,3vw,2rem);color:var(--gold)}
+  .trust-cell .l{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:.2rem}
+
+  /* Sections */
+  section.pad{padding:clamp(3.5rem,8vw,6rem) 0}
+  .sec-head{text-align:center;max-width:60ch;margin:0 auto clamp(2.2rem,5vw,3rem)}
+  .kicker{font-family:'Sora',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+  .kicker.on-navy{color:var(--gold-soft)}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;color:var(--navy)}
+  .sec-head p{color:var(--slate);font-size:1.05rem;margin-top:.8rem}
+
+  /* Services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.7rem 1.5rem;
+    box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .2s ease,border-color .2s ease;
+    position:relative;overflow:hidden;
+  }
+  .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--gold),var(--navy-700));transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(230,169,43,.5)}
+  .card:hover::before{transform:scaleX(1)}
+  .icon{
+    width:52px;height:52px;border-radius:13px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:1rem;
+    background:linear-gradient(160deg,var(--paper-2),#fff);border:1px solid var(--line);
+  }
+  .card h3{font-size:1.18rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+  .card p{color:var(--slate);font-size:.95rem}
+
+  /* Story */
+  .story{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;position:relative;overflow:hidden}
+  .story::before{content:"";position:absolute;right:-8%;top:-20%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(230,169,43,.16),transparent 65%)}
+  .story-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  @media(max-width:860px){.story-grid{grid-template-columns:1fr}}
+  .story h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:1.1rem}
+  .story h2 span{color:var(--gold)}
+  .story p{color:rgba(255,255,255,.82);margin-bottom:1rem;font-size:1.04rem}
+  .story .mm-founders{display:flex;gap:.8rem;margin:1.5rem 0}
+  .founder{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.1rem;text-align:center}
+  .founder .av{width:54px;height:54px;border-radius:50%;margin:0 auto .6rem;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:800;font-size:1.3rem;color:#3a2a05;background:linear-gradient(160deg,var(--gold-soft),var(--gold))}
+  .founder b{display:block;font-family:'Sora',sans-serif;font-size:1rem}
+  .founder small{color:rgba(255,255,255,.6);font-size:.78rem}
+  .story-panel{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:1.8rem;box-shadow:var(--shadow)}
+  .vals{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .val{display:flex;gap:.7rem;align-items:flex-start}
+  .val .vi{font-size:1.3rem;line-height:1}
+  .val b{font-family:'Sora',sans-serif;display:block;font-size:.98rem}
+  .val small{color:rgba(255,255,255,.65);font-size:.82rem}
+
+  /* Storm / insurance SEO section */
+  .storm{background:var(--paper-2)}
+  .storm-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(max-width:860px){.storm-grid{grid-template-columns:1fr}}
+  .storm-copy h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:1rem}
+  .storm-copy p{color:var(--slate);margin-bottom:1.2rem;font-size:1.03rem}
+  .steps{list-style:none;display:grid;gap:.9rem;margin-bottom:1.6rem}
+  .step{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;box-shadow:var(--shadow-sm)}
+  .step .num{flex:none;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:800;color:#fff;background:var(--navy-700)}
+  .step b{font-family:'Sora',sans-serif;color:var(--navy);font-size:1rem}
+  .step p{margin:.15rem 0 0;font-size:.9rem;color:var(--slate)}
+  .storm-alert{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;border-radius:22px;padding:2rem 1.8rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .storm-alert::before{content:"⛈";position:absolute;right:-10px;top:-14px;font-size:6rem;opacity:.12}
+  .storm-alert h3{font-size:1.4rem;margin-bottom:.6rem}
+  .storm-alert p{color:rgba(255,255,255,.8);font-size:.96rem;margin-bottom:1.3rem}
+  .storm-alert .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+  .storm-alert .tag{font-size:.76rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.3rem .65rem;border-radius:8px;color:rgba(255,255,255,.85)}
+
+  /* Quote CTA anchor block */
+  .quote-band{background:var(--white)}
+  .quote-box{
+    background:linear-gradient(150deg,var(--navy-700),var(--navy-deep));border-radius:26px;color:#fff;
+    padding:clamp(2rem,5vw,3.2rem);display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .quote-box::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 90% 0%,rgba(230,169,43,.22),transparent 60%)}
+  .quote-box>*{position:relative;z-index:1}
+  @media(max-width:820px){.quote-box{grid-template-columns:1fr;gap:1.6rem}}
+  .quote-box h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800;margin-bottom:.7rem}
+  .quote-box p{color:rgba(255,255,255,.82);margin-bottom:1.4rem}
+  .mini-form{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:1.3rem}
+  .mini-form .fld{display:block;margin-bottom:.7rem}
+  .mini-form label{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600}
+  .mini-form .fake{margin-top:.3rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:.7rem .8rem;color:rgba(255,255,255,.85);font-size:.92rem}
+  .mini-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+  .mini-form .btn{width:100%;margin-top:.4rem}
+  .mini-note{font-size:.76rem;color:rgba(255,255,255,.55);text-align:center;margin-top:.7rem}
+
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+  .rev .s{color:var(--gold);font-size:1.1rem;letter-spacing:.1em;margin-bottom:.7rem}
+  .rev p{color:var(--ink);font-size:.98rem;margin-bottom:1.1rem;flex:1}
+  .rev .who{display:flex;align-items:center;gap:.7rem}
+  .rev .who .a{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:700;color:#fff;background:linear-gradient(160deg,var(--navy-700),var(--navy))}
+  .rev .who b{font-family:'Sora',sans-serif;font-size:.92rem;color:var(--navy);display:block}
+  .rev .who small{color:var(--slate);font-size:.8rem}
+  .rev-foot{text-align:center;margin-top:2.2rem;color:var(--slate);font-size:.95rem}
+  .rev-foot b{color:var(--navy)}
+
+  /* Final CTA */
+  .final{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;text-align:center;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 50% -10%,rgba(230,169,43,.2),transparent 60%)}
+  .final .wrap{position:relative;z-index:1}
+  .final h2{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:800;margin-bottom:.9rem}
+  .final p{color:rgba(255,255,255,.82);font-size:1.1rem;max-width:52ch;margin:0 auto 1.8rem}
+  .final-cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+  .final-phone{margin-top:1.5rem;font-size:.95rem;color:rgba(255,255,255,.7)}
+  .final-phone b{font-family:'Sora',sans-serif;color:#fff;font-size:1.15rem}
+
+  /* Footer */
+  footer.site{background:var(--navy-deep);color:rgba(255,255,255,.7);padding:2.6rem 0 3rem;border-top:1px solid rgba(255,255,255,.08)}
+  .foot-top{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:flex-start;margin-bottom:1.6rem}
+  .foot-brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+  .foot-cols{display:flex;gap:2.5rem;flex-wrap:wrap;font-size:.9rem}
+  .foot-cols b{font-family:'Sora',sans-serif;color:#fff;display:block;margin-bottom:.5rem;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+  .foot-cols a,.foot-cols span{display:block;color:rgba(255,255,255,.65);margin-bottom:.3rem}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem;font-size:.82rem;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .concept-tag{color:var(--gold-soft);font-weight:600}
+
+  /* Fixed concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:100;
+    background:rgba(13,27,42,.92);color:#fff;border:1px solid rgba(230,169,43,.5);
+    font-family:'Sora',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.03em;
+    padding:.5rem .8rem;border-radius:999px;box-shadow:0 10px 26px -12px rgba(0,0,0,.6);
+    backdrop-filter:blur(6px);
+  }
+  .concept-badge b{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="M&M Roofing home">
+      <span class="mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f6c53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M9.5 20v-5h5v5"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">M&amp;M <span>Roofing</span></span>
+        <span class="brand-sub">Est. 1992 · Olathe, KS</span>
+      </span>
+    </a>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:19137827300">
+        <small>Call the crew</small>
+        <b>(913) 782-7300</b>
+      </a>
+      <a class="btn btn-gold" href="#quote">Get a Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">★ 5.0 · 147 Google reviews · GAF Master Elite</span>
+        <h1>Olathe &amp; KC roofs built to outlast the <em>next storm</em>.</h1>
+        <p class="lead">For 34 years, homeowners across Johnson County have trusted the same family crew to replace, repair, and weatherproof their roofs — done right the first time.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#quote">Start My Free Quote →</a>
+          <a class="btn btn-ghost" href="tel:19137827300">📞 (913) 782-7300</a>
+        </div>
+        <div class="stars">
+          <span class="s">★★★★★</span>
+          <span><b>5.0</b> across 147 reviews · A+ BBB · Angie's Super Service</span>
+        </div>
+      </div>
+
+      <aside class="quote-card">
+        <div class="badge-row">
+          <span class="chip">GAF Master Elite</span>
+          <span class="chip">CertainTeed Certified</span>
+          <span class="chip">A+ BBB</span>
+        </div>
+        <div class="stars-lg" aria-hidden="true">★★★★★</div>
+        <p>"They were not the cheapest bid — but definitely the overall best value. Prompt, honest, and the crew cleaned up like they were never here."</p>
+        <cite>— Brad D., Overland Park</cite>
+        <div class="est-line"><span class="est-dot" aria-hidden="true"></span> Most free roof quotes scheduled within 48 hours.</div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="trust-cell"><div class="n">34</div><div class="l">Years in business</div></div>
+        <div class="trust-cell"><div class="n">5.0★</div><div class="l">147 Google reviews</div></div>
+        <div class="trust-cell"><div class="n">A+</div><div class="l">BBB accredited</div></div>
+        <div class="trust-cell"><div class="n">GAF</div><div class="l">Master Elite installer</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="pad" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">What we do</div>
+        <h2>Full-service roofing for the Kansas City metro</h2>
+        <p>Residential and commercial — from a single leak to a complete tear-off, with the same standard of workmanship since 1992.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🏠</div>
+          <h3>Roof Replacement</h3>
+          <p>Complete tear-offs and new roof systems with GAF &amp; CertainTeed shingles built for Kansas weather.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌩️</div>
+          <h3>Storm &amp; Hail Damage</h3>
+          <p>Fast damage consultations after wind and hail, with documentation your insurer will actually accept.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🔧</div>
+          <h3>Leak Diagnosis &amp; Repair</h3>
+          <p>We find the real source of the leak and fix it right — no guesswork, no repeat call-backs.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🏢</div>
+          <h3>Commercial &amp; Low-Slope</h3>
+          <p>Large projects, flat and low-slope systems, and protective coatings for business properties.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🛡️</div>
+          <h3>Maintenance &amp; Tune-Ups</h3>
+          <p>Preventative inspections and general repairs that add years to the roof you already have.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📋</div>
+          <h3>Insurance Claim Support</h3>
+          <p>We walk you through the claim, meet the adjuster on-site, and make sure nothing gets missed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / WHY US -->
+  <section class="pad story">
+    <div class="wrap story-grid">
+      <div>
+        <div class="kicker on-navy">The "Mike &amp; Mike" story</div>
+        <h2>Two guys named Mike. <span>One handshake standard.</span></h2>
+        <p>M&amp;M Roofing started in 1992 when two Kansas City tradesmen — both named Mike — got tired of watching homeowners get rushed, upsold, and left with sloppy work.</p>
+        <p>Thirty-four years later, that same principle runs every job: quality, knowledge, integrity, and service that doesn't stop the day the last shingle goes on.</p>
+        <div class="mm-founders">
+          <div class="founder"><div class="av" aria-hidden="true">M</div><b>Mike</b><small>Co-founder, 1992</small></div>
+          <div class="founder"><div class="av" aria-hidden="true">M</div><b>&amp; Mike</b><small>Co-founder, 1992</small></div>
+        </div>
+      </div>
+      <div class="story-panel">
+        <div class="vals">
+          <div class="val"><span class="vi" aria-hidden="true">✔️</span><div><b>Quality</b><small>GAF Master Elite &amp; CertainTeed certified installs.</small></div></div>
+          <div class="val"><span class="vi" aria-hidden="true">🧠</span><div><b>Knowledge</b><small>34 years of Kansas roofs, storms &amp; codes.</small></div></div>
+          <div class="val"><span class="vi" aria-hidden="true">🤝</span><div><b>Integrity</b><small>Honest bids. No pressure, no surprise charges.</small></div></div>
+          <div class="val"><span class="vi" aria-hidden="true">📞</span><div><b>Service</b><small>We stand behind the work after installation.</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORM / INSURANCE SEO SECTION -->
+  <section class="pad storm" id="storm">
+    <div class="wrap storm-grid">
+      <div class="storm-copy">
+        <div class="kicker">Storm &amp; hail damage in Kansas</div>
+        <h2>Hit by a Kansas hailstorm? Here's exactly what to do.</h2>
+        <p>Johnson County sees some of the most active hail in the country. If your Olathe, Overland Park, or Lenexa roof took a beating, moving fast protects both your home and your claim.</p>
+        <ol class="steps">
+          <li class="step"><span class="num">1</span><div><b>Get a free damage inspection</b><p>We photograph and document every hit before weather makes it worse.</p></div></li>
+          <li class="step"><span class="num">2</span><div><b>File your insurance claim</b><p>We give you the report and evidence your adjuster needs to approve it.</p></div></li>
+          <li class="step"><span class="num">3</span><div><b>Meet the adjuster with us</b><p>We're on the roof with your adjuster so nothing legitimate gets denied.</p></div></li>
+          <li class="step"><span class="num">4</span><div><b>Restore it right</b><p>Certified installation, cleaned-up site, and a roof that's ready for the next storm.</p></div></li>
+        </ol>
+        <a class="btn btn-navy" href="#quote">Book My Storm Inspection</a>
+      </div>
+      <aside class="storm-alert">
+        <h3>Don't wait on a leak.</h3>
+        <p>Most policies limit how long you have to file after a storm. A quick inspection now can be the difference between a covered claim and an out-of-pocket bill.</p>
+        <div class="tags">
+          <span class="tag">Hail damage</span>
+          <span class="tag">Wind &amp; missing shingles</span>
+          <span class="tag">Insurance claims</span>
+          <span class="tag">Emergency leaks</span>
+          <span class="tag">Free inspection</span>
+        </div>
+        <a class="btn btn-gold" href="tel:19137827300">📞 Call (913) 782-7300</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- QUOTE TOOL CTA -->
+  <section class="pad quote-band" id="quote">
+    <div class="wrap">
+      <div class="quote-box">
+        <div>
+          <div class="kicker on-navy">Instant online quote</div>
+          <h2>Get your free roof quote in under 2 minutes</h2>
+          <p>Skip the phone tag. Tell us about your roof and a real M&amp;M estimator — not a call center — follows up with a straight, no-pressure number. Most quotes are scheduled within 48 hours.</p>
+          <div class="stars"><span class="s">★★★★★</span><span style="color:rgba(255,255,255,.82)">Trusted by 147+ KC-metro homeowners</span></div>
+        </div>
+        <form class="mini-form" onsubmit="return false" aria-label="Free quote request (concept demo)">
+          <span class="fld">
+            <label>Your name</label>
+            <div class="fake">Jane Homeowner</div>
+          </span>
+          <div class="row2">
+            <span class="fld">
+              <label>ZIP code</label>
+              <div class="fake">66062</div>
+            </span>
+            <span class="fld">
+              <label>Roof age</label>
+              <div class="fake">15+ years</div>
+            </span>
+          </div>
+          <span class="fld">
+            <label>What do you need?</label>
+            <div class="fake">Storm / hail inspection ▾</div>
+          </span>
+          <button class="btn btn-gold" type="button">Get My Free Quote →</button>
+          <p class="mini-note">Concept demo — a live version would submit straight to the M&amp;M team.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pad" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Why homeowners keep calling</div>
+        <h2>5.0 stars, earned one roof at a time</h2>
+        <p>A perfect rating across 147 Google reviews doesn't happen by accident.</p>
+      </div>
+      <div class="rev-grid">
+        <article class="rev">
+          <div class="s" aria-hidden="true">★★★★★</div>
+          <p>"They were very prompt and honest about the time frame and cost. The crew was friendly and efficient — a job well done and on time."</p>
+          <div class="who"><span class="a" aria-hidden="true">T</span><div><b>Thomas A.</b><small>Olathe, KS</small></div></div>
+        </article>
+        <article class="rev">
+          <div class="s" aria-hidden="true">★★★★★</div>
+          <p>"Not the cheapest bid, but the best value by far. They respected my property and cleaned up after themselves every single day."</p>
+          <div class="who"><span class="a" aria-hidden="true">B</span><div><b>Brad D.</b><small>Overland Park, KS</small></div></div>
+        </article>
+        <article class="rev">
+          <div class="s" aria-hidden="true">★★★★★</div>
+          <p>"Honest, fair, fast, and great quality. After 30+ years in the business they clearly know Kansas roofs. Highly recommended."</p>
+          <div class="who"><span class="a" aria-hidden="true">L</span><div><b>Lauren M.</b><small>Lenexa, KS</small></div></div>
+        </article>
+      </div>
+      <p class="rev-foot">Serving <b>Olathe · Overland Park · Lenexa · Shawnee · Leawood</b> &amp; the greater Kansas City metro since 1992.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="pad final">
+    <div class="wrap">
+      <h2>Your roof protects everything. Let's protect your roof.</h2>
+      <p>Talk to the family crew that's been keeping KC-metro homes dry for 34 years. Free quotes, honest advice, certified work.</p>
+      <div class="final-cta">
+        <a class="btn btn-gold" href="#quote">Get My Free Quote →</a>
+        <a class="btn btn-ghost" href="tel:19137827300">📞 (913) 782-7300</a>
+      </div>
+      <div class="final-phone">Prefer email? A branded <b>@mmroofingkc.com</b> inbox reaches the team directly.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f6c53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M9.5 20v-5h5v5"/></svg>
+          </span>
+          <span><span class="brand-name">M&amp;M Roofing Co., Inc.</span><br><small style="color:rgba(255,255,255,.55)">Olathe, KS · Serving the KC metro since 1992</small></span>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <b>Services</b>
+          <a href="#services">Roof Replacement</a>
+          <a href="#storm">Storm &amp; Hail</a>
+          <a href="#services">Leak Repair</a>
+          <a href="#services">Commercial</a>
+        </div>
+        <div>
+          <b>Service Area</b>
+          <span>Olathe · Overland Park</span>
+          <span>Lenexa · Shawnee</span>
+          <span>Leawood · KC Metro</span>
+        </div>
+        <div>
+          <b>Get in Touch</b>
+          <a href="tel:19137827300">(913) 782-7300</a>
+          <span>GAF Master Elite</span>
+          <span>A+ BBB Accredited</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 1992–2026 M&amp;M Roofing Co., Inc. — trade names shown for demonstration only.</span>
+      <span class="concept-tag">Concept preview designed by Gigawatt · not the live M&amp;M Roofing site.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="concept-badge" href="#top">⚡ <b>concept preview</b></a>
+
+</body>
+</html>

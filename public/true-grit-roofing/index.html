@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="True Grit Roofing — Olathe & Overland Park storm, hail & insurance-claim roofing. Licensed in KS & MO, 500+ roofs, 4.9★. Get a free roof inspection today.">
+<title>True Grit Roofing — Olathe & OP Storm-Damage Roofing, Built to Last</title>
+<style>
+  :root{
+    --charcoal:#15181d;
+    --slate:#22272f;
+    --slate-2:#2c333d;
+    --steel:#3a434f;
+    --line:rgba(255,255,255,.08);
+    --ink:#e9edf2;
+    --muted:#a6b0bd;
+    --dim:#7d8896;
+    --orange:#ff5a1f;
+    --orange-2:#ff7a3c;
+    --ember:#ffb347;
+    --red:#e01f2b;
+    --ok:#35c07d;
+    --card:#1b2027;
+    --radius:16px;
+    --shadow:0 18px 50px -20px rgba(0,0,0,.75);
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--charcoal);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ember);
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--orange),transparent)}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-weight:800;font-size:1rem;letter-spacing:.01em;
+    padding:15px 26px;border-radius:12px;border:1px solid transparent;
+    cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .2s ease;
+    min-height:52px;white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(180deg,var(--orange-2),var(--orange));
+    color:#fff;box-shadow:0 10px 26px -10px rgba(255,90,31,.8),inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(255,90,31,.9)}
+  .btn-ghost{
+    background:rgba(255,255,255,.04);color:var(--ink);border:1px solid var(--line);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+  .btn-block{width:100%}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(21,24,29,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.02em}
+  .mark{
+    width:42px;height:42px;border-radius:11px;flex:0 0 auto;
+    background:
+      linear-gradient(135deg,var(--orange),var(--red));
+    display:grid;place-items:center;
+    box-shadow:0 8px 18px -8px rgba(255,90,31,.8),inset 0 1px 0 rgba(255,255,255,.3);
+    position:relative;
+  }
+  .mark svg{width:24px;height:24px}
+  .brand-name{font-size:1.12rem;line-height:1.05}
+  .brand-name small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.22em;color:var(--dim);text-transform:uppercase}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .phone-link{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.02rem}
+  .phone-link svg{width:17px;height:17px;color:var(--orange)}
+  .phone-link small{display:block;font-size:.58rem;font-weight:700;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+  @media(max-width:720px){.phone-link .txt{display:none}.brand-name small{display:none}}
+
+  /* Hero */
+  .hero{position:relative;padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,84px);overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(120% 90% at 82% 0%,rgba(255,90,31,.22),transparent 55%),
+      radial-gradient(90% 70% at 0% 100%,rgba(224,31,43,.12),transparent 60%),
+      linear-gradient(180deg,var(--charcoal),#12151a);
+  }
+  /* CSS-only "roofline" texture */
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+    background:repeating-linear-gradient(135deg,transparent 0 26px,rgba(255,255,255,.018) 26px 27px);
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 40%);
+    mask-image:linear-gradient(180deg,transparent,#000 40%);
+  }
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,60px);align-items:center}
+  @media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:38px}}
+  h1{
+    font-size:clamp(2.1rem,6vw,4rem);line-height:1.02;font-weight:900;letter-spacing:-.02em;margin:18px 0 0;
+  }
+  h1 .hl{color:transparent;background:linear-gradient(120deg,var(--orange-2),var(--ember));-webkit-background-clip:text;background-clip:text}
+  .sub{font-size:clamp(1.02rem,2.2vw,1.22rem);color:var(--muted);margin-top:20px;max-width:38ch}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .stars-line{display:flex;align-items:center;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .stars{color:var(--ember);font-size:1.15rem;letter-spacing:2px}
+  .stars-line b{font-weight:800}
+  .stars-line span{color:var(--dim);font-size:.92rem}
+
+  /* Hero panel: storm-alert / AI chat mock */
+  .panel{
+    position:relative;background:linear-gradient(180deg,var(--slate),var(--slate-2));
+    border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);
+  }
+  .panel-top{display:flex;align-items:center;gap:10px;padding:4px 4px 14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .dot.a{background:#ff5f57}.dot.b{background:#febc2e}.dot.c{background:#28c840}
+  .panel-title{margin-left:6px;font-size:.82rem;color:var(--dim);font-weight:700;letter-spacing:.04em}
+  .badge-live{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:.66rem;font-weight:800;letter-spacing:.1em;color:var(--ok);text-transform:uppercase}
+  .badge-live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(53,192,125,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(53,192,125,.55)}70%{box-shadow:0 0 0 9px rgba(53,192,125,0)}100%{box-shadow:0 0 0 0 rgba(53,192,125,0)}}
+  .chat{display:flex;flex-direction:column;gap:11px}
+  .msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:.9rem;line-height:1.45}
+  .msg.them{background:rgba(255,255,255,.05);border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start}
+  .msg.you{background:linear-gradient(180deg,var(--orange-2),var(--orange));color:#fff;border-bottom-right-radius:5px;align-self:flex-end;font-weight:600}
+  .msg .who{display:block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-bottom:3px;opacity:.7}
+  .typing{align-self:flex-start;display:flex;gap:4px;padding:12px 15px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:14px;border-bottom-left-radius:5px}
+  .typing i{width:7px;height:7px;border-radius:50%;background:var(--dim);animation:bob 1.3s infinite}
+  .typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+  @keyframes bob{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+  .panel-foot{margin-top:14px;font-size:.72rem;color:var(--dim);text-align:center}
+
+  /* Trust strip */
+  .trust{background:var(--slate);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+  @media(max-width:720px){.trust .wrap{grid-template-columns:repeat(2,1fr)}}
+  .trust-item{background:var(--slate);padding:22px 16px;text-align:center}
+  .trust-item .n{font-size:clamp(1.4rem,3.4vw,2rem);font-weight:900;color:#fff;letter-spacing:-.01em}
+  .trust-item .n .u{color:var(--orange)}
+  .trust-item .l{font-size:.74rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-top:4px}
+
+  /* Sections */
+  section{padding:clamp(58px,8vw,96px) 0}
+  .sec-head{max-width:640px;margin-bottom:clamp(30px,5vw,52px)}
+  .sec-head h2{font-size:clamp(1.7rem,4.4vw,2.7rem);font-weight:900;letter-spacing:-.02em;line-height:1.06;margin-top:14px}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+
+  /* Services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    position:relative;overflow:hidden;
+  }
+  .card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--orange),var(--red));transition:width .3s ease}
+  .card:hover{transform:translateY(-5px);border-color:rgba(255,90,31,.4);box-shadow:var(--shadow)}
+  .card:hover::before{width:100%}
+  .ico{
+    width:52px;height:52px;border-radius:13px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px;
+    background:linear-gradient(135deg,rgba(255,90,31,.18),rgba(224,31,43,.14));border:1px solid rgba(255,90,31,.25);
+  }
+  .card h3{font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+  .card p{color:var(--muted);margin-top:8px;font-size:.96rem}
+
+  /* Gallery (CSS-only) */
+  .gallery{background:linear-gradient(180deg,#12151a,var(--charcoal))}
+  .grid-proj{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:900px){.grid-proj{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid-proj{grid-template-columns:1fr}}
+  .proj{
+    position:relative;height:230px;border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--line);box-shadow:var(--shadow);
+    display:flex;align-items:flex-end;
+  }
+  .proj .sky{position:absolute;inset:0;z-index:0}
+  /* varied roof scenes via layered gradients */
+  .p1 .sky{background:
+    linear-gradient(180deg,#2a3746 0%,#3d4d5e 42%,#0000 42%),
+    linear-gradient(180deg,#0000 42%,#8a5a3c 42%,#6e4630 70%,#0000 70%),
+    linear-gradient(180deg,#0000 70%,#20262e 70%);}
+  .p2 .sky{background:
+    linear-gradient(180deg,#3a2f4a 0%,#5a3d55 40%,#0000 40%),
+    linear-gradient(135deg,#0000 40%,#43505e 40% 66%,#0000 66%),
+    linear-gradient(180deg,#0000 66%,#1c222a 66%);}
+  .p3 .sky{background:
+    linear-gradient(180deg,#233240 0%,#35566b 45%,#0000 45%),
+    linear-gradient(180deg,#0000 45%,#2c2c2c 45% 68%,#0000 68%),
+    linear-gradient(180deg,#0000 68%,#22282f 68%);}
+  .p4 .sky{background:
+    linear-gradient(180deg,#402a2a 0%,#6b3d3a 44%,#0000 44%),
+    linear-gradient(135deg,#0000 44%,#7a4a34 44% 68%,#0000 68%),
+    linear-gradient(180deg,#0000 68%,#1e242c 68%);}
+  .p5 .sky{background:
+    linear-gradient(180deg,#26303f 0%,#3d5168 43%,#0000 43%),
+    linear-gradient(180deg,#0000 43%,#4a5560 43% 67%,#0000 67%),
+    linear-gradient(180deg,#0000 67%,#20262e 67%);}
+  .p6 .sky{background:
+    linear-gradient(180deg,#2b2440 0%,#463a63 41%,#0000 41%),
+    linear-gradient(135deg,#0000 41%,#5a4033 41% 67%,#0000 67%),
+    linear-gradient(180deg,#0000 67%,#1c222a 67%);}
+  /* shingle texture stripes over the roof band */
+  .proj .shg{position:absolute;left:0;right:0;top:41%;height:27%;z-index:1;
+    background:repeating-linear-gradient(90deg,rgba(0,0,0,.16) 0 10px,rgba(255,255,255,.05) 10px 11px),
+    repeating-linear-gradient(180deg,rgba(0,0,0,.22) 0 8px,transparent 8px 9px);
+    -webkit-mask-image:linear-gradient(180deg,#000,#000);}
+  .proj .glow{position:absolute;inset:0;z-index:1;background:radial-gradient(90% 60% at 70% 12%,rgba(255,179,71,.16),transparent 60%)}
+  .proj .tag{position:relative;z-index:2;width:100%;padding:16px 16px 14px;background:linear-gradient(180deg,transparent,rgba(12,14,18,.9));display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+  .proj .tag h4{font-size:.98rem;font-weight:800}
+  .proj .tag span{font-size:.74rem;color:var(--muted);display:block;margin-top:2px}
+  .proj .pill{flex:0 0 auto;font-size:.64rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:20px;background:rgba(255,90,31,.18);color:var(--ember);border:1px solid rgba(255,90,31,.3)}
+
+  /* Story / Why us */
+  .story{background:var(--slate)}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+  @media(max-width:860px){.story .wrap{grid-template-columns:1fr}}
+  .story h2{font-size:clamp(1.7rem,4.2vw,2.6rem);font-weight:900;letter-spacing:-.02em;line-height:1.08;margin-top:14px}
+  .story p{color:var(--muted);margin-top:16px;font-size:1.04rem}
+  .why-list{list-style:none;display:grid;gap:14px;margin-top:8px}
+  .why-list li{display:flex;gap:13px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px}
+  .why-list .ck{flex:0 0 auto;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:rgba(53,192,125,.14);color:var(--ok);font-weight:900}
+  .why-list b{display:block;font-weight:800}
+  .why-list span{color:var(--muted);font-size:.92rem}
+
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;position:relative}
+  .review .q{color:var(--orange);font-size:2.6rem;line-height:.6;font-weight:900;opacity:.5}
+  .review p{margin-top:10px;color:var(--ink);font-size:.98rem}
+  .review .who{margin-top:16px;display:flex;align-items:center;gap:11px;padding-top:15px;border-top:1px solid var(--line)}
+  .review .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--orange),var(--red))}
+  .review .who b{font-weight:800;font-size:.92rem}
+  .review .who small{color:var(--dim);font-size:.78rem}
+  .review .rstars{color:var(--ember);font-size:.82rem;letter-spacing:1px;margin-top:2px}
+
+  /* Final CTA */
+  .cta-band{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--slate),#12151a)}
+  .cta-band::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(80% 120% at 15% 0%,rgba(255,90,31,.25),transparent 55%),
+    radial-gradient(70% 120% at 100% 100%,rgba(224,31,43,.18),transparent 55%);}
+  .cta-inner{position:relative;text-align:center;max-width:720px;margin:0 auto}
+  .cta-inner h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;letter-spacing:-.02em;line-height:1.05}
+  .cta-inner p{color:var(--muted);margin-top:16px;font-size:1.08rem}
+  .cta-inner .hero-cta{justify-content:center}
+  .storm-note{margin-top:22px;display:inline-flex;align-items:center;gap:9px;font-size:.86rem;color:var(--ember);background:rgba(255,179,71,.1);border:1px solid rgba(255,179,71,.28);padding:9px 16px;border-radius:30px;font-weight:700}
+
+  /* Footer */
+  footer.site{background:var(--charcoal);border-top:1px solid var(--line);padding:48px 0 40px}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  .foot-brand{max-width:340px}
+  .foot-brand p{color:var(--dim);font-size:.9rem;margin-top:12px}
+  .foot-col b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+  .foot-col a,.foot-col span{display:block;color:var(--muted);font-size:.92rem;margin-bottom:6px}
+  .disclaim{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:.8rem;line-height:1.7}
+  .disclaim b{color:var(--muted)}
+
+  /* concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:100;
+    background:rgba(21,24,29,.9);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,90,31,.45);color:var(--ember);
+    font-size:.72rem;font-weight:800;letter-spacing:.06em;
+    padding:8px 13px;border-radius:30px;box-shadow:0 8px 24px -8px rgba(0,0,0,.7);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="True Grit Roofing home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11 12 3l10 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+      </span>
+      <span class="brand-name">True Grit Roofing<small>Olathe · Overland Park</small></span>
+    </a>
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+19133139594">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <span class="txt"><small>Call 24/7</small>(913) 313-9594</span>
+      </a>
+      <a class="btn btn-primary" href="#schedule">Free Inspection</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Storm &amp; Hail Roofing · Licensed KS + MO</span>
+        <h1>Olathe's roof took the hit. <span class="hl">We'll make the insurance company pay for it.</span></h1>
+        <p class="sub">From 2 a.m. hail to a finished replacement — True Grit inspects the damage, documents the claim, and installs a roof built to survive the next storm. Olathe &amp; Overland Park homeowners, no upfront guesswork.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#schedule">Book a Free Roof Inspection →</a>
+          <a class="btn btn-ghost" href="tel:+19133139594">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            (913) 313-9594
+          </a>
+        </div>
+        <div class="stars-line">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <b>4.9</b><span>· 237 Google reviews · BBB A+ · 500+ roofs installed</span>
+        </div>
+      </div>
+
+      <!-- AI emergency-lead chat mock -->
+      <div class="panel" aria-label="After-hours storm assistant preview">
+        <div class="panel-top">
+          <span class="dot a"></span><span class="dot b"></span><span class="dot c"></span>
+          <span class="panel-title">True Grit Storm Assistant</span>
+          <span class="badge-live">Online 24/7</span>
+        </div>
+        <div class="chat">
+          <div class="msg them"><span class="who">Assistant</span>Hailstorm just rolled through Olathe. Notice any missing shingles or dents on gutters &amp; vents?</div>
+          <div class="msg you"><span class="who">Homeowner · 2:14 AM</span>Yeah — shingles in the yard and a dent in the flashing.</div>
+          <div class="msg them"><span class="who">Assistant</span>That's classic hail impact and usually claim-worthy. I've logged your address and photos. Want the first free inspection slot?</div>
+          <div class="msg you"><span class="who">Homeowner · 2:15 AM</span>Yes, tomorrow morning works.</div>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="panel-foot">Concept: an AI intake that captures storm leads while competitors sleep.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item"><div class="n">500<span class="u">+</span></div><div class="l">Roofs Installed</div></div>
+      <div class="trust-item"><div class="n">4.9<span class="u">★</span></div><div class="l">237 Reviews</div></div>
+      <div class="trust-item"><div class="n">KS<span class="u"> + </span>MO</div><div class="l">Licensed &amp; Insured</div></div>
+      <div class="trust-item"><div class="n">Since <span class="u">2013</span></div><div class="l">Olathe-Owned</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Roofing that starts with the storm and ends with the claim closed.</h2>
+        <p>Residential and light commercial — every job documented for your insurance adjuster, priced to what the claim actually covers.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">🌩️</div>
+          <h3>Storm &amp; Hail Restoration</h3>
+          <p>Granular loss, vent dents, wind-lifted shingles — we find the damage adjusters miss and prove it.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🏠</div>
+          <h3>Full Roof Replacement</h3>
+          <p>Asphalt, composite, and tile tear-offs done clean in a day, backed by manufacturer warranties.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🔧</div>
+          <h3>Roof Repair &amp; Leaks</h3>
+          <p>Ceiling stains and dining-room drips traced to the source and sealed for good — not patched to fail.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">📋</div>
+          <h3>Insurance Claim Help</h3>
+          <p>We meet your adjuster on the roof and document total-loss evidence so you get the coverage you paid for.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🧱</div>
+          <h3>Gutters &amp; Siding</h3>
+          <p>Residential gutters and storm-battered siding replaced to match — one crew, one accountable contact.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🔎</div>
+          <h3>Free Roof Inspection</h3>
+          <p>A no-pressure, top-to-bottom assessment with photos — book online in under a minute.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (CSS-only) -->
+  <section class="gallery" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Recent Work</span>
+        <h2>500+ roofs across Johnson County — a look at the grit.</h2>
+        <p>A sample of storm restorations and replacements around Olathe &amp; Overland Park. (Visual concept — real project photos drop in here.)</p>
+      </div>
+      <div class="grid-proj">
+        <div class="proj p1"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Full Tear-Off &amp; Replace</h4><span>Olathe · Architectural Asphalt</span></div><span class="pill">Hail Claim</span></div></div>
+        <div class="proj p2"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Storm Restoration</h4><span>Overland Park · Wind Damage</span></div><span class="pill">Insured</span></div></div>
+        <div class="proj p3"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Leak Repair &amp; Deck Fix</h4><span>Olathe · Emergency Call</span></div><span class="pill">Repair</span></div></div>
+        <div class="proj p4"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Tile Roof Rebuild</h4><span>Overland Park · Composite Tile</span></div><span class="pill">Replace</span></div></div>
+        <div class="proj p5"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Gutter + Roof Combo</h4><span>Olathe · Full Exterior</span></div><span class="pill">Storm</span></div></div>
+        <div class="proj p6"><span class="sky"></span><span class="shg"></span><span class="glow"></span><div class="tag"><div><h4>Total-Loss Approved</h4><span>Overland Park · Hail 2&quot; +</span></div><span class="pill">Claim Won</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / WHY US -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">The Founder's Story</span>
+        <h2>Sergio Flores started True Grit from scratch in 2013 — and never lost the work ethic that built it.</h2>
+        <p>What began as one man with a ladder and a reputation to earn is now a full crew that has installed 500+ roofs across Olathe and Overland Park. After a 2022 rebrand, the name says it plainly: honest grit. Licensed in Kansas <em>and</em> Missouri, True Grit shows up when the hail hits, documents the damage straight, and stands behind the roof long after the check clears.</p>
+      </div>
+      <ul class="why-list">
+        <li><span class="ck">✓</span><div><b>No pressure, no phantom damage.</b><span>We only file what's real — and we prove it with photos your adjuster can't argue with.</span></div></li>
+        <li><span class="ck">✓</span><div><b>Licensed KS + MO, fully insured.</b><span>Metro-wide coverage with the paperwork to back it. BBB A+ rated.</span></div></li>
+        <li><span class="ck">✓</span><div><b>We meet your adjuster on the roof.</b><span>Owner-level knowledge of how hail claims actually get approved — including total-loss.</span></div></li>
+        <li><span class="ck">✓</span><div><b>One accountable crew, start to finish.</b><span>From the 2 a.m. lead to final cleanup — same team, same standard.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Neighbors Talk</span>
+        <h2>4.9 stars, 237 reviews, and a lot of dry ceilings.</h2>
+      </div>
+      <div class="rev-grid">
+        <article class="review">
+          <div class="q">&ldquo;</div>
+          <p>Hail wrecked our roof and I dreaded dealing with insurance. Sergio's crew found granular loss and dented vents the first adjuster missed — we ended up approved for a full replacement. Beyond pleased.</p>
+          <div class="who"><span class="av">C</span><div><b>Claudia R.</b><small>Olathe, KS</small><div class="rstars">★★★★★</div></div></div>
+        </article>
+        <article class="review">
+          <div class="q">&ldquo;</div>
+          <p>They repaired a leak that had been staining our dining-room ceiling for a year. Proactive communication, fair price, superior craftsmanship. Wish every contractor worked like this.</p>
+          <div class="who"><span class="av">J</span><div><b>John B.</b><small>Overland Park, KS</small><div class="rstars">★★★★★</div></div></div>
+        </article>
+        <article class="review">
+          <div class="q">&ldquo;</div>
+          <p>Crew was on our roof from early morning to late evening and left the yard spotless. Top-notch, professional, and the final price was exactly what the adjuster said it should be. True grit is right.</p>
+          <div class="who"><span class="av">L</span><div><b>Luis M.</b><small>Olathe, KS</small><div class="rstars">★★★★★</div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band" id="schedule">
+    <div class="wrap cta-inner">
+      <span class="eyebrow" style="justify-content:center;display:flex">Book Your Slot</span>
+      <h2>Storm damage doesn't wait. Neither should your inspection.</h2>
+      <p>Schedule a free, photo-documented roof inspection online — or call now and talk to a real Olathe roofer. Licensed KS + MO, insurance-claim ready.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+19133139594">📞 Call (913) 313-9594</a>
+        <a class="btn btn-ghost" href="#top">Schedule Online →</a>
+      </div>
+      <div><span class="storm-note">⚡ 2 a.m. hailstorm? Our AI assistant logs your lead instantly.</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="True Grit Roofing">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11 12 3l10 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+          </span>
+          <span class="brand-name">True Grit Roofing</span>
+        </a>
+        <p>Storm, hail &amp; insurance-claim roofing for Olathe, Overland Park and the greater Kansas City metro. Founder-led since 2013.</p>
+      </div>
+      <div class="foot-col">
+        <b>Service Area</b>
+        <span>Olathe, KS</span>
+        <span>Overland Park, KS</span>
+        <span>Johnson County &amp; KC Metro</span>
+        <span>Licensed KS + MO</span>
+      </div>
+      <div class="foot-col">
+        <b>Get in Touch</b>
+        <a href="tel:+19133139594">(913) 313-9594</a>
+        <a href="#schedule">Free Roof Inspection</a>
+        <a href="#reviews">Read Reviews</a>
+        <a href="#work">Recent Work</a>
+      </div>
+    </div>
+    <div class="disclaim">
+      <b>Concept preview by Gigawatt.</b> This is a design concept created to explore a redesign for True Grit Roofing — it is not the business's official website. Ratings, review counts and story details are based on public listings; the AI storm-assistant and online scheduling shown here are proposed concepts. For live service, contact True Grit Roofing directly.
+    </div>
+  </div>
+</footer>
+
+<div class="concept-badge">⚡ concept preview</div>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Garage Door Masters KC — Same-Day Garage Door Repair Across the KC Metro</title>
+  <meta name="description" content="Same-day garage door repair, spring & opener replacement, and new door installs across Olathe, Overland Park, Leawood & the KC metro. 4.9★, 490+ reviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #16181d;        /* near-black charcoal */
+      --steel: #2b3038;      /* steel panel */
+      --steel-2: #3a4048;
+      --line: #e4e7ec;
+      --paper: #f4f5f7;
+      --orange: #f2611b;     /* safety orange */
+      --orange-dk: #d24d0d;
+      --amber: #ffc233;      /* star / accent */
+      --text: #1c2027;
+      --muted: #5c6672;
+      --muted-dk: #9aa4b0;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.6; background: #fff; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, .display { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; letter-spacing: .2px; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    .eyebrow { font: 700 13px/1 'Barlow Condensed', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); }
+
+    /* Header */
+    header.site { background: var(--ink); position: sticky; top: 0; z-index: 20; border-bottom: 3px solid var(--orange); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 0; }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo .mark { width: 38px; height: 38px; border-radius: 8px; background: linear-gradient(150deg, var(--orange), var(--orange-dk)); position: relative; flex: none; box-shadow: inset 0 -2px 0 rgba(0,0,0,.25); }
+    .logo .mark::before { content: ""; position: absolute; inset: 7px 6px; border-radius: 2px; background:
+      repeating-linear-gradient(to bottom, #fff 0 3px, transparent 3px 6px); opacity: .92; }
+    .logo .txt { font: 800 21px/1 'Barlow Condensed', sans-serif; color: #fff; letter-spacing: .4px; text-transform: uppercase; }
+    .logo .txt span { color: var(--orange); }
+    .logo .txt small { display: block; font: 600 10px/1.2 'Inter', sans-serif; letter-spacing: 2px; color: var(--muted-dk); text-transform: uppercase; margin-top: 3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--amber); }
+    .btn { display: inline-block; font-weight: 700; text-decoration: none; border-radius: 8px; padding: 12px 22px; text-align: center; transition: transform .06s ease, background .15s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--orange); color: #fff; box-shadow: 0 6px 16px rgba(242,97,27,.32); }
+    .btn-primary:hover { background: var(--orange-dk); }
+    .btn-ghost { border: 2px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: var(--steel); }
+    .nav .btn { padding: 10px 18px; font-size: 14px; }
+    @media (max-width: 640px){ .nav-phone{ display:none; } }
+
+    /* Hero */
+    .hero { position: relative; background: radial-gradient(120% 120% at 80% -10%, #333a44 0%, var(--steel) 40%, var(--ink) 100%); color: #fff; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+      background: repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 26px); }
+    .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 66px 22px 74px; }
+    .hero h1 { font-size: clamp(38px, 6.2vw, 68px); line-height: .98; font-weight: 800; text-transform: uppercase; }
+    .hero h1 em { font-style: normal; color: var(--orange); }
+    .hero .lead { margin: 20px 0 26px; font-size: clamp(16px, 1.9vw, 19px); color: #d7dce3; max-width: 520px; }
+    .hero .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .hero .rating { margin-top: 26px; display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+    .hero .rating .st { color: var(--amber); font-size: 18px; letter-spacing: 2px; }
+    .hero .rating .rt { font-size: 14px; color: #cfd6de; }
+    .hero .rating .rt b { color: #fff; }
+    .badge-24 { display: inline-flex; align-items: center; gap: 8px; background: rgba(242,97,27,.14); border: 1px solid rgba(242,97,27,.5); color: #ffd9c4; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
+    .badge-24 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(242,97,27,.25); }
+
+    /* Hero door panel visual */
+    .door { position: relative; justify-self: end; width: 100%; max-width: 360px; aspect-ratio: 5/6; border-radius: 12px; background: linear-gradient(180deg, #d9dee4, #b9c1cb); padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.4), inset 0 0 0 1px rgba(255,255,255,.4); }
+    .door .slat { height: calc((100% - 44px)/6); margin-bottom: 6px; border-radius: 4px; background: linear-gradient(180deg, #f3f5f7 0%, #dfe4e9 48%, #c8cfd6 52%, #eef1f4 100%); box-shadow: inset 0 -2px 3px rgba(0,0,0,.12); display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 0 10px; align-items: center; }
+    .door .slat:nth-child(2) i { display: block; height: 34%; border-radius: 3px; background: linear-gradient(180deg, #6fb7e6, #2e6f9e); opacity: .85; }
+    .door .slat i { visibility: hidden; }
+    .door .tag { position: absolute; bottom: -18px; left: -14px; background: var(--orange); color: #fff; font: 800 15px/1 'Barlow Condensed', sans-serif; letter-spacing: .5px; text-transform: uppercase; padding: 11px 15px; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.3); }
+    .door .tag b { display: block; font-size: 26px; }
+    @media (max-width: 860px){
+      .hero .wrap { grid-template-columns: 1fr; gap: 30px; padding: 48px 22px 58px; }
+      .door { display: none; }
+    }
+
+    /* Trust strip */
+    .strip { background: var(--ink); border-top: 1px solid rgba(255,255,255,.06); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .strip .item { padding: 20px 14px; text-align: center; color: #fff; }
+    .strip .item b { display: block; font: 800 26px/1 'Barlow Condensed', sans-serif; color: var(--amber); }
+    .strip .item span { font-size: 12.5px; color: var(--muted-dk); letter-spacing: .3px; }
+    @media (max-width: 640px){ .strip .wrap { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .sec-head { max-width: 640px; margin-bottom: 40px; }
+    h2 { font-size: clamp(30px, 4.4vw, 44px); line-height: 1.02; text-transform: uppercase; font-weight: 800; color: var(--ink); margin-top: 8px; }
+    .sec-head p { color: var(--muted); font-size: 17px; margin-top: 12px; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; background: #fff; position: relative; transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease; }
+    .card:hover { box-shadow: 0 18px 40px rgba(22,24,29,.10); transform: translateY(-3px); border-color: #d7dbe1; }
+    .card .ico { width: 52px; height: 52px; border-radius: 11px; display: grid; place-items: center; font-size: 26px; background: linear-gradient(150deg, #fff1ea, #ffe1d1); margin-bottom: 16px; }
+    .card h3 { font-size: 23px; text-transform: uppercase; font-weight: 700; color: var(--ink); }
+    .card p { color: var(--muted); font-size: 15px; margin-top: 7px; }
+    .card .em { display: inline-block; margin-top: 12px; font: 700 13px/1 'Inter'; color: var(--orange); text-decoration: none; }
+    @media (max-width: 860px){ .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px){ .cards { grid-template-columns: 1fr; } }
+
+    /* Story */
+    .story { background: var(--paper); }
+    .story .grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 48px; align-items: center; }
+    .story .portrait { position: relative; border-radius: 16px; aspect-ratio: 4/5; background: radial-gradient(120% 120% at 30% 10%, #3a4048, var(--steel) 55%, var(--ink)); overflow: hidden; box-shadow: 0 24px 50px rgba(22,24,29,.28); display: grid; place-items: center; }
+    .story .portrait::after { content: ""; position: absolute; inset: 0; opacity: .5; background: repeating-linear-gradient(115deg, rgba(255,255,255,.04) 0 2px, transparent 2px 22px); }
+    .story .portrait .init { position: relative; z-index: 1; font: 800 92px/1 'Barlow Condensed', sans-serif; color: rgba(255,255,255,.14); }
+    .story .portrait .name-plate { position: absolute; z-index: 2; bottom: 20px; left: 20px; right: 20px; background: rgba(22,24,29,.72); backdrop-filter: blur(2px); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 14px 16px; }
+    .story .portrait .name-plate strong { color: #fff; font: 700 18px/1.1 'Barlow Condensed', sans-serif; letter-spacing: .5px; text-transform: uppercase; display: block; }
+    .story .portrait .name-plate span { color: var(--muted-dk); font-size: 13px; }
+    .story h2 { color: var(--ink); }
+    .story p { color: #444b55; font-size: 16.5px; margin-top: 16px; }
+    .story .pull { margin: 24px 0; padding: 16px 22px; border-left: 4px solid var(--orange); background: #fff; border-radius: 0 10px 10px 0; font: 600 18px/1.4 'Inter'; color: var(--ink); }
+    @media (max-width: 800px){ .story .grid { grid-template-columns: 1fr; gap: 30px; } .story .portrait { max-width: 340px; } }
+
+    /* AI capture callout */
+    .capture { background: var(--ink); color: #fff; }
+    .capture .box { background: linear-gradient(150deg, #23272e, var(--steel)); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 44px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
+    .capture h2 { color: #fff; }
+    .capture p { color: #cfd6de; font-size: 16.5px; margin-top: 14px; max-width: 480px; }
+    .capture .actions { margin-top: 26px; display: flex; gap: 13px; flex-wrap: wrap; }
+    .chatcard { background: #12141a; border: 1px solid rgba(255,255,255,.09); border-radius: 14px; padding: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+    .chatcard .row { display: flex; align-items: center; gap: 9px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 14px; }
+    .chatcard .row .av { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(150deg, var(--orange), var(--orange-dk)); display: grid; place-items: center; font-size: 15px; }
+    .chatcard .row b { font-size: 14px; color: #fff; }
+    .chatcard .row small { display: block; color: #6fd08a; font-size: 11px; font-weight: 600; }
+    .bub { font-size: 13.5px; line-height: 1.45; padding: 10px 13px; border-radius: 12px; margin-bottom: 9px; max-width: 88%; }
+    .bub.them { background: #262b33; color: #e6eaef; border-bottom-left-radius: 3px; }
+    .bub.me { background: var(--orange); color: #fff; margin-left: auto; border-bottom-right-radius: 3px; }
+    @media (max-width: 800px){ .capture .box { grid-template-columns: 1fr; padding: 30px 24px; } }
+
+    /* Reviews */
+    .reviews .stars-big { color: var(--amber); font-size: 20px; letter-spacing: 3px; }
+    .quote { border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; background: #fff; display: flex; flex-direction: column; }
+    .quote .q { color: var(--amber); font: 800 40px/.6 Georgia, serif; height: 20px; }
+    .quote p { font-size: 15.5px; color: #343b44; margin: 6px 0 0; flex: 1; }
+    .quote footer { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-weight: 700; font-size: 13.5px; color: var(--ink); }
+    .quote footer span { display: block; color: var(--muted); font-weight: 500; font-size: 12.5px; }
+
+    /* Service area */
+    .area { background: var(--paper); }
+    .area .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .area .chips span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: var(--steel); }
+
+    /* Final CTA */
+    .cta-band { background: linear-gradient(150deg, var(--orange), var(--orange-dk)); color: #fff; text-align: center; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #ffe6d8; margin: 12px auto 28px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-band .btn-primary { background: #fff; color: var(--orange-dk); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+    .cta-band .btn-primary:hover { background: #fff; color: var(--ink); }
+    .cta-band .btn-ghost { border-color: rgba(255,255,255,.7); }
+
+    /* Footer */
+    footer.foot { background: var(--ink); color: var(--muted-dk); padding: 44px 0 30px; }
+    footer.foot .top { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    footer.foot .top .logo .txt { font-size: 19px; }
+    footer.foot .note { margin-top: 20px; font-size: 12.5px; line-height: 1.7; }
+    footer.foot .note b { color: #cfd6de; }
+    footer.foot a.link { color: var(--amber); text-decoration: none; font-weight: 600; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #0f1013; color: var(--amber); font: 700 11px/1 'Inter', system-ui; letter-spacing: .4px; padding: 9px 14px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.1); }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="logo" href="#top" aria-label="Garage Door Masters KC home">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="txt">Garage Door <span>Masters</span> KC
+          <small>Olathe · KC Metro</small>
+        </span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19137310190">☎ <span>(913) 731-0190</span></a>
+        <a class="btn btn-primary" href="tel:+19137310190">Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="badge-24"><span class="dot"></span> Open 24/7 · Same-day service, 7 days a week</span>
+          <h1>Garage door<br>down? We're<br>on it <em>today.</em></h1>
+          <p class="lead">Broken springs, dead openers, doors off the track — fast, honest repair across Olathe, Overland Park, Leawood and the whole KC metro. Most calls fixed same day.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+19137310190">☎ Call (913) 731-0190</a>
+            <a class="btn btn-ghost" href="#estimate">Request a quote</a>
+          </div>
+          <div class="rating">
+            <span class="st">★★★★★</span>
+            <span class="rt"><b>4.9</b> Google rating · <b>490+</b> reviews · BBB A+</span>
+          </div>
+        </div>
+        <div class="door" aria-hidden="true">
+          <div class="slat"></div>
+          <div class="slat"><i></i><i></i><i></i><i></i></div>
+          <div class="slat"></div>
+          <div class="slat"></div>
+          <div class="slat"></div>
+          <div class="slat"></div>
+          <div class="tag">Fixed<b>Today</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <div class="item"><b>4.9★</b><span>490+ Google reviews</span></div>
+        <div class="item"><b>Est. 2019</b><span>Local &amp; owner-run</span></div>
+        <div class="item"><b>24/7</b><span>Emergency service</span></div>
+        <div class="item"><b>BBB A+</b><span>Licensed &amp; insured</span></div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">What we fix &amp; install</span>
+          <h2>One crew for every garage door problem</h2>
+          <p>From a snapped spring at 6 a.m. to a brand-new insulated door, we diagnose the whole system — not just the part that broke — so it stays fixed.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="ico">🌀</div>
+            <h3>Spring Repair</h3>
+            <p>Torsion &amp; extension springs replaced the same day — the #1 reason a door won't lift. Done safely, matched to your door's weight.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🎛️</div>
+            <h3>Opener Install</h3>
+            <p>New belt-drive and smart Wi-Fi openers, plus remote and keypad repairs. Quieter, safer, and controllable from your phone.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🛤️</div>
+            <h3>Off-Track &amp; Cables</h3>
+            <p>Door jumped the track or a cable snapped? We re-align rollers, replace cables, and get it moving straight and quiet again.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🚪</div>
+            <h3>New Door Installs</h3>
+            <p>Insulated steel, carriage-style, and modern glass doors installed to boost curb appeal and cut energy loss.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🛠️</div>
+            <h3>Tune-Up &amp; Safety Check</h3>
+            <p>Balance, lubrication, and a full 25-point safety inspection to catch small issues before they leave you stranded.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🏢</div>
+            <h3>Commercial Doors</h3>
+            <p>Rolling steel and sectional service for shops, warehouses, and fleets — keeping your bays open and business moving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story">
+      <div class="wrap">
+        <div class="grid">
+          <div class="portrait" aria-hidden="true">
+            <span class="init">AP</span>
+            <div class="name-plate">
+              <strong>Andrey Portnoy</strong>
+              <span>Founder &amp; owner, Garage Door Masters KC</span>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">The story behind the truck</span>
+            <h2>Built from a truck, a layoff, and a lot of grit</h2>
+            <p>In 2019, Andrey Portnoy lost his job. With a truck, a little savings, and zero garage-door experience, he bet on himself instead of waiting for the next opening — learning the trade through YouTube, research, and long days on real jobs.</p>
+            <div class="pull">"With grit and resourcefulness, you can build something from the ground up."</div>
+            <p>That solo operation grew into a trusted KC-metro team. The values never changed: be transparent, fix the whole system instead of chasing quick patches, and teach homeowners how their door actually works. It's why neighbors keep calling back — and sending their friends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI CAPTURE -->
+    <section class="capture">
+      <div class="wrap">
+        <div class="box">
+          <div>
+            <span class="eyebrow">Never miss an after-hours call</span>
+            <h2>A garage that won't close at 11 p.m. can't wait</h2>
+            <p>Our concept adds an AI assistant that answers instantly, day or night — triages the emergency, captures the address and best callback number, and books the first available same-day slot. No lost lead, no voicemail black hole.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="tel:+19137310190">☎ Call (913) 731-0190</a>
+              <a class="btn btn-ghost" href="#estimate">Start online</a>
+            </div>
+          </div>
+          <div class="chatcard" aria-hidden="true">
+            <div class="row">
+              <div class="av">⚡</div>
+              <div><b>GDM Assistant</b><small>● Online · replies in seconds</small></div>
+            </div>
+            <div class="bub them">Garage Door Masters KC — how can we help tonight?</div>
+            <div class="bub me">My door is stuck halfway open and won't close!</div>
+            <div class="bub them">That's likely a spring or cable. What's the property address and best number?</div>
+            <div class="bub me">Overland Park — 913-555-0148</div>
+            <div class="bub them">Got it. A tech can be there this evening. Booking your same-day slot now ✅</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">4.9★ from 490+ neighbors</span>
+          <h2>KC homeowners talk</h2>
+          <p><span class="stars-big">★★★★★</span> Real reviews from across Johnson County and the metro.</p>
+        </div>
+        <div class="cards">
+          <div class="quote">
+            <div class="q">&ldquo;</div>
+            <p>Our tech answered, was at our house in 30 minutes, and had it fixed within the hour. Couldn't ask for faster.</p>
+            <footer>Anthony G.<span>Overland Park, KS</span></footer>
+          </div>
+          <div class="quote">
+            <div class="q">&ldquo;</div>
+            <p>Same-day service at a fair price for a tension spring. Honest, no upsell, and the door runs like new.</p>
+            <footer>Ben H.<span>Olathe, KS</span></footer>
+          </div>
+          <div class="quote">
+            <div class="q">&ldquo;</div>
+            <p>Very timely, highly professional work by our technician. Explained exactly what was wrong before touching anything.</p>
+            <footer>Susan M.<span>Leawood, KS</span></footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="area">
+      <div class="wrap">
+        <div class="sec-head" style="margin-bottom:22px;">
+          <span class="eyebrow">Where we work</span>
+          <h2>Serving the whole KC metro</h2>
+          <p>Based in Olathe, on the road across roughly 40 miles of Kansas and Missouri.</p>
+        </div>
+        <div class="chips">
+          <span>Olathe</span><span>Overland Park</span><span>Lenexa</span><span>Shawnee</span>
+          <span>Leawood</span><span>Prairie Village</span><span>Gardner</span><span>Spring Hill</span>
+          <span>Lee's Summit</span><span>Blue Springs</span><span>Independence</span><span>Liberty</span>
+          <span>Raymore</span><span>Kansas City</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band" id="estimate">
+      <div class="wrap">
+        <span class="eyebrow" style="color:#ffe6d8;">Same-day · 7 days a week</span>
+        <h2>Get your garage door working today</h2>
+        <p>Call for a fast, no-pressure quote — or request a callback and we'll reach out right away. Springs, openers, off-track doors, and new installs.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+19137310190">☎ Call (913) 731-0190</a>
+          <a class="btn btn-ghost" href="tel:+19138998662">Request a callback</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="top">
+        <a class="logo" href="#top">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="txt">Garage Door <span>Masters</span> KC<small>Olathe · KC Metro</small></span>
+        </a>
+        <a class="nav-phone" href="tel:+19137310190" style="color:#fff;">☎ <span style="color:var(--amber);">(913) 731-0190</span></a>
+      </div>
+      <p class="note">
+        <b>Garage Door Masters KC</b> · Olathe, Kansas · Serving the greater Kansas City metro · 4.9★ from 490+ reviews.<br>
+        This is a <b>concept preview</b> designed by <a class="link" href="#top">Gigawatt</a> — a Kansas City web design &amp; AI consulting studio. It is a design demonstration, not the business's official website, and does not reflect their live pricing, offers, or legal contact details.
+      </p>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

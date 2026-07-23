@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Cliffy Care Landscaping — Johnson County's Custom Hardscape &amp; Outdoor Living Designers</title>
+  <meta name="description" content="Custom paver patios, retaining walls & outdoor living for Overland Park, Leawood, Mission Hills & Prairie Village. AutoCAD-designed, craftsman-built. 4.9★ · 150 reviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --forest:#1b2a22;        /* deep evergreen */
+      --forest-2:#233a2e;
+      --moss:#3c5a45;
+      --stone:#8b8574;         /* warm stone */
+      --limestone:#f5f2ea;     /* warm neutral bg */
+      --sand:#ece5d6;
+      --cream:#fbf9f4;
+      --brass:#b0894f;         /* premium accent */
+      --brass-dark:#8f6d38;
+      --brass-light:#cbae76;
+      --ink:#20261f;
+      --muted:#5d675a;
+      --line:#e3dccd;
+    }
+    *{margin:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);line-height:1.6;background:var(--cream);-webkit-font-smoothing:antialiased}
+    img{max-width:100%}
+    h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    a{color:inherit}
+
+    /* ---- header ---- */
+    header.site{background:rgba(251,249,244,.86);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+    .mark{width:38px;height:38px;flex:none;border-radius:10px;background:linear-gradient(150deg,var(--forest-2),var(--moss));display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+    .brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--forest);line-height:1.05}
+    .brand .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-dark);font-weight:600}
+    .nav-right{display:flex;align-items:center;gap:18px}
+    .nav-phone{display:none;text-decoration:none;font-weight:600;color:var(--forest);font-size:15px;white-space:nowrap}
+    .nav-phone span{color:var(--brass-dark)}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-radius:10px;padding:12px 20px;font-size:15px;line-height:1;transition:transform .12s ease,background .18s ease,box-shadow .18s ease;cursor:pointer;border:none}
+    .btn-primary{background:linear-gradient(160deg,var(--brass-light),var(--brass));color:#241a08;box-shadow:0 6px 18px -8px rgba(176,137,79,.7)}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(176,137,79,.85)}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.09)}
+    .btn-outline{border:1.5px solid var(--forest);color:var(--forest)}
+    .btn-outline:hover{background:var(--forest);color:#fff}
+    .btn-lg{padding:15px 26px;font-size:16px}
+
+    /* ---- hero ---- */
+    .hero{position:relative;overflow:hidden;color:#f3efe6;background:
+      radial-gradient(1200px 500px at 78% -10%,rgba(203,174,118,.16),transparent 60%),
+      linear-gradient(158deg,var(--forest) 0%,var(--forest-2) 55%,#1a2b22 100%)}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+      background-image:
+        linear-gradient(rgba(203,174,118,.09) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(203,174,118,.09) 1px,transparent 1px);
+      background-size:44px 44px;
+      -webkit-mask-image:radial-gradient(900px 500px at 80% 10%,#000,transparent 72%);
+      mask-image:radial-gradient(900px 500px at 80% 10%,#000,transparent 72%)}
+    .hero .wrap{position:relative;z-index:2;padding:66px 22px 74px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-light);font-weight:600;margin-bottom:20px}
+    .eyebrow::before{content:"";width:26px;height:1px;background:var(--brass-light);display:inline-block}
+    .hero h1{font-size:clamp(34px,5.4vw,56px);line-height:1.06;font-weight:600;color:#fdfbf6}
+    .hero h1 em{font-style:italic;color:var(--brass-light);font-weight:500}
+    .hero p.lead{margin:22px 0 30px;font-size:clamp(16px,2vw,19px);color:#d6dcd1;max-width:560px}
+    .hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+    .rating{margin-top:30px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#d6dcd1;font-size:14.5px}
+    .rating .stars{color:var(--brass-light);letter-spacing:2px;font-size:16px}
+    .rating b{color:#fff}
+    .rating .divider{width:1px;height:16px;background:rgba(255,255,255,.2)}
+
+    /* hero side card */
+    .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(203,174,118,.28);border-radius:18px;padding:26px;backdrop-filter:blur(6px)}
+    .hero-card h3{font-size:20px;color:#fdfbf6;margin-bottom:4px}
+    .hero-card .cap{font-size:13px;color:var(--brass-light);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+    .spec{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14.5px;color:#e6e9e1}
+    .spec:first-of-type{border-top:none}
+    .spec .k{width:26px;height:26px;flex:none;border-radius:7px;background:rgba(203,174,118,.16);display:grid;place-items:center;color:var(--brass-light);font-size:14px}
+    .spec b{color:#fff;font-weight:600}
+
+    /* ---- trust strip ---- */
+    .strip{background:var(--forest);border-top:1px solid rgba(203,174,118,.2)}
+    .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;padding:18px 22px}
+    .strip .item{display:flex;align-items:center;gap:9px;color:#cfd6ca;font-size:13.5px;font-weight:500}
+    .strip .item svg{color:var(--brass-light);flex:none}
+
+    /* ---- sections ---- */
+    section{padding:78px 0}
+    .sec-head{max-width:640px;margin-bottom:44px}
+    .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-dark);font-weight:700;margin-bottom:14px}
+    h2{font-size:clamp(27px,3.6vw,40px);color:var(--forest);line-height:1.12}
+    h2 em{font-style:italic;color:var(--brass-dark);font-weight:500}
+    .sub{color:var(--muted);margin-top:14px;font-size:17px}
+
+    /* services */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 26px;transition:transform .16s ease,box-shadow .18s ease,border-color .18s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(27,42,34,.4);border-color:var(--brass-light)}
+    .card .ico{width:50px;height:50px;border-radius:13px;background:linear-gradient(155deg,var(--sand),#ded4bf);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+    .card h3{font-size:20px;color:var(--forest);margin-bottom:8px}
+    .card p{color:var(--muted);font-size:15px}
+    .card .price{margin-top:14px;font-size:12.5px;letter-spacing:.05em;color:var(--brass-dark);font-weight:600;text-transform:uppercase}
+
+    /* ---- differentiator / process ---- */
+    .why{background:linear-gradient(170deg,var(--limestone),var(--sand));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+    .blueprint{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,var(--forest),var(--forest-2));min-height:340px;box-shadow:0 24px 60px -30px rgba(27,42,34,.6);border:1px solid rgba(203,174,118,.25)}
+    .blueprint svg{display:block;width:100%;height:100%}
+    .steps{display:flex;flex-direction:column;gap:20px;margin-top:8px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step .num{width:38px;height:38px;flex:none;border-radius:50%;border:1.5px solid var(--brass);color:var(--brass-dark);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:16px;background:var(--cream)}
+    .step h4{font-size:17px;color:var(--forest);margin-bottom:3px;font-weight:700;font-family:'Inter',sans-serif}
+    .step p{color:var(--muted);font-size:14.5px}
+
+    /* project range band */
+    .range{background:var(--forest);color:#e9ece5}
+    .range .wrap{display:grid;grid-template-columns:1.1fr 1.4fr;gap:44px;align-items:center}
+    .range h2{color:#fdfbf6}
+    .range h2 em{color:var(--brass-light)}
+    .range p{color:#cbd3c7;margin-top:14px;font-size:16px}
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tier{background:rgba(255,255,255,.05);border:1px solid rgba(203,174,118,.24);border-radius:14px;padding:22px 18px}
+    .tier .amt{font-family:'Fraunces',serif;font-size:23px;color:var(--brass-light);font-weight:600}
+    .tier .lbl{font-size:13px;color:#cbd3c7;margin-top:6px;line-height:1.45}
+
+    /* ---- reviews ---- */
+    .reviews{background:var(--cream)}
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .quote{background:var(--limestone);border:1px solid var(--line);border-radius:16px;padding:26px}
+    .quote .qmark{font-family:'Fraunces',serif;font-size:48px;line-height:.6;color:var(--brass-light);height:24px}
+    .quote p{font-size:15.5px;color:var(--ink);margin:14px 0 18px}
+    .quote .stars{color:var(--brass);letter-spacing:2px;font-size:14px}
+    .quote footer{margin-top:12px;color:var(--muted);font-size:13.5px;font-weight:600}
+    .rev-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px}
+    .rev-score{text-align:right}
+    .rev-score .big{font-family:'Fraunces',serif;font-size:40px;color:var(--forest);line-height:1}
+    .rev-score .s{color:var(--brass);letter-spacing:2px}
+    .rev-score .c{font-size:13px;color:var(--muted)}
+
+    /* ---- consult CTA band ---- */
+    .consult{position:relative;overflow:hidden;background:
+      radial-gradient(900px 400px at 15% 120%,rgba(203,174,118,.16),transparent 60%),
+      linear-gradient(150deg,var(--forest-2),var(--forest));color:#f3efe6;text-align:center}
+    .consult::before{content:"";position:absolute;inset:0;opacity:.4;
+      background-image:linear-gradient(rgba(203,174,118,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(203,174,118,.08) 1px,transparent 1px);
+      background-size:44px 44px;-webkit-mask-image:radial-gradient(700px 320px at 50% 0,#000,transparent 75%);mask-image:radial-gradient(700px 320px at 50% 0,#000,transparent 75%)}
+    .consult .wrap{position:relative;z-index:2}
+    .consult h2{color:#fdfbf6;max-width:640px;margin:0 auto}
+    .consult h2 em{color:var(--brass-light)}
+    .consult p{color:#d6dcd1;max-width:520px;margin:16px auto 30px;font-size:17px}
+    .consult .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .consult .note{margin-top:22px;font-size:13.5px;color:#b7c1b1}
+
+    /* ---- footer ---- */
+    footer.site-f{background:var(--forest);color:#aeb8ac;padding:44px 0 30px;border-top:1px solid rgba(203,174,118,.2)}
+    .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .foot-brand .name{font-family:'Fraunces',serif;color:#fdfbf6;font-size:20px}
+    .foot-brand .loc{font-size:14px;margin-top:6px;color:#c1cabb}
+    .foot-cols{display:flex;gap:48px;flex-wrap:wrap}
+    .foot-col h5{color:#e6ebe2;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+    .foot-col a,.foot-col span{display:block;font-size:14px;color:#aeb8ac;text-decoration:none;margin-bottom:6px}
+    .foot-col a:hover{color:var(--brass-light)}
+    .foot-bottom{padding-top:20px;font-size:12.5px;color:#8f9a8c;line-height:1.6}
+    .foot-bottom b{color:var(--brass-light);font-weight:600}
+
+    .demo-tag{position:fixed;bottom:14px;right:14px;z-index:50;background:#12100b;color:var(--brass-light);font:600 11px/1 'Inter',system-ui;padding:9px 14px;border-radius:999px;box-shadow:0 6px 20px -6px rgba(0,0,0,.6);border:1px solid rgba(203,174,118,.35)}
+
+    /* ---- responsive ---- */
+    @media(max-width:900px){
+      .hero .wrap{grid-template-columns:1fr;gap:34px;padding:52px 22px 60px}
+      .why-grid{grid-template-columns:1fr;gap:34px}
+      .blueprint{min-height:260px;order:-1}
+      .range .wrap{grid-template-columns:1fr;gap:30px}
+      .cards,.quotes{grid-template-columns:1fr 1fr}
+    }
+    @media(min-width:720px){.nav-phone{display:inline}}
+    @media(max-width:560px){
+      section{padding:56px 0}
+      .cards,.quotes,.tiers{grid-template-columns:1fr}
+      .rev-head{align-items:flex-start}
+      .rev-score{text-align:left}
+      .nav .btn{padding:11px 16px;font-size:14px}
+      .brand .tag{display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbae76" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 7 5 10 5 14a7 7 0 0 0 14 0c0-4-2-7-7-12Z"/><path d="M12 22V9"/></svg>
+        </span>
+        <span>
+          <span class="name">Cliffy Care Landscaping</span><br>
+          <span class="tag">Hardscape &amp; Outdoor Living</span>
+        </span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19132712900">📞 <span>(913) 271-2900</span></a>
+        <a class="btn btn-primary" href="#consult">Book a consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Overland Park · Leawood · Mission Hills · Prairie Village</span>
+        <h1>Backyards in Johnson County, <em>designed before we ever dig.</em></h1>
+        <p class="lead">Custom paver patios, retaining walls, and complete outdoor-living spaces — engineered in AutoCAD, hand-built by a craftsman crew, and made to raise the value of the finest homes on your street.</p>
+        <div class="actions">
+          <a class="btn btn-primary btn-lg" href="#consult">Book a design consultation</a>
+          <a class="btn btn-ghost btn-lg" href="tel:+19132712900">Call (913) 271-2900</a>
+        </div>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span><b>4.9</b> · 150 Google reviews</span>
+          <span class="divider"></span>
+          <span>15+ years serving Johnson County</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="cap">Why homeowners choose us</div>
+        <h3>Premium work, done right the first time</h3>
+        <div class="spec"><span class="k">✎</span><span><b>AutoCAD-designed plans</b> — you see the finished space before a single stone is set.</span></div>
+        <div class="spec"><span class="k">⚑</span><span><b>15+ years, owner-led</b> — Ian Clifford designs and runs every project himself.</span></div>
+        <div class="spec"><span class="k">✦</span><span><b>$15k–$75k builds</b> — patios, walls &amp; outdoor kitchens for premium homes.</span></div>
+        <div class="spec"><span class="k">♦</span><span><b>2-year workmanship &amp; plant warranty</b> — we stand behind the build.</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <span class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>Licensed &amp; insured</span>
+      <span class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M4 9h16l-1 13H5L4 9Z"/></svg>Family-owned, honoring Cliff</span>
+      <span class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg>4.9★ · 150 reviews</span>
+      <span class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>Gemstone lighting dealer</span>
+      <span class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-6"/></svg>AutoCAD-engineered plans</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">What we build</div>
+        <h2>Signature outdoor living, <em>built to last generations.</em></h2>
+        <p class="sub">Every project is a permanent addition to your property — designed, engineered, and installed by one accountable crew.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico">🧱</div>
+          <h3>Paver Patios</h3>
+          <p>Herringbone, chaotic, and custom-pattern patios laid on a compacted, engineered base that won't heave or settle.</p>
+          <div class="price">100–1,000+ sq ft · at-grade or raised</div>
+        </div>
+        <div class="card">
+          <div class="ico">🪨</div>
+          <h3>Retaining &amp; Seat Walls</h3>
+          <p>Structural walls for grade and erosion, plus fire-pit seat walls with integrated cap lighting. Engineered where height requires it.</p>
+          <div class="price">Boulder, block &amp; natural stone</div>
+        </div>
+        <div class="card">
+          <div class="ico">🔥</div>
+          <h3>Outdoor Kitchens &amp; Fire</h3>
+          <p>Built-in grills, bars, custom fire pits, and water features that turn a backyard into a true second living room.</p>
+          <div class="price">Full outdoor-living design</div>
+        </div>
+        <div class="card">
+          <div class="ico">🏛️</div>
+          <h3>Pergolas &amp; Flagstone</h3>
+          <p>Shade structures and flagstone pathways that frame the space and connect the whole landscape with intention.</p>
+          <div class="price">Cedar, composite &amp; stone</div>
+        </div>
+        <div class="card">
+          <div class="ico">💡</div>
+          <h3>Landscape Lighting</h3>
+          <p>Low-voltage and Gemstone architectural lighting that keeps the design working long after sunset — and year-round.</p>
+          <div class="price">Certified Gemstone dealer</div>
+        </div>
+        <div class="card">
+          <div class="ico">💧</div>
+          <h3>Drainage &amp; French Drains</h3>
+          <p>The unglamorous work that protects everything above it — grading, French drains, and water management done properly.</p>
+          <div class="price">Protects your investment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US / PROCESS -->
+  <section class="why" id="process">
+    <div class="wrap why-grid">
+      <div class="blueprint" aria-hidden="true">
+        <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M24 0H0V24" fill="none" stroke="#cbae76" stroke-opacity="0.14" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="340" fill="url(#grid)"/>
+          <!-- patio plan -->
+          <rect x="60" y="70" width="180" height="130" fill="none" stroke="#cbae76" stroke-opacity="0.9" stroke-width="1.6"/>
+          <rect x="60" y="70" width="180" height="130" fill="#cbae76" fill-opacity="0.06"/>
+          <line x1="60" y1="102" x2="240" y2="102" stroke="#cbae76" stroke-opacity="0.35" stroke-width="1"/>
+          <line x1="60" y1="134" x2="240" y2="134" stroke="#cbae76" stroke-opacity="0.35" stroke-width="1"/>
+          <line x1="60" y1="166" x2="240" y2="166" stroke="#cbae76" stroke-opacity="0.35" stroke-width="1"/>
+          <line x1="120" y1="70" x2="120" y2="200" stroke="#cbae76" stroke-opacity="0.35" stroke-width="1"/>
+          <line x1="180" y1="70" x2="180" y2="200" stroke="#cbae76" stroke-opacity="0.35" stroke-width="1"/>
+          <!-- curved wall -->
+          <path d="M60 210 Q160 260 300 230" fill="none" stroke="#cbae76" stroke-opacity="0.9" stroke-width="2"/>
+          <path d="M60 218 Q160 268 300 238" fill="none" stroke="#cbae76" stroke-opacity="0.4" stroke-width="1.2"/>
+          <!-- fire pit circle -->
+          <circle cx="300" cy="120" r="34" fill="none" stroke="#cbae76" stroke-opacity="0.9" stroke-width="1.6"/>
+          <circle cx="300" cy="120" r="14" fill="#cbae76" fill-opacity="0.12" stroke="#cbae76" stroke-opacity="0.6" stroke-width="1"/>
+          <!-- dimension line -->
+          <line x1="60" y1="52" x2="240" y2="52" stroke="#cbae76" stroke-opacity="0.7" stroke-width="1"/>
+          <path d="M60 48v8M240 48v8" stroke="#cbae76" stroke-opacity="0.7" stroke-width="1"/>
+          <text x="150" y="46" fill="#cbae76" fill-opacity="0.85" font-family="monospace" font-size="11" text-anchor="middle">18'-0"</text>
+          <text x="70" y="90" fill="#cbae76" fill-opacity="0.75" font-family="monospace" font-size="9">PATIO · HERRINGBONE</text>
+          <text x="256" y="176" fill="#cbae76" fill-opacity="0.75" font-family="monospace" font-size="9">SEAT WALL</text>
+          <text x="278" y="122" fill="#cbae76" fill-opacity="0.85" font-family="monospace" font-size="9">FIRE</text>
+        </svg>
+      </div>
+      <div>
+        <div class="kicker">The Cliffy Care difference</div>
+        <h2>An <em>AutoCAD-trained designer</em>, not just a crew with a truck.</h2>
+        <p class="sub">Owner Ian Clifford has spent 15+ years and thousands of hours turning steep, tricky Johnson County lots into finished outdoor rooms. Every build starts on the drafting table — so you approve the design, the materials, and the price before we break ground.</p>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><div><h4>On-site design consultation</h4><p>We walk the property, talk vision and budget, and capture the grade, drainage, and sight lines that make or break a build.</p></div></div>
+          <div class="step"><span class="num">2</span><div><h4>Your space, drawn to scale</h4><p>A precise AutoCAD plan with dimensions, materials, and layout — so there are no surprises and no guesswork on install day.</p></div></div>
+          <div class="step"><span class="num">3</span><div><h4>Engineered, craftsman build</h4><p>Compacted bases, layered structural walls, and clean lines — installed by the same owner-led crew from first cut to final sweep.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT RANGE -->
+  <section class="range">
+    <div class="wrap">
+      <div>
+        <div class="kicker" style="color:var(--brass-light)">Investment range</div>
+        <h2>Built for the <em>finest homes</em> in the metro.</h2>
+        <p>From a refined paver patio to a full outdoor-living transformation, we specialize in premium projects for Mission Hills, Leawood, and Prairie Village homeowners who want it done once, done right.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier"><div class="amt">$15k–$30k</div><div class="lbl">Signature paver patio, seat wall &amp; landscape lighting.</div></div>
+        <div class="tier"><div class="amt">$30k–$55k</div><div class="lbl">Multi-level hardscape with fire feature &amp; structural walls.</div></div>
+        <div class="tier"><div class="amt">$55k–$75k+</div><div class="lbl">Complete outdoor living — kitchen, pergola &amp; full grounds.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="rev-head">
+        <div class="sec-head" style="margin:0">
+          <div class="kicker">Neighbors talk</div>
+          <h2>145+ five-star reviews <em>across the county.</em></h2>
+        </div>
+        <div class="rev-score">
+          <div class="big">4.9</div>
+          <div class="s">★★★★★</div>
+          <div class="c">150 Google reviews</div>
+        </div>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="qmark">&ldquo;</div>
+          <div class="stars">★★★★★</div>
+          <p>Ian and his crew were hard-working, clean, and always on time. The new paver patio and the landscaping around it look better than the renderings — and the renderings were beautiful.</p>
+          <footer>— Karen M., Leawood</footer>
+        </div>
+        <div class="quote">
+          <div class="qmark">&ldquo;</div>
+          <div class="stars">★★★★★</div>
+          <p>Our backyard had a serious slope and a drainage nightmare. Ian designed a tiered retaining wall in AutoCAD, walked us through every detail, and delivered exactly what he drew. Worth every penny.</p>
+          <footer>— David &amp; Sara P., Mission Hills</footer>
+        </div>
+        <div class="quote">
+          <div class="qmark">&ldquo;</div>
+          <div class="stars">★★★★★</div>
+          <p>Outdoor kitchen, fire pit, and seat walls — the whole space feels like an extension of the house now. Communication was excellent and the cleanup was spotless. Already recommending them to neighbors.</p>
+          <footer>— Michael T., Prairie Village</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT CTA -->
+  <section class="consult" id="consult">
+    <div class="wrap">
+      <div class="kicker" style="color:var(--brass-light)">Ready when you are</div>
+      <h2>Let's design the backyard <em>your home deserves.</em></h2>
+      <p>Book a no-pressure design consultation with Ian. We'll walk your property, talk vision and budget, and put together an AutoCAD plan you can actually picture living in.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="tel:+19132712900">📞 Call (913) 271-2900</a>
+        <a class="btn btn-ghost btn-lg" href="#consult">Request a callback</a>
+      </div>
+      <div class="note">Evenings &amp; weekends welcome · Serving Overland Park, Leawood, Mission Hills, Prairie Village &amp; Johnson County</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-f">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <div class="name">Cliffy Care Landscaping LLC</div>
+          <div class="loc">Hardscaping &amp; outdoor living · Johnson County, Kansas</div>
+        </div>
+        <div class="foot-cols">
+          <div class="foot-col">
+            <h5>Build with us</h5>
+            <a href="#services">Paver patios</a>
+            <a href="#services">Retaining walls</a>
+            <a href="#services">Outdoor kitchens</a>
+            <a href="#services">Landscape lighting</a>
+          </div>
+          <div class="foot-col">
+            <h5>Service area</h5>
+            <span>Overland Park · Leawood</span>
+            <span>Mission Hills · Prairie Village</span>
+            <span>Olathe · Lenexa · Shawnee</span>
+          </div>
+          <div class="foot-col">
+            <h5>Get started</h5>
+            <a href="tel:+19132712900">(913) 271-2900</a>
+            <a href="#consult">Book a consultation</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <b>Concept preview by Gigawatt.</b> This is a redesign concept created to demonstrate a homepage direction for Cliffy Care Landscaping LLC — it is not the business's live website. Business details and service area reflect public information; review quotes are illustrative of the company's reputation. © 2026 Gigawatt · Kansas City web design + AI.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

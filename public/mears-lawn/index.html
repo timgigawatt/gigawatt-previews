@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Mears Lawn &amp; Landscape — Johnson County's Landscape Craftsmen</title>
+  <meta name="description" content="Full-service landscape design, hardscaping, irrigation & lawn care for Overland Park, Prairie Village, Leawood & Shawnee. Family-owned, 4.8★ on Google." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest: #1e3a2b;
+      --forest-2: #244834;
+      --moss: #3f6b4c;
+      --sage: #7fa088;
+      --gold: #c8a24a;
+      --gold-dk: #a9863a;
+      --cream: #f6f4ec;
+      --paper: #fbfaf5;
+      --line: #e4e0d3;
+      --text: #23281f;
+      --muted: #5d685a;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--paper); line-height: 1.6; }
+    img { max-width: 100%; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .logo { font-family: 'Fraunces', Georgia, serif; }
+    a { color: inherit; }
+
+    /* Header */
+    header { background: rgba(251,250,245,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; }
+    .logo { font-weight: 700; font-size: clamp(19px, 2.4vw, 23px); color: var(--forest); text-decoration: none; letter-spacing: -.01em; display: flex; align-items: center; gap: 9px; }
+    .leaf { width: 26px; height: 26px; flex: none; }
+    .logo small { display: block; font-family: 'Inter'; font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-dk); margin-top: 1px; }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-phone { text-decoration: none; font-weight: 600; color: var(--forest); font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--gold-dk); }
+    .btn { display: inline-block; font-weight: 600; text-decoration: none; border-radius: 10px; padding: 12px 22px; font-size: 15px; transition: transform .12s ease, background .2s ease, box-shadow .2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-gold { background: var(--gold); color: #2a2410; box-shadow: 0 4px 14px rgba(200,162,74,.35); }
+    .btn-gold:hover { background: var(--gold-dk); }
+    .btn-outline { border: 1.5px solid rgba(255,255,255,.5); color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .btn-ghost { border: 1.5px solid var(--moss); color: var(--forest); }
+    .btn-ghost:hover { background: var(--cream); }
+    .nav .btn-gold { padding: 10px 18px; }
+    @media (max-width: 620px) { .nav-phone { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(150deg, var(--forest) 0%, var(--forest-2) 45%, var(--moss) 130%); }
+    .hero::before { content:""; position:absolute; inset:0; background:
+      radial-gradient(700px 420px at 82% -8%, rgba(200,162,74,.20), transparent 60%),
+      radial-gradient(560px 360px at 8% 110%, rgba(127,160,136,.28), transparent 60%); }
+    .hero::after { content:""; position:absolute; inset:0; opacity:.10; background-image:
+      linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px);
+      background-size: 46px 46px; -webkit-mask-image: linear-gradient(180deg, transparent, #000 60%, transparent); }
+    .hero .wrap { position: relative; z-index: 1; padding: 74px 22px 88px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #dfead9; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); padding: 7px 14px; border-radius: 999px; }
+    .hero h1 { font-size: clamp(34px, 6vw, 62px); line-height: 1.04; font-weight: 700; margin: 22px 0 0; max-width: 15ch; letter-spacing: -.02em; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero .lede { margin: 22px 0 30px; font-size: clamp(16px, 2vw, 19px); color: #d8e2d3; max-width: 54ch; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .stars { margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: #e7eee3; }
+    .stars .g { color: var(--gold); letter-spacing: 2px; font-size: 17px; }
+    .stars b { color: #fff; }
+    .stars .div { width: 1px; height: 16px; background: rgba(255,255,255,.25); }
+
+    /* Trust strip */
+    .strip { background: var(--forest-2); color: #dfe7db; border-top: 1px solid rgba(255,255,255,.08); }
+    .strip .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; padding: 18px 22px; font-size: 13.5px; font-weight: 500; }
+    .strip span { display: inline-flex; align-items: center; gap: 8px; }
+    .strip .dot { color: var(--gold); }
+
+    /* Sections */
+    section { padding: 78px 0; }
+    .sec-head { max-width: 620px; margin-bottom: 40px; }
+    .kicker { font-size: 12.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dk); }
+    h2 { font-size: clamp(27px, 4vw, 40px); color: var(--forest); margin: 12px 0 12px; line-height: 1.1; letter-spacing: -.015em; font-weight: 600; }
+    .sub { color: var(--muted); font-size: 17px; }
+
+    /* Portfolio gallery — CSS only */
+    .portfolio { background: var(--cream); }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .tile { position: relative; border-radius: 16px; overflow: hidden; min-height: 210px; color: #fff; text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; box-shadow: 0 10px 30px rgba(30,58,43,.12); border: 1px solid rgba(0,0,0,.04); isolation: isolate; }
+    .tile::before { content:""; position:absolute; inset:0; z-index:-2; }
+    .tile::after { content:""; position:absolute; inset:0; z-index:-1; background: linear-gradient(180deg, transparent 30%, rgba(15,28,20,.78) 100%); }
+    .tile span.tag { font-size: 11.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .9; }
+    .tile h3 { font-size: 20px; font-weight: 600; margin-top: 4px; text-shadow: 0 1px 10px rgba(0,0,0,.35); }
+    .tile.big { grid-column: span 2; grid-row: span 2; min-height: 300px; }
+    .tile.wide { grid-column: span 2; }
+    /* faux photography via layered gradients */
+    .t-patio::before { background:
+      radial-gradient(120% 90% at 20% 0%, #cbb085 0%, #9d7f57 40%, #6f5a3c 100%),
+      repeating-linear-gradient(115deg, rgba(0,0,0,.05) 0 3px, transparent 3px 22px); background-blend-mode: overlay; }
+    .t-design::before { background: linear-gradient(160deg, #6fae7a 0%, #3f7d54 55%, #245139 100%); }
+    .t-mow::before { background:
+      linear-gradient(90deg, #4a8a54 0 12.5%, #58995f 12.5% 25%, #4a8a54 25% 37.5%, #58995f 37.5% 50%, #4a8a54 50% 62.5%, #58995f 62.5% 75%, #4a8a54 75% 87.5%, #58995f 87.5% 100%); }
+    .t-fire::before { background: radial-gradient(90% 100% at 50% 120%, #e8a34a 0%, #b56a2f 30%, #4a3220 75%, #241a12 100%); }
+    .t-water::before { background: linear-gradient(160deg, #2f5f6e 0%, #29788a 45%, #7fb7bf 100%); }
+    .t-light::before { background:
+      radial-gradient(60% 80% at 50% 90%, rgba(240,214,120,.55), transparent 60%),
+      linear-gradient(180deg, #14261c 0%, #1f3a2a 100%); }
+    .t-retain::before { background:
+      repeating-linear-gradient(0deg, #8a7256 0 26px, #7a6349 26px 28px),
+      linear-gradient(180deg, #9c8465, #6d5941); background-blend-mode: multiply; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; transition: transform .15s ease, box-shadow .2s ease, border-color .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(30,58,43,.10); border-color: var(--sage); }
+    .card .ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; font-size: 23px; background: linear-gradient(140deg, var(--cream), #eef1e6); border: 1px solid var(--line); margin-bottom: 15px; }
+    .card h3 { color: var(--forest); font-size: 20px; font-weight: 600; margin-bottom: 7px; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Story / why us */
+    .story { background: var(--forest); color: #eef2ea; }
+    .story .grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 52px; align-items: center; }
+    .story .kicker { color: var(--gold); }
+    .story h2 { color: #fff; }
+    .story p { color: #cdd8c8; margin-bottom: 16px; font-size: 16.5px; }
+    .story .sig { font-family: 'Fraunces', serif; font-size: 22px; font-style: italic; color: #fff; margin-top: 4px; }
+    .story .sig small { display: block; font-family: 'Inter'; font-style: normal; font-size: 13px; color: var(--sage); letter-spacing: .04em; margin-top: 3px; }
+    .statgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .stat { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 22px; }
+    .stat b { display: block; font-family: 'Fraunces', serif; font-size: clamp(30px, 5vw, 42px); color: var(--gold); line-height: 1; font-weight: 700; }
+    .stat span { font-size: 13.5px; color: #cdd8c8; margin-top: 8px; display: block; }
+
+    /* Reviews */
+    .reviews { background: var(--paper); }
+    .quote { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; position: relative; }
+    .quote .g { color: var(--gold); letter-spacing: 2px; font-size: 15px; }
+    .quote p { font-size: 16px; margin: 12px 0 16px; color: #33392f; }
+    .quote footer { color: var(--muted); font-size: 13.5px; font-weight: 600; }
+    .review-foot { margin-top: 34px; text-align: center; color: var(--muted); font-size: 15px; }
+    .review-foot b { color: var(--forest); }
+
+    /* CTA band */
+    .cta-band { background: linear-gradient(150deg, var(--moss), var(--forest)); color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .cta-band::before { content:""; position:absolute; inset:0; background: radial-gradient(600px 300px at 50% -20%, rgba(200,162,74,.25), transparent 60%); }
+    .cta-band .wrap { position: relative; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #dbe4d5; max-width: 52ch; margin: 12px auto 28px; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+    .cta-note { margin-top: 18px; font-size: 13.5px; color: #bcccb4; }
+
+    /* Footer */
+    footer.site { background: #16241b; color: #a7b6a3; padding: 40px 0 30px; font-size: 13.5px; }
+    footer.site .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 22px; margin-bottom: 20px; }
+    footer.site .logo { color: #fff; font-size: 20px; }
+    footer.site .logo small { color: var(--sage); }
+    footer.site a { color: #d5e0d0; text-decoration: none; }
+    footer.site .disc { color: #7f9079; max-width: 62ch; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #14261c; color: var(--gold); font: 600 11.5px/1 'Inter', system-ui; padding: 9px 14px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,.28); border: 1px solid rgba(200,162,74,.4); }
+
+    @media (max-width: 900px) {
+      .story .grid { grid-template-columns: 1fr; gap: 34px; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .tile.big { grid-column: span 2; grid-row: auto; min-height: 240px; }
+    }
+    @media (max-width: 720px) {
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+    }
+    @media (max-width: 520px) {
+      .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .tile { min-height: 160px; padding: 15px; }
+      .tile.big, .tile.wide { grid-column: span 2; }
+      .tile h3 { font-size: 17px; }
+      .statgrid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 6 3 9 3 15a9 9 0 0 0 18 0c0-6-4-9-9-13Z" fill="#3f6b4c"/><path d="M12 4.5c-.5 5-1 9-.5 15" stroke="#c8a24a" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <span>Mears Lawn &amp; Landscape<small>Overland Park &amp; Johnson County</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19132844976"><span>&#9742;</span> (913) 284-4976</a>
+        <a class="btn btn-gold" href="#quote">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">&#127793; Design &middot; Build &middot; Maintain</span>
+      <h1>Johnson County's finest yards, <em>designed &amp; cared for</em> year-round.</h1>
+      <p class="lede">From award-winning landscape design and hardscapes to dependable weekly mowing, Overland Park, Prairie Village &amp; Leawood homeowners trust Mears to make the whole property look effortless.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#quote">Get your free design consult</a>
+        <a class="btn btn-outline" href="tel:+19132844976">&#9742; Call (913) 284-4976</a>
+      </div>
+      <div class="stars">
+        <span class="g">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4.8</b> on Google &middot; 339 reviews
+        <span class="div"></span>
+        <span>Family-owned &middot; Licensed &amp; insured</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span><span class="dot">&#10022;</span> Best of Merriam 2022, 2023 &amp; 2024</span>
+      <span><span class="dot">&#10022;</span> 20+ years in the industry</span>
+      <span><span class="dot">&#10022;</span> Unilock Certified installers</span>
+      <span><span class="dot">&#10022;</span> KDA licensed &amp; insured</span>
+    </div>
+  </div>
+
+  <section class="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Recent work</div>
+        <h2>A portfolio, not a promise.</h2>
+        <p class="sub">Real project types we build across Overland Park, Leawood, Prairie Village &amp; Shawnee — patios, plantings, and lawns worthy of the neighborhood.</p>
+      </div>
+      <div class="gallery">
+        <a class="tile big t-patio" href="#quote">
+          <span class="tag">Hardscaping</span>
+          <h3>Paver patios &amp; outdoor kitchens</h3>
+        </a>
+        <a class="tile t-design" href="#quote">
+          <span class="tag">Design</span>
+          <h3>Full landscape design</h3>
+        </a>
+        <a class="tile t-mow" href="#quote">
+          <span class="tag">Lawn care</span>
+          <h3>Weekly mowing</h3>
+        </a>
+        <a class="tile wide t-fire" href="#quote">
+          <span class="tag">Enhancements</span>
+          <h3>Fire pits &amp; features</h3>
+        </a>
+        <a class="tile t-retain" href="#quote">
+          <span class="tag">Structure</span>
+          <h3>Retaining walls</h3>
+        </a>
+        <a class="tile t-water" href="#quote">
+          <span class="tag">Water</span>
+          <h3>Water features</h3>
+        </a>
+        <a class="tile t-light" href="#quote">
+          <span class="tag">Lighting</span>
+          <h3>Landscape lighting</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Full service</div>
+        <h2>One team for the entire property.</h2>
+        <p class="sub">No juggling three contractors. Mears handles design through maintenance — all in-house, all accountable to one name.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ico">&#128396;</div><h3>Landscape design &amp; build</h3><p>Custom plans, plantings, and installation tailored to your home and how you use the yard.</p></div>
+        <div class="card"><div class="ico">&#129521;</div><h3>Patios &amp; hardscaping</h3><p>Unilock-certified paver patios, walkways, retaining walls, and outdoor living spaces built to last.</p></div>
+        <div class="card"><div class="ico">&#127793;</div><h3>Lawn maintenance</h3><p>Reliable mowing, edging, fertilizing &amp; weed control that keeps the whole lawn showroom-clean.</p></div>
+        <div class="card"><div class="ico">&#128167;</div><h3>Irrigation &amp; drainage</h3><p>Sprinkler install and repair plus yard drainage solutions that end soggy spots and erosion.</p></div>
+        <div class="card"><div class="ico">&#128293;</div><h3>Fire, water &amp; lighting</h3><p>Fire features, water features, outdoor kitchens, and low-voltage lighting that extend the season.</p></div>
+        <div class="card"><div class="ico">&#10052;</div><h3>Seasonal &amp; snow</h3><p>Spring clean-ups, fall lawn renovation, and commercial snow removal — covered all year.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="kicker">Why Mears</div>
+          <h2>Started with a mower at 11. Grown into a name Leawood trusts.</h2>
+          <p>Will Mears began mowing lawns as a kid, then studied horticulture and agricultural business before founding the company. Today he and his wife Danielle lead a trained, certified crew with a simple mission: restore trust in an industry full of no-shows and upsells.</p>
+          <p>That means clean, organized job sites, honest communication, and craftsmanship that respects both your budget and your neighborhood. When we say we'll be there, we're there.</p>
+          <div class="sig">Will &amp; Danielle Mears<small>Owners &middot; Kansas City natives</small></div>
+        </div>
+        <div class="statgrid">
+          <div class="stat"><b>20+</b><span>Years of industry experience</span></div>
+          <div class="stat"><b>4.8&#9733;</b><span>339 Google reviews</span></div>
+          <div class="stat"><b>3&#215;</b><span>Best of Merriam award winner</span></div>
+          <div class="stat"><b>100%</b><span>In-house, licensed &amp; insured crews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Neighbors talk</div>
+        <h2>Word travels fast in Johnson County.</h2>
+        <p class="sub">A few of the reasons Mears keeps a 4.8-star reputation across 339 Google reviews.</p>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <span class="g">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"It exceeded our expectations. Their attention to detail, hard work, and creativity truly made our dreams come true."</p>
+          <footer>&mdash; Tina B., Leawood</footer>
+        </div>
+        <div class="quote">
+          <span class="g">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"Edgar and Sadrae did an exceptional job turning our old, outdated landscape into something bright and cheery. Everything flowed smoothly."</p>
+          <footer>&mdash; Julie J., Prairie Village</footer>
+        </div>
+        <div class="quote">
+          <span class="g">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"They came out when they said they would. Worked hard and got the job done quick. Every crew member was professional."</p>
+          <footer>&mdash; Timothy J., Overland Park</footer>
+        </div>
+      </div>
+      <p class="review-foot">Rated <b>4.8&#9733;</b> on Google &middot; also on <b>Yelp</b>, <b>Nextdoor</b> &amp; <b>BBB</b> &mdash; ask us for references in your neighborhood.</p>
+    </div>
+  </section>
+
+  <section class="cta-band" id="quote">
+    <div class="wrap">
+      <div class="kicker" style="color:var(--gold)">Free consultation</div>
+      <h2>Let's design the yard your street remembers.</h2>
+      <p>Tell us about your project and we'll schedule a free on-site consultation. Design, patio, irrigation, or just a lawn you never have to think about again.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="tel:+19132844976">&#9742; Call (913) 284-4976</a>
+        <a class="btn btn-outline" href="#quote">Request a callback</a>
+      </div>
+      <div class="cta-note">Serving Overland Park &middot; Prairie Village &middot; Leawood &middot; Shawnee &middot; Merriam &amp; nearby &mdash; Mon–Fri, 8am–5pm</div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="top">
+        <a class="logo" href="#" style="text-decoration:none">
+          <svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 6 3 9 3 15a9 9 0 0 0 18 0c0-6-4-9-9-13Z" fill="#7fa088"/></svg>
+          <span>Mears Lawn &amp; Landscape<small>Overland Park &amp; Johnson County, KS</small></span>
+        </a>
+        <div>
+          <a href="tel:+19132844976">(913) 284-4976</a><br>
+          Merriam, KS &middot; serving Johnson County
+        </div>
+      </div>
+      <p class="disc">Concept preview by <strong>Gigawatt</strong> — a Kansas City web design &amp; AI studio. This is a redesign concept, not the official Mears Lawn &amp; Landscape website. Business details are drawn from public listings for demonstration; contact the business directly to confirm services and hours.</p>
+    </div>
+  </footer>
+
+  <div class="demo-tag">&#9889; concept preview</div>
+</body>
+</html>

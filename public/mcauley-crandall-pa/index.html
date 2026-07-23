@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="McAuley & Crandall, PA — a two-partner CPA firm in Overland Park, KS. Tax prep, planning, bookkeeping & small-business accounting. 25 years, one office, 4.8 stars." />
+  <title>McAuley &amp; Crandall, PA — Overland Park's steady hand at tax time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --teal:#0d3b3e;        /* deep teal */
+      --teal-800:#0a2f31;
+      --teal-700:#12494c;
+      --teal-600:#1b5f62;
+      --gold:#c69a4b;        /* warm precise gold */
+      --gold-lt:#e2c07f;
+      --sage:#4f8a72;        /* green accent */
+      --cream:#f7f4ec;
+      --paper:#fbfaf6;
+      --ink:#182225;
+      --muted:#5b6b6c;
+      --line:rgba(13,59,62,.12);
+      --shadow:0 18px 50px -22px rgba(10,47,49,.45);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--paper);color:var(--ink);
+      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;-webkit-font-smoothing:antialiased;
+    }
+    .wrap{width:min(1120px,92vw);margin:0 auto}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.08;letter-spacing:-.01em;margin:0}
+    p{margin:0}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border-radius:999px;
+      padding:.85rem 1.5rem;font-size:1rem;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;border:1px solid transparent;white-space:nowrap}
+    .btn-gold{background:linear-gradient(180deg,var(--gold-lt),var(--gold));color:#3a2c0c;box-shadow:0 10px 24px -12px rgba(198,154,75,.9)}
+    .btn-gold:hover{transform:translateY(-2px)}
+    .btn-ghost{background:transparent;border-color:rgba(255,255,255,.4);color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.1)}
+    .btn-outline{background:#fff;border-color:var(--line);color:var(--teal)}
+    .btn-outline:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+    .logo{display:flex;align-items:center;gap:.65rem;font-family:"Fraunces",serif;font-weight:700;font-size:1.22rem;color:var(--teal);letter-spacing:-.01em}
+    .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(145deg,var(--teal-600),var(--teal-800));display:grid;place-items:center;color:var(--gold-lt);font-weight:700;font-family:"Fraunces",serif;font-size:1rem;box-shadow:inset 0 0 0 1px rgba(226,192,127,.28)}
+    .logo small{display:block;font-family:"Inter";font-weight:500;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .nav-right{display:flex;align-items:center;gap:1rem}
+    .nav-phone{font-weight:600;color:var(--teal);font-size:.95rem;display:flex;align-items:center;gap:.4rem}
+    .nav-phone:hover{color:var(--gold)}
+    @media(max-width:720px){.nav-phone span{display:none}}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(120% 90% at 85% -10%,rgba(198,154,75,.22),transparent 55%),
+      radial-gradient(90% 80% at 0% 110%,rgba(79,138,114,.28),transparent 55%),
+      linear-gradient(160deg,var(--teal) 0%,var(--teal-800) 100%);
+      color:#eaf1ef}
+    .hero::after{content:"";position:absolute;inset:0;background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:46px 46px;mask:radial-gradient(120% 80% at 70% 0%,#000,transparent 70%);pointer-events:none}
+    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:clamp(3rem,7vw,5.5rem) 0 clamp(3.5rem,7vw,5rem)}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:2.25rem}}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt);background:rgba(226,192,127,.1);border:1px solid rgba(226,192,127,.28);padding:.4rem .8rem;border-radius:999px}
+    h1{font-size:clamp(2.35rem,5.4vw,3.9rem);font-weight:600;margin:1.1rem 0 .9rem;color:#fff}
+    h1 em{font-style:italic;color:var(--gold-lt)}
+    .lede{font-size:clamp(1.02rem,2vw,1.18rem);color:#cfe0dc;max-width:34ch}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.7rem 0 1.3rem}
+    .stars-line{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:#d7e5e1}
+    .stars{color:var(--gold-lt);letter-spacing:2px;font-size:1.02rem}
+    .stars-line b{color:#fff}
+
+    /* Hero card */
+    .card-appt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.4rem;backdrop-filter:blur(6px);box-shadow:var(--shadow)}
+    .card-appt h3{font-size:1.15rem;color:#fff;font-weight:600;margin-bottom:.25rem}
+    .card-appt p.sub{color:#bcd0cc;font-size:.86rem;margin-bottom:1rem}
+    .slot{display:flex;align-items:center;justify-content:space-between;gap:.75rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.7rem .85rem;margin-bottom:.55rem;transition:border-color .15s,background .15s}
+    .slot:hover{border-color:var(--gold-lt);background:rgba(226,192,127,.08)}
+    .slot .when{font-weight:600;font-size:.92rem;color:#eef5f3}
+    .slot .day{font-size:.72rem;color:#9fb7b2;letter-spacing:.03em}
+    .slot .pick{font-size:.72rem;font-weight:700;color:var(--gold-lt);letter-spacing:.08em;text-transform:uppercase}
+    .card-appt .btn{width:100%;justify-content:center;margin-top:.5rem}
+
+    /* Trust strip */
+    .trust{background:var(--cream);border-bottom:1px solid var(--line)}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+    @media(max-width:760px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+    .trust-cell{background:var(--cream);padding:1.5rem 1.1rem;text-align:center}
+    .trust-cell .num{font-family:"Fraunces",serif;font-size:1.75rem;font-weight:700;color:var(--teal);line-height:1}
+    .trust-cell .lbl{font-size:.78rem;color:var(--muted);margin-top:.35rem;letter-spacing:.02em}
+
+    /* Sections */
+    section.pad{padding:clamp(3.5rem,7vw,6rem) 0}
+    .sec-head{max-width:56ch;margin-bottom:2.5rem}
+    .kicker{font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+    h2{font-size:clamp(1.8rem,3.8vw,2.7rem);font-weight:600;color:var(--teal)}
+    .sec-head p{color:var(--muted);margin-top:.8rem;font-size:1.05rem}
+
+    /* Services */
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+    @media(max-width:860px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+    .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.5rem;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+    .svc .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(150deg,rgba(27,95,98,.14),rgba(198,154,75,.16));margin-bottom:1rem}
+    .svc h3{font-size:1.18rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+    .svc p{color:var(--muted);font-size:.94rem}
+
+    /* Story / why us */
+    .story{background:linear-gradient(160deg,var(--teal-800),var(--teal));color:#e9f1ef;border-radius:26px;overflow:hidden;position:relative}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;padding:clamp(2.2rem,5vw,3.5rem)}
+    @media(max-width:840px){.story-grid{grid-template-columns:1fr;gap:1.8rem}}
+    .story .kicker{color:var(--gold-lt)}
+    .story h2{color:#fff;margin-bottom:1rem}
+    .story p{color:#cfe0dc;margin-bottom:1rem}
+    .partners{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.4rem}
+    .partner{display:flex;align-items:center;gap:.75rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:.7rem 1rem}
+    .avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:700;color:var(--teal-800);background:linear-gradient(150deg,var(--gold-lt),var(--gold))}
+    .partner .pn{font-weight:600;color:#fff;font-size:.94rem;line-height:1.2}
+    .partner .pr{font-size:.74rem;color:#9fb7b2}
+    .story-side{display:grid;gap:.8rem}
+    .pledge{display:flex;gap:.8rem;align-items:flex-start}
+    .pledge .dot{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(226,192,127,.18);color:var(--gold-lt);display:grid;place-items:center;font-size:.85rem;font-weight:700;margin-top:.15rem}
+    .pledge b{color:#fff;font-weight:600}
+    .pledge span{color:#bcd0cc;font-size:.92rem}
+
+    /* Reviews */
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+    @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+    .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:.9rem}
+    .rev .s{color:var(--gold);letter-spacing:2px;font-size:1rem}
+    .rev q{font-family:"Fraunces",serif;font-style:italic;font-size:1.06rem;color:var(--ink);line-height:1.45;quotes:none}
+    .rev .who{display:flex;align-items:center;gap:.7rem;margin-top:auto}
+    .rev .who .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(150deg,var(--sage),var(--teal-600));color:#fff;display:grid;place-items:center;font-weight:600;font-size:.85rem}
+    .rev .who .nm{font-weight:600;font-size:.9rem}
+    .rev .who .ct{font-size:.78rem;color:var(--muted)}
+
+    /* Final CTA */
+    .final{background:
+      radial-gradient(100% 120% at 100% 0%,rgba(198,154,75,.22),transparent 55%),
+      linear-gradient(160deg,var(--teal),var(--teal-800));color:#fff;text-align:center;border-radius:26px;padding:clamp(2.5rem,6vw,4.2rem) 1.5rem}
+    .final h2{color:#fff;max-width:22ch;margin:0 auto 1rem}
+    .final p{color:#cfe0dc;max-width:44ch;margin:0 auto 1.8rem}
+    .final .hero-cta{justify-content:center}
+
+    /* Footer */
+    footer{padding:3rem 0 4.5rem;color:var(--muted);font-size:.88rem}
+    .foot-grid{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:flex-start}
+    footer .logo{color:var(--teal);margin-bottom:.6rem}
+    .foot-note{max-width:40ch}
+    .concept-line{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+    .concept-line b{color:var(--teal)}
+
+    .demo-tag{position:fixed;bottom:14px;right:14px;z-index:99;background:#0a2f31;color:var(--gold-lt);
+      font:600 11px/1 "Inter",system-ui;padding:9px 13px;border-radius:999px;box-shadow:0 8px 22px -8px rgba(0,0,0,.5);border:1px solid rgba(226,192,127,.35)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="mark">M&amp;C</span>
+        <span>McAuley &amp; Crandall<small>Certified Public Accountants</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19132399130">☎ <span>(913) 239-9130</span></a>
+        <a class="btn btn-gold" href="#book">Book a consult</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">◆ Overland Park, KS · Est. 2001</span>
+        <h1>Tax season, <em>handled</em> — by the same two CPAs who've done it for 25 years.</h1>
+        <p class="lede">McAuley &amp; Crandall is a two-partner firm in Johnson County. No call centers, no rotating juniors — just precise, year-round accounting for families and small businesses across the metro.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#book">Reserve a tax-season slot</a>
+          <a class="btn btn-ghost" href="tel:+19132399130">☎ (913) 239-9130</a>
+        </div>
+        <div class="stars-line">
+          <span class="stars">★★★★★</span>
+          <b>4.8 / 5</b> · 91 client reviews · Overland Park
+        </div>
+      </div>
+
+      <aside class="card-appt" id="book" aria-label="Schedule a consultation">
+        <h3>Beat the April rush</h3>
+        <p class="sub">Pick a time — we'll confirm within one business day.</p>
+        <a class="slot" href="#book">
+          <span><span class="when">Fri · 9:30 AM</span><span class="day">Feb 6 · In-office or video</span></span>
+          <span class="pick">Open</span>
+        </a>
+        <a class="slot" href="#book">
+          <span><span class="when">Tue · 1:00 PM</span><span class="day">Feb 10 · New-client intake</span></span>
+          <span class="pick">Open</span>
+        </a>
+        <a class="slot" href="#book">
+          <span><span class="when">Thu · 4:15 PM</span><span class="day">Feb 12 · Small-business review</span></span>
+          <span class="pick">Open</span>
+        </a>
+        <a class="btn btn-gold" href="tel:+19132399130">Request this time →</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap trust-grid">
+      <div class="trust-cell"><div class="num">25 yrs</div><div class="lbl">One office, same partners</div></div>
+      <div class="trust-cell"><div class="num">4.8★</div><div class="lbl">91 Google &amp; Birdeye reviews</div></div>
+      <div class="trust-cell"><div class="num">2</div><div class="lbl">Partners who know your file</div></div>
+      <div class="trust-cell"><div class="num">Year-round</div><div class="lbl">Not just April 15</div></div>
+    </div>
+  </section>
+
+  <section class="pad wrap" id="services">
+    <div class="sec-head">
+      <div class="kicker">What we do</div>
+      <h2>Everything a household or small business needs — under one roof.</h2>
+      <p>From a straightforward 1040 to payroll, audits and IRS letters, you work with a partner who already knows your numbers.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic">🧾</div><h3>Individual Tax Prep</h3><p>Accurate personal returns with planning built in — so April holds no surprises.</p></div>
+      <div class="svc"><div class="ic">🏢</div><h3>Business Taxation</h3><p>S-corps, partnerships and LLCs filed right, with strategy that follows you all year.</p></div>
+      <div class="svc"><div class="ic">📊</div><h3>Bookkeeping &amp; Accounting</h3><p>Clean monthly books and back-office support so you can run the business, not the ledger.</p></div>
+      <div class="svc"><div class="ic">💡</div><h3>Tax Planning</h3><p>Proactive, practical strategies to keep more of what you earn before year-end.</p></div>
+      <div class="svc"><div class="ic">📚</div><h3>QuickBooks &amp; Payroll</h3><p>Setup, training and payroll support that keeps your small business compliant.</p></div>
+      <div class="svc"><div class="ic">🛡️</div><h3>IRS &amp; State Representation</h3><p>Got a notice or an audit? We stand between you and the letter — audits &amp; attest services too.</p></div>
+    </div>
+  </section>
+
+  <section class="pad wrap">
+    <div class="story">
+      <div class="story-grid">
+        <div>
+          <div class="kicker">Why clients stay for decades</div>
+          <h2>A two-partner firm, on purpose.</h2>
+          <p>Nancy McAuley and Becky Crandall opened their doors in Overland Park in 2001 and never chased the growth-at-all-costs model. Twenty-five years later it's still the two of them and a small, tenured team — which means the person who signs your return is the person who answers when you call.</p>
+          <p>Call in July with a question and you won't re-explain your life to a stranger. That continuity is rare, and it's the whole point.</p>
+          <div class="partners">
+            <div class="partner"><span class="avatar">NM</span><span><span class="pn">Nancy McAuley</span><span class="pr">CPA · Partner</span></span></div>
+            <div class="partner"><span class="avatar">BC</span><span><span class="pn">Becky Crandall</span><span class="pr">CPA · Partner</span></span></div>
+          </div>
+        </div>
+        <div class="story-side">
+          <div class="pledge"><span class="dot">✓</span><span><b>You get a partner, not a queue.</b> Every client is served directly by an owner of the firm.</span></div>
+          <div class="pledge"><span class="dot">✓</span><span><b>Quick to answer.</b> Clients tell us we're fast to help with tax questions all year — not just at filing.</span></div>
+          <div class="pledge"><span class="dot">✓</span><span><b>Ethics that don't bend.</b> Straight answers and uncompromising standards, whether it's a family 1040 or a nonprofit audit.</span></div>
+          <div class="pledge"><span class="dot">✓</span><span><b>Local since 2001.</b> Overland Park, Leawood, Olathe and the greater KC metro.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad wrap" id="reviews">
+    <div class="sec-head">
+      <div class="kicker">In their words</div>
+      <h2>Overland Park clients who've stayed for the long haul.</h2>
+      <p>Rated 4.8 across 91 reviews. A few of the reasons people don't switch.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="s">★★★★★</div>
+        <q>They've done an excellent job on our taxes, but also in service throughout the year. We often call with tax questions and they're quick to help.</q>
+        <div class="who"><span class="av">DM</span><span><span class="nm">Long-time client</span><span class="ct">Overland Park, KS</span></span></div>
+      </div>
+      <div class="rev">
+        <div class="s">★★★★★</div>
+        <q>Their professionalism, high standards and uncompromising ethics are impeccable — our organization is all the better for it.</q>
+        <div class="who"><span class="av">LL</span><span><span class="nm">LaDora L.</span><span class="ct">Nonprofit Director, KC</span></span></div>
+      </div>
+      <div class="rev">
+        <div class="s">★★★★★</div>
+        <q>A granular understanding of everyday, practical tax-saving tips. They actually look for ways to help the business, not just file it.</q>
+        <div class="who"><span class="av">PR</span><span><span class="nm">Prosperity R.</span><span class="ct">Small business, Overland Park</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad wrap">
+    <div class="final">
+      <h2>Don't wait for a shoebox in April.</h2>
+      <p>Reserve a consultation now and start the season organized — with a CPA who'll still know your name in ten years.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#book">Book a consultation</a>
+        <a class="btn btn-ghost" href="tel:+19132399130">☎ (913) 239-9130</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><span class="mark">M&amp;C</span><span>McAuley &amp; Crandall, PA<small>Certified Public Accountants</small></span></a>
+        <p class="foot-note">Independent CPA firm serving Overland Park and the greater Kansas City metro since 2001.</p>
+      </div>
+      <div>
+        <p><b style="color:var(--teal)">Overland Park, KS</b></p>
+        <p>7200 W 132nd St, Suite 160</p>
+        <p><a href="tel:+19132399130" style="color:var(--teal);font-weight:600">(913) 239-9130</a></p>
+      </div>
+    </div>
+    <p class="concept-line">This is a <b>concept preview by Gigawatt</b> — a Kansas City web design &amp; AI studio. It is a design proposal, not the official McAuley &amp; Crandall, PA website, and is not affiliated with or endorsed by the firm. Content and scheduling are illustrative.</p>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

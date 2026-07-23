@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Kiddi Kollege of Leawood — family-owned early learning since 1957. Infant to pre-K care in Leawood, KS. Book a tour and see where kids grow a lifelong love of learning.">
+<title>Kiddi Kollege of Leawood — Nurturing early learning in Leawood, KS since 1957</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#3a7bd5;
+    --blue-deep:#2b5fa8;
+    --sky:#e8f2fd;
+    --yellow:#ffd15c;
+    --yellow-soft:#fff4d6;
+    --green:#5cbf8a;
+    --green-soft:#e6f6ee;
+    --coral:#ff8a6b;
+    --ink:#2a3342;
+    --ink-soft:#586173;
+    --cream:#fffaf2;
+    --white:#ffffff;
+    --line:#eee4d4;
+    --shadow:0 18px 40px -18px rgba(43,95,168,.35);
+    --shadow-sm:0 8px 22px -12px rgba(42,51,66,.35);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.font-display{font-family:"Fredoka","Nunito",sans-serif;line-height:1.1;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1140px,92%);margin-inline:auto}
+  section{position:relative}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.02rem;
+    padding:.85rem 1.5rem;border-radius:999px;border:0;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 24px -10px rgba(255,138,107,.9)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 28px -10px rgba(255,138,107,.95)}
+  .btn-sun{background:var(--yellow);color:#5b4302;box-shadow:0 10px 24px -12px rgba(255,209,92,.9)}
+  .btn-sun:hover{transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.85);color:var(--blue-deep);border:2px solid #fff}
+  .btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+  .btn-lg{font-size:1.12rem;padding:1rem 1.9rem}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,242,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.65rem;font-family:"Fredoka";font-weight:700;font-size:1.28rem;color:var(--ink)}
+  .mark{
+    width:44px;height:44px;border-radius:14px;flex:none;
+    background:linear-gradient(135deg,var(--blue),var(--green));
+    display:grid;place-items:center;color:#fff;font-size:1.4rem;
+    box-shadow:var(--shadow-sm);transform:rotate(-4deg);
+  }
+  .brand small{display:block;font-family:"Nunito";font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-top:-2px}
+  .head-cta{display:flex;align-items:center;gap:.9rem}
+  .head-phone{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;color:var(--blue-deep)}
+  .head-phone span{font-size:.72rem;display:block;color:var(--ink-soft);font-weight:700;text-transform:uppercase;letter-spacing:.08em;line-height:1}
+  @media(max-width:720px){.head-phone{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(60% 60% at 88% 8%, rgba(255,209,92,.35), transparent 60%),
+      radial-gradient(55% 60% at 6% 92%, rgba(92,191,138,.28), transparent 60%),
+      linear-gradient(180deg,var(--sky), var(--cream) 88%);
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding:3.4rem 0 3.8rem}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:.4rem .9rem;font-weight:800;font-size:.82rem;color:var(--blue-deep);
+    box-shadow:var(--shadow-sm);margin-bottom:1.1rem;
+  }
+  .eyebrow b{color:var(--coral)}
+  h1{font-size:clamp(2.15rem,5.2vw,3.5rem);font-weight:700;color:var(--ink)}
+  h1 .hl{color:var(--blue);position:relative;white-space:nowrap}
+  .lede{font-size:clamp(1.05rem,2.2vw,1.22rem);color:var(--ink-soft);margin:1.1rem 0 1.6rem;max-width:34ch}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+  .stars{display:flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-weight:700;color:var(--ink)}
+  .stars .s{color:var(--yellow);font-size:1.15rem;letter-spacing:1px}
+  .stars small{color:var(--ink-soft);font-weight:600}
+
+  /* Hero card cluster */
+  .hero-art{position:relative;min-height:360px}
+  .card-float{
+    background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:1.15rem 1.25rem;border:1px solid var(--line);
+  }
+  .hero-main{
+    background:linear-gradient(160deg,#fff, #fff);
+    padding:1.4rem;border-radius:26px;box-shadow:var(--shadow);border:1px solid var(--line);
+  }
+  .hero-main .kids{display:flex;gap:.5rem;margin-bottom:1rem}
+  .blob{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem}
+  .b1{background:var(--yellow-soft)}.b2{background:var(--green-soft)}.b3{background:var(--sky)}.b4{background:#ffe9e2}
+  .hero-main h3{font-size:1.15rem;margin-bottom:.2rem}
+  .prog-row{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-top:1px dashed var(--line);font-weight:700;font-size:.95rem}
+  .prog-row span{color:var(--ink-soft);font-weight:600;font-size:.85rem}
+  .age-pill{background:var(--sky);color:var(--blue-deep);border-radius:999px;padding:.15rem .6rem;font-size:.75rem;font-weight:800}
+  .float-badge{
+    position:absolute;top:-14px;right:-10px;z-index:3;
+    background:var(--yellow);color:#5b4302;font-family:"Fredoka";font-weight:700;
+    border-radius:16px;padding:.6rem .85rem;box-shadow:var(--shadow-sm);text-align:center;line-height:1;transform:rotate(6deg);
+  }
+  .float-badge b{display:block;font-size:1.5rem}
+  .float-badge small{font-size:.62rem;letter-spacing:.06em;text-transform:uppercase}
+  .float-book{
+    position:absolute;bottom:-22px;left:-14px;z-index:3;display:flex;align-items:center;gap:.6rem;
+  }
+  .float-book .ic{width:40px;height:40px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1.2rem;flex:none}
+  .float-book small{font-size:.72rem;color:var(--ink-soft);font-weight:700}
+  .float-book b{display:block;font-size:.95rem;color:var(--ink)}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:2.4rem;padding:2.4rem 0 2.8rem}
+    .lede{max-width:none}
+    .hero-art{min-height:auto;margin-top:.5rem}
+    .float-book{position:static;margin-top:1rem}
+  }
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--blue-deep);color:#fff}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.5rem 0}
+  .trust .item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.15rem}
+  .trust .n{font-family:"Fredoka";font-weight:700;font-size:1.7rem;color:var(--yellow)}
+  .trust .l{font-size:.82rem;color:#d5e3f7;font-weight:600;line-height:1.2}
+  @media(max-width:680px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:1.3rem}}
+
+  /* ---------- Section shells ---------- */
+  .pad{padding:4.2rem 0}
+  .head-block{text-align:center;max-width:640px;margin:0 auto 2.4rem}
+  .kicker{display:inline-block;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--green);margin-bottom:.6rem}
+  .head-block h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+  .head-block p{color:var(--ink-soft);margin-top:.7rem;font-size:1.05rem}
+
+  /* ---------- Programs ---------- */
+  .grid{display:grid;gap:1.2rem}
+  .prog-grid{grid-template-columns:repeat(3,1fr)}
+  .p-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.5rem;box-shadow:var(--shadow-sm);transition:transform .18s ease, box-shadow .18s ease;
+    position:relative;overflow:hidden;
+  }
+  .p-card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px}
+  .p-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .p-card .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;margin-bottom:1rem}
+  .p-card h3{font-size:1.28rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+  .p-card .age{background:var(--sky);color:var(--blue-deep);font-size:.72rem;font-weight:800;border-radius:999px;padding:.15rem .6rem}
+  .p-card p{color:var(--ink-soft);margin-top:.5rem;font-size:.97rem}
+  .c-yellow::before{background:var(--yellow)}.c-yellow .ic{background:var(--yellow-soft)}
+  .c-green::before{background:var(--green)}.c-green .ic{background:var(--green-soft)}
+  .c-blue::before{background:var(--blue)}.c-blue .ic{background:var(--sky)}
+  .c-coral::before{background:var(--coral)}.c-coral .ic{background:#ffe9e2}
+  @media(max-width:860px){.prog-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.prog-grid{grid-template-columns:1fr}}
+
+  /* ---------- Story ---------- */
+  .story{background:linear-gradient(180deg,var(--green-soft),var(--cream))}
+  .story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:3rem;align-items:center}
+  .story-visual{position:relative}
+  .timeline{background:#fff;border:1px solid var(--line);border-radius:26px;padding:1.6rem 1.7rem;box-shadow:var(--shadow)}
+  .tl-item{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px dashed var(--line)}
+  .tl-item:last-child{border-bottom:0}
+  .tl-year{font-family:"Fredoka";font-weight:700;color:var(--blue);font-size:1.15rem;flex:none;width:74px}
+  .tl-item p{font-size:.95rem;color:var(--ink-soft)}
+  .tl-item b{color:var(--ink)}
+  .gen-badge{
+    position:absolute;bottom:-20px;right:-8px;background:var(--coral);color:#fff;
+    font-family:"Fredoka";font-weight:700;border-radius:18px;padding:.75rem 1rem;text-align:center;line-height:1.05;box-shadow:var(--shadow-sm);transform:rotate(-5deg);
+  }
+  .gen-badge b{display:block;font-size:1.6rem}
+  .gen-badge small{font-size:.66rem;text-transform:uppercase;letter-spacing:.05em}
+  .story-copy h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.4rem}
+  .story-copy .kicker{color:var(--coral)}
+  .story-copy p{color:var(--ink-soft);margin-top:.9rem}
+  .story-copy p strong{color:var(--ink)}
+  @media(max-width:860px){.story .wrap{grid-template-columns:1fr;gap:2.6rem}.gen-badge{position:static;display:inline-block;margin-top:1rem;transform:none}}
+
+  /* ---------- Feature / concept angles ---------- */
+  .feat-grid{grid-template-columns:repeat(3,1fr)}
+  .f-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+  .f-card .ic{width:50px;height:50px;border-radius:14px;background:var(--sky);display:grid;place-items:center;font-size:1.5rem;margin-bottom:.9rem}
+  .f-card h3{font-size:1.15rem;margin-bottom:.35rem}
+  .f-card p{color:var(--ink-soft);font-size:.95rem}
+  @media(max-width:860px){.feat-grid{grid-template-columns:1fr}}
+
+  /* ---------- Tuition transparency band ---------- */
+  .tuition{background:var(--yellow-soft)}
+  .tuition .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+  .tuition .box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow-sm)}
+  .price-row{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px dashed var(--line);font-weight:700}
+  .price-row:last-child{border-bottom:0}
+  .price-row .amt{color:var(--green);font-family:"Fredoka";font-weight:700}
+  .tuition h2{font-size:clamp(1.7rem,3.6vw,2.3rem)}
+  .tuition .kicker{color:var(--blue-deep)}
+  .tuition p{color:var(--ink-soft);margin:.8rem 0 1.2rem}
+  .disc{font-size:.78rem;color:var(--ink-soft);margin-top:.9rem}
+  @media(max-width:760px){.tuition .wrap{grid-template-columns:1fr;gap:1.8rem}}
+
+  /* ---------- Reviews ---------- */
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .r-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+  .r-card .s{color:var(--yellow);font-size:1.05rem;letter-spacing:1px;margin-bottom:.7rem}
+  .r-card blockquote{font-size:1.02rem;color:var(--ink);font-weight:600;flex:1}
+  .r-card .who{display:flex;align-items:center;gap:.65rem;margin-top:1.1rem}
+  .r-card .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:"Fredoka";font-weight:700;flex:none}
+  .r-card .who b{display:block;font-size:.95rem}
+  .r-card .who small{color:var(--ink-soft)}
+  @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+
+  /* ---------- Final CTA ---------- */
+  .final{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;text-align:center}
+  .final .wrap{padding:3.6rem 0}
+  .final h2{font-size:clamp(1.9rem,4.4vw,2.7rem);color:#fff}
+  .final p{color:#d5e3f7;max-width:42ch;margin:.8rem auto 1.6rem;font-size:1.08rem}
+  .final .hero-cta{justify-content:center}
+  .final-phone{margin-top:1.3rem;font-weight:700;color:#eaf2ff}
+  .final-phone a{color:#fff;border-bottom:2px solid var(--yellow)}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--ink);color:#cbd3e0;padding:2.6rem 0}
+  footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.4rem;align-items:flex-start}
+  footer .brand{color:#fff}
+  footer .brand small{color:var(--green)}
+  footer .locs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+  footer .locs span{background:rgba(255,255,255,.08);border-radius:999px;padding:.25rem .8rem;font-size:.82rem}
+  .concept-note{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;color:#9aa4b6;line-height:1.6}
+  .concept-note b{color:#fff}
+
+  /* ---------- Concept badge ---------- */
+  .concept-badge{
+    position:fixed;bottom:16px;right:16px;z-index:100;
+    background:var(--ink);color:#fff;font-family:"Fredoka",sans-serif;font-weight:600;
+    font-size:.82rem;padding:.5rem .9rem;border-radius:999px;
+    box-shadow:0 8px 22px -6px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);
+    display:flex;align-items:center;gap:.4rem;
+  }
+  .concept-badge b{color:var(--yellow)}
+
+  /* Chatbot mock */
+  .chat-mock{
+    position:fixed;bottom:16px;left:16px;z-index:99;
+    background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+    padding:.7rem .9rem;display:flex;align-items:center;gap:.65rem;max-width:250px;
+  }
+  .chat-mock .av{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;font-size:1.2rem;flex:none}
+  .chat-mock b{font-size:.86rem;display:block}
+  .chat-mock small{font-size:.72rem;color:var(--ink-soft)}
+  @media(max-width:600px){.chat-mock{display:none}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <span class="mark">🎓</span>
+      <span>Kiddi Kollege<small>of Leawood · est. 1957</small></span>
+    </a>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:19132398882">
+        <span>Leawood center</span>(913) 239-8882
+      </a>
+      <a class="btn btn-primary" href="#tour">📅 Book a Tour</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">👨‍👩‍👧 Family-owned <b>·</b> 3 generations <b>·</b> since 1957</span>
+      <h1>Where Leawood kids grow a <span class="hl">lifelong love of learning</span>.</h1>
+      <p class="lede">Warm, play-filled days and kindergarten-ready results — from six weeks old through pre-K, right here on Briar Street.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#tour">📅 Book Your Tour</a>
+        <a class="btn btn-ghost btn-lg" href="tel:19132398882">📞 (913) 239-8882</a>
+      </div>
+      <div class="stars">
+        <span class="s">★★★★★</span>
+        <span>4.5<small> · 44 Google reviews from Leawood families</small></span>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="float-badge"><b>100%</b><small>Pre-K test<br>kindergarten-ready</small></div>
+      <div class="hero-main">
+        <div class="kids">
+          <span class="blob b1">🧸</span>
+          <span class="blob b2">🎨</span>
+          <span class="blob b3">📚</span>
+          <span class="blob b4">🧩</span>
+        </div>
+        <h3>Programs by age</h3>
+        <div class="prog-row">Infants <span class="age-pill">6 wks–12 mo</span></div>
+        <div class="prog-row">Toddlers <span class="age-pill">12–36 mo</span></div>
+        <div class="prog-row">Preschool <span class="age-pill">3–4 yrs</span></div>
+        <div class="prog-row">Pre-Kindergarten <span class="age-pill">4–5 yrs</span></div>
+        <div class="prog-row">Before &amp; After School <span class="age-pill">K–grade</span></div>
+      </div>
+      <div class="float-book card-float">
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <span class="ic">✅</span>
+          <span><small>Open daily</small><b>6:30a – 6:00p</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust">
+  <div class="wrap">
+    <div class="item"><span class="n">1957</span><span class="l">Family-owned<br>since day one</span></div>
+    <div class="item"><span class="n">3</span><span class="l">Generations of<br>one family</span></div>
+    <div class="item"><span class="n">76%</span><span class="l">Pre-K grads test at<br>advanced levels</span></div>
+    <div class="item"><span class="n">4.5★</span><span class="l">44 reviews from<br>local parents</span></div>
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="pad">
+  <div class="wrap">
+    <div class="head-block">
+      <span class="kicker">Programs for every stage</span>
+      <h2>A nurturing classroom for every age</h2>
+      <p>From the very first steps to the leap into kindergarten, each room is built around where your child is right now — with breakfast, lunch, and an afternoon snack included every day.</p>
+    </div>
+    <div class="grid prog-grid">
+      <div class="p-card c-yellow">
+        <div class="ic">🍼</div>
+        <h3>Infants <span class="age">6 wks–12 mo</span></h3>
+        <p>Gentle, one-on-one care on your baby's own schedule — cuddles, tummy time, and daily updates so you never miss a milestone.</p>
+      </div>
+      <div class="p-card c-green">
+        <div class="ic">🧸</div>
+        <h3>Toddlers <span class="age">12–36 mo</span></h3>
+        <p>Curious little movers explore, build, and start early words through hands-on play designed for busy, growing bodies.</p>
+      </div>
+      <div class="p-card c-blue">
+        <div class="ic">🎨</div>
+        <h3>Preschool <span class="age">3–4 yrs</span></h3>
+        <p>Letters, numbers, colors, and friendships — a joyful mix of structure and creativity that gets kids ready to learn.</p>
+      </div>
+      <div class="p-card c-coral">
+        <div class="ic">🎓</div>
+        <h3>Pre-Kindergarten <span class="age">4–5 yrs</span></h3>
+        <p>Confident, kindergarten-ready graduates — 100% test ready for kindergarten and 76% at advanced levels.</p>
+      </div>
+      <div class="p-card c-green">
+        <div class="ic">🚌</div>
+        <h3>Before &amp; After School <span class="age">School-age</span></h3>
+        <p>Pick-up from Leawood, Mission Trail, Overland Trail &amp; Prairie Star Elementary, plus homework help and play.</p>
+      </div>
+      <div class="p-card c-yellow">
+        <div class="ic">☀️</div>
+        <h3>Summer Camp <span class="age">Seasonal</span></h3>
+        <p>Field trips, water days, crafts, and adventures that keep summer full of wonder while school's out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story / differentiator -->
+<section class="story pad">
+  <div class="wrap">
+    <div class="story-visual">
+      <div class="timeline">
+        <div class="tl-item"><span class="tl-year">1957</span><p><b>A basement dream.</b> Geraldine Dolinar opens Kiddi Kollege out of her own home in Kansas City.</p></div>
+        <div class="tl-item"><span class="tl-year">1964</span><p><b>The first school.</b> The very first Kiddi Kollege building opens its doors to the neighborhood.</p></div>
+        <div class="tl-item"><span class="tl-year">Gen 2</span><p><b>Patty comes home.</b> Geraldine's daughter studies early education and steps in to lead.</p></div>
+        <div class="tl-item"><span class="tl-year">Gen 3</span><p><b>Tricia, Jon &amp; Matt.</b> The grandkids grew up in these rooms — now they run them.</p></div>
+      </div>
+      <div class="gen-badge"><b>68</b><small>years<br>family-run</small></div>
+    </div>
+    <div class="story-copy">
+      <span class="kicker">Why Leawood families stay</span>
+      <h2>Three generations. One promise.</h2>
+      <p>Kiddi Kollege didn't start as a franchise — it started in a family's basement in 1957, built on the simple belief that every child deserves to feel loved while they learn.</p>
+      <p><strong>The same family still runs it today.</strong> Geraldine's grandchildren grew up in these classrooms, taught in them, and now lead them. When you tour our Leawood center, you're not meeting a manager — you're meeting the family whose name is on the door.</p>
+      <p>That continuity is rare in childcare, and it's exactly why parents trust us with their most precious little people, year after year.</p>
+      <a class="btn btn-sun btn-lg" href="#tour" style="margin-top:1.2rem">Meet the family — book a tour →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Concept feature angles -->
+<section class="pad">
+  <div class="wrap">
+    <div class="head-block">
+      <span class="kicker">Enrolling made easy</span>
+      <h2>Answers and a spot — without the phone tag</h2>
+      <p>Choosing care shouldn't mean guessing at prices or waiting for a callback. Here's how a modern Kiddi Kollege experience welcomes busy Leawood parents.</p>
+    </div>
+    <div class="grid feat-grid">
+      <div class="f-card">
+        <div class="ic">📅</div>
+        <h3>Book a tour online</h3>
+        <p>Pick a time that works for your family and reserve it in seconds — no back-and-forth, no waiting room voicemail.</p>
+      </div>
+      <div class="f-card">
+        <div class="ic">💬</div>
+        <h3>Ask KolaBot, anytime</h3>
+        <p>A friendly AI assistant answers questions about ages, hours, waitlists, and openings 24/7 — even after bedtime.</p>
+      </div>
+      <div class="f-card">
+        <div class="ic">🏷️</div>
+        <h3>Clear, upfront pricing</h3>
+        <p>See tuition ranges by age before you visit, so you can plan your family budget with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tuition transparency -->
+<section class="tuition pad">
+  <div class="wrap">
+    <div>
+      <span class="kicker">No surprises</span>
+      <h2>Tuition, out in the open</h2>
+      <p>Most families want to know one thing first: <strong>what does it cost?</strong> Instead of "call for pricing," a transparent tuition guide helps parents self-qualify — and shows up better in local search.</p>
+      <a class="btn btn-primary btn-lg" href="#tour">📅 Reserve a Tour</a>
+      <p class="disc">Sample ranges shown for concept illustration. Actual Kiddi Kollege of Leawood tuition confirmed at your tour.</p>
+    </div>
+    <div class="box">
+      <div class="price-row">Infant (full-time) <span class="amt">$$$</span></div>
+      <div class="price-row">Toddler (full-time) <span class="amt">$$$</span></div>
+      <div class="price-row">Preschool (full-time) <span class="amt">$$</span></div>
+      <div class="price-row">Pre-Kindergarten <span class="amt">$$</span></div>
+      <div class="price-row">Before &amp; After School <span class="amt">$</span></div>
+      <p class="disc">Meals (breakfast, lunch &amp; snack) included in every program.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="pad">
+  <div class="wrap">
+    <div class="head-block">
+      <span class="kicker">Loved by local parents</span>
+      <h2>Leawood families, in their words</h2>
+      <p>4.5 stars across 44 Google reviews — here's what parents say about drop-off, teachers, and peace of mind.</p>
+    </div>
+    <div class="grid rev-grid">
+      <div class="r-card">
+        <div class="s">★★★★★</div>
+        <blockquote>"I love Kiddi Kollege of Leawood! It's such a clean and fun environment for your child, and the teachers truly love what they do."</blockquote>
+        <div class="who">
+          <span class="av" style="background:var(--blue)">R</span>
+          <span><b>The Renard Family</b><small>Leawood, KS</small></span>
+        </div>
+      </div>
+      <div class="r-card">
+        <div class="s">★★★★★</div>
+        <blockquote>"Sending our children to Kiddi Kollege has been the absolute best decision our family has made. They're happy, safe, and thriving."</blockquote>
+        <div class="who">
+          <span class="av" style="background:var(--green)">R</span>
+          <span><b>The Ross Family</b><small>Leawood, KS</small></span>
+        </div>
+      </div>
+      <div class="r-card">
+        <div class="s">★★★★★</div>
+        <blockquote>"Knowing my son is loved and cared for every day gives me real peace of mind. The consistency of the same caring teachers means everything."</blockquote>
+        <div class="who">
+          <span class="av" style="background:var(--coral)">M</span>
+          <span><b>Megan T.</b><small>Overland Park, KS</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final" id="tour">
+  <div class="wrap">
+    <h2>Come see where your child will thrive</h2>
+    <p>Tour our Leawood center on Briar Street, meet the teachers, and picture your little one's day. Spots fill by age group — reserve yours today.</p>
+    <div class="hero-cta">
+      <a class="btn btn-sun btn-lg" href="tel:19132398882">📞 Call (913) 239-8882</a>
+      <a class="btn btn-primary btn-lg" href="tel:19132398882">📅 Request a Tour Time</a>
+    </div>
+    <p class="final-phone">Kiddi Kollege of Leawood · 13401 Briar Street, Leawood, KS 66209 · <a href="tel:19132398882">(913) 239-8882</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="#top">
+          <span class="mark">🎓</span>
+          <span style="color:#fff">Kiddi Kollege<small>of Leawood · est. 1957</small></span>
+        </a>
+        <div class="locs">
+          <span>📍 Leawood</span>
+          <span>📍 Overland Park</span>
+          <span>📍 Olathe</span>
+          <span>📍 Lenexa</span>
+        </div>
+      </div>
+      <div style="max-width:34ch;font-size:.9rem">
+        Nurturing early education across Johnson County, KS — family-owned and operated for three generations.
+      </div>
+    </div>
+    <div class="concept-note">
+      <b>Concept preview by Gigawatt.</b> This is an independent design concept created by Gigawatt (Kansas City web design + AI consulting) to illustrate a homepage redesign — it is not the official Kiddi Kollege website and is not affiliated with or endorsed by Kiddi Kollege. Tuition figures are illustrative placeholders. Business facts, programs, and review sentiment are drawn from public sources for demonstration only.
+    </div>
+  </div>
+</footer>
+
+<!-- AI chatbot mock -->
+<div class="chat-mock" aria-hidden="true">
+  <span class="av">💬</span>
+  <span><b>Hi! I'm KolaBot 🎓</b><small>Ask me about openings &amp; tours</small></span>
+</div>
+
+<!-- Concept badge -->
+<div class="concept-badge">⚡ <b>concept preview</b></div>
+
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Rooted Landscape — Design-Build Landscapes for Olathe &amp; Johnson County</title>
+  <meta name="description" content="Family-owned Olathe design-build landscaper since 1990. Custom patios, retaining walls, outdoor living, and planting across Johnson County. 4.5★, 56 reviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --moss:   #3a4a2b;   /* deep olive/moss */
+      --moss-2: #4f6538;
+      --sage:   #7d8f5f;
+      --clay:   #c07a4e;   /* warm clay */
+      --clay-d: #a8623a;
+      --walnut: #4a3a2c;   /* walnut brown */
+      --cream:  #f6f3ea;   /* off-white */
+      --cream-2:#ece7d8;
+      --ink:    #2b2a24;
+      --muted:  #6a6558;
+      --line:   #ddd6c4;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--ink); line-height: 1.6; background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .display { font-family: 'Fraunces', Georgia, serif; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* ---------- Header ---------- */
+    header.site {
+      background: rgba(246,243,234,.9); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Fraunces', serif; font-weight: 700; font-size: 20px; color: var(--moss); }
+    .brand .leaf { width: 30px; height: 30px; flex: none; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { text-decoration: none; font-weight: 600; color: var(--walnut); font-size: 15px; }
+    .nav-phone span { color: var(--muted); font-weight: 500; }
+    .btn { display: inline-block; padding: 13px 24px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 15px; transition: transform .12s ease, background .2s; cursor: pointer; border: none; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--clay); color: #fff; }
+    .btn-primary:hover { background: var(--clay-d); }
+    .btn-moss { background: var(--moss); color: var(--cream); }
+    .btn-moss:hover { background: var(--moss-2); }
+    .btn-ghost { border: 1.5px solid var(--line); color: var(--walnut); background: transparent; }
+    .btn-ghost:hover { border-color: var(--clay); color: var(--clay-d); }
+    .nav .btn-primary { padding: 10px 20px; }
+    @media (max-width: 620px) { .nav-phone span { display: none; } .brand { font-size: 18px; } }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; overflow: hidden; background:
+      radial-gradient(120% 90% at 80% 0%, #56683c 0%, var(--moss) 45%, #2f3c22 100%); color: var(--cream); }
+    .hero::after { content:""; position:absolute; inset:0; background-image:
+      radial-gradient(circle at 15% 85%, rgba(192,122,78,.18), transparent 40%),
+      radial-gradient(circle at 92% 20%, rgba(125,143,95,.25), transparent 45%); pointer-events:none; }
+    .hero .wrap { position: relative; z-index: 1; padding: 78px 22px 88px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:'Inter'; font-weight:600; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#d8e0bf; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); padding:6px 14px; border-radius:999px; }
+    .hero h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.06; font-weight: 600; margin: 22px 0 0; max-width: 15ch; letter-spacing: -.01em; }
+    .hero h1 em { font-style: italic; color: #e8c9a6; }
+    .hero .lede { margin: 20px 0 30px; font-size: clamp(16px,2.3vw,19px); color: #e4e6d6; max-width: 50ch; }
+    .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .rating { display:flex; align-items:center; gap:12px; margin-top: 30px; flex-wrap: wrap; }
+    .rating .stars { color: #f2c879; letter-spacing: 2px; font-size: 16px; }
+    .rating b { color: #fff; }
+    .rating .dot { color: rgba(255,255,255,.4); }
+    .rating span { color:#d8dcc8; font-size: 14px; }
+
+    /* ---------- Trust strip ---------- */
+    .strip { background: var(--walnut); color: var(--cream); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px 24px; padding: 20px 22px; }
+    .strip .item { display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; padding: 6px 0; }
+    .strip .item b { font-family:'Fraunces',serif; font-size: 22px; color:#f0d9bf; font-weight:600; }
+    .strip .item small { font-size: 12.5px; color: #d7cdbd; letter-spacing:.02em; }
+    @media (max-width: 640px){ .strip .wrap { grid-template-columns: repeat(2,1fr); } }
+
+    /* ---------- Sections ---------- */
+    section.pad { padding: 76px 0; }
+    .kicker { font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color: var(--clay-d); }
+    h2 { font-size: clamp(27px, 4vw, 40px); color: var(--moss); font-weight:600; line-height:1.1; margin: 10px 0 0; letter-spacing:-.01em; }
+    .sub { color: var(--muted); margin-top: 12px; max-width: 60ch; font-size: 17px; }
+    .head-row { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom: 40px; }
+
+    /* ---------- Portfolio (CSS-only gallery) ---------- */
+    .portfolio { background: var(--cream-2); }
+    .gallery { display:grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 168px; gap: 16px; }
+    .tile { border-radius: 16px; overflow:hidden; position:relative; box-shadow: 0 8px 24px rgba(74,58,44,.10); border:1px solid rgba(74,58,44,.06); }
+    .tile .cap { position:absolute; left:0; right:0; bottom:0; padding: 30px 16px 14px; color:#fff;
+      background: linear-gradient(to top, rgba(30,26,18,.78), transparent); font-size:14px; font-weight:600; z-index:2; }
+    .tile .tag { position:absolute; top:12px; left:12px; z-index:2; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; background:rgba(255,255,255,.92); color:var(--walnut); padding:5px 10px; border-radius:999px; }
+    .tile .art { position:absolute; inset:0; }
+    .t-wide { grid-column: span 2; }
+    .t-tall { grid-row: span 2; }
+    /* scenic gradient "photos" built from CSS only */
+    .a-patio  { background:
+      radial-gradient(60% 80% at 30% 20%, #cfd8bf 0%, transparent 55%),
+      linear-gradient(160deg, #b79b73 0%, #9c7f57 40%, #7c6244 100%); }
+    .a-patio::before { content:""; position:absolute; inset:0; background:
+      repeating-linear-gradient(115deg, rgba(255,255,255,.10) 0 3px, transparent 3px 26px),
+      repeating-linear-gradient(25deg, rgba(70,50,30,.12) 0 2px, transparent 2px 30px); }
+    .a-wall   { background:
+      linear-gradient(180deg, #86975f 0%, #6c7d49 30%, transparent 30%),
+      linear-gradient(135deg, #c08b5f 0%, #a06f45 100%); }
+    .a-wall::before { content:""; position:absolute; inset:0; top:30%; background:
+      repeating-linear-gradient(90deg, rgba(60,40,25,.22) 0 2px, transparent 2px 34px),
+      repeating-linear-gradient(0deg, rgba(60,40,25,.18) 0 2px, transparent 2px 20px); }
+    .a-fire   { background:
+      radial-gradient(45% 55% at 50% 68%, #f0a95a 0%, #d1743a 30%, transparent 62%),
+      radial-gradient(120% 90% at 50% 120%, #3d4a2b 0%, #253018 70%), #1f2814; }
+    .a-fire::before { content:""; position:absolute; left:50%; bottom:22%; width:12px; height:44px; transform:translateX(-50%); border-radius:50% 50% 40% 40%; background:radial-gradient(#ffe08a,#f0863b 70%); filter:blur(2px); opacity:.9; }
+    .a-garden { background:
+      radial-gradient(30% 40% at 25% 70%, #c56a86 0%, transparent 50%),
+      radial-gradient(26% 36% at 62% 60%, #e0b15a 0%, transparent 50%),
+      radial-gradient(30% 40% at 80% 78%, #b98ac0 0%, transparent 50%),
+      linear-gradient(180deg, #8fa267 0%, #5f7440 100%); }
+    .a-water  { background:
+      radial-gradient(70% 50% at 50% 30%, #a9d0cf 0%, #6fa6a4 40%, transparent 70%),
+      linear-gradient(180deg, #7d8f5f 0%, #4f6538 100%); }
+    .a-water::before { content:""; position:absolute; left:0; right:0; top:34%; height:46%; background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.28) 0 2px, transparent 2px 12px); opacity:.5; }
+    .a-light  { background:
+      radial-gradient(24% 30% at 30% 40%, #ffe6a3 0%, transparent 55%),
+      radial-gradient(22% 28% at 70% 55%, #ffdb8a 0%, transparent 55%),
+      linear-gradient(180deg, #35432a 0%, #1f2814 100%); }
+    .a-kitchen{ background:
+      linear-gradient(180deg, #a4855e 0%, #7c6244 55%, transparent 55%),
+      linear-gradient(135deg, #6c7d49 0%, #4f6538 100%); }
+    .a-kitchen::before { content:""; position:absolute; inset:0; bottom:45%; background:repeating-linear-gradient(90deg, rgba(40,28,16,.2) 0 3px, transparent 3px 40px); }
+    @media (max-width: 860px){ .gallery { grid-template-columns: repeat(2,1fr); grid-auto-rows: 150px; } .t-wide{ grid-column: span 2; } .t-tall{ grid-row: span 1; } }
+    @media (max-width: 460px){ .gallery { grid-template-columns: 1fr; } .t-wide{ grid-column: span 1; } }
+
+    /* ---------- Services ---------- */
+    .cards { display:grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding: 26px; transition: transform .15s ease, box-shadow .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(74,58,44,.12); }
+    .card .ico { width:46px; height:46px; border-radius:12px; display:grid; place-items:center; font-size:22px; background: var(--cream-2); margin-bottom:14px; }
+    .card h3 { font-size:19px; color:var(--walnut); font-weight:600; }
+    .card p { color: var(--muted); font-size: 15px; margin-top:6px; }
+    @media (max-width:820px){ .cards{ grid-template-columns: repeat(2,1fr);} }
+    @media (max-width:520px){ .cards{ grid-template-columns: 1fr;} }
+
+    /* ---------- Story / why us ---------- */
+    .story { background: var(--moss); color: var(--cream); }
+    .story .grid { display:grid; grid-template-columns: 1.05fr .95fr; gap: 52px; align-items:center; }
+    .story h2 { color:#fff; }
+    .story p { color:#e4e6d6; margin-top: 16px; font-size: 17px; }
+    .story .kicker { color:#e8c9a6; }
+    .story .facts { display:grid; gap:14px; margin-top: 8px; }
+    .fact { display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); padding:18px; border-radius:14px; }
+    .fact .n { font-family:'Fraunces',serif; font-size: 30px; font-weight:600; color:#f0d9bf; line-height:1; flex:none; min-width: 64px; }
+    .fact b { display:block; color:#fff; font-family:'Inter'; font-size:15px; }
+    .fact span { color:#cdd3ba; font-size:14px; }
+    @media (max-width: 820px){ .story .grid{ grid-template-columns:1fr; gap:34px; } }
+
+    /* ---------- Quote flow ---------- */
+    .quoteflow { background: var(--cream-2); }
+    .steps { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-top: 8px; counter-reset: s; }
+    .step { background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 20px; position:relative; }
+    .step::before { counter-increment:s; content: counter(s); position:absolute; top:20px; right:20px; font-family:'Fraunces',serif; font-size:34px; font-weight:600; color: var(--cream-2); }
+    .step .st-ico { font-size:24px; }
+    .step h3 { font-size:17px; margin-top:12px; color:var(--walnut); font-weight:600; }
+    .step p { font-size:14.5px; color:var(--muted); margin-top:6px; }
+    .flow-cta { display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-top: 34px; }
+    .flow-cta small { color: var(--muted); font-size:14px; }
+    @media (max-width: 820px){ .steps{ grid-template-columns: repeat(2,1fr);} }
+    @media (max-width: 440px){ .steps{ grid-template-columns: 1fr;} }
+
+    /* ---------- Reviews ---------- */
+    .quote-cards { display:grid; grid-template-columns: repeat(3,1fr); gap:18px; }
+    .qc { background:#fff; border:1px solid var(--line); border-radius:16px; padding:26px; display:flex; flex-direction:column; }
+    .qc .qs { color:#e0a94e; letter-spacing:2px; font-size:14px; }
+    .qc p { font-size:16px; margin:14px 0 18px; color:var(--ink); }
+    .qc .who { margin-top:auto; display:flex; align-items:center; gap:12px; }
+    .qc .av { width:40px; height:40px; border-radius:50%; flex:none; display:grid; place-items:center; color:#fff; font-weight:700; font-family:'Fraunces',serif; }
+    .qc .who b { font-size:14.5px; color:var(--walnut); display:block; }
+    .qc .who span { font-size:13px; color:var(--muted); }
+    @media (max-width:820px){ .quote-cards{ grid-template-columns:1fr;} }
+
+    /* ---------- Final CTA ---------- */
+    .cta-band { position:relative; overflow:hidden; background: linear-gradient(135deg, var(--clay) 0%, var(--clay-d) 100%); color:#fff; text-align:center; }
+    .cta-band::after { content:""; position:absolute; inset:0; background: radial-gradient(60% 100% at 50% 0%, rgba(255,255,255,.14), transparent 60%); }
+    .cta-band .wrap { position:relative; z-index:1; padding: 72px 22px; }
+    .cta-band h2 { color:#fff; }
+    .cta-band p { color: #fbe8db; margin: 14px auto 30px; max-width: 52ch; font-size: 18px; }
+    .cta-band .actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .cta-band .btn-ghost { border-color: rgba(255,255,255,.55); color:#fff; }
+    .cta-band .btn-ghost:hover { border-color:#fff; color:#fff; background:rgba(255,255,255,.1); }
+
+    /* ---------- Footer ---------- */
+    footer.site { background: var(--walnut); color: #d9cfc0; padding: 44px 0 30px; font-size: 14px; }
+    footer.site .cols { display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; align-items:flex-start; }
+    footer.site .brand { color: var(--cream); }
+    footer.site a { color:#ecd9c3; text-decoration:none; }
+    footer.site .note { margin-top: 26px; padding-top: 20px; border-top:1px solid rgba(255,255,255,.12); color:#bcae9c; font-size:13px; line-height:1.6; }
+
+    /* ---------- Chat widget ---------- */
+    .chat-fab { position: fixed; right: 18px; bottom: 62px; z-index: 40; display:flex; align-items:center; gap:10px;
+      background: var(--moss); color: var(--cream); border:none; padding: 12px 18px 12px 14px; border-radius: 999px; cursor:pointer;
+      box-shadow: 0 10px 26px rgba(47,60,34,.4); font-weight:600; font-size:14px; font-family:'Inter'; }
+    .chat-fab:hover { background: var(--moss-2); }
+    .chat-fab .pulse { width:9px; height:9px; border-radius:50%; background:#8fe08a; box-shadow:0 0 0 0 rgba(143,224,138,.7); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%{ box-shadow:0 0 0 0 rgba(143,224,138,.6);} 70%{ box-shadow:0 0 0 8px rgba(143,224,138,0);} 100%{ box-shadow:0 0 0 0 rgba(143,224,138,0);} }
+    .chat-panel { position: fixed; right: 18px; bottom: 62px; z-index: 41; width: min(360px, calc(100vw - 36px)); background:#fff; border-radius:18px; box-shadow: 0 24px 60px rgba(40,30,18,.35); overflow:hidden; display:none; border:1px solid var(--line); }
+    .chat-panel.open { display:block; }
+    .chat-head { background: var(--moss); color:var(--cream); padding:16px 18px; display:flex; align-items:center; gap:12px; }
+    .chat-head .av { width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.16); display:grid; place-items:center; font-size:18px; }
+    .chat-head b { font-family:'Fraunces',serif; font-size:16px; font-weight:600; }
+    .chat-head small { display:block; color:#cdd3ba; font-size:12px; }
+    .chat-head .x { margin-left:auto; background:none; border:none; color:var(--cream); font-size:22px; cursor:pointer; line-height:1; opacity:.8; }
+    .chat-body { padding:16px; display:flex; flex-direction:column; gap:10px; max-height: 300px; overflow-y:auto; background: var(--cream); }
+    .msg { max-width: 82%; padding:10px 14px; border-radius:14px; font-size:14px; line-height:1.5; }
+    .msg.bot { background:#fff; border:1px solid var(--line); border-bottom-left-radius:4px; align-self:flex-start; }
+    .msg.me { background: var(--clay); color:#fff; border-bottom-right-radius:4px; align-self:flex-end; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; padding: 4px 16px 14px; background:var(--cream); }
+    .chip { background:#fff; border:1px solid var(--line); color:var(--walnut); border-radius:999px; padding:8px 13px; font-size:13px; cursor:pointer; font-family:'Inter'; }
+    .chip:hover { border-color: var(--clay); color:var(--clay-d); }
+    .chat-input { display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--line); background:#fff; }
+    .chat-input input { flex:1; border:1px solid var(--line); border-radius:999px; padding:10px 14px; font-size:14px; font-family:'Inter'; outline:none; }
+    .chat-input input:focus { border-color: var(--sage); }
+    .chat-input button { background:var(--clay); border:none; color:#fff; width:40px; border-radius:50%; cursor:pointer; font-size:16px; flex:none; }
+    @media (max-width: 620px){ .chat-fab .lbl { display:none; } .chat-fab{ padding:12px; } }
+
+    /* ---------- Concept badge ---------- */
+    .demo-tag { position: fixed; bottom: 12px; left: 12px; background:#17181b; color:#f2c879;
+      font: 600 11px/1 'Inter', system-ui; padding: 8px 12px; border-radius: 999px; opacity:.92; z-index:50; letter-spacing:.03em; }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <svg class="leaf" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M28 4C14 5 6 12 5 24c0 0-1 3 0 4 3-9 9-13 16-15-6 4-10 8-12 15 9 1 20-5 19-24z" fill="#4f6538"/>
+          <path d="M6 28C8 18 15 12 26 8" stroke="#c07a4e" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Rooted Landscape
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19137821845">(913)&nbsp;782-1845 <span>· Olathe</span></a>
+        <a class="btn btn-primary" href="#quote">Start your quote</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">🌿 Family-owned in Olathe since 1990</span>
+      <h1>Johnson County backyards, <em>designed and built</em> to last for decades.</h1>
+      <p class="lede">Custom patios, retaining walls, outdoor living rooms, and planting from one Olathe crew that designs it, builds it, and stands behind it — the same family your neighbors have trusted for 35 years.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#quote">Start your project quote</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="tel:+19137821845">📞 Call (913) 782-1845</a>
+      </div>
+      <div class="rating">
+        <span class="stars">★★★★½</span>
+        <b>4.5</b><span>Google rating</span>
+        <span class="dot">•</span>
+        <span><b>56</b> reviews</span>
+        <span class="dot">•</span>
+        <span>Olathe · Overland Park · Leawood · Lenexa</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><b>1990</b><small>Family-owned &amp; operated</small></div>
+      <div class="item"><b>35 yrs</b><small>Across Johnson County</small></div>
+      <div class="item"><b>Design-Build</b><small>One crew, start to finish</small></div>
+      <div class="item"><b>4.5★</b><small>56 verified reviews</small></div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO FIRST -->
+  <section class="pad portfolio" id="work">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="kicker">Recent builds</span>
+          <h2>Our work speaks first.</h2>
+          <p class="sub">Every project is designed and installed in-house. A look at the patios, walls, and outdoor spaces we've built across Olathe and the metro.</p>
+        </div>
+        <a class="btn btn-ghost" href="#quote">Get a space like this →</a>
+      </div>
+      <div class="gallery">
+        <div class="tile t-wide t-tall"><div class="art a-patio"></div><span class="tag">Paver patio</span><span class="cap">Flagstone patio &amp; seat wall — South Olathe</span></div>
+        <div class="tile"><div class="art a-fire"></div><span class="tag">Fire feature</span><span class="cap">Custom gas fire pit</span></div>
+        <div class="tile"><div class="art a-garden"></div><span class="tag">Planting</span><span class="cap">Pollinator garden design</span></div>
+        <div class="tile t-wide"><div class="art a-wall"></div><span class="tag">Hardscape</span><span class="cap">Retaining wall rebuild + drainage — Overland Park</span></div>
+        <div class="tile"><div class="art a-water"></div><span class="tag">Water feature</span><span class="cap">Pondless waterfall</span></div>
+        <div class="tile"><div class="art a-kitchen"></div><span class="tag">Outdoor living</span><span class="cap">Built-in outdoor kitchen</span></div>
+        <div class="tile t-wide"><div class="art a-light"></div><span class="tag">Lighting</span><span class="cap">Architectural landscape lighting — Leawood</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pad" id="services">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="kicker">What we build</span>
+          <h2>Full design-build landscaping.</h2>
+          <p class="sub">From the first sketch to the final plant, it's all handled by our own Olathe team — no subcontractor roulette.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ico">🪨</div><h3>Patios &amp; hardscapes</h3><p>Paver and flagstone patios, walkways, and seat walls engineered for KC freeze-thaw winters.</p></div>
+        <div class="card"><div class="ico">🧱</div><h3>Retaining walls &amp; grading</h3><p>Structural walls with proper drainage and land leveling to keep water where it belongs.</p></div>
+        <div class="card"><div class="ico">🔥</div><h3>Outdoor living</h3><p>Fire pits, outdoor fireplaces, kitchens, and pergolas that turn a yard into a gathering space.</p></div>
+        <div class="card"><div class="ico">🌳</div><h3>Landscape design &amp; planting</h3><p>Custom garden design, drought-tolerant plantings, raised planters, sod, and trees.</p></div>
+        <div class="card"><div class="ico">💧</div><h3>Irrigation &amp; drainage</h3><p>Sprinkler and drip systems, dry creek beds, and drainage solutions installed and repaired.</p></div>
+        <div class="card"><div class="ico">💡</div><h3>Lighting &amp; water features</h3><p>Landscape lighting, audio, and pondless waterfalls that make the yard shine after dark.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / WHY US -->
+  <section class="pad story" id="story">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="kicker">Rooted here since 1990</span>
+          <h2>Three decades of roots in Johnson County.</h2>
+          <p>Rooted Landscape started as a family operation in Olathe in 1990, and we still run it that way. The same people who design your project are the ones who show up to build it — and many of our clients have called us back for 20 years and counting, from their first patio to their forever backyard.</p>
+          <p>That kind of repeat trust only comes one way: transparent pricing up front, updates all the way through, and craftsmanship we're proud to put our name on.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><div class="n">35+</div><div><b>Years serving the same neighborhoods</b><span>Established 1990 — and still family-run.</span></div></div>
+          <div class="fact"><div class="n">20yr</div><div><b>Multi-decade repeat clients</b><span>Families who've hired us across generations of projects.</span></div></div>
+          <div class="fact"><div class="n">1</div><div><b>Crew, start to finish</b><span>Designed and built in-house — no handoffs, no surprises.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FLOW -->
+  <section class="pad quoteflow" id="quote">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="kicker">How it works</span>
+          <h2>From idea to installed — a clear path.</h2>
+          <p class="sub">Big backyard projects shouldn't start with a mystery. Here's exactly how a Rooted project goes, and what your quote covers before you commit.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="st-ico">📐</div><h3>Tell us your vision</h3><p>Share your space, your goals, and a budget range in a 2-minute guided form.</p></div>
+        <div class="step"><div class="st-ico">🚶</div><h3>On-site walkthrough</h3><p>We visit, measure, and talk through what's realistic for your yard and grade.</p></div>
+        <div class="step"><div class="st-ico">✏️</div><h3>Design &amp; transparent quote</h3><p>A clear design and itemized pricing — no vague guesses, no pressure.</p></div>
+        <div class="step"><div class="st-ico">🌿</div><h3>We build it</h3><p>Our own crew installs it, keeps you updated, and cleans up when we're done.</p></div>
+      </div>
+      <div class="flow-cta">
+        <a class="btn btn-moss" href="#quote">Start my guided quote</a>
+        <a class="btn btn-ghost" href="tel:+19137821845">Or call (913) 782-1845</a>
+        <small>Most projects run $5k–$50k+ — the quote is always free.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pad" id="reviews">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="kicker">4.5★ · 56 reviews</span>
+          <h2>What Johnson County says.</h2>
+          <p class="sub">Real feedback from homeowners around Olathe and the metro.</p>
+        </div>
+      </div>
+      <div class="quote-cards">
+        <div class="qc">
+          <div class="qs">★★★★★</div>
+          <p>“They installed a stone patio with a small retaining wall and drainage box, plus a couple of dry creek beds. Pricing was transparent up front and they kept us updated the whole way.”</p>
+          <div class="who"><div class="av" style="background:#4f6538">S</div><div><b>Sarah M.</b><span>Olathe, KS</span></div></div>
+        </div>
+        <div class="qc">
+          <div class="qs">★★★★★</div>
+          <p>“Had an old retaining wall that needed to be redone, and the guys did an incredible job. The grading work afterward was top notch — water finally drains the right way.”</p>
+          <div class="who"><div class="av" style="background:#c07a4e">D</div><div><b>David R.</b><span>Overland Park, KS</span></div></div>
+        </div>
+        <div class="qc">
+          <div class="qs">★★★★★</div>
+          <p>“We've used Rooted for years — first a patio, then the front beds, now landscape lighting. Same family, same quality every time. That's why we keep calling them.”</p>
+          <div class="who"><div class="av" style="background:#4a3a2c">J</div><div><b>Julie T.</b><span>Leawood, KS</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 style="font-size:clamp(28px,4.5vw,42px)">Let's design the backyard you actually use.</h2>
+      <p>Tell us about your space and we'll follow up within one business day with next steps. Family-owned in Olathe since 1990.</p>
+      <div class="actions">
+        <a class="btn" style="background:#fff;color:var(--clay-d)" href="#quote">Start your free quote</a>
+        <a class="btn btn-ghost" href="tel:+19137821845">📞 (913) 782-1845</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="brand" style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;">🌿 Rooted Landscape, Inc.</div>
+          <div style="margin-top:8px;color:#c9bdac;">Design-build landscaping · Olathe, Kansas</div>
+        </div>
+        <div>
+          <div style="color:#f0d9bf;font-weight:600;margin-bottom:6px;">Serving</div>
+          Olathe · Overland Park · Leawood<br>Lenexa · Johnson County metro
+        </div>
+        <div>
+          <div style="color:#f0d9bf;font-weight:600;margin-bottom:6px;">Get started</div>
+          <a href="tel:+19137821845">(913) 782-1845</a><br>
+          <a href="#quote">Request a project quote</a>
+        </div>
+      </div>
+      <div class="note">
+        Concept preview by <strong>Gigawatt</strong> — a Kansas City web design &amp; AI consulting studio. This is a redesign concept created to demonstrate direction and is <strong>not the official Rooted Landscape website</strong>. Business details shown are drawn from public listings and are for demonstration only. Not affiliated with or endorsed by Rooted Landscape, Inc.
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI CHAT -->
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">
+    <span class="pulse"></span><span class="lbl">Ask about your project</span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Rooted Landscape assistant">
+    <div class="chat-head">
+      <div class="av">🌿</div>
+      <div><b>Rooted Assistant</b><small>Typically replies in a few minutes</small></div>
+      <button class="x" id="chatClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot">Hi! I'm the Rooted Landscape assistant. Planning a patio, wall, or a full backyard redesign in Johnson County? I can help you get started. 🌿</div>
+    </div>
+    <div class="chips" id="chatChips">
+      <button class="chip" data-q="What does a patio project cost?">Patio cost?</button>
+      <button class="chip" data-q="Do you handle retaining walls and drainage?">Retaining walls?</button>
+      <button class="chip" data-q="What areas do you serve?">Service area?</button>
+      <button class="chip" data-q="How do I start a quote?">Start a quote</button>
+    </div>
+    <div class="chat-input">
+      <input id="chatInput" type="text" placeholder="Ask about your project…" aria-label="Message" />
+      <button id="chatSend" aria-label="Send">➤</button>
+    </div>
+  </div>
+
+  <div class="demo-tag">⚡ concept preview</div>
+
+  <script>
+    (function(){
+      var fab=document.getElementById('chatFab'),panel=document.getElementById('chatPanel'),
+          close=document.getElementById('chatClose'),body=document.getElementById('chatBody'),
+          input=document.getElementById('chatInput'),send=document.getElementById('chatSend'),
+          chips=document.getElementById('chatChips');
+      function open(){ panel.classList.add('open'); fab.style.display='none'; input.focus(); }
+      function shut(){ panel.classList.remove('open'); fab.style.display='flex'; }
+      fab.addEventListener('click',open); close.addEventListener('click',shut);
+      function add(text,who){ var d=document.createElement('div'); d.className='msg '+who; d.textContent=text; body.appendChild(d); body.scrollTop=body.scrollHeight; }
+      function reply(q){
+        var t=q.toLowerCase(), r;
+        if(/cost|price|much|budget|\$/.test(t)) r="Most of our design-build projects run between $5,000 and $50,000+ depending on scope. Every quote is free and itemized up front — want me to help you start one?";
+        else if(/wall|drain|grad|slope/.test(t)) r="Absolutely — retaining walls, grading, and drainage are a core part of what we do, including dry creek beds and drainage boxes. We'd do an on-site walkthrough to spec it right.";
+        else if(/area|serve|location|olathe|where/.test(t)) r="We're family-owned in Olathe and serve Overland Park, Leawood, Lenexa and the greater Johnson County metro.";
+        else if(/quote|start|begin|estimate|book/.test(t)) r="Great! Tap 'Start your quote' anywhere on the page, or call us at (913) 782-1845. It takes about 2 minutes and there's no obligation.";
+        else if(/patio|paver|stone|flagstone/.test(t)) r="We build custom paver and flagstone patios, often with seat walls and fire features. I can help you get a free quote started whenever you're ready.";
+        else r="Good question! For specifics like that, the fastest path is a quick call at (913) 782-1845 or starting a free quote — our team designs and builds everything in-house.";
+        setTimeout(function(){ add(r,'bot'); },500);
+      }
+      function ask(q){ add(q,'me'); reply(q); }
+      chips.addEventListener('click',function(e){ var b=e.target.closest('.chip'); if(b){ ask(b.dataset.q); } });
+      function submit(){ var v=input.value.trim(); if(!v) return; ask(v); input.value=''; }
+      send.addEventListener('click',submit);
+      input.addEventListener('keydown',function(e){ if(e.key==='Enter') submit(); });
+    })();
+  </script>
+</body>
+</html>

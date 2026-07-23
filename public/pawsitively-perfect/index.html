@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Pawsitively Perfect — Overland Park's Neighborhood Pet Salon &amp; Daycare</title>
+  <meta name="description" content="Loving dog &amp; cat grooming, boarding, and doggie daycare in southern Overland Park, KS. Family-owned, 4.6★ on Google. Book with Shannon's team today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #2f9e9a;
+      --teal-dark: #1f7c79;
+      --teal-deep: #12514f;
+      --coral: #ff7a66;
+      --coral-dark: #ef5a44;
+      --cream: #fff7ee;
+      --cream-2: #fdeede;
+      --plum: #43384f;
+      --text: #33313a;
+      --muted: #6f6a75;
+      --gold: #ffb62e;
+      --line: #eadbc9;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text); line-height: 1.6; background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    h1, h2, h3, .logo { font-family: 'Fredoka', system-ui, sans-serif; letter-spacing: .2px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* Header */
+    header {
+      background: rgba(255,247,238,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 0; }
+    .logo { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: clamp(19px, 3.4vw, 23px); color: var(--teal-deep); text-decoration: none; }
+    .logo .paw { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); display: grid; place-items: center; font-size: 17px; box-shadow: 0 4px 12px rgba(47,158,154,.35); }
+    .logo b { color: var(--coral); font-weight: 700; }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone { color: var(--teal-deep); text-decoration: none; font-weight: 800; font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--muted); font-weight: 700; }
+    .cta {
+      background: var(--coral); color: #fff; text-decoration: none; padding: 11px 20px;
+      border-radius: 999px; font-weight: 800; font-family: 'Fredoka', sans-serif; font-size: 15px;
+      box-shadow: 0 6px 16px rgba(255,122,102,.4); transition: transform .15s, background .15s; white-space: nowrap;
+    }
+    .cta:hover { background: var(--coral-dark); transform: translateY(-1px); }
+    .nav-phone.mobile { display: none; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; background:
+      radial-gradient(1100px 480px at 82% -10%, rgba(255,182,46,.22), transparent 60%),
+      linear-gradient(160deg, #eafaf8 0%, var(--cream-2) 100%);
+      padding: clamp(48px, 8vw, 86px) 0 clamp(56px, 9vw, 92px);
+    }
+    .hero::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 46px;
+      background: var(--cream);
+      -webkit-mask: radial-gradient(24px at 24px 46px, transparent 98%, #000) repeat-x;
+      mask: radial-gradient(24px at 24px 46px, transparent 98%, #000) repeat-x;
+      -webkit-mask-size: 48px 46px; mask-size: 48px 46px;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--teal-dark);
+      font-weight: 800; font-size: 13px; padding: 7px 14px; border-radius: 999px;
+      border: 1px solid var(--line); box-shadow: 0 3px 10px rgba(0,0,0,.04); margin-bottom: 18px;
+    }
+    .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+    .hero h1 { font-size: clamp(32px, 5.4vw, 52px); line-height: 1.08; color: var(--teal-deep); max-width: 12ch; }
+    .hero h1 em { font-style: normal; color: var(--coral); }
+    .hero p.lead { margin: 18px 0 26px; font-size: clamp(16px, 2.1vw, 19px); color: var(--muted); max-width: 46ch; font-weight: 600; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 26px; border-radius: 999px; font-weight: 800; font-family: 'Fredoka', sans-serif; text-decoration: none; font-size: 16px; transition: transform .15s, background .15s, box-shadow .15s; }
+    .btn-primary { background: var(--coral); color: #fff; box-shadow: 0 8px 20px rgba(255,122,102,.4); }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .btn-ghost { background: #fff; color: var(--teal-deep); border: 2px solid var(--teal); }
+    .btn-ghost:hover { background: #f0fbfa; transform: translateY(-2px); }
+    .rating { margin-top: 26px; display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+    .rating .stars { color: var(--gold); font-size: 18px; letter-spacing: 1px; }
+    .rating .rtext { font-size: 15px; color: var(--muted); font-weight: 700; }
+    .rating .rtext b { color: var(--text); }
+
+    /* Hero art card */
+    .hero-art { position: relative; }
+    .photo-card {
+      border-radius: 26px; aspect-ratio: 4/5; position: relative; overflow: hidden;
+      background:
+        radial-gradient(120px 120px at 68% 30%, rgba(255,255,255,.5), transparent 70%),
+        linear-gradient(150deg, var(--teal) 0%, var(--teal-dark) 55%, var(--teal-deep) 100%);
+      box-shadow: 0 26px 55px rgba(18,81,79,.32); display: grid; place-items: center;
+      border: 6px solid #fff;
+    }
+    .photo-card .pup { font-size: clamp(96px, 20vw, 168px); filter: drop-shadow(0 12px 18px rgba(0,0,0,.22)); }
+    .photo-card .bubbles span { position: absolute; border-radius: 50%; background: rgba(255,255,255,.16); }
+    .b1 { width: 60px; height: 60px; top: 12%; left: 14%; }
+    .b2 { width: 34px; height: 34px; top: 26%; right: 18%; }
+    .b3 { width: 20px; height: 20px; bottom: 22%; left: 22%; }
+    .float-chip {
+      position: absolute; background: #fff; border-radius: 16px; padding: 11px 15px;
+      box-shadow: 0 14px 30px rgba(18,81,79,.22); display: flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 14px; color: var(--text);
+    }
+    .float-chip .ic { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; font-size: 18px; }
+    .fc-1 { bottom: 30px; left: -18px; }
+    .fc-1 .ic { background: #fff0ec; }
+    .fc-2 { top: 26px; right: -14px; }
+    .fc-2 .ic { background: #e7f7f6; }
+    .fc-2 small { display: block; color: var(--muted); font-weight: 700; font-size: 12px; }
+
+    /* Trust strip */
+    .strip { background: var(--teal-deep); color: #eafaf8; }
+    .strip .wrap { display: flex; gap: 12px 30px; flex-wrap: wrap; justify-content: center; padding: 16px 22px; }
+    .strip span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; }
+    .strip .em { font-size: 16px; }
+
+    /* Sections */
+    section.pad { padding: clamp(52px, 8vw, 82px) 0; }
+    .head { text-align: center; max-width: 620px; margin: 0 auto 42px; }
+    .kicker { color: var(--coral); font-weight: 800; font-family: 'Fredoka', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; }
+    h2 { font-size: clamp(26px, 4.2vw, 38px); color: var(--teal-deep); margin: 8px 0 12px; line-height: 1.12; }
+    .head p { color: var(--muted); font-size: 17px; font-weight: 600; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 26px 24px;
+      transition: transform .18s, box-shadow .18s; position: relative;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(18,81,79,.12); }
+    .card .ico { width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center; font-size: 27px; margin-bottom: 15px; background: #e7f7f6; }
+    .card:nth-child(2n) .ico { background: #fff0ec; }
+    .card:nth-child(3n) .ico { background: #fff5e0; }
+    .card h3 { color: var(--teal-deep); font-size: 20px; margin-bottom: 7px; }
+    .card p { color: var(--muted); font-size: 15px; font-weight: 600; }
+    .card .price { display: inline-block; margin-top: 12px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 13.5px; color: var(--teal-dark); background: #e7f7f6; padding: 4px 12px; border-radius: 999px; }
+
+    /* Story / why us */
+    .story { background: linear-gradient(160deg, #fff 0%, #fef6ec 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .story-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 46px; align-items: center; }
+    .story-art {
+      border-radius: 24px; aspect-ratio: 1/1; background:
+        radial-gradient(circle at 30% 28%, rgba(255,255,255,.45), transparent 55%),
+        linear-gradient(150deg, var(--coral) 0%, var(--coral-dark) 100%);
+      box-shadow: 0 22px 46px rgba(239,90,68,.3); display: grid; place-items: center; border: 6px solid #fff;
+    }
+    .story-art .em { font-size: clamp(90px, 18vw, 150px); filter: drop-shadow(0 10px 16px rgba(0,0,0,.2)); }
+    .story h2 { text-align: left; }
+    .story p { color: var(--muted); font-size: 16.5px; font-weight: 600; margin-bottom: 14px; }
+    .story p strong { color: var(--text); }
+    .signoff { display: flex; align-items: center; gap: 12px; margin-top: 22px; }
+    .signoff .av { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 19px; }
+    .signoff b { color: var(--teal-deep); font-family: 'Fredoka', sans-serif; }
+    .signoff small { display: block; color: var(--muted); font-weight: 700; }
+
+    /* Reviews */
+    .reviews { background: #eafaf8; }
+    .quote { background: #fff; border-radius: 20px; padding: 26px 24px; border: 1px solid #d6efee; box-shadow: 0 8px 22px rgba(18,81,79,.06); }
+    .quote .qs { color: var(--gold); letter-spacing: 1px; margin-bottom: 12px; }
+    .quote p { font-size: 15.5px; font-weight: 600; color: var(--text); }
+    .quote footer { margin-top: 16px; color: var(--teal-dark); font-size: 14px; font-weight: 800; font-family: 'Fredoka', sans-serif; }
+
+    /* CTA band */
+    .cta-band { background:
+      radial-gradient(700px 300px at 15% 0%, rgba(255,182,46,.2), transparent 60%),
+      linear-gradient(150deg, var(--teal-dark) 0%, var(--teal-deep) 100%);
+      color: #fff; text-align: center;
+    }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #cdeeec; max-width: 520px; margin: 12px auto 26px; font-size: 17px; font-weight: 600; }
+    .cta-band .actions { justify-content: center; }
+    .cta-band .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+    .cta-band .btn-ghost:hover { background: rgba(255,255,255,.12); }
+    .hours { margin-top: 26px; font-size: 14.5px; color: #bfe8e6; font-weight: 700; }
+    .hours b { color: #fff; }
+
+    /* Footer */
+    footer.site { background: var(--plum); color: #cbc4d3; padding: 40px 0 30px; font-size: 14px; }
+    .foot-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-start; }
+    footer .fname { font-family: 'Fredoka', sans-serif; font-size: 19px; color: #fff; font-weight: 700; }
+    footer .fname b { color: var(--coral); }
+    footer a { color: #fff; font-weight: 700; text-decoration: none; }
+    .foot-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); font-size: 12.5px; color: #9c94a8; line-height: 1.7; }
+
+    .demo-tag {
+      position: fixed; bottom: 14px; right: 14px; background: #17181b; color: #f5b518;
+      font: 700 11px/1 'Nunito', system-ui; padding: 9px 13px; border-radius: 999px;
+      opacity: .94; z-index: 50; box-shadow: 0 6px 16px rgba(0,0,0,.28); letter-spacing: .3px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-art { max-width: 380px; margin: 0 auto; width: 100%; }
+      .story-grid { grid-template-columns: 1fr; gap: 30px; }
+      .story-art { max-width: 340px; margin: 0 auto; width: 100%; }
+      .story h2 { text-align: center; }
+    }
+    @media (max-width: 560px) {
+      .nav .cta { display: none; }
+      .nav-phone.desktop { display: none; }
+      .nav-phone.mobile { display: inline-flex; background: var(--coral); color: #fff; padding: 10px 16px; border-radius: 999px; box-shadow: 0 6px 16px rgba(255,122,102,.4); }
+      .nav-phone.mobile span { color: #ffe4dd; }
+      .float-chip { display: none; }
+      .actions .btn { flex: 1 1 auto; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top"><span class="paw">🐾</span> Pawsitively <b>Perfect</b></a>
+      <div class="nav-right">
+        <a class="nav-phone desktop" href="tel:+19133458245"><span>📞</span> (913) 345-8245</a>
+        <a class="cta" href="#book">Book Grooming</a>
+        <a class="nav-phone mobile" href="tel:+19133458245">📞 <span>Call</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span> Southern Overland Park · 151st &amp; Metcalf</span>
+          <h1>Your dog's happy place in <em>Overland Park</em>.</h1>
+          <p class="lead">Gentle, personalized grooming, cozy boarding, and playful doggie daycare — from a neighborhood salon your pup will actually be excited to visit.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#book">🐶 Book an appointment</a>
+            <a class="btn btn-ghost" href="tel:+19133458245">Call (913) 345-8245</a>
+          </div>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="rtext"><b>4.6</b> on Google · 89 reviews from local pet parents</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="photo-card">
+            <div class="bubbles"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+            <div class="pup">🐕</div>
+          </div>
+          <div class="float-chip fc-1"><span class="ic">✂️</span> Fresh cut &amp; bandana</div>
+          <div class="float-chip fc-2"><span class="ic">🦴</span> <div>Boarding &amp; daycare<small>half or full day</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <span><span class="em">🏡</span> Locally &amp; family owned</span>
+        <span><span class="em">⭐</span> 4.6★ · 89 Google reviews</span>
+        <span><span class="em">🐈</span> Dogs &amp; cats welcome</span>
+        <span><span class="em">🧴</span> Gentle, natural shampoos</span>
+        <span><span class="em">💛</span> No cages, no rush</span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="pad" id="services">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">What we do</span>
+          <h2>Full-service care for the whole pack</h2>
+          <p>From a spa-day groom to a weekend stay, every visit is tailored to your pet — not a conveyor belt.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="ico">✂️</div>
+            <h3>Full Groom</h3>
+            <p>Bath with natural shampoos, blow-dry, brush-out, the cut of your choice, nails, clean ears — finished with a bow or bandana.</p>
+            <span class="price">Dogs &amp; cats</span>
+          </div>
+          <div class="card">
+            <div class="ico">🛁</div>
+            <h3>Bath &amp; Tidy</h3>
+            <p>A refreshing bath, blow-dry, and tidy-up between full grooms to keep your buddy soft, clean, and smelling great.</p>
+            <span class="price">Quick visit</span>
+          </div>
+          <div class="card">
+            <div class="ico">🐾</div>
+            <h3>Nail Trims</h3>
+            <p>Fast, stress-free nail trims — walk-ins welcome. No appointment needed for happy, healthy paws.</p>
+            <span class="price">Walk-in</span>
+          </div>
+          <div class="card">
+            <div class="ico">🎾</div>
+            <h3>Doggie Daycare</h3>
+            <p>Supervised play and socializing in a safe, homey space. Choose a half day (5 hrs or less) or a full day.</p>
+            <span class="price">Half &amp; full day</span>
+          </div>
+          <div class="card">
+            <div class="ico">🏠</div>
+            <h3>Boarding</h3>
+            <p>Comfy overnight stays with real attention and affection — a home away from home while you travel.</p>
+            <span class="price">Overnight</span>
+          </div>
+          <div class="card">
+            <div class="ico">🚿</div>
+            <h3>Self-Serve Wash</h3>
+            <p>Use our tubs, tools, and products to bathe your pup — we handle the mess and the cleanup, you keep the cuddles.</p>
+            <span class="price">DIY station</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / WHY US -->
+    <section class="pad story" id="story">
+      <div class="wrap story-grid">
+        <div class="story-art"><div class="em">💇‍♀️🐩</div></div>
+        <div class="story-copy">
+          <span class="kicker">Why neighbors love us</span>
+          <h2>A salon Shannon built, one wagging tail at a time</h2>
+          <p><strong>Pawsitively Perfect grew up the old-fashioned way</strong> — through word of mouth, friendly faces, and pet parents telling their neighbors. No big-box chain, no hard sell. Just a family-owned salon on 151st Street where your dog is a regular, not a number.</p>
+          <p>Owner Shannon and her team learn every pet's quirks — who needs a little extra patience, who wants belly rubs before the blow-dryer. That's why so many Overland Park families have trusted us with their fur babies for years.</p>
+          <div class="signoff">
+            <span class="av">S</span>
+            <div><b>Shannon &amp; the team</b><small>Owner · Pawsitively Perfect, Overland Park</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="pad reviews" id="reviews">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Happy tails</span>
+          <h2>Loved by Overland Park pet parents</h2>
+          <p>4.6★ across 89 Google reviews — here's what a few of them had to say.</p>
+        </div>
+        <div class="cards">
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“Shannon and her team are the only groomers my anxious little guy actually likes going to. He comes home soft, happy, and wearing the cutest bandana every time.”</p>
+            <footer>— Kelly M., Overland Park</footer>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“Fair prices and it's obvious they genuinely love the animals. We board here whenever we travel and never worry for a second.”</p>
+            <footer>— Marcus T., Overland Park</footer>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“Daycare has been a lifesaver for our high-energy pup. She's worn out and thrilled by pickup. This is a true neighborhood gem.”</p>
+            <footer>— Danielle R., Overland Park</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="pad cta-band" id="book">
+      <div class="wrap">
+        <span class="kicker" style="color:#ffd98a;">Ready when you are</span>
+        <h2>Let's get your pup on the calendar</h2>
+        <p>Appointments fill up fast with our regulars. Call or text and we'll find the perfect time for a groom, a daycare day, or a boarding stay.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+19133458245">📞 Call (913) 345-8245</a>
+          <a class="btn btn-ghost" href="sms:+19132212613">💬 Text to book</a>
+        </div>
+        <div class="hours">
+          <b>Hours:</b> Mon–Fri 8am–3pm · Sat 9am–3pm · 7711 W 151st St, Overland Park, KS 66223
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="fname">Pawsitively <b>Perfect</b></div>
+          <div style="margin-top:8px;">Neighborhood pet salon, daycare &amp; boarding<br/>7711 W 151st St, Overland Park, KS 66223</div>
+        </div>
+        <div>
+          <div style="font-weight:800;color:#fff;margin-bottom:6px;">Get in touch</div>
+          Call: <a href="tel:+19133458245">(913) 345-8245</a><br/>
+          Text: <a href="sms:+19132212613">(913) 221-2613</a><br/>
+          Mon–Fri 8–3 · Sat 9–3
+        </div>
+      </div>
+      <div class="foot-note">
+        This is a concept website preview designed by <strong style="color:#cbc4d3;">Gigawatt</strong> — a Kansas City web design &amp; AI studio — to show how Pawsitively Perfect could look online. It is not the business's official site, and it is not affiliated with or endorsed by the business. Details shown are for demonstration; please contact the salon directly to confirm services and hours.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

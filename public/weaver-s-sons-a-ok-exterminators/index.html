@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Weaver's &amp; Sons A-OK Exterminators — Johnson County's family pest pros since 1960</title>
+  <meta name="description" content="Family-owned pest control in Shawnee &amp; Johnson County, KS since 1960. Termites, rodents, mosquitoes, bed bugs &amp; recurring service. Book online in minutes." />
+  <style>
+    :root {
+      --forest: #14351f;
+      --moss: #1f5a34;
+      --leaf: #3f8f56;
+      --sage: #eaf3ec;
+      --sand: #f6f3ec;
+      --char: #232826;
+      --text: #1c2621;
+      --muted: #566b5e;
+      --gold: #e7b24b;
+      --line: #dfe7e0;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.55; background: #fff; }
+    img { max-width: 100%; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* HEADER */
+    header { background: rgba(255,255,255,.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: clamp(16px, 3.6vw, 20px); color: var(--forest); text-decoration: none; letter-spacing: -.3px; }
+    .logo .mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(150deg, var(--moss), var(--leaf)); display: grid; place-items: center; font-size: 18px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); flex: none; }
+    .logo span { color: var(--leaf); }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { color: var(--forest); text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .nav-phone .lbl { display: block; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .cta { background: var(--moss); color: #fff; text-decoration: none; padding: 11px 18px; border-radius: 9px; font-weight: 700; font-size: 15px; white-space: nowrap; box-shadow: 0 4px 14px rgba(31,90,52,.28); transition: transform .15s, background .15s; }
+    .cta:hover { background: var(--forest); transform: translateY(-1px); }
+    .nav-phone.only-mobile { display: none; }
+
+    /* HERO */
+    .hero { position: relative; color: #fff; overflow: hidden;
+      background: radial-gradient(1200px 500px at 80% -10%, #2a6b40 0%, transparent 60%), linear-gradient(160deg, var(--forest) 0%, #0e2717 70%); }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .08; pointer-events: none;
+      background-image: radial-gradient(circle at 20% 30%, #fff 1px, transparent 1.4px), radial-gradient(circle at 70% 60%, #fff 1px, transparent 1.4px), radial-gradient(circle at 40% 80%, #fff 1px, transparent 1.4px);
+      background-size: 90px 90px, 130px 130px, 70px 70px; }
+    .hero .wrap { position: relative; z-index: 2; padding: 68px 22px 76px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #d7ecdc; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(31px, 5.6vw, 52px); line-height: 1.08; max-width: 720px; letter-spacing: -1px; font-weight: 800; }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p.lede { margin: 20px 0 30px; font-size: clamp(16px, 2.4vw, 19px); color: #cfe0d5; max-width: 560px; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 26px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px; transition: transform .15s, background .15s, border-color .15s; }
+    .btn-primary { background: var(--gold); color: #3a2a06; box-shadow: 0 6px 20px rgba(231,178,75,.3); }
+    .btn-primary:hover { background: #f2c163; transform: translateY(-1px); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+    .stars { margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: #cfe0d5; }
+    .stars .s { color: var(--gold); letter-spacing: 2px; font-size: 17px; }
+    .stars b { color: #fff; }
+    .stars .dot { opacity: .4; }
+
+    /* TRUST STRIP */
+    .strip { background: var(--sage); border-bottom: 1px solid var(--line); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 20px 22px; }
+    .strip .item { display: flex; align-items: center; gap: 11px; }
+    .strip .ico { width: 38px; height: 38px; border-radius: 9px; background: #fff; display: grid; place-items: center; font-size: 19px; flex: none; box-shadow: 0 2px 6px rgba(20,53,31,.08); }
+    .strip .t { font-weight: 700; font-size: 14px; color: var(--forest); line-height: 1.25; }
+    .strip .d { font-size: 12px; color: var(--muted); }
+
+    /* SECTIONS */
+    section.pad { padding: 74px 0; }
+    .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 12.5px; font-weight: 800; color: var(--leaf); margin-bottom: 12px; }
+    h2 { font-size: clamp(26px, 4vw, 36px); color: var(--forest); letter-spacing: -.6px; line-height: 1.12; }
+    .sub { color: var(--muted); margin-top: 12px; max-width: 600px; font-size: 17px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    /* SERVICES */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; transition: transform .18s, box-shadow .18s, border-color .18s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(20,53,31,.1); border-color: #cfe0d3; }
+    .card .ico { width: 50px; height: 50px; border-radius: 12px; background: var(--sage); display: grid; place-items: center; font-size: 25px; margin-bottom: 16px; }
+    .card h3 { color: var(--forest); font-size: 18px; margin-bottom: 7px; }
+    .card p { color: var(--muted); font-size: 14.5px; }
+
+    /* STORY */
+    .story { background: linear-gradient(165deg, var(--forest), #0f2a19); color: #fff; }
+    .story .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 52px; align-items: center; }
+    .story h2 { color: #fff; }
+    .story .kicker { color: var(--gold); }
+    .story p { color: #cfe0d5; margin-top: 16px; font-size: 16.5px; }
+    .gens { margin-top: 30px; display: grid; gap: 14px; }
+    .gen { display: flex; gap: 15px; align-items: flex-start; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 13px; padding: 16px 18px; }
+    .gen .yr { font-weight: 800; color: var(--gold); font-size: 15px; flex: none; width: 66px; }
+    .gen .who { font-weight: 700; color: #fff; font-size: 15px; }
+    .gen .role { color: #bcd3c4; font-size: 13.5px; }
+    .story-aside { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 34px; text-align: center; }
+    .big-num { font-size: clamp(58px, 11vw, 92px); font-weight: 800; line-height: 1; color: var(--gold); letter-spacing: -3px; }
+    .big-num-lbl { font-size: 15px; color: #cfe0d5; margin-top: 6px; font-weight: 600; }
+    .aside-div { height: 1px; background: rgba(255,255,255,.14); margin: 26px 0; }
+    .aside-stat { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 14.5px; }
+    .aside-stat b { color: #fff; }
+    .aside-stat span { color: #bcd3c4; }
+
+    /* RECURRING / DIFFERENTIATOR BANNER */
+    .recur { background: var(--sand); }
+    .recur .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+    .recur h2 { color: var(--forest); }
+    .recur p { color: var(--muted); margin-top: 14px; font-size: 16.5px; }
+    .checks { margin-top: 22px; display: grid; gap: 12px; }
+    .checks li { list-style: none; display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; color: var(--text); }
+    .checks .ck { color: #fff; background: var(--leaf); width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; flex: none; margin-top: 1px; }
+    .plan-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: 0 10px 30px rgba(20,53,31,.08); }
+    .plan-card .tag { display: inline-block; background: var(--sage); color: var(--moss); font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; letter-spacing: .04em; }
+    .plan-card h3 { color: var(--forest); font-size: 22px; margin: 14px 0 4px; }
+    .plan-card .price { color: var(--muted); font-size: 15px; }
+    .plan-list { margin: 20px 0 24px; display: grid; gap: 11px; }
+    .plan-list div { display: flex; gap: 10px; font-size: 14.5px; color: var(--text); }
+    .plan-list .ck { color: var(--leaf); font-weight: 800; }
+    .plan-card .btn { width: 100%; justify-content: center; }
+
+    /* REVIEWS */
+    .reviews { background: var(--sage); }
+    .rev-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .rev-badge { text-align: right; }
+    .rev-badge .num { font-size: 34px; font-weight: 800; color: var(--forest); line-height: 1; }
+    .rev-badge .num .s { color: var(--gold); }
+    .rev-badge .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .quote { background: #fff; border-radius: 16px; padding: 26px; border: 1px solid var(--line); display: flex; flex-direction: column; }
+    .quote .q-stars { color: var(--gold); letter-spacing: 2px; font-size: 15px; margin-bottom: 12px; }
+    .quote p { font-size: 15px; color: var(--text); flex: 1; }
+    .quote .who { margin-top: 18px; display: flex; align-items: center; gap: 12px; }
+    .quote .av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(150deg, var(--moss), var(--leaf)); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; flex: none; }
+    .quote .nm { font-weight: 700; font-size: 14px; color: var(--forest); }
+    .quote .ct { font-size: 12.5px; color: var(--muted); }
+
+    /* CTA BAND */
+    .cta-band { background: linear-gradient(160deg, var(--moss), var(--forest)); color: #fff; text-align: center; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #cfe0d5; margin: 14px auto 30px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+
+    /* FOOTER */
+    footer.site { background: var(--char); color: #b7c3ba; padding: 40px 0 34px; font-size: 14px; }
+    footer.site .grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+    footer.site .fname { color: #fff; font-weight: 800; font-size: 17px; margin-bottom: 6px; }
+    footer.site a { color: #d8e2db; }
+    .concept-note { margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); font-size: 12.5px; color: #8ea295; line-height: 1.6; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #14351f; color: var(--gold); font: 700 11.5px/1 system-ui; padding: 9px 14px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,.3); border: 1px solid rgba(231,178,75,.35); }
+
+    @media (max-width: 860px) {
+      .strip .wrap { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .cards, .quotes { grid-template-columns: 1fr 1fr; }
+      .story .wrap, .recur .wrap { grid-template-columns: 1fr; gap: 34px; }
+      .story-aside { order: -1; }
+    }
+    @media (max-width: 620px) {
+      .nav-phone.desktop { display: none; }
+      .cards, .quotes { grid-template-columns: 1fr; }
+      section.pad { padding: 56px 0; }
+      .hero .wrap { padding: 52px 22px 60px; }
+      .btn { flex: 1; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top"><span class="mark">🌿</span> Weaver's <span>&amp; Sons</span></a>
+      <div class="nav-right">
+        <a class="nav-phone desktop" href="tel:+19137221515"><span class="lbl">Call the family</span>(913) 722-1515</a>
+        <a class="cta" href="#book">Book Online</a>
+      </div>
+    </div>
+  </header>
+
+  <a id="top"></a>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">🏡 Family-owned in Shawnee since 1960</span>
+      <h1>Johnson County's pest problems, handled by <em>three generations</em> of the Weaver family.</h1>
+      <p class="lede">Termites, rodents, mosquitoes, bed bugs, and the everyday invaders — treated by the same trusted local family your neighbors have called for 65 years. Now with real-time online scheduling.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">📅 Schedule your visit</a>
+        <a class="btn btn-ghost" href="tel:+19137221515">📞 (913) 722-1515</a>
+      </div>
+      <div class="stars">
+        <span class="s">★★★★★</span> <b>4.9</b> on Angi
+        <span class="dot">•</span> Trusted across Johnson County for decades
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><div class="ico">🌳</div><div><div class="t">Since 1960</div><div class="d">65 years serving KC</div></div></div>
+      <div class="item"><div class="ico">👨‍👦</div><div><div class="t">3 generations</div><div class="d">Family owned &amp; run</div></div></div>
+      <div class="item"><div class="ico">🛡️</div><div><div class="t">Licensed &amp; certified</div><div class="d">Professional technicians</div></div></div>
+      <div class="item"><div class="ico">🔁</div><div><div class="t">Recurring plans</div><div class="d">Quarterly &amp; monthly</div></div></div>
+    </div>
+  </div>
+
+  <section class="pad">
+    <div class="wrap center">
+      <div class="kicker">What we treat</div>
+      <h2>Complete pest control for home &amp; business</h2>
+      <p class="sub">From a single termite inspection to year-round protection — one local family handling it all across the Kansas City metro.</p>
+    </div>
+    <div class="wrap">
+      <div class="cards">
+        <div class="card"><div class="ico">🐜</div><h3>General Pest Control</h3><p>Ants, spiders, roaches, and seasonal invaders — treated inside and out with proven methods.</p></div>
+        <div class="card"><div class="ico">🪵</div><h3>Termite Control</h3><p>Inspections, treatment, and 10-year renewal protection to safeguard your biggest investment.</p></div>
+        <div class="card"><div class="ico">🐭</div><h3>Rodent Removal</h3><p>Mice and rats trapped, excluded, and kept out — with entry points sealed for good.</p></div>
+        <div class="card"><div class="ico">🦟</div><h3>Mosquito Management</h3><p>Reclaim your yard all summer with targeted seasonal treatments that actually keep them away.</p></div>
+        <div class="card"><div class="ico">🛏️</div><h3>Bed Bug Treatment</h3><p>Thorough, discreet inspection and elimination so you can rest easy again — fast.</p></div>
+        <div class="card"><div class="ico">🏢</div><h3>Commercial Service</h3><p>Reliable, scheduled protection for offices, restaurants, and rental properties across the metro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story pad">
+    <div class="wrap">
+      <div>
+        <div class="kicker">The Weaver story</div>
+        <h2>The same family name on the truck since 1960.</h2>
+        <p>Jim Weaver started A-OK Exterminators the year JFK was elected. Three generations later, the Weavers are still the ones answering the phone, walking your crawlspace, and standing behind the work. When your grandparents had a problem, they called Weaver's. Chances are, so did you.</p>
+        <div class="gens">
+          <div class="gen"><div class="yr">1960</div><div><div class="who">Jim Weaver</div><div class="role">Founder — built the reputation, one honest visit at a time</div></div></div>
+          <div class="gen"><div class="yr">Today</div><div><div class="who">George Jr. &amp; Brock</div><div class="role">Carrying the trade forward for a new generation of KC families</div></div></div>
+        </div>
+      </div>
+      <div class="story-aside">
+        <div class="big-num">65</div>
+        <div class="big-num-lbl">years of protecting KC homes</div>
+        <div class="aside-div"></div>
+        <div class="aside-stat"><span>Founded</span><b>1960</b></div>
+        <div class="aside-stat"><span>Family generations</span><b>Three</b></div>
+        <div class="aside-stat"><span>Rating</span><b>★ 4.9 on Angi</b></div>
+        <div class="aside-stat"><span>Based in</span><b>Shawnee, KS</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recur pad">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Why neighbors stay</div>
+        <h2>Set it and forget it — pest protection that just shows up.</h2>
+        <p>The Weavers built their name on recurring service: quarterly and monthly plans that keep pests out year-round without you ever having to think about it. Many customers have been on the same schedule for decades.</p>
+        <ul class="checks">
+          <li><span class="ck">✓</span> Same trusted technicians visit after visit — no strangers, no surprises</li>
+          <li><span class="ck">✓</span> Seasonal treatments timed to Kansas weather and pest cycles</li>
+          <li><span class="ck">✓</span> Free re-treats between visits if anything comes back</li>
+          <li><span class="ck">✓</span> Fair, straightforward pricing — the kind that earns 65-year customers</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <span class="tag">MOST POPULAR</span>
+        <h3>Quarterly Home Protection</h3>
+        <div class="price">Year-round coverage • billed per visit</div>
+        <div class="plan-list">
+          <div><span class="ck">✓</span> Interior &amp; exterior treatment every season</div>
+          <div><span class="ck">✓</span> Covers ants, spiders, roaches &amp; common pests</div>
+          <div><span class="ck">✓</span> Priority scheduling for callbacks</div>
+          <div><span class="ck">✓</span> Guaranteed between-visit re-treatment</div>
+        </div>
+        <a class="btn btn-primary" href="#book">Check availability online</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews pad">
+    <div class="wrap">
+      <div class="rev-head">
+        <div>
+          <div class="kicker">Neighbors talk</div>
+          <h2>Trusted across Johnson County</h2>
+          <p class="sub">Real reputation, built one satisfied home at a time.</p>
+        </div>
+        <div class="rev-badge">
+          <div class="num"><span class="s">★</span> 4.9</div>
+          <div class="lbl">rated on Angi</div>
+        </div>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>"Hands down, THE best people and company to work with. Weaver's has taken care of our home for years and I recommend them to everyone I know."</p>
+          <div class="who"><div class="av">DB</div><div><div class="nm">Dana B.</div><div class="ct">Shawnee, KS</div></div></div>
+        </div>
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>"Reliable at a good price. They gave me a thorough overview of what they found and exactly what they were doing. No upsell, just honest work."</p>
+          <div class="who"><div class="av">JF</div><div><div class="nm">James F.</div><div class="ct">Overland Park, KS</div></div></div>
+        </div>
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>"Very, very thorough and priced right. Been on their quarterly plan for years and never had to worry about a thing. A true local family business."</p>
+          <div class="who"><div class="av">JT</div><div><div class="nm">Jann T.</div><div class="ct">Olathe, KS</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band pad" id="book">
+    <div class="wrap">
+      <div class="kicker" style="color:var(--gold)">Real-time scheduling</div>
+      <h2>Book your visit in under two minutes.</h2>
+      <p>No more forms that vanish into an inbox. Pick a time that works, and a Weaver technician will confirm your appointment. Or call the family directly — a real person answers.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">📅 See available times</a>
+        <a class="btn btn-ghost" href="tel:+19137221515">📞 (913) 722-1515</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="fname">Weaver's &amp; Sons A-OK Exterminators</div>
+          <div>Family-owned pest control • Shawnee, Kansas</div>
+          <div>Serving Johnson County &amp; the greater Kansas City metro since 1960</div>
+        </div>
+        <div>
+          <div style="font-weight:700;color:#fff;margin-bottom:6px;">Get in touch</div>
+          <div><a href="tel:+19137221515">(913) 722-1515</a></div>
+          <div>Shawnee, KS 66203</div>
+        </div>
+      </div>
+      <div class="concept-note">
+        This is a concept redesign preview created by Gigawatt, a Kansas City web design &amp; AI consulting agency. It is not the live website and is not affiliated with or endorsed by Weaver's &amp; Sons A-OK Exterminators. Business details are shown for demonstration only.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

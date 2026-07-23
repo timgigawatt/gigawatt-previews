@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>J.F. Denney, Inc. — Olathe & Johnson County's Family Plumbing, Heating & A/C Since 1952</title>
+  <meta name="description" content="Third-generation family plumbing, heating, A/C & water treatment in Olathe and Johnson County. 5.0 stars, 1,050+ five-star reviews. Trusted since 1952." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest: #123829;      /* deep heritage green */
+      --forest-2: #1c5138;
+      --pine: #0c2a1f;
+      --brass: #c39434;       /* brass/gold */
+      --brass-2: #a87c22;
+      --brass-lt: #e6c66e;
+      --cream: #f6f2e7;
+      --cream-2: #efe9d8;
+      --paper: #fbf9f2;
+      --ink: #1a2620;
+      --muted: #566860;
+      --line: #e2ddcc;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink); line-height: 1.6; background: var(--paper); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .logo-name { font-family: 'Fraunces', Georgia, serif; }
+
+    /* Header */
+    header { background: rgba(18,56,41,0.98); position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(195,148,52,0.35); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .crest { width: 42px; height: 42px; flex: none; border-radius: 9px; background: linear-gradient(150deg, var(--brass-lt), var(--brass) 55%, var(--brass-2)); display: grid; place-items: center; color: var(--pine); font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25); }
+    .logo-name { color: #fff; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: .2px; }
+    .logo-sub { display: block; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 2.4px; text-transform: uppercase; color: var(--brass-lt); margin-top: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .nav-phone span { display: block; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brass-lt); }
+    .btn { display: inline-block; padding: 13px 24px; border-radius: 9px; font-weight: 700; text-decoration: none; font-size: 15px; transition: transform .12s ease, background .18s ease, box-shadow .18s ease; border: none; cursor: pointer; }
+    .btn-primary { background: linear-gradient(150deg, var(--brass-lt), var(--brass) 60%, var(--brass-2)); color: var(--pine); box-shadow: 0 6px 18px rgba(168,124,34,0.35); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 9px 24px rgba(168,124,34,0.45); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.55); color: #fff; }
+    .btn-ghost:hover { border-color: var(--brass-lt); color: var(--brass-lt); }
+    .btn-dark { background: var(--forest); color: #fff; }
+    .btn-dark:hover { background: var(--forest-2); transform: translateY(-1px); }
+    .nav .btn { padding: 11px 20px; }
+    @media (max-width: 720px) { .nav-phone { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; color: #fff; overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 85% 0%, rgba(195,148,52,0.22), transparent 55%),
+        linear-gradient(160deg, var(--forest-2) 0%, var(--forest) 45%, var(--pine) 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+      background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 26px); }
+    .hero .wrap { position: relative; z-index: 1; padding: 72px 22px 84px; }
+    .est-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(195,148,52,0.16); border: 1px solid rgba(230,198,110,0.5); color: var(--brass-lt); font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; padding: 7px 15px; border-radius: 999px; }
+    .hero h1 { font-size: clamp(33px, 6vw, 58px); line-height: 1.06; margin: 22px 0 0; max-width: 780px; font-weight: 600; letter-spacing: -0.5px; }
+    .hero h1 em { font-style: italic; color: var(--brass-lt); }
+    .hero p.lead { margin: 22px 0 30px; font-size: clamp(16px, 2vw, 19px); color: #d8e4dc; max-width: 560px; }
+    .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .stars-line { margin-top: 30px; display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+    .stars { color: var(--brass-lt); font-size: 19px; letter-spacing: 2px; }
+    .stars-line b { color: #fff; font-weight: 700; }
+    .stars-line span { color: #b8c9bf; font-size: 14px; }
+    .hero-note { margin-top: 14px; color: #9fb4a8; font-size: 13.5px; }
+
+    /* Trust strip */
+    .strip { background: var(--pine); border-top: 1px solid rgba(195,148,52,0.3); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .strip .item { padding: 22px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+    .strip .item:last-child { border-right: none; }
+    .strip .num { font-family: 'Fraunces', serif; font-size: clamp(22px, 3vw, 30px); font-weight: 700; color: var(--brass-lt); line-height: 1; }
+    .strip .lbl { color: #c6d4cb; font-size: 12.5px; font-weight: 500; margin-top: 7px; letter-spacing: .3px; }
+    @media (max-width: 640px) { .strip .wrap { grid-template-columns: repeat(2, 1fr); }
+      .strip .item:nth-child(2) { border-right: none; } .strip .item:nth-child(1), .strip .item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); } }
+
+    /* Sections */
+    section { padding: 78px 0; }
+    .eyebrow { display: inline-block; color: var(--brass-2); font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+    h2 { font-size: clamp(27px, 4vw, 40px); color: var(--forest); line-height: 1.12; font-weight: 600; letter-spacing: -0.4px; }
+    .sub { color: var(--muted); margin-top: 14px; max-width: 620px; font-size: 17px; }
+    .sec-head { margin-bottom: 42px; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; transition: transform .15s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(18,56,41,0.12); border-color: var(--brass); }
+    .card .ico { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(150deg, var(--cream), var(--cream-2)); display: grid; place-items: center; font-size: 26px; margin-bottom: 16px; border: 1px solid var(--line); }
+    .card h3 { color: var(--forest); font-size: 20px; margin-bottom: 8px; font-weight: 600; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Story */
+    .story { background: linear-gradient(160deg, var(--cream) 0%, var(--cream-2) 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .story-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 52px; align-items: center; }
+    @media (max-width: 860px) { .story-grid { grid-template-columns: 1fr; gap: 34px; } }
+    .story h2 { color: var(--forest); }
+    .story p { color: #3d4c44; font-size: 16.5px; margin-top: 16px; }
+    .story .signoff { margin-top: 24px; font-family: 'Fraunces', serif; font-style: italic; color: var(--brass-2); font-size: 18px; }
+    .timeline { display: grid; gap: 14px; }
+    .t-item { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--brass); border-radius: 12px; padding: 18px 20px; display: flex; gap: 16px; align-items: baseline; }
+    .t-year { font-family: 'Fraunces', serif; font-weight: 700; color: var(--forest); font-size: 20px; flex: none; width: 62px; }
+    .t-text { color: #3d4c44; font-size: 15px; }
+    .t-text b { color: var(--forest); }
+
+    /* After-hours / AI feature */
+    .feature { background: var(--forest); color: #fff; position: relative; overflow: hidden; }
+    .feature::before { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(195,148,52,0.25), transparent 70%); }
+    .feature .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    @media (max-width: 860px) { .feature .wrap { grid-template-columns: 1fr; gap: 34px; } }
+    .feature h2 { color: #fff; }
+    .feature .eyebrow { color: var(--brass-lt); }
+    .feature p { color: #d8e4dc; font-size: 16.5px; margin-top: 16px; }
+    .feature ul { list-style: none; margin-top: 22px; display: grid; gap: 12px; }
+    .feature li { display: flex; gap: 12px; align-items: flex-start; color: #e6efe9; font-size: 15.5px; }
+    .feature li b { color: #fff; }
+    .chk { color: var(--brass-lt); font-weight: 800; flex: none; }
+    /* Chat mock */
+    .chat { background: #fff; border-radius: 18px; padding: 18px; box-shadow: 0 24px 60px rgba(0,0,0,0.35); color: var(--ink); }
+    .chat-top { display: flex; align-items: center; gap: 11px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .chat-av { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(150deg, var(--forest-2), var(--forest)); display: grid; place-items: center; color: var(--brass-lt); font-weight: 700; font-family: 'Fraunces', serif; }
+    .chat-top .nm { font-weight: 700; color: var(--forest); font-size: 14px; }
+    .chat-top .st { font-size: 12px; color: #2e9d5b; display: flex; align-items: center; gap: 5px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #2e9d5b; display: inline-block; }
+    .bubbles { display: grid; gap: 10px; padding: 16px 4px 6px; }
+    .bub { max-width: 84%; padding: 11px 15px; border-radius: 15px; font-size: 14px; line-height: 1.45; }
+    .bub.bot { background: var(--cream); color: #33413a; border-bottom-left-radius: 5px; }
+    .bub.me { background: var(--forest); color: #fff; margin-left: auto; border-bottom-right-radius: 5px; }
+    .bub.time { text-align: center; background: none; color: var(--muted); font-size: 11.5px; max-width: 100%; padding: 2px; }
+
+    /* Service area */
+    .area { text-align: center; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
+    .chip { background: #fff; border: 1px solid var(--line); color: var(--forest); font-weight: 600; font-size: 14px; padding: 9px 17px; border-radius: 999px; }
+    .chip.strong { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+    /* Reviews */
+    .reviews { background: linear-gradient(160deg, var(--cream) 0%, var(--cream-2) 100%); border-top: 1px solid var(--line); }
+    .rev-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; margin-bottom: 40px; }
+    .rev-score { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 20px; }
+    .rev-score .big { font-family: 'Fraunces', serif; font-size: 40px; font-weight: 700; color: var(--forest); line-height: 1; }
+    .rev-score .g { color: var(--brass); font-size: 15px; letter-spacing: 1px; }
+    .rev-score small { color: var(--muted); font-size: 12.5px; }
+    .quote { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; }
+    .quote .qs { color: var(--brass); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .quote p { font-size: 15.5px; color: #33413a; flex: 1; }
+    .quote footer { margin-top: 18px; color: var(--forest); font-size: 13.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .qav { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(150deg, var(--brass-lt), var(--brass-2)); display: grid; place-items: center; color: var(--pine); font-weight: 700; font-size: 13px; flex: none; }
+
+    /* CTA band */
+    .cta-band { background: linear-gradient(160deg, var(--forest-2) 0%, var(--forest) 50%, var(--pine) 100%); color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .cta-band::after { content: ""; position: absolute; inset: 0; opacity: .5;
+      background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 26px); }
+    .cta-band .wrap { position: relative; z-index: 1; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #d8e4dc; margin: 16px auto 30px; max-width: 540px; font-size: 17px; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-hours { margin-top: 22px; color: #9fb4a8; font-size: 13.5px; }
+
+    /* Footer */
+    footer.site { background: var(--pine); color: #a9bcb1; padding: 44px 0 30px; font-size: 14px; }
+    .foot-grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+    .foot-brand { display: flex; align-items: center; gap: 12px; }
+    .foot-brand .logo-name { font-size: 17px; }
+    .foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
+    .foot-links a { color: #c6d4cb; text-decoration: none; font-weight: 500; }
+    .foot-links a:hover { color: var(--brass-lt); }
+    .foot-note { margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #7f948a; font-size: 12.5px; line-height: 1.7; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #0c2a1f; color: var(--brass-lt);
+      font: 700 11px/1 'Inter', system-ui; padding: 9px 14px; border-radius: 999px; letter-spacing: .5px;
+      border: 1px solid rgba(230,198,110,0.4); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="crest">JD</span>
+        <span>
+          <span class="logo-name">J.F. Denney, Inc.</span>
+          <span class="logo-sub">Plumbing · Heating · A/C · Water</span>
+        </span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19137728994"><span>Olathe office</span>(913) 772-8994</a>
+        <a class="btn btn-primary" href="#book">Book Service</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="est-badge">★ Family owned in Kansas City since 1952</span>
+      <h1>Olathe's plumbing, heating &amp; A/C team — <em>three generations</em> of doing it right.</h1>
+      <p class="lead">From burst pipes and water heaters to furnaces, air conditioning, and whole-home water softeners — one trusted family name across Johnson County and the KC metro.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">Book service online</a>
+        <a class="btn btn-ghost" href="tel:+19137728994">Call (913) 772-8994</a>
+      </div>
+      <div class="stars-line">
+        <span class="stars">★★★★★</span>
+        <b>5.0</b>
+        <span>· 350+ Olathe Google reviews · 1,050+ five-star reviews company-wide</span>
+      </div>
+      <p class="hero-note">Same-day drain cleaning &amp; repairs · Straightforward pricing · Kinetico &amp; Kinetico-grade water treatment</p>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><div class="num">1952</div><div class="lbl">Family owned since</div></div>
+      <div class="item"><div class="num">3rd</div><div class="lbl">Generation Denney family</div></div>
+      <div class="item"><div class="num">5.0★</div><div class="lbl">Google rating</div></div>
+      <div class="item"><div class="num">1,050+</div><div class="lbl">Five-star reviews</div></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">One name, every system</span>
+        <h2>Full-service home comfort under one roof</h2>
+        <p class="sub">No juggling three different companies. The same family crew handles your plumbing, your heating and cooling, and the water running through your home.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico">🔧</div>
+          <h3>Plumbing</h3>
+          <p>Drain cleaning, sewer camera inspections, water heaters, leaks, and repiping — done right the first time.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔥</div>
+          <h3>Heating</h3>
+          <p>Furnace repair, replacement, and seasonal maintenance to keep Johnson County winters comfortable.</p>
+        </div>
+        <div class="card">
+          <div class="ico">❄️</div>
+          <h3>Air Conditioning</h3>
+          <p>A/C repair, tune-ups, and high-efficiency system installs sized right for your home.</p>
+        </div>
+        <div class="card">
+          <div class="ico">💧</div>
+          <h3>Water Treatment</h3>
+          <p>Water softeners, reverse osmosis, and whole-home filtration for cleaner, softer KC water.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🛠️</div>
+          <h3>Remodeling</h3>
+          <p>Kitchen and bath remodels, tile, and room additions from a licensed crew you already trust.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🚜</div>
+          <h3>Excavation &amp; Sewer</h3>
+          <p>Main line and sewer excavation handled in-house — no subcontractor guessing games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap story-grid">
+      <div>
+        <span class="eyebrow">Since 1952</span>
+        <h2>Started by one family. Still run by the same one.</h2>
+        <p>J.F. Denney opened its doors in 1952 when John Sr. and Dorothy Denney set out to serve Kansas City homeowners with honest, dependable work. Seventy-four years later, the company is in its third generation — owned and operated today by Mark &amp; Becky Denney.</p>
+        <p>Longevity like that is rare in the trades, and it only happens one way: by showing up, standing behind the work, and treating your home the way we'd treat our own. That's why so many Johnson County families have called the same number for decades.</p>
+        <p class="signoff">— The Denney family, Olathe &amp; Leavenworth, Kansas</p>
+      </div>
+      <div class="timeline">
+        <div class="t-item"><span class="t-year">1952</span><span class="t-text"><b>Founded</b> by John Sr. &amp; Dorothy Denney in the Kansas City area.</span></div>
+        <div class="t-item"><span class="t-year">2nd</span><span class="t-text"><b>Grew into full-service</b> plumbing, heating, A/C, and water treatment.</span></div>
+        <div class="t-item"><span class="t-year">Today</span><span class="t-text"><b>Mark &amp; Becky Denney</b> lead the third generation, serving Johnson County from the Olathe office.</span></div>
+        <div class="t-item"><span class="t-year">5.0★</span><span class="t-text"><b>1,050+ five-star reviews</b> and counting across the metro.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="after-hours">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">New: after-hours help</span>
+        <h2>Plumbing emergencies don't wait for 8am.</h2>
+        <p>The office is open Monday–Friday, 8:00–4:30 — but water damage and no-heat nights don't keep those hours. So we're adding an after-hours assistant that answers questions and gets you on the schedule any time, day or night.</p>
+        <ul>
+          <li><span class="chk">✓</span><span><b>24/7 online booking</b> — reserve the next available visit even at midnight.</span></li>
+          <li><span class="chk">✓</span><span><b>AI chat triage</b> — describe the problem, get first-step guidance and an honest sense of urgency.</span></li>
+          <li><span class="chk">✓</span><span><b>Straight to a real Denney tech</b> — mornings start with your request already in hand.</span></li>
+        </ul>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">
+          <div class="chat-av">JD</div>
+          <div>
+            <div class="nm">Denney Assistant</div>
+            <div class="st"><span class="dot"></span> Online · after hours</div>
+          </div>
+        </div>
+        <div class="bubbles">
+          <div class="bub time">11:48 PM</div>
+          <div class="bub me">Water's coming up from my basement floor drain — is this an emergency?</div>
+          <div class="bub bot">That can be. Please avoid running water or the washing machine for now. I can hold the first morning slot for you and flag it as urgent for the on-call tech.</div>
+          <div class="bub me">Yes, please book it.</div>
+          <div class="bub bot">Done ✓ You're set for 8:00 AM in Olathe. Bill will call before he heads over. Want a text reminder?</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap">
+      <span class="eyebrow">Proudly local</span>
+      <h2>Serving Johnson County &amp; the greater KC metro</h2>
+      <p class="sub" style="margin: 14px auto 0;">Based in Olathe, with roots in Leavenworth — bringing 70+ years of trusted home service across the area.</p>
+      <div class="chips">
+        <span class="chip strong">Olathe</span>
+        <span class="chip">Overland Park</span>
+        <span class="chip">Lenexa</span>
+        <span class="chip">Shawnee</span>
+        <span class="chip">Leawood</span>
+        <span class="chip">Prairie Village</span>
+        <span class="chip">Gardner</span>
+        <span class="chip">Spring Hill</span>
+        <span class="chip">De Soto</span>
+        <span class="chip">Merriam</span>
+        <span class="chip">Leavenworth</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="rev-top">
+        <div class="sec-head" style="margin-bottom: 0;">
+          <span class="eyebrow">What neighbors say</span>
+          <h2>1,050+ five-star reviews, one family name</h2>
+        </div>
+        <div class="rev-score">
+          <div class="big">5.0</div>
+          <div>
+            <div class="g">★★★★★</div>
+            <small>350+ Olathe Google reviews</small>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"Water started coming up from our basement drain and they called back quickly and had people out fast. Devan and Bill worked the problem from every angle until it was fixed."</p>
+          <footer><span class="qav">R</span>Ryan M., Olathe</footer>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"Brian replaced a leaking garbage disposal and snaked a slow bathtub drain. Very professional and explained everything as he went. This is who we call now."</p>
+          <footer><span class="qav">D</span>Dana R., Overland Park</footer>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"We've used JF Denney for many years and always had great service. Professional, on time, and they always do a good job. A family business you can count on."</p>
+          <footer><span class="qav">L</span>Linda K., Lenexa</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="book">
+    <div class="wrap">
+      <span class="eyebrow" style="color: var(--brass-lt);">Book your visit</span>
+      <h2>Ready when you are — day or night.</h2>
+      <p>Request service online in under a minute, or call the Olathe office and talk to a real person. Three generations of Denneys are ready to help.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="tel:+19137728994">Call (913) 772-8994</a>
+        <a class="btn btn-ghost" href="#after-hours">Book online 24/7</a>
+      </div>
+      <p class="cta-hours">Office hours: Mon–Fri 8:00 AM – 4:30 PM · After-hours booking &amp; chat always open</p>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <span class="crest">JD</span>
+          <span>
+            <span class="logo-name" style="color:#fff;">J.F. Denney, Inc.</span>
+            <span class="logo-sub">Family owned since 1952 · Olathe, KS</span>
+          </span>
+        </div>
+        <div class="foot-links">
+          <a href="#services">Services</a>
+          <a href="#story">Our Story</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#book">Book Service</a>
+        </div>
+      </div>
+      <div class="foot-note">
+        Concept preview by Gigawatt — a Kansas City web design &amp; AI consulting studio. This is a design concept for J.F. Denney, Inc., not the company's live website. Business facts (founding year, family ownership, services, service area, and ratings) are drawn from public sources; review quotes are representative and attributed by first name and city. For real service, contact J.F. Denney through their official website and phone line.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

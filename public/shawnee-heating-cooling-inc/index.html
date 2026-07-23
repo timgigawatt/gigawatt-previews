@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Shawnee Heating &amp; Cooling — Comfort for Johnson County Since 1983</title>
+  <meta name="description" content="Family-owned HVAC in Lenexa & Overland Park since 1983. Lennox Premier Dealer for AC repair, furnace install, heat pumps & maintenance. Same-day service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0c2942;
+      --blue: #12507e;
+      --blue-bright: #1f7fc4;
+      --ice: #eef5fb;
+      --ice-2: #dcebf7;
+      --ember: #ef6321;
+      --ember-dark: #cf4d12;
+      --ember-soft: #fbe6d8;
+      --text: #16222e;
+      --muted: #5a6b7a;
+      --line: #dbe6f0;
+      --white: #ffffff;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text); line-height: 1.6; background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .logo, .stat b { font-family: 'Sora', system-ui, sans-serif; }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; gap: 14px; }
+    .logo { font-weight: 800; font-size: clamp(17px, 2.4vw, 21px); color: var(--navy); text-decoration: none; letter-spacing: -.4px; display: flex; align-items: center; gap: 10px; }
+    .logo .mark {
+      width: 34px; height: 34px; border-radius: 9px; flex: none;
+      background: linear-gradient(150deg, var(--blue-bright), var(--blue));
+      display: grid; place-items: center; color: #fff; font-size: 18px;
+      box-shadow: 0 4px 12px rgba(18,80,126,.32);
+    }
+    .logo span { color: var(--ember); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone { text-decoration: none; font-weight: 700; color: var(--navy); font-size: 15px; white-space: nowrap; }
+    .nav-phone small { display: block; font-weight: 500; color: var(--muted); font-size: 11px; letter-spacing: .3px; text-transform: uppercase; }
+    .cta {
+      background: var(--ember); color: #fff; text-decoration: none;
+      padding: 11px 20px; border-radius: 9px; font-weight: 700; font-size: 15px;
+      box-shadow: 0 6px 16px rgba(239,99,33,.32); transition: transform .15s, background .15s; white-space: nowrap;
+    }
+    .cta:hover { background: var(--ember-dark); transform: translateY(-1px); }
+    .nav-phone.mobile { display: none; }
+
+    /* Hero */
+    .hero {
+      position: relative; color: #fff; overflow: hidden;
+      background:
+        radial-gradient(900px 500px at 82% -10%, rgba(31,127,196,.55), transparent 60%),
+        linear-gradient(150deg, var(--navy) 0%, var(--blue) 62%, #0d3a5c 100%);
+      padding: clamp(56px, 8vw, 96px) 0 clamp(64px, 9vw, 104px);
+    }
+    .hero::after {
+      content: ""; position: absolute; right: -120px; bottom: -140px;
+      width: 460px; height: 460px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(239,99,33,.4), transparent 62%);
+      filter: blur(8px); pointer-events: none;
+    }
+    .hero .wrap { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 13px;
+      letter-spacing: .5px; text-transform: uppercase; color: #bfe0f6;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+      padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
+    }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 0 4px rgba(239,99,33,.28); }
+    .hero h1 { font-size: clamp(32px, 5.4vw, 54px); line-height: 1.08; letter-spacing: -1px; max-width: 720px; font-weight: 800; }
+    .hero h1 em { font-style: normal; color: #ffb783; }
+    .hero p.lead { margin: 20px 0 30px; font-size: clamp(16px, 2vw, 19px); color: #cddeec; max-width: 560px; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 15px 28px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px; transition: transform .15s, background .15s; }
+    .btn-primary { background: var(--ember); color: #fff; box-shadow: 0 10px 26px rgba(239,99,33,.36); }
+    .btn-primary:hover { background: var(--ember-dark); transform: translateY(-2px); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.4); color: #fff; background: rgba(255,255,255,.04); }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+    .rating { margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .rating .stars { color: #ffc531; font-size: 18px; letter-spacing: 2px; }
+    .rating .txt { font-size: 14px; color: #cddeec; }
+    .rating .txt b { color: #fff; }
+    .rating .sep { width: 4px; height: 4px; border-radius: 50%; background: #6f93b3; }
+
+    /* Trust strip */
+    .strip { background: var(--navy); border-top: 1px solid rgba(255,255,255,.08); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 4px 22px; }
+    .strip .item { display: flex; align-items: center; gap: 11px; padding: 20px 10px; color: #d3e2ef; }
+    .strip .item + .item { border-left: 1px solid rgba(255,255,255,.08); }
+    .strip .ico { font-size: 22px; flex: none; }
+    .strip .item b { display: block; color: #fff; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; }
+    .strip .item span { font-size: 12.5px; color: #93aec6; }
+
+    /* Sections */
+    section { padding: clamp(56px, 8vw, 88px) 0; }
+    .kicker { color: var(--blue-bright); font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 12px; }
+    h2 { font-size: clamp(26px, 3.6vw, 38px); color: var(--navy); line-height: 1.14; letter-spacing: -.6px; font-weight: 800; }
+    .sub { color: var(--muted); margin-top: 14px; max-width: 600px; font-size: 17px; }
+    .sec-head { margin-bottom: 42px; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      border: 1px solid var(--line); border-radius: 16px; padding: 28px;
+      background: #fff; transition: transform .18s, box-shadow .18s, border-color .18s;
+      position: relative; overflow: hidden;
+    }
+    .card::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: linear-gradient(90deg, var(--blue-bright), var(--ember)); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(12,41,66,.12); border-color: var(--ice-2); }
+    .card:hover::before { transform: scaleX(1); }
+    .card .ico {
+      width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center;
+      font-size: 26px; margin-bottom: 18px; background: var(--ice); border: 1px solid var(--ice-2);
+    }
+    .card.warm .ico { background: var(--ember-soft); border-color: #f6d3bf; }
+    .card h3 { color: var(--navy); margin-bottom: 8px; font-size: 19px; font-weight: 700; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Story / why us */
+    .story { background: var(--ice); }
+    .story .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 54px; align-items: center; }
+    .story h2 { margin-bottom: 16px; }
+    .story p { color: #3a4a58; margin-bottom: 16px; font-size: 16.5px; }
+    .story .signature { font-family: 'Sora', sans-serif; font-weight: 700; color: var(--blue); font-size: 15px; margin-top: 6px; }
+    .story-visual {
+      border-radius: 20px; padding: 34px; color: #fff; position: relative; overflow: hidden;
+      background: linear-gradient(155deg, var(--blue) 0%, var(--navy) 100%);
+      box-shadow: 0 24px 50px rgba(12,41,66,.28);
+    }
+    .story-visual::after { content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, rgba(239,99,33,.5), transparent 65%); }
+    .badge-row { display: flex; flex-direction: column; gap: 14px; position: relative; z-index: 1; }
+    .b-item { display: flex; align-items: center; gap: 14px; }
+    .b-item .n { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 30px; color: #ffb783; line-height: 1; min-width: 74px; }
+    .b-item .l { font-size: 14.5px; color: #cddeec; }
+    .b-divider { height: 1px; background: rgba(255,255,255,.14); margin: 4px 0; }
+
+    /* AI chat differentiator */
+    .ai-band { background: #fff; }
+    .ai-inner {
+      border: 1px solid var(--ice-2); border-radius: 20px; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
+      box-shadow: 0 16px 44px rgba(12,41,66,.09);
+    }
+    .ai-copy { padding: clamp(30px, 4vw, 48px); }
+    .ai-copy h2 { font-size: clamp(24px,3vw,32px); }
+    .ai-copy p { color: var(--muted); font-size: 16px; margin-top: 14px; }
+    .ai-copy .feat { list-style: none; margin: 22px 0 0; display: grid; gap: 12px; }
+    .ai-copy .feat li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; color: #34434f; }
+    .ai-copy .feat .ck { color: #fff; background: var(--blue-bright); width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; flex: none; margin-top: 1px; }
+    .ai-visual { background: linear-gradient(160deg, var(--ice) 0%, var(--ice-2) 100%); padding: clamp(26px,3.4vw,40px); display: flex; align-items: center; }
+    .chat { width: 100%; background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 12px 30px rgba(12,41,66,.12); }
+    .chat .head { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+    .chat .avatar { width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(150deg, var(--blue-bright), var(--blue)); display: grid; place-items: center; color: #fff; font-size: 16px; }
+    .chat .head b { font-family: 'Sora',sans-serif; font-size: 14px; color: var(--navy); }
+    .chat .head small { color: #35a06a; font-size: 11.5px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+    .chat .head small::before { content:""; width:7px; height:7px; border-radius:50%; background:#35a06a; }
+    .bubble { max-width: 84%; padding: 10px 14px; border-radius: 14px; font-size: 14px; margin-bottom: 10px; line-height: 1.45; }
+    .bubble.them { background: var(--ice); color: #24313d; border-bottom-left-radius: 4px; }
+    .bubble.me { background: var(--blue); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+
+    /* Reviews */
+    .reviews { background: var(--navy); color: #fff; }
+    .reviews h2 { color: #fff; }
+    .reviews .sub { color: #a9c2d8; }
+    .reviews .kicker { color: #7fc0ee; }
+    .quote {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px; padding: 26px;
+    }
+    .quote .qstars { color: #ffc531; font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .quote p { font-size: 15.5px; color: #e4eef6; line-height: 1.6; }
+    .quote footer { margin-top: 16px; color: #9fb9d0; font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+    .quote .who { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(150deg, var(--ember), var(--ember-dark)); display: grid; place-items: center; color: #fff; font-family: 'Sora',sans-serif; font-weight: 700; font-size: 14px; }
+
+    /* Final CTA */
+    .cta-band {
+      text-align: center; color: #fff; position: relative; overflow: hidden;
+      background:
+        radial-gradient(700px 380px at 50% 0%, rgba(31,127,196,.5), transparent 60%),
+        linear-gradient(140deg, #0d3a5c, var(--navy));
+    }
+    .cta-band::before { content:""; position:absolute; left:-100px; bottom:-120px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle at 40% 40%, rgba(239,99,33,.4), transparent 62%); }
+    .cta-band .wrap { position: relative; z-index: 1; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #cddeec; margin: 14px auto 30px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+    .guarantee { margin-top: 22px; font-size: 13.5px; color: #9fb9d0; }
+
+    /* Footer */
+    footer.site { background: #081f31; color: #8ba6bd; font-size: 13.5px; padding: 40px 0; }
+    footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
+    footer.site .fl b { color: #fff; font-family: 'Sora',sans-serif; font-size: 15px; }
+    footer.site .fl { line-height: 1.7; }
+    footer.site .fr { text-align: right; max-width: 380px; }
+    .concept-note { color: #6c8aa4; font-size: 12.5px; margin-top: 6px; }
+
+    .demo-tag {
+      position: fixed; bottom: 14px; right: 14px; z-index: 50;
+      background: #0a1720; color: #ffb046; font: 700 11.5px/1 'Inter', system-ui;
+      padding: 9px 14px; border-radius: 999px; letter-spacing: .3px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.35); border: 1px solid rgba(255,176,70,.32);
+    }
+
+    @media (max-width: 860px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+      .story .wrap { grid-template-columns: 1fr; gap: 34px; }
+      .ai-inner { grid-template-columns: 1fr; }
+      .ai-visual { order: -1; }
+      .strip .wrap { grid-template-columns: 1fr 1fr; }
+      .strip .item:nth-child(3) { border-left: none; }
+      .strip .item:nth-child(odd) { border-left: none; }
+    }
+    @media (max-width: 560px) {
+      .cards { grid-template-columns: 1fr; }
+      .nav-phone.desk { display: none; }
+      .rating { gap: 8px; }
+      .btn { flex: 1 1 auto; justify-content: center; }
+      .actions { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="mark" aria-hidden="true">❄</span>
+        Shawnee <span>Heating&nbsp;&amp;&nbsp;Cooling</span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone desk" href="tel:+19134920824">(913) 492-0824<small>Same-day service</small></a>
+        <a class="cta" href="#schedule">Schedule Service</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span> Family-operated in Lenexa since 1983</span>
+      <h1>Johnson County's home for <em>heating &amp; cooling</em> that just works.</h1>
+      <p class="lead">Three generations of Kansas comfort — fast, honest HVAC repair and installation for Lenexa, Overland Park, Shawnee, and all of Johnson County. Lennox Premier Dealer.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#schedule">Book online in 60 seconds →</a>
+        <a class="btn btn-ghost" href="tel:+19134920824">📞 (913) 492-0824</a>
+      </div>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="txt"><b>4.7</b> on Google · 154 reviews</span>
+        <span class="sep"></span>
+        <span class="txt">A+ BBB Accredited</span>
+        <span class="sep"></span>
+        <span class="txt">2× Nextdoor Neighborhood Favorite</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><span class="ico">🏡</span><div><b>43 Years</b><span>Family-owned since 1983</span></div></div>
+      <div class="item"><span class="ico">🏆</span><div><b>Lennox Premier</b><span>Factory-trained dealer</span></div></div>
+      <div class="item"><span class="ico">🛡️</span><div><b>Licensed &amp; Insured</b><span>Bonded, warrantied work</span></div></div>
+      <div class="item"><span class="ico">⚡</span><div><b>Same-Day Service</b><span>Fast local response</span></div></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">What we do</div>
+        <h2>Heating and cooling, handled — from one honest crew.</h2>
+        <p class="sub">Whatever your system needs, we service, repair, and install it. No subcontractors, no surprise upsells — just the fix your home actually needs.</p>
+      </div>
+      <div class="cards">
+        <div class="card warm"><div class="ico">🔥</div><h3>Furnace Repair &amp; Install</h3><p>Fast diagnostics, honest repairs, and high-efficiency Lennox furnace installs that keep KC winters outside where they belong.</p></div>
+        <div class="card"><div class="ico">❄️</div><h3>AC Repair &amp; Install</h3><p>Cooling out on a 100° day? We get you comfortable again fast — and quote new systems without the pressure.</p></div>
+        <div class="card"><div class="ico">🔄</div><h3>Heat Pumps &amp; Mini-Splits</h3><p>Energy-efficient heat pump and ductless mini-split installation for year-round comfort and lower utility bills.</p></div>
+        <div class="card"><div class="ico">🗓️</div><h3>Maintenance Plans</h3><p>Spring &amp; winter tune-ups that catch small problems early, protect your warranty, and extend system life.</p></div>
+        <div class="card"><div class="ico">💨</div><h3>Indoor Air Quality</h3><p>Air purifiers, advanced filtration, humidifiers, and HVAC zoning for cleaner, healthier air in every room.</p></div>
+        <div class="card"><div class="ico">📟</div><h3>Smart Thermostats</h3><p>Smart thermostat setup and repair so you control comfort — and savings — from anywhere.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Our story</div>
+        <h2>43 years. Same family. Same handshake.</h2>
+        <p>Shawnee Heating &amp; Cooling opened its doors in 1983 with a simple promise: treat every Johnson County home like it's our own. Four decades later, we're still family-operated — and still the company your neighbors call by name.</p>
+        <p>As a Lennox Premier Dealer, our technicians complete factory training most shops never bother with. That means the right diagnosis the first time, systems sized correctly for your home, and warranties that actually hold up.</p>
+        <p>No call centers. No high-pressure sales. Just the same trusted crew that's kept Lenexa, Overland Park, and Shawnee comfortable for two generations of homeowners.</p>
+        <div class="signature">— The Shawnee Heating &amp; Cooling family</div>
+      </div>
+      <div class="story-visual">
+        <div class="badge-row">
+          <div class="b-item"><span class="n">1983</span><span class="l">The year we started serving Johnson County families</span></div>
+          <div class="b-divider"></div>
+          <div class="b-item"><span class="n">40hr</span><span class="l">Lennox factory training completed by our techs</span></div>
+          <div class="b-divider"></div>
+          <div class="b-item"><span class="n">A+</span><span class="l">BBB accredited rating for honest work</span></div>
+          <div class="b-divider"></div>
+          <div class="b-item"><span class="n">4.7★</span><span class="l">Across 154 Google reviews from real neighbors</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ai-band">
+    <div class="wrap">
+      <div class="ai-inner">
+        <div class="ai-copy">
+          <div class="kicker">New: 24/7 comfort assistant</div>
+          <h2>Answers at 2 a.m., without the wait.</h2>
+          <p>Furnace out on a cold night? Our AI comfort assistant helps you troubleshoot the simple stuff, gives ballpark guidance, and books your visit the moment you're ready — then a real Shawnee tech takes it from there.</p>
+          <ul class="feat">
+            <li><span class="ck">✓</span> Instant answers on common furnace &amp; AC issues</li>
+            <li><span class="ck">✓</span> Book or reschedule service any hour, any day</li>
+            <li><span class="ck">✓</span> Straight to a human tech for true emergencies</li>
+          </ul>
+        </div>
+        <div class="ai-visual">
+          <div class="chat" role="img" aria-label="Example chat with the comfort assistant">
+            <div class="head">
+              <div class="avatar" aria-hidden="true">❄</div>
+              <div>
+                <b>Shawnee Comfort Assistant</b><br>
+                <small>Online now</small>
+              </div>
+            </div>
+            <div class="bubble them">Hi! My furnace is blowing cold air in Overland Park. Can someone come out?</div>
+            <div class="bubble me">Sorry about that! Let's check the basics first — is your thermostat set to Heat and the filter clean? I can also book a same-day visit.</div>
+            <div class="bubble them">Filter's fine. Let's book it.</div>
+            <div class="bubble me">Done — a Lennox-certified tech can be there this afternoon. Confirming to (913) 492-0824. 👍</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Neighbors talk</div>
+        <h2>Trusted across Johnson County.</h2>
+        <p class="sub">4.7 stars and 154 Google reviews from Lenexa, Overland Park, and Shawnee homeowners — plus two Nextdoor Neighborhood Favorite wins.</p>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <div class="qstars">★★★★★</div>
+          <p>“They've been our HVAC company for 15 years. They installed our original system and did a wonderful job replacing the old unit — fair, honest, and never pushy.”</p>
+          <footer><span class="who">D</span> Diane K., Lenexa</footer>
+        </div>
+        <div class="quote">
+          <div class="qstars">★★★★★</div>
+          <p>“Replaced our air conditioner and they were fast, friendly, knowledgeable, and fairly priced. Exactly what you want when it's 100° out.”</p>
+          <footer><span class="who">R</span> Ray M., Overland Park</footer>
+        </div>
+        <div class="quote">
+          <div class="qstars">★★★★★</div>
+          <p>“Emergency motor repair was handled the same day, done on time and right to the quote. A family business that still does things the honest way.”</p>
+          <footer><span class="who">T</span> Teresa H., Shawnee</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="schedule">
+    <div class="wrap">
+      <div class="kicker" style="color:#ffb783;">Ready when you are</div>
+      <h2>Let's get your home comfortable again.</h2>
+      <p>Book online in under a minute or call the family that's kept Johnson County warm and cool since 1983. Same-day service available.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#schedule">Schedule service online →</a>
+        <a class="btn btn-ghost" href="tel:+19134920824">📞 (913) 492-0824</a>
+      </div>
+      <div class="guarantee">Lennox Premier Dealer · Licensed, bonded &amp; insured · A+ BBB Accredited</div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="fl">
+        <b>Shawnee Heating &amp; Cooling Inc.</b><br>
+        Lenexa, Kansas · Serving Lenexa, Overland Park, Shawnee &amp; Johnson County<br>
+        (913) 492-0824
+      </div>
+      <div class="fr">
+        This is a concept preview by <b style="color:#cbdbea;">Gigawatt</b> — a Kansas City web design &amp; AI studio.
+        <div class="concept-note">Not the live website. Design concept created to illustrate a redesign direction. All marks belong to their owners.</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

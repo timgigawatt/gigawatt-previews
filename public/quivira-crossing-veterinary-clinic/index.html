@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Quivira Crossing Veterinary Clinic in Overland Park, KS — trusted, family-owned care from Drs. Nathan & Marci Feyerabend. 640+ near-perfect reviews. Book online today.">
+<title>Quivira Crossing Veterinary Clinic — Trusted Pet Care in Overland Park, KS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-900:#12233f;
+    --blue-800:#1b3358;
+    --blue-700:#264a7d;
+    --blue-500:#3a6bb0;
+    --blue-300:#8fb2df;
+    --blue-100:#e7f0fb;
+    --gold-600:#c9962f;
+    --gold-500:#e0ad3e;
+    --gold-300:#f2d68a;
+    --gold-100:#fbf1d6;
+    --cream:#fbf8f2;
+    --paper:#ffffff;
+    --ink:#1c2a3d;
+    --muted:#5c6b80;
+    --line:#e6ddca;
+    --ok:#2e8b6f;
+    --shadow:0 18px 46px -22px rgba(18,35,63,.45);
+    --shadow-sm:0 8px 22px -14px rgba(18,35,63,.4);
+    --r:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+    font-weight:600;font-size:1rem;text-decoration:none;
+    padding:.85rem 1.4rem;border-radius:999px;border:1px solid transparent;
+    cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+    white-space:nowrap;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold-500),var(--gold-600));color:#20180a;box-shadow:var(--shadow-sm)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(201,150,47,.7)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16)}
+  .btn-outline{background:var(--paper);color:var(--blue-800);border-color:var(--line)}
+  .btn-outline:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(18,35,63,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.65rem;color:#fff;text-decoration:none}
+  .mark{
+    width:42px;height:42px;border-radius:12px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--blue-500),var(--blue-300));
+    display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);
+  }
+  .brand-txt{display:flex;flex-direction:column;line-height:1.05}
+  .brand-txt b{font-family:'Fraunces',serif;font-weight:600;font-size:1.02rem}
+  .brand-txt span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-300)}
+  .head-cta{display:flex;align-items:center;gap:.6rem}
+  .head-phone{color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.4rem}
+  .head-phone span{opacity:.7;font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+  @media(max-width:720px){.head-phone{display:none}}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(1100px 520px at 82% -10%,rgba(224,173,62,.22),transparent 60%),
+      radial-gradient(900px 600px at 8% 110%,rgba(58,107,176,.4),transparent 55%),
+      linear-gradient(160deg,var(--blue-900),var(--blue-800) 60%,var(--blue-700));
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(2px 2px at 20% 30%,rgba(255,255,255,.15),transparent),
+      radial-gradient(2px 2px at 70% 60%,rgba(255,255,255,.1),transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%,rgba(255,255,255,.12),transparent);
+    opacity:.6;
+  }
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:4.2rem 0 4.6rem}
+  .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-300);font-weight:600;background:rgba(224,173,62,.12);border:1px solid rgba(224,173,62,.3);padding:.35rem .8rem;border-radius:999px}
+  h1{font-size:clamp(2.2rem,5.2vw,3.7rem);font-weight:600;margin:1.1rem 0 0}
+  h1 em{font-style:normal;color:var(--gold-300)}
+  .sub{font-size:clamp(1.02rem,2.2vw,1.2rem);color:#d8e2f2;max-width:38ch;margin:1.1rem 0 0}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+  .stars{display:flex;align-items:center;gap:.7rem;margin-top:1.7rem;flex-wrap:wrap}
+  .stars .s{color:var(--gold-500);font-size:1.15rem;letter-spacing:.1em}
+  .stars b{font-weight:700}
+  .stars small{color:#c6d3e6}
+
+  .hero-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+    border-radius:22px;padding:1.5rem;backdrop-filter:blur(6px);box-shadow:var(--shadow)
+  }
+  .hero-card h3{font-size:1.15rem;font-weight:600;color:#fff}
+  .hero-card .row{display:flex;align-items:center;gap:.7rem;padding:.7rem 0;border-bottom:1px dashed rgba(255,255,255,.14)}
+  .hero-card .row:last-child{border-bottom:0}
+  .hero-card .ic{width:34px;height:34px;border-radius:9px;background:rgba(224,173,62,.18);display:grid;place-items:center;flex:0 0 auto}
+  .hero-card .row div{line-height:1.2}
+  .hero-card .row b{display:block;font-size:.95rem}
+  .hero-card .row small{color:#c6d3e6;font-size:.82rem}
+  .hero-card .btn{width:100%;margin-top:1rem}
+
+  /* Trust strip */
+  .trust{background:var(--blue-900);color:#fff;border-top:1px solid rgba(255,255,255,.06)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.6rem 0}
+  .trust .t{text-align:center;padding:.3rem}
+  .trust .t b{display:block;font-family:'Fraunces',serif;font-size:1.55rem;color:var(--gold-300);font-weight:600}
+  .trust .t span{font-size:.82rem;color:#c6d3e6;letter-spacing:.02em}
+  @media(max-width:720px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:1.2rem}}
+
+  section{padding:4.6rem 0}
+  .sec-head{max-width:56ch;margin:0 auto 2.6rem;text-align:center}
+  .sec-head .kick{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-600);font-weight:700}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin:.5rem 0 .6rem}
+  .sec-head p{color:var(--muted);font-size:1.05rem;margin:0}
+
+  /* Services */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+    padding:1.5rem;box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card .ico{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;
+    background:linear-gradient(135deg,var(--blue-100),#fff);border:1px solid var(--line);margin-bottom:1rem
+  }
+  .card h3{font-size:1.18rem;font-weight:600;margin-bottom:.35rem}
+  .card p{color:var(--muted);font-size:.95rem;margin:0}
+
+  /* Story */
+  .story{background:linear-gradient(160deg,#fff,var(--blue-100))}
+  .story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:3rem;align-items:center}
+  .story .badge{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-700);font-weight:700}
+  .story h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:600;margin:.6rem 0 1rem}
+  .story p{color:var(--muted);margin:0 0 1rem}
+  .story .owners{
+    background:var(--blue-900);color:#fff;border-radius:22px;padding:2rem;box-shadow:var(--shadow);position:relative;overflow:hidden
+  }
+  .story .owners::before{content:"";position:absolute;inset:auto -30% -40% auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(224,173,62,.25),transparent 70%)}
+  .owners .duo{display:flex;gap:.9rem;margin-bottom:1.2rem;position:relative}
+  .owners .av{width:58px;height:58px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;color:#20180a;background:linear-gradient(135deg,var(--gold-300),var(--gold-500));box-shadow:0 0 0 3px rgba(255,255,255,.15)}
+  .owners h3{font-size:1.3rem;font-weight:600;position:relative}
+  .owners .lede{color:var(--gold-300);font-size:.85rem;letter-spacing:.05em;font-weight:600}
+  .owners p{color:#d3ddef;font-size:.95rem;position:relative}
+  .owners ul{list-style:none;padding:0;margin:1rem 0 0;position:relative}
+  .owners li{display:flex;gap:.6rem;padding:.35rem 0;font-size:.92rem;color:#e7eefa}
+  .owners li b{color:var(--gold-300)}
+
+  /* Feature: AI + booking */
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1rem}
+  @media(max-width:900px){.features{grid-template-columns:1fr}}
+  .feat{border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;background:var(--paper);box-shadow:var(--shadow-sm)}
+  .feat .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-600)}
+  .feat h3{font-size:1.15rem;font-weight:600;margin:.4rem 0 .5rem;display:flex;align-items:center;gap:.5rem}
+  .feat p{color:var(--muted);font-size:.94rem;margin:0}
+  .chat{margin-top:1rem;background:var(--blue-100);border:1px solid var(--blue-300);border-radius:14px;padding:.9rem}
+  .bub{background:#fff;border-radius:12px;padding:.55rem .8rem;font-size:.85rem;margin-bottom:.5rem;box-shadow:var(--shadow-sm);max-width:90%}
+  .bub.me{background:var(--blue-700);color:#fff;margin-left:auto}
+  .bub:last-child{margin-bottom:0}
+
+  /* Reviews */
+  .reviews{background:var(--blue-900);color:#fff}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head .kick{color:var(--gold-300)}
+  .reviews .sec-head p{color:#c6d3e6}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  @media(max-width:900px){.rgrid{grid-template-columns:1fr}}
+  .quote{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:1.5rem}
+  .quote .s{color:var(--gold-500);letter-spacing:.12em;font-size:1rem}
+  .quote p{color:#e7eefa;font-size:1rem;margin:.7rem 0 1.1rem}
+  .quote .who{display:flex;align-items:center;gap:.7rem}
+  .quote .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue-500),var(--blue-300));display:grid;place-items:center;font-weight:700;font-size:.9rem;color:#fff}
+  .quote .who b{font-size:.92rem}
+  .quote .who small{display:block;color:#a9bad4;font-size:.8rem}
+  .widget-note{text-align:center;margin-top:2rem;font-size:.9rem;color:#a9bad4}
+  .widget-note b{color:var(--gold-300)}
+
+  /* Final CTA */
+  .final{background:linear-gradient(135deg,var(--gold-100),var(--cream));text-align:center}
+  .final .box{
+    background:var(--blue-900);color:#fff;border-radius:26px;padding:clamp(2.2rem,5vw,3.4rem);
+    box-shadow:var(--shadow);position:relative;overflow:hidden
+  }
+  .final .box::before{content:"";position:absolute;inset:-40% 60% auto auto;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(58,107,176,.5),transparent 70%)}
+  .final h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:600;position:relative}
+  .final p{color:#d3ddef;max-width:46ch;margin:1rem auto 0;position:relative}
+  .final .hero-cta{justify-content:center;position:relative}
+  .final .fine{margin-top:1.3rem;font-size:.85rem;color:#a9bad4;position:relative}
+
+  /* Footer */
+  footer.site{background:var(--blue-900);color:#c6d3e6;padding:2.6rem 0;border-top:1px solid rgba(255,255,255,.08)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;align-items:flex-start}
+  footer .brand b{color:#fff;font-family:'Fraunces',serif;font-weight:600}
+  footer .col{font-size:.9rem;line-height:1.7}
+  footer .col b{color:#fff;display:block;margin-bottom:.3rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+  footer a{color:var(--gold-300);text-decoration:none}
+  .concept{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);font-size:.82rem;color:#8ea0bd;text-align:center;width:100%}
+
+  .badge-fixed{
+    position:fixed;bottom:16px;right:16px;z-index:99;
+    background:#12233f;color:#f2d68a;border:1px solid var(--gold-600);
+    font-size:.78rem;font-weight:600;padding:.5rem .8rem;border-radius:999px;
+    box-shadow:0 10px 24px -10px rgba(0,0,0,.6);letter-spacing:.02em
+  }
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:2rem;padding:3.2rem 0}
+    .story .wrap{grid-template-columns:1fr;gap:2rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20.5c-2.2-1.6-6.5-4.4-6.5-8.6A4 4 0 0 1 12 9.2a4 4 0 0 1 6.5 2.7c0 4.2-4.3 7-6.5 8.6Z" fill="#fff" opacity=".95"/><circle cx="8" cy="5.5" r="1.7" fill="#fff"/><circle cx="12" cy="4.2" r="1.7" fill="#fff"/><circle cx="16" cy="5.5" r="1.7" fill="#fff"/></svg>
+      </span>
+      <span class="brand-txt"><b>Quivira Crossing</b><span>Veterinary Clinic</span></span>
+    </a>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:19136474141"><span>Call</span> (913)&nbsp;647-4141</a>
+      <a class="btn btn-gold" href="#book">Book Online</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">★ 4.9 · 640+ reviews · Overland Park</span>
+        <h1>Overland Park's most-trusted vet, now <em>even easier to book</em>.</h1>
+        <p class="sub">Family-owned care from Drs. Nathan &amp; Marci Feyerabend — the same warm, unhurried medicine your neighbors rave about, on 135th &amp; Quivira.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#book">Book an appointment</a>
+          <a class="btn btn-ghost" href="tel:19136474141">📞 (913) 647-4141</a>
+        </div>
+        <div class="stars">
+          <span class="s">★★★★★</span>
+          <b>4.9 / 5</b>
+          <small>from 640+ Google, Yelp &amp; Demandforce reviews</small>
+        </div>
+      </div>
+
+      <aside class="hero-card" id="book" aria-label="Booking">
+        <h3>Request a visit in 30 seconds</h3>
+        <div class="row">
+          <span class="ic" aria-hidden="true">🗓️</span>
+          <div><b>Real online scheduling</b><small>Pick a time — no phone tag</small></div>
+        </div>
+        <div class="row">
+          <span class="ic" aria-hidden="true">🐾</span>
+          <div><b>Wellness, dental &amp; surgery</b><small>Full-service companion care</small></div>
+        </div>
+        <div class="row">
+          <span class="ic" aria-hidden="true">🌙</span>
+          <div><b>After-hours AI triage</b><small>Guidance when we're closed</small></div>
+        </div>
+        <a class="btn btn-gold" href="tel:19136474141">Start booking</a>
+        <p style="text-align:center;margin:.7rem 0 0;font-size:.78rem;color:#c6d3e6">Or text us at (913) 298-8327</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="t"><b>4.9★</b><span>640+ reviews</span></div>
+      <div class="t"><b>100%</b><span>would refer us*</span></div>
+      <div class="t"><b>Family</b><span>owned &amp; operated</span></div>
+      <div class="t"><b>Mizzou</b><span>DVM-trained doctors</span></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kick">Full-service companion care</span>
+        <h2>Everything your pet needs, under one roof</h2>
+        <p>From first puppy visit to senior wellness — preventive, surgical, and urgent care for the dogs and cats of Johnson County.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="ico">🩺</div><h3>Wellness &amp; Prevention</h3><p>Thorough well-checkups, vaccines, and tailored care plans built around your individual pet.</p></div>
+        <div class="card"><div class="ico">🦷</div><h3>Dental Care</h3><p>Cleanings, extractions, and oral-health exams that protect the whole body, not just the smile.</p></div>
+        <div class="card"><div class="ico">🔬</div><h3>Internal Medicine</h3><p>Diagnostics and treatment for the tricky, chronic, and behind-the-scenes conditions.</p></div>
+        <div class="card"><div class="ico">🦴</div><h3>Surgery &amp; Orthopedics</h3><p>Routine and advanced surgical procedures — including orthopedic work — with careful monitoring.</p></div>
+        <div class="card"><div class="ico">🏠</div><h3>Boarding</h3><p>A safe, familiar place to stay while you travel, watched over by the team who knows your pet.</p></div>
+        <div class="card"><div class="ico">✂️</div><h3>Grooming</h3><p>Grooming for small dogs and cats, so wellness visits and pampering happen in one trusted stop.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / WHY US -->
+  <section class="story">
+    <div class="wrap">
+      <div>
+        <span class="badge">A legacy in good hands</span>
+        <h2>New owners. The same clinic you've always trusted.</h2>
+        <p>When Drs. Nathan &amp; Marci Feyerabend took the reins at Quivira Crossing, longtime clients worried the little things might change. They didn't. The transition has been so smooth that most families only noticed the care got <em>more</em> personal.</p>
+        <p>Both doctors trained at the University of Missouri College of Veterinary Medicine and have volunteered their skills internationally. Their promise on 135th Street is simple: treat every patient as though it were their own.</p>
+        <div class="hero-cta" style="margin-top:1.5rem">
+          <a class="btn btn-outline" href="#book">Meet the doctors</a>
+        </div>
+      </div>
+      <div class="owners">
+        <div class="duo">
+          <span class="av">NF</span><span class="av">MF</span>
+        </div>
+        <span class="lede">Owners &amp; Veterinarians</span>
+        <h3>Drs. Nathan &amp; Marci Feyerabend</h3>
+        <p>A husband-and-wife team who bought the practice they believed in — and kept everything the neighborhood loved about it.</p>
+        <ul>
+          <li><b>✓</b> University of Missouri, DVM</li>
+          <li><b>✓</b> International volunteer veterinary service</li>
+          <li><b>✓</b> Care plans tailored to each individual pet</li>
+          <li><b>✓</b> Same trusted front-desk team you know</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODERN FEATURES -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kick">Built for busy pet parents</span>
+        <h2>Trusted medicine, finally paired with modern convenience</h2>
+        <p>A concept from Gigawatt: keep the beloved clinic exactly as it is — and remove the friction around getting seen.</p>
+      </div>
+      <div class="features">
+        <div class="feat">
+          <span class="tag">Online scheduling</span>
+          <h3>📅 Book without the phone tag</h3>
+          <p>Replace the request-only form with real-time openings clients can grab in seconds — synced to your existing schedule so nothing double-books.</p>
+        </div>
+        <div class="feat">
+          <span class="tag">Branded email</span>
+          <h3>✉️ A clinic email clients trust</h3>
+          <p>Move from a personal Yahoo address to <b>care@quiviracrossingvc.com</b> — the same team, a signal of the professional practice you already are.</p>
+        </div>
+        <div class="feat">
+          <span class="tag">After-hours AI triage</span>
+          <h3>🌙 Help when you're closed</h3>
+          <p>An AI assistant answers common questions and flags true emergencies overnight — routing serious cases to care and booking the rest for morning.</p>
+          <div class="chat" aria-hidden="true">
+            <div class="bub">Hi! Milo ate a grape 20 min ago — is that urgent?</div>
+            <div class="bub me">Grapes can be toxic to dogs. Please call Blue Pearl ER now — I'll text you the number and book a Quivira follow-up for 8am.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kick">640+ near-perfect reviews</span>
+        <h2>Overland Park keeps coming back</h2>
+        <p>A reputation earned one pet, and one family, at a time.</p>
+      </div>
+      <div class="rgrid">
+        <div class="quote">
+          <div class="s">★★★★★</div>
+          <p>"I was nervous when the clinic changed hands, but Dr. Feyerabend and the whole team made it seamless. Same friendly faces, and honestly even more thorough."</p>
+          <div class="who"><span class="av">JM</span><div><b>Jennifer M.</b><small>Overland Park, KS</small></div></div>
+        </div>
+        <div class="quote">
+          <div class="s">★★★★★</div>
+          <p>"They never rush you and never upsell. They explained every option for my senior lab and clearly cared about him as much as I do. The best in Johnson County."</p>
+          <div class="who"><span class="av">DR</span><div><b>David R.</b><small>Olathe, KS</small></div></div>
+        </div>
+        <div class="quote">
+          <div class="s">★★★★★</div>
+          <p>"The front desk knows my cat by name. Booking, dental, and boarding all in one place with people I actually trust — I recommend them to every pet parent I meet."</p>
+          <div class="who"><span class="av">SB</span><div><b>Sarah B.</b><small>Lenexa, KS</small></div></div>
+        </div>
+      </div>
+      <p class="widget-note">Concept idea: a live <b>review widget</b> pulling fresh 5-star Google &amp; Demandforce reviews straight onto the homepage.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <div class="box">
+        <h2>Your pet deserves the clinic everyone recommends.</h2>
+        <p>Booking a visit at Quivira Crossing should be as easy as the care is good. Reserve a time online, or give us a call — we'd love to meet your family.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#book">Book an appointment</a>
+          <a class="btn btn-ghost" href="tel:19136474141">📞 (913) 647-4141</a>
+        </div>
+        <p class="fine">11806 W. 135th St., Overland Park, KS 66221 · Mon–Fri 8–5:30 · Sat 9–12</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="flex-direction:column;align-items:flex-start;gap:.4rem">
+      <b style="font-size:1.15rem">Quivira Crossing Veterinary Clinic</b>
+      <span style="font-size:.9rem">Overland Park, Kansas</span>
+    </div>
+    <div class="col">
+      <b>Visit</b>
+      11806 W. 135th St.<br>Overland Park, KS 66221<br>
+      <a href="tel:19136474141">(913) 647-4141</a> · Text (913) 298-8327
+    </div>
+    <div class="col">
+      <b>Hours</b>
+      Mon–Fri: 8:00a–5:30p<br>Sat: 9:00a–12:00p (urgent)<br>Sun: Closed
+    </div>
+    <div class="concept">
+      ⚡ This is a non-affiliated <b>concept preview by Gigawatt</b>, a Kansas City web design + AI studio. Not the clinic's live website. Business details shown for demonstration only; contact the clinic directly to book.
+    </div>
+  </div>
+</footer>
+
+<div class="badge-fixed">⚡ concept preview</div>
+
+</body>
+</html>

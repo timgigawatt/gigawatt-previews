@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Poor John's Plumbing — Honest, Flat-Rate Plumbing for the KC Metro</title>
+  <meta name="description" content="Kansas City's trusted family plumber since 1988. Flat-rate pricing posted online, no service fee to show up, 4.9★ from 391 reviews. Serving KC metro, MO & KS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2740;        /* deep confident blue */
+      --ink-2: #163b5c;
+      --deep: #071b2e;
+      --copper: #c86a34;     /* warm memorable accent — copper pipe */
+      --copper-dk: #a9531f;
+      --copper-lt: #f0d9c6;
+      --cream: #fbf6ef;      /* warm off-white */
+      --paper: #ffffff;
+      --text: #17293a;
+      --muted: #5c7183;
+      --line: #e5ddd2;
+      --gold: #f2b544;       /* stars */
+      --shadow: 0 18px 40px -22px rgba(7,27,46,.45);
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.58; background: var(--cream); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, .brand, .display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+
+    /* HEADER */
+    header { background: rgba(251,246,239,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 0; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-size: clamp(18px, 2.4vw, 22px); color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+    .mark { width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(150deg, var(--ink) 0%, var(--ink-2) 100%); display: grid; place-items: center; color: var(--copper); font-size: 21px; box-shadow: inset 0 0 0 2px rgba(255,255,255,.06); flex-shrink: 0; }
+    .brand .pj { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .headphone { display: none; font-weight: 700; color: var(--ink); text-decoration: none; font-size: 15px; }
+    .headphone span { color: var(--muted); font-weight: 600; font-size: 12px; display: block; letter-spacing: .04em; text-transform: uppercase; }
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; transition: transform .12s ease, background .18s ease, box-shadow .18s ease; letter-spacing: .01em; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--copper); color: #fff; box-shadow: 0 10px 22px -12px rgba(200,106,52,.9); }
+    .btn-primary:hover { background: var(--copper-dk); }
+    .btn-ink { background: var(--ink); color: #fff; }
+    .btn-ink:hover { background: var(--deep); }
+    .btn-ghost { border: 2px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+    /* HERO */
+    .hero { position: relative; overflow: hidden; background: radial-gradient(120% 130% at 82% -10%, var(--ink-2) 0%, var(--ink) 42%, var(--deep) 100%); color: #fff; padding: clamp(56px, 8vw, 96px) 0 clamp(64px, 9vw, 104px); }
+    .hero::after { content: ""; position: absolute; right: -120px; top: -80px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(200,106,52,.28) 0%, transparent 62%); pointer-events: none; }
+    .hero .wrap { position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 13px; letter-spacing: .09em; text-transform: uppercase; color: var(--copper-lt); background: rgba(200,106,52,.16); border: 1px solid rgba(200,106,52,.35); padding: 7px 14px; border-radius: 999px; }
+    .hero h1 { font-size: clamp(33px, 6vw, 57px); line-height: 1.05; letter-spacing: -.02em; max-width: 15ch; margin: 22px 0 0; font-weight: 700; }
+    .hero h1 em { font-style: normal; color: var(--copper); }
+    .hero p.lede { margin: 20px 0 30px; font-size: clamp(16px, 2.1vw, 19px); color: #cfdcea; max-width: 52ch; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .stars-row { margin-top: 30px; display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+    .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
+    .stars-row b { color: #fff; }
+    .stars-row .txt { color: #cfdcea; font-size: 15px; }
+    .pill-dot { width: 5px; height: 5px; border-radius: 50%; background: #4d6982; }
+
+    /* TRUST STRIP */
+    .strip { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 0; }
+    .strip .cell { padding: 20px 18px; text-align: center; }
+    .strip .cell b { display: block; font-family: 'Space Grotesk', sans-serif; color: var(--ink); font-size: clamp(19px, 3vw, 25px); font-weight: 700; }
+    .strip .cell span { color: var(--muted); font-size: 12.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+
+    /* SECTIONS */
+    section.pad { padding: clamp(56px, 8vw, 88px) 0; }
+    .kicker { font-weight: 700; font-size: 13px; letter-spacing: .11em; text-transform: uppercase; color: var(--copper-dk); }
+    h2 { font-size: clamp(26px, 4.4vw, 38px); color: var(--ink); margin: 8px 0 12px; letter-spacing: -.02em; line-height: 1.1; }
+    .sub { color: var(--muted); max-width: 58ch; font-size: 17px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 38px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 26px 24px; transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--copper-lt); }
+    .card .ico { width: 50px; height: 50px; border-radius: 13px; background: linear-gradient(150deg, #fbeade, #f4d6c1); display: grid; place-items: center; font-size: 25px; margin-bottom: 15px; }
+    .card h3 { color: var(--ink); font-size: 19px; margin-bottom: 7px; letter-spacing: -.01em; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* WHY / DIFFERENTIATOR */
+    .why { background: var(--ink); color: #fff; }
+    .why-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    .why h2 { color: #fff; }
+    .why .kicker { color: var(--copper); }
+    .why p.big { color: #cfdcea; font-size: 17px; margin-top: 14px; max-width: 54ch; }
+    .why-list { list-style: none; margin: 26px 0 0; display: grid; gap: 14px; }
+    .why-list li { display: flex; gap: 13px; align-items: flex-start; }
+    .why-list .chk { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; background: rgba(200,106,52,.2); border: 1px solid rgba(200,106,52,.5); color: var(--copper-lt); display: grid; place-items: center; font-size: 14px; font-weight: 700; margin-top: 2px; }
+    .why-list li b { color: #fff; }
+    .why-list li span { color: #b7c8d8; }
+    .price-card { background: linear-gradient(160deg, #10314e, #0a2437); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); }
+    .price-card .tag { color: var(--copper-lt); font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .price-card .zero { font-family: 'Space Grotesk', sans-serif; font-size: clamp(52px, 9vw, 74px); font-weight: 700; line-height: 1; color: #fff; margin: 8px 0 2px; }
+    .price-card .zero small { font-size: 22px; color: var(--copper); vertical-align: top; }
+    .price-card .desc { color: #b7c8d8; font-size: 15px; }
+    .price-card hr { border: 0; border-top: 1px solid rgba(255,255,255,.12); margin: 22px 0; }
+    .price-card .compare { color: #9fb2c4; font-size: 14px; }
+    .price-card .compare b { color: #fff; }
+
+    /* REVIEWS */
+    .reviews { background: var(--cream); }
+    .quote { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 26px 24px; display: flex; flex-direction: column; }
+    .quote .q-stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .quote p { font-size: 15.5px; color: var(--text); flex-grow: 1; }
+    .quote .who { margin-top: 18px; display: flex; align-items: center; gap: 11px; }
+    .quote .av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(150deg, var(--copper), var(--copper-dk)); color: #fff; display: grid; place-items: center; font-weight: 700; font-family: 'Space Grotesk', sans-serif; font-size: 16px; }
+    .quote .who b { display: block; color: var(--ink); font-size: 14.5px; }
+    .quote .who span { color: var(--muted); font-size: 13px; }
+    .g-badge { margin-top: 34px; display: inline-flex; align-items: center; gap: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 14px; color: var(--muted); font-weight: 600; }
+    .g-badge b { color: var(--ink); }
+    .g-badge .stars { font-size: 15px; }
+
+    /* CTA BAND */
+    .cta-band { background: radial-gradient(120% 140% at 15% 0%, var(--copper) 0%, var(--copper-dk) 58%, #8a4114 100%); color: #fff; text-align: center; }
+    .cta-band h2 { color: #fff; max-width: 20ch; margin-inline: auto; }
+    .cta-band p { color: #ffe9d9; margin: 12px auto 28px; max-width: 50ch; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+    .cta-band .btn-primary { background: #fff; color: var(--copper-dk); box-shadow: 0 12px 26px -14px rgba(0,0,0,.5); }
+    .cta-band .btn-primary:hover { background: #fff5ee; }
+    .cta-band .phones { margin-top: 22px; color: #ffe9d9; font-size: 15px; display: flex; gap: 8px 22px; justify-content: center; flex-wrap: wrap; }
+    .cta-band .phones a { color: #fff; font-weight: 700; text-decoration: none; }
+
+    /* FOOTER */
+    footer.site { background: var(--deep); color: #9fb2c4; padding: 40px 0 30px; }
+    footer.site .cols { display: flex; flex-wrap: wrap; gap: 26px; justify-content: space-between; align-items: flex-start; }
+    footer.site .brand { color: #fff; }
+    footer.site .fnote { font-size: 13px; max-width: 46ch; margin-top: 12px; line-height: 1.6; }
+    footer.site .areas { font-size: 13px; max-width: 32ch; }
+    footer.site .areas b { color: #cfdcea; display: block; margin-bottom: 6px; font-family: 'Space Grotesk', sans-serif; }
+    footer.site .concept { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.1); font-size: 12.5px; color: #7d94a8; }
+    footer.site .concept b { color: #cfdcea; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #0c1116; color: var(--copper); font: 700 11.5px/1 'Space Grotesk', system-ui; padding: 9px 13px; border-radius: 999px; box-shadow: 0 8px 20px -6px rgba(0,0,0,.5); border: 1px solid rgba(200,106,52,.4); letter-spacing: .03em; }
+
+    @media (min-width: 620px) {
+      .strip .wrap { grid-template-columns: repeat(4, 1fr); }
+      .strip .cell { border-left: 1px solid var(--line); }
+      .strip .cell:first-child { border-left: 0; }
+    }
+    @media (min-width: 720px) {
+      .headphone { display: block; text-align: right; }
+    }
+    @media (min-width: 900px) {
+      .why-grid { grid-template-columns: 1.15fr .85fr; gap: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="mark">🔧</span>
+        <span>Poor <span class="pj">John's</span> Plumbing</span>
+      </a>
+      <div class="nav-right">
+        <a class="headphone" href="tel:+18164555420">(816) 455-5420<span>Call the MO line</span></a>
+        <a class="btn btn-primary" href="#book">Book online</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">⚡ Kansas City family plumbers since 1988</span>
+      <h1>Straight answers and <em>flat-rate</em> plumbing across the KC metro.</h1>
+      <p class="lede">Three generations of the Welker family fixing drains, water heaters, and sewers the honest way — prices posted up front, and no fee just to show up at your door.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">Book a plumber online</a>
+        <a class="btn btn-ghost" href="tel:+18164555420">Call (816) 455-5420</a>
+      </div>
+      <div class="stars-row">
+        <span class="stars">★★★★★</span>
+        <span class="txt"><b>4.9</b> average from <b>391</b> Google reviews</span>
+        <span class="pill-dot"></span>
+        <span class="txt">BBB A+ rated</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="cell"><b>37 yrs</b><span>Family owned since 1988</span></div>
+      <div class="cell"><b>4.9★</b><span>391 Google reviews</span></div>
+      <div class="cell"><b>$0</b><span>Fee to come out</span></div>
+      <div class="cell"><b>MO &amp; KS</b><span>Licensed &amp; insured</span></div>
+    </div>
+  </div>
+
+  <section class="pad">
+    <div class="wrap">
+      <span class="kicker">What we fix</span>
+      <h2>Every common KC plumbing problem, one honest crew.</h2>
+      <p class="sub">From a slow drain to a burst main line, Poor John's handles it with flat-rate pricing you can see before we ever pick up a wrench.</p>
+      <div class="cards">
+        <div class="card"><div class="ico">🚿</div><h3>Drain &amp; sewer cleaning</h3><p>Clogged sinks, tubs, and main lines cleared fast — plus camera inspections for the stubborn ones.</p></div>
+        <div class="card"><div class="ico">🔥</div><h3>Water heaters</h3><p>Repair, replacement, and tankless upgrades sized right for your home and your hot showers.</p></div>
+        <div class="card"><div class="ico">🕳️</div><h3>Sewer &amp; drain repair</h3><p>Internal drain repairs and sewer line work done right, so a small leak never becomes a flood.</p></div>
+        <div class="card"><div class="ico">🚽</div><h3>Toilets &amp; faucets</h3><p>Running toilets, dripping faucets, and worn fixtures repaired or swapped the same visit.</p></div>
+        <div class="card"><div class="ico">💧</div><h3>Water service lines</h3><p>Main supply lines, pressure-reducing valves, and shutoff valves replaced by licensed pros.</p></div>
+        <div class="card"><div class="ico">⚙️</div><h3>Sump pumps &amp; disposals</h3><p>Sump pump install and repair to keep basements dry, plus garbage disposal fixes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="kicker">Why the metro calls Poor John's</span>
+        <h2>Prices on the website. No surprises on the invoice.</h2>
+        <p class="big">Daryl Welker started Poor John's in 1988 on a simple idea: tell people what it costs before you start, then stand behind the quote. Thirty-seven years later, his family still runs it that way.</p>
+        <ul class="why-list">
+          <li><span class="chk">✓</span><div><b>Flat-rate pricing, posted online.</b> <span>Compare our numbers before you even call — no games.</span></div></li>
+          <li><span class="chk">✓</span><div><b>No trip charge.</b> <span>Most KC plumbers bill $49–$111 just to show up. We don't.</span></div></li>
+          <li><span class="chk">✓</span><div><b>We stand by the quote.</b> <span>The price we give is the price you pay.</span></div></li>
+          <li><span class="chk">✓</span><div><b>Clean work, respectful crew.</b> <span>Booties on, mess cleaned up, job explained in plain English.</span></div></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <span class="tag">Our service call fee</span>
+        <div class="zero"><small>$</small>0</div>
+        <p class="desc">to have a licensed Poor John's plumber come diagnose the problem at your home.</p>
+        <hr />
+        <p class="compare">The typical KC plumber charges <b>$49–$111</b> before touching a thing. We'd rather earn the job.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad reviews">
+    <div class="wrap">
+      <span class="kicker">Neighbors talk</span>
+      <h2>4.9 stars, 391 reviews, and counting.</h2>
+      <p class="sub">A reputation the Welker family has earned one honest visit at a time across the Kansas City metro.</p>
+      <div class="cards">
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>“Gave me a flat price right off their website, showed up on time, and it was exactly what they quoted. Saved us hundreds over the last bid we got.”</p>
+          <div class="who"><span class="av">MB</span><div><b>Megan B.</b><span>Overland Park, KS</span></div></div>
+        </div>
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>“New water heater in and running the same afternoon. Clean, friendly, no upsell — just fixed the problem. Would recommend to anyone.”</p>
+          <div class="who"><span class="av">JR</span><div><b>Jeremy R.</b><span>Lee's Summit, MO</span></div></div>
+        </div>
+        <div class="quote">
+          <div class="q-stars">★★★★★</div>
+          <p>“Great people, great service, fair prices. They didn't charge just to come look, cleaned up after themselves, and explained everything.”</p>
+          <div class="who"><span class="av">DK</span><div><b>Dana K.</b><span>Independence, MO</span></div></div>
+        </div>
+      </div>
+      <div class="g-badge"><span class="stars">★★★★★</span> <b>4.9</b> on Google · <b>391</b> reviews · BBB A+</div>
+    </div>
+  </section>
+
+  <section class="pad cta-band" id="book">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#fff;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4)">No fee to come out</span>
+      <h2>Ready for a plumber who tells you the price first?</h2>
+      <p>Book online in under a minute, or call the family directly. We serve Kansas City MO &amp; KS and the surrounding metro.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">Book online now</a>
+        <a class="btn btn-ghost" href="tel:+18164555420">Call (816) 455-5420</a>
+      </div>
+      <div class="phones">
+        <span>Missouri: <a href="tel:+18164555420">(816) 455-5420</a></span>
+        <span>Kansas: <a href="tel:+19134227101">(913) 422-7101</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <a class="brand" href="#top"><span class="mark">🔧</span><span>Poor <span class="pj" style="color:var(--copper)">John's</span> Plumbing</span></a>
+          <p class="fnote">Family-owned, licensed &amp; insured plumbers serving the Kansas City metro since 1988. Flat-rate pricing, no trip charge, honest work.</p>
+        </div>
+        <div class="areas">
+          <b>Serving the KC metro</b>
+          Kansas City MO &amp; KS · Overland Park · Olathe · Lee's Summit · Blue Springs · Independence · Liberty · Shawnee · Lenexa · Leawood · Prairie Village
+        </div>
+      </div>
+      <p class="concept"><b>Concept preview by Gigawatt.</b> This is a design concept created to explore a redesign of Poor John's Plumbing — it is not the live website and is not affiliated with or endorsed by the business. Details shown are for demonstration only.</p>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Ronnie's Restaurant — Lenexa's Beloved Breakfast &amp; Brunch</title>
+  <meta name="description" content="Ronnie's Restaurant in Lenexa, KS — family-owned breakfast &amp; brunch since day one. Cinnamon rolls, stuffed French toast, hearty omelets. Order online or call ahead." />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --amber: #f6a821; --amber-deep: #e8890b; --sun: #ffcf4d;
+      --tomato: #d64528; --tomato-deep: #b93317;
+      --teal: #2f7d72; --teal-deep: #235f57;
+      --cream: #fff8ec; --cream-2: #fdefd6;
+      --ink: #35281a; --muted: #7a6a56; --line: #efe0c6;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif; color: var(--ink);
+      line-height: 1.6; background: var(--cream); }
+    img { max-width: 100%; }
+    h1,h2,h3,.logo { font-family: 'Fraunces', Georgia, serif; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* Header */
+    header.site { background: rgba(255,248,236,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 22px;
+      color: var(--tomato-deep); text-decoration: none; letter-spacing: -.5px; }
+    .logo .egg { width: 34px; height: 34px; border-radius: 50%; flex: none;
+      background: radial-gradient(circle at 50% 45%, var(--amber) 0 30%, #fff 32% 100%);
+      box-shadow: inset 0 0 0 3px var(--sun), 0 2px 6px rgba(214,69,40,.25);
+      display: grid; place-items: center; font-size: 16px; }
+    .logo small { display: block; font: 700 10px/1 'Nunito Sans', sans-serif; color: var(--teal);
+      letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .phone-link { display: none; font-weight: 800; color: var(--teal-deep); text-decoration: none; font-size: 15px; }
+    .btn { display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 800;
+      text-decoration: none; font-size: 15px; transition: transform .1s ease, box-shadow .1s ease; border: none; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--tomato); color: #fff; box-shadow: 0 4px 0 var(--tomato-deep); }
+    .btn-primary:hover { background: var(--tomato-deep); }
+    .btn-amber { background: var(--amber); color: var(--ink); box-shadow: 0 4px 0 var(--amber-deep); }
+    .btn-amber:hover { background: var(--amber-deep); color:#fff; }
+    .btn-ghost { border: 2px solid rgba(255,255,255,.7); color:#fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,.14); }
+    @media (min-width: 720px){ .phone-link { display: inline; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden;
+      background:
+        radial-gradient(1100px 500px at 88% -10%, rgba(255,207,77,.55), transparent 60%),
+        radial-gradient(900px 500px at 0% 120%, rgba(47,125,114,.20), transparent 55%),
+        linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); }
+    .hero .wrap { display: grid; gap: 34px; padding-top: 58px; padding-bottom: 68px; }
+    @media (min-width: 900px){ .hero .wrap { grid-template-columns: 1.15fr .85fr; align-items: center; padding-top: 74px; padding-bottom: 84px; } }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: #fff;
+      border: 1px solid var(--line); color: var(--teal-deep); font-weight: 800; font-size: 13px;
+      padding: 6px 14px; border-radius: 999px; letter-spacing: .3px; box-shadow: 0 2px 8px rgba(53,40,26,.06); }
+    .hero h1 { font-size: clamp(34px, 6.2vw, 60px); line-height: 1.02; font-weight: 900;
+      letter-spacing: -1px; margin: 18px 0 0; }
+    .hero h1 em { font-style: normal; color: var(--tomato); }
+    .hero p.lede { font-size: clamp(17px, 2.1vw, 20px); color: var(--muted); margin: 18px 0 26px; max-width: 520px; }
+    .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .stars { margin-top: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
+    .stars .glyphs { color: var(--amber-deep); letter-spacing: 2px; font-size: 18px; }
+    .stars b { color: var(--ink); }
+
+    /* Hero plate visual */
+    .plate { position: relative; justify-self: center; width: min(360px, 82vw); aspect-ratio: 1;
+      border-radius: 50%; background: #fff;
+      box-shadow: 0 20px 50px rgba(184,51,23,.20), inset 0 0 0 14px #fff, inset 0 0 0 16px var(--cream-2);
+      display: grid; place-items: center; }
+    .plate::before { content: ""; position: absolute; inset: 22px; border-radius: 50%;
+      background: radial-gradient(circle at 50% 40%, #fff 0 62%, #f3e6cd 100%); box-shadow: inset 0 6px 16px rgba(53,40,26,.08); }
+    .plate .stack { position: relative; text-align: center; }
+    .plate .stack .big { font-size: clamp(58px, 12vw, 92px); line-height: 1; }
+    .plate .stack .cap { margin-top: 6px; font: 800 12px/1.3 'Nunito Sans',sans-serif; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--teal-deep); }
+    .badge-float { position: absolute; background:#fff; border-radius: 16px; padding: 10px 14px;
+      box-shadow: 0 10px 24px rgba(53,40,26,.16); border: 1px solid var(--line); font-weight: 800; font-size: 13px; }
+    .badge-float .n { font: 900 20px/1 'Fraunces',serif; color: var(--tomato); }
+    .badge-float.tl { top: 4%; left: -6%; color: var(--teal-deep); }
+    .badge-float.br { bottom: 6%; right: -4%; color: var(--amber-deep); }
+
+    /* Trust strip */
+    .strip { background: var(--teal-deep); color: #fdeccf; }
+    .strip .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 30px;
+      padding: 16px 22px; font-weight: 700; font-size: 14.5px; }
+    .strip span { display: inline-flex; align-items: center; gap: 8px; }
+    .strip .dot { color: var(--sun); }
+
+    section { padding: 66px 0; }
+    .sec-head { max-width: 620px; margin-bottom: 40px; }
+    .sec-head .kicker { color: var(--tomato); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; }
+    h2 { font-size: clamp(28px, 4.4vw, 40px); font-weight: 900; letter-spacing: -.6px; margin: 8px 0 12px; line-height: 1.08; }
+    .sub { color: var(--muted); font-size: 17px; }
+
+    /* Menu cards */
+    .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px;
+      box-shadow: 0 6px 18px rgba(53,40,26,.05); transition: transform .12s ease, box-shadow .12s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(53,40,26,.12); }
+    .card .ico { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 27px; margin-bottom: 14px; background: var(--cream-2); }
+    .card h3 { font-size: 21px; font-weight: 700; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 15.5px; }
+
+    /* Story */
+    .story { background:
+      linear-gradient(180deg, #fff 0%, var(--cream) 100%); }
+    .story .grid { display: grid; gap: 40px; align-items: center; }
+    @media (min-width: 880px){ .story .grid { grid-template-columns: 1fr 1fr; } }
+    .story-card { background: var(--tomato); color: #fff; border-radius: 24px; padding: 40px;
+      position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(184,51,23,.28); }
+    .story-card::after { content:"🍳"; position: absolute; right: -10px; bottom: -18px; font-size: 130px; opacity: .16; }
+    .story-card h2 { color: #fff; }
+    .story-card p { color: #ffe4d8; font-size: 16.5px; margin-top: 14px; }
+    .story-card .sig { margin-top: 22px; font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; }
+    .story-list { list-style: none; display: grid; gap: 18px; }
+    .story-list li { display: flex; gap: 14px; align-items: flex-start; }
+    .story-list .mark { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--sun);
+      display: grid; place-items: center; font-size: 20px; box-shadow: 0 4px 10px rgba(232,137,11,.3); }
+    .story-list h3 { font-size: 18px; font-weight: 700; }
+    .story-list p { color: var(--muted); font-size: 15px; }
+
+    /* Reviews */
+    .reviews { background: var(--cream-2); }
+    .quote { background: #fff; border-radius: 18px; padding: 26px; border: 1px solid var(--line);
+      box-shadow: 0 6px 18px rgba(53,40,26,.05); display: flex; flex-direction: column; }
+    .quote .q-stars { color: var(--amber-deep); letter-spacing: 1px; margin-bottom: 10px; }
+    .quote p { font-size: 16.5px; font-family: 'Fraunces', serif; font-weight: 500; line-height: 1.5; }
+    .quote footer { margin-top: 16px; color: var(--teal-deep); font-size: 14px; font-weight: 800; }
+
+    /* Hours + location band */
+    .info { display: grid; gap: 22px; grid-template-columns: 1fr; }
+    @media (min-width: 760px){ .info { grid-template-columns: 1fr 1fr; } }
+    .info-card { background:#fff; border: 1px solid var(--line); border-radius: 18px; padding: 28px; box-shadow: 0 6px 18px rgba(53,40,26,.05); }
+    .info-card h3 { font-size: 20px; display:flex; align-items:center; gap:10px; margin-bottom: 14px; }
+    .hours-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 15.5px; }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .d { font-weight: 700; }
+    .hours-row .t { color: var(--muted); }
+    .info-card address { font-style: normal; color: var(--muted); font-size: 16px; line-height: 1.7; }
+
+    /* CTA band */
+    .cta-band { background:
+      radial-gradient(700px 300px at 80% 0%, rgba(255,207,77,.35), transparent 60%),
+      linear-gradient(135deg, var(--tomato) 0%, var(--tomato-deep) 100%);
+      color: #fff; text-align: center; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #ffe4d8; margin: 12px auto 28px; max-width: 500px; font-size: 17px; }
+    .cta-band .actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    footer.site-foot { background: var(--ink); color: #d8c7ad; padding: 40px 0; font-size: 14px; }
+    .site-foot .top { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .site-foot .logo { color: var(--sun); }
+    .site-foot .logo small { color: var(--amber); }
+    .site-foot .note { border-top: 1px solid #4a3a28; padding-top: 16px; line-height: 1.7; color: #b9a488; }
+
+    .demo-tag { position: fixed; bottom: 12px; right: 12px; background: #17181b; color: #f5b518;
+      font: 700 11px/1 'Nunito Sans', system-ui; padding: 9px 13px; border-radius: 999px;
+      opacity: .95; z-index: 50; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="logo" href="#">
+        <span class="egg">🍳</span>
+        <span>Ronnie's<small>Lenexa · Breakfast &amp; Brunch</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="phone-link" href="tel:+19138318600">📞 (913) 831-8600</a>
+        <a class="btn btn-primary" href="#order">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">⭐ Lenexa's beloved breakfast table since day one</span>
+        <h1>The Lenexa breakfast <em>worth waking up for.</em></h1>
+        <p class="lede">Family-owned, packed every morning, and famous for warm cinnamon rolls and hearty plates on 87th Street. Come hungry — leave part of the family.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#order">Order Online</a>
+          <a class="btn btn-amber" href="tel:+19138318600">Call (913) 831-8600</a>
+        </div>
+        <div class="stars">
+          <span class="glyphs">★★★★★</span>
+          <span><b>4.7</b> Google · <b>4.6</b> Tripadvisor · <b>4.5</b> Yelp</span>
+          <span>· <b>366+</b> reviews</span>
+        </div>
+      </div>
+      <div class="plate">
+        <div class="stack">
+          <div class="big">🥞</div>
+          <div class="cap">Griddle-hot, always</div>
+        </div>
+        <div class="badge-float tl"><span class="n">6:30a</span><br>doors open</div>
+        <div class="badge-float br"><span class="n">Free</span> cinnamon roll<br>for first-timers</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span><span class="dot">●</span> Family-owned &amp; operated</span>
+      <span><span class="dot">●</span> Made-from-scratch classics</span>
+      <span><span class="dot">●</span> 4.7★ across 366+ reviews</span>
+      <span><span class="dot">●</span> Open 7 days a week</span>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">The Menu</div>
+        <h2>Breakfast &amp; brunch classics, done generously.</h2>
+        <p class="sub">Big portions, fresh off the griddle, and the cinnamon rolls everybody talks about. A few of the regulars' favorites.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ico">🌀</div><h3>Cinnamon Roll French Toast</h3><p>Our signature roll griddled into a platter — the reason people drive across the metro.</p></div>
+        <div class="card"><div class="ico">🍓</div><h3>Stuffed French Toast</h3><p>Thick-cut and stuffed, topped with fresh fruit. Sweet, warm, unforgettable.</p></div>
+        <div class="card"><div class="ico">🧀</div><h3>Kitchen Sink Omelet</h3><p>Everything but the sink, folded into a fluffy three-egg omelet with hash browns and toast.</p></div>
+        <div class="card"><div class="ico">🦀</div><h3>Crab Cake Benedict</h3><p>House crab cakes, poached eggs, and hollandaise — brunch worth dressing up for.</p></div>
+        <div class="card"><div class="ico">🍳</div><h3>Country Scrambler</h3><p>Eggs, potatoes, and all the fixings piled high. The plate that keeps regulars coming back.</p></div>
+        <div class="card"><div class="ico">🌯</div><h3>Loaded Breakfast Burrito</h3><p>Stuffed, smothered, and served with a smile. A Lenexa morning staple.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap grid">
+      <div class="story-card">
+        <h2>Named for our son. Run by our family.</h2>
+        <p>Dave &amp; Kelly Hendrix built Ronnie's around a simple idea: feed your neighbors like family, and name the place after someone you love. Ronnie's carries their son's name — and the same warmth in every plate.</p>
+        <p>You'll still find the owners walking the floor most mornings, refilling coffee and swapping stories with tables full of regulars.</p>
+        <div class="sig">— Dave &amp; Kelly Hendrix</div>
+      </div>
+      <ul class="story-list">
+        <li><span class="mark">👨‍👩‍👦</span><div><h3>A family name, a family table</h3><p>Ronnie's isn't a chain concept — it's a real Lenexa family cooking for theirs.</p></div></li>
+        <li><span class="mark">☕</span><div><h3>The owner still stops by your table</h3><p>Regulars know the coffee's hot and the welcome is real, every single morning.</p></div></li>
+        <li><span class="mark">🥐</span><div><h3>First time? The cinnamon roll's on us</h3><p>A little Lenexa tradition to say thanks for stopping in.</p></div></li>
+        <li><span class="mark">🏙️</span><div><h3>A morning ritual on 87th Street</h3><p>Packed most mornings — and worth every minute of the wait.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Word Around Town</div>
+        <h2>Lenexa keeps coming back.</h2>
+        <p class="sub">The kind of place neighbors bring out-of-towners to show off.</p>
+      </div>
+      <div class="cards">
+        <div class="quote"><div class="q-stars">★★★★★</div><p>“A true hidden gem. Friendly, attentive staff and a warm, welcoming feel — the owner even came by to chat. Portions are huge.”</p><footer>— Sarah M., Lenexa</footer></div>
+        <div class="quote"><div class="q-stars">★★★★★</div><p>“Best breakfast in the area, hands down. The cinnamon roll French toast is worth the drive from Overland Park every weekend.”</p><footer>— Mike D., Overland Park</footer></div>
+        <div class="quote"><div class="q-stars">★★★★★</div><p>“Clean, spacious, and always busy for a reason. Ample portions, excellent service, and it feels like family every time.”</p><footer>— Jen R., Olathe</footer></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Plan Your Visit</div>
+        <h2>Hot coffee's on. Come find us.</h2>
+        <p class="sub">Order online for pickup, or just walk in — there's usually a friendly buzz waiting for you.</p>
+      </div>
+      <div class="info">
+        <div class="info-card">
+          <h3>🕒 Hours</h3>
+          <div class="hours-row"><span class="d">Monday – Friday</span><span class="t">6:30 AM – 2:00 PM</span></div>
+          <div class="hours-row"><span class="d">Saturday</span><span class="t">7:00 AM – 2:00 PM</span></div>
+          <div class="hours-row"><span class="d">Sunday</span><span class="t">7:00 AM – 2:00 PM</span></div>
+        </div>
+        <div class="info-card">
+          <h3>📍 Find Us</h3>
+          <address>
+            12812 W 87th St<br>
+            Lenexa, KS 66215<br><br>
+            <a href="tel:+19138318600" style="color:var(--teal-deep);font-weight:800;text-decoration:none;">📞 (913) 831-8600</a>
+          </address>
+          <div style="margin-top:18px;">
+            <a class="btn btn-primary" href="#order">Order Online for Pickup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Save your seat at Lenexa's favorite breakfast.</h2>
+      <p>Order ahead for a quick pickup, or call and we'll have your table ready. Either way, breakfast is better at Ronnie's.</p>
+      <div class="actions">
+        <a class="btn btn-amber" href="#order">Order Online</a>
+        <a class="btn btn-ghost" href="tel:+19138318600">Call (913) 831-8600</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="top">
+        <a class="logo" href="#"><span class="egg">🍳</span><span>Ronnie's<small>Lenexa · Breakfast &amp; Brunch</small></span></a>
+        <div>12812 W 87th St, Lenexa, KS 66215 · (913) 831-8600</div>
+      </div>
+      <div class="note">
+        This is a concept preview designed by <strong style="color:var(--sun)">Gigawatt</strong>, a Kansas City web design &amp; AI studio — created to show how Ronnie's Restaurant could look with a dedicated brand and online ordering. It is not the official Ronnie's website and does not represent live hours, pricing, or ordering. Business details shown are drawn from public listings.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

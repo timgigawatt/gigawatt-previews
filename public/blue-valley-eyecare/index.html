@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Blue Valley Eyecare — Independent Eye Care in Overland Park, KS</title>
+  <meta name="description" content="Independent Overland Park optometry since 1999. Comprehensive eye exams, contacts, dry eye care, and an in-house optical boutique from three trusted doctors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c2033;
+      --deep: #0e3a5c;
+      --blue: #1668a8;
+      --blue-2: #2a86c9;
+      --mint: #23c9a7;
+      --mint-dark: #12a888;
+      --wash: #eef5fb;
+      --wash-2: #e3f1f4;
+      --line: #dbe6f0;
+      --text: #16283a;
+      --muted: #5a6f83;
+      --white: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text); line-height: 1.6; background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* Header */
+    header.site {
+      background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .brand .eye {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, var(--mint) 0 22%, var(--blue) 23% 58%, var(--deep) 59% 100%);
+      box-shadow: 0 2px 8px rgba(22,104,168,.35); flex: none;
+      position: relative;
+    }
+    .brand .eye::after {
+      content: ""; position: absolute; top: 9px; left: 10px; width: 7px; height: 7px;
+      background: #fff; border-radius: 50%; opacity: .9;
+    }
+    .brand .name { font-weight: 800; font-size: 19px; color: var(--ink); letter-spacing: -.2px; line-height: 1.1; }
+    .brand .name span { color: var(--blue); }
+    .brand .tag { display: block; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone { text-decoration: none; font-weight: 700; color: var(--deep); font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--muted); font-weight: 500; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none;
+      font-size: 15px; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: none; cursor: pointer;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%); color: #05201a; box-shadow: 0 6px 16px rgba(18,168,136,.35); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(18,168,136,.42); }
+    .btn-blue { background: linear-gradient(135deg, var(--blue-2) 0%, var(--blue) 100%); color: #fff; box-shadow: 0 6px 16px rgba(22,104,168,.32); }
+    .btn-blue:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(22,104,168,.4); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.5); color: #fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+    .btn-outline { border: 1.5px solid var(--line); color: var(--deep); background: #fff; }
+    .btn-outline:hover { border-color: var(--blue); }
+    .nav .btn { padding: 10px 18px; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; color: #fff;
+      background: linear-gradient(150deg, var(--deep) 0%, var(--blue) 55%, #0f4f7f 100%); }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(520px 520px at 88% -10%, rgba(35,201,167,.28), transparent 60%),
+        radial-gradient(420px 420px at 10% 120%, rgba(42,134,201,.4), transparent 60%);
+    }
+    .hero .wrap { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 72px 22px 84px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase; color: #bfe9dd;
+      background: rgba(35,201,167,.14); border: 1px solid rgba(35,201,167,.35);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif; font-weight: 600;
+      font-size: clamp(33px, 5.2vw, 54px); line-height: 1.08; letter-spacing: -.5px;
+    }
+    .hero h1 em { font-style: italic; color: #7fe6cf; }
+    .hero p.lead { margin: 20px 0 30px; font-size: clamp(16px,1.7vw,18.5px); color: #d6e6f2; max-width: 520px; }
+    .hero .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .stars { margin-top: 28px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14.5px; color: #d6e6f2; }
+    .stars .s { color: #ffd36b; letter-spacing: 2px; font-size: 16px; }
+    .stars b { color: #fff; }
+    .stars .div { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.4); }
+
+    /* Hero visual card */
+    .hero-card {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 20px; padding: 26px; backdrop-filter: blur(6px);
+      box-shadow: 0 24px 60px rgba(4,26,44,.45);
+    }
+    .hero-card h3 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: #bfe9dd; margin-bottom: 16px; font-weight: 700; }
+    .hc-row { display: flex; align-items: center; gap: 13px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.12); }
+    .hc-row:first-of-type { border-top: none; }
+    .hc-ico { width: 40px; height: 40px; border-radius: 11px; background: rgba(35,201,167,.18); display: grid; place-items: center; font-size: 20px; flex: none; }
+    .hc-row .t { font-weight: 700; font-size: 15px; color: #fff; }
+    .hc-row .d { font-size: 13px; color: #c3d7e8; }
+
+    /* Trust strip */
+    .strip { background: var(--wash); border-bottom: 1px solid var(--line); }
+    .strip .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 30px; padding: 20px 22px; }
+    .strip .item { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14px; color: var(--deep); }
+    .strip .item .k { color: var(--mint-dark); font-size: 17px; }
+
+    /* Sections */
+    section { padding: 76px 0; }
+    .head { max-width: 640px; margin-bottom: 40px; }
+    .head .kick { color: var(--blue); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; }
+    h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: clamp(26px, 3.6vw, 38px); color: var(--ink); line-height: 1.14; letter-spacing: -.4px; }
+    .head p { color: var(--muted); margin-top: 12px; font-size: 17px; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(14,58,92,.1); border-color: #c4dcef; }
+    .card .ico {
+      width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center;
+      font-size: 25px; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--wash) 0%, var(--wash-2) 100%);
+      border: 1px solid var(--line);
+    }
+    .card h3 { color: var(--ink); font-size: 18.5px; margin-bottom: 7px; letter-spacing: -.2px; }
+    .card p { color: var(--muted); font-size: 14.5px; }
+
+    /* Story / why us */
+    .story { background: linear-gradient(160deg, var(--wash) 0%, #fff 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .story .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .story .head { margin-bottom: 22px; }
+    .story p.body { color: var(--muted); font-size: 16px; margin-bottom: 16px; }
+    .story .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; }
+    .fact { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .fact .n { font-family: 'Fraunces', serif; font-weight: 600; font-size: 30px; color: var(--blue); line-height: 1; }
+    .fact .l { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
+
+    /* Doctors */
+    .docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .doc { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; text-align: center; }
+    .doc .av {
+      width: 78px; height: 78px; border-radius: 50%; margin: 0 auto 16px;
+      display: grid; place-items: center; font-family: 'Fraunces', serif; font-weight: 600;
+      font-size: 26px; color: #fff;
+      background: linear-gradient(140deg, var(--blue-2), var(--deep));
+      box-shadow: 0 8px 20px rgba(22,104,168,.28);
+    }
+    .doc:nth-child(2) .av { background: linear-gradient(140deg, var(--mint), var(--mint-dark)); box-shadow: 0 8px 20px rgba(18,168,136,.3); color: #04231c; }
+    .doc h3 { color: var(--ink); font-size: 18px; }
+    .doc .role { color: var(--blue); font-weight: 700; font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; margin: 4px 0 12px; }
+    .doc p { color: var(--muted); font-size: 14px; }
+
+    /* Reviews */
+    .reviews { background: var(--ink); color: #fff; }
+    .reviews h2 { color: #fff; }
+    .reviews .head p { color: #a9c2d8; }
+    .reviews .kick { color: var(--mint); }
+    .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .quote {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px; padding: 24px;
+    }
+    .quote .q { color: #ffd36b; letter-spacing: 2px; font-size: 15px; margin-bottom: 12px; }
+    .quote p { font-size: 15px; color: #e6eef6; }
+    .quote footer { margin-top: 15px; color: #9fbdd6; font-size: 13.5px; font-weight: 600; }
+
+    /* CTA band */
+    .cta-band {
+      background: linear-gradient(135deg, var(--deep) 0%, var(--blue) 60%, var(--mint-dark) 140%);
+      color: #fff; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-band::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px 300px at 80% 0%, rgba(35,201,167,.28), transparent 60%); }
+    .cta-band .wrap { position: relative; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #d6e6f2; margin: 14px auto 28px; max-width: 500px; font-size: 17px; }
+    .cta-band .actions { display: flex; gap: 13px; justify-content: center; flex-wrap: wrap; }
+
+    /* Footer */
+    footer.foot { background: var(--ink); color: #90a8bf; padding: 40px 0; font-size: 13.5px; border-top: 1px solid rgba(255,255,255,.08); }
+    footer.foot .wrap { display: flex; flex-wrap: wrap; gap: 18px 40px; justify-content: space-between; align-items: flex-start; }
+    footer.foot .fb { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; color: #fff; margin-bottom: 6px; }
+    footer.foot .note { max-width: 460px; line-height: 1.6; }
+    footer.foot a { color: #bfe9dd; text-decoration: none; }
+
+    .demo-tag {
+      position: fixed; bottom: 14px; right: 14px; z-index: 50;
+      background: #0a0d12; color: #f5b518; font: 700 11.5px/1 'Inter', system-ui;
+      padding: 9px 14px; border-radius: 999px; letter-spacing: .03em;
+      box-shadow: 0 6px 18px rgba(0,0,0,.35); border: 1px solid rgba(245,181,24,.35);
+    }
+
+    @media (max-width: 860px) {
+      .hero .wrap { grid-template-columns: 1fr; gap: 32px; padding: 56px 22px 64px; }
+      .hero-card { order: 2; }
+      .story .wrap { grid-template-columns: 1fr; gap: 32px; }
+      .docs { grid-template-columns: 1fr; }
+      .nav-phone { display: none; }
+    }
+    @media (max-width: 560px) {
+      section { padding: 56px 0; }
+      .strip .wrap { gap: 12px 20px; }
+      .story .facts { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Blue Valley Eyecare home">
+        <span class="eye" aria-hidden="true"></span>
+        <span>
+          <span class="name">Blue Valley <span>Eyecare</span></span>
+          <span class="tag">Overland Park · Since 1999</span>
+        </span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19138147707"><span>Call</span> (913) 814-7707</a>
+        <a class="btn btn-primary" href="#book">Book an Exam</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">👁️ Independent eye care · Overland Park, KS</span>
+        <h1>Clear vision and healthy eyes, <em>close to home</em> in Overland Park.</h1>
+        <p class="lead">A locally owned practice — not a chain. Three trusted optometrists, comprehensive exams, and an in-house optical boutique, all under one roof for the whole family.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#book">Schedule your exam</a>
+          <a class="btn btn-ghost" href="tel:+19138147707">📞 (913) 814-7707</a>
+        </div>
+        <div class="stars">
+          <span class="s">★★★★★</span> <b>4.5</b> on Google
+          <span class="div" aria-hidden="true"></span>
+          318 reviews
+          <span class="div" aria-hidden="true"></span>
+          25 years serving Johnson County
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>What to expect</h3>
+        <div class="hc-row"><span class="hc-ico" aria-hidden="true">🔬</span><div><div class="t">Thorough, unhurried exams</div><div class="d">Real doctor time — never rushed</div></div></div>
+        <div class="hc-row"><span class="hc-ico" aria-hidden="true">👓</span><div><div class="t">Optical boutique in-house</div><div class="d">Frames fitted the same visit</div></div></div>
+        <div class="hc-row"><span class="hc-ico" aria-hidden="true">💧</span><div><div class="t">Dry eye & medical care</div><div class="d">Treatment, not just prescriptions</div></div></div>
+        <div class="hc-row"><span class="hc-ico" aria-hidden="true">👨‍👩‍👧</span><div><div class="t">All ages welcome</div><div class="d">Pediatric through senior eye health</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span class="item"><span class="k">✦</span> Locally owned since 1999</span>
+      <span class="item"><span class="k">✦</span> 3 licensed optometrists</span>
+      <span class="item"><span class="k">✦</span> 4.5★ · 318 Google reviews</span>
+      <span class="item"><span class="k">✦</span> Most insurance accepted</span>
+      <span class="item"><span class="k">✦</span> Exams + eyewear, one visit</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <div class="kick">Comprehensive Eye Care</div>
+        <h2>Everything your eyes need, in one Overland Park office.</h2>
+        <p>From annual checkups to specialty contact fittings and medical treatment — the full spectrum of care from doctors who know you by name.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico" aria-hidden="true">🔬</div>
+          <h3>Comprehensive Eye Exams</h3>
+          <p>Complete vision and eye-health evaluations for adults and kids, with plenty of doctor time to answer your questions.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">👁️</div>
+          <h3>Contact Lens Fittings</h3>
+          <p>Standard and specialty lenses — including hard-to-fit eyes — plus easy reordering when you run low.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">👓</div>
+          <h3>Eyewear & Optical Boutique</h3>
+          <p>Browse a curated frame collection and get fitted on the spot by our licensed opticians.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">💧</div>
+          <h3>Dry Eye & Medical Care</h3>
+          <p>Relief and treatment for dry eye, irritation, and conjunctivitis — real solutions, not just drops.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🧸</div>
+          <h3>Pediatric Eye Care</h3>
+          <p>Gentle, kid-friendly exams to catch vision issues early and support healthy learning.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🩺</div>
+          <h3>Surgery Co-Management</h3>
+          <p>Pre- and post-op care for LASIK and cataract surgery, coordinated with your surgeon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div>
+        <div class="head">
+          <div class="kick">Why patients stay</div>
+          <h2>A quarter century of independent, personal eye care.</h2>
+        </div>
+        <p class="body">Since 1999, Blue Valley Eyecare has stayed exactly what a great eye doctor should be: independent, local, and genuinely invested in you. No corporate quotas, no upselling — just careful exams and honest recommendations.</p>
+        <p class="body">Our three doctors have built relationships that span decades and generations. When you visit, you see the same familiar faces who remember your history and treat your eyes like they'd treat their own family's.</p>
+        <div class="facts">
+          <div class="fact"><div class="n">25 yrs</div><div class="l">Serving Overland Park & Johnson County</div></div>
+          <div class="fact"><div class="n">3</div><div class="l">Trusted, licensed optometrists</div></div>
+          <div class="fact"><div class="n">4.5★</div><div class="l">Across 318 Google reviews</div></div>
+          <div class="fact"><div class="n">All ages</div><div class="l">Pediatric through senior care</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="head" style="margin-bottom:22px;">
+          <div class="kick">Meet the doctors</div>
+          <h2 style="font-size:clamp(22px,2.6vw,27px);">The faces behind your care.</h2>
+        </div>
+        <div class="docs">
+          <div class="doc">
+            <div class="av" aria-hidden="true">HR</div>
+            <h3>Dr. Heidi Reiling</h3>
+            <div class="role">Owner, O.D.</div>
+            <p>Practicing optometry in Overland Park with a focus on lifelong patient relationships.</p>
+          </div>
+          <div class="doc">
+            <div class="av" aria-hidden="true">MB</div>
+            <h3>Dr. Melissa Brewer</h3>
+            <div class="role">Optometrist, O.D.</div>
+            <p>Comprehensive care for the whole family, from first exams to specialty lenses.</p>
+          </div>
+          <div class="doc">
+            <div class="av" aria-hidden="true">AM</div>
+            <h3>Dr. Annette Manion</h3>
+            <div class="role">Optometrist, O.D.</div>
+            <p>Contact lens expertise and attentive, personalized eye-health care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="head">
+        <div class="kick">Neighbors trust us</div>
+        <h2>Overland Park families have relied on us for decades.</h2>
+        <p>4.5 stars across 318 Google reviews — here's what patients say.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="q" aria-hidden="true">★★★★★</div>
+          <p>“The service the doctor and the staff at Blue Valley Eyecare provide is amazing.”</p>
+          <footer>— Jenna F., Overland Park</footer>
+        </div>
+        <div class="quote">
+          <div class="q" aria-hidden="true">★★★★★</div>
+          <p>“Amazing doctors and staff. The best in Overland Park!”</p>
+          <footer>— Savannah C., Overland Park</footer>
+        </div>
+        <div class="quote">
+          <div class="q" aria-hidden="true">★★★★★</div>
+          <p>“I've been a Blue Valley Eyecare patient for over 10 years and have always received excellent treatment.”</p>
+          <footer>— Jem W., Overland Park</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="book">
+    <div class="wrap">
+      <h2>Ready for eye care that actually knows you?</h2>
+      <p>Book your comprehensive exam with an independent Overland Park practice that's cared for this community for 25 years.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+19138147707">📞 Call (913) 814-7707</a>
+        <a class="btn btn-outline" href="#book" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4);color:#fff;">Request an appointment online</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div>
+        <div class="fb">Blue Valley Eyecare</div>
+        <div>12621 Antioch Rd · Overland Park, KS 66213</div>
+        <div><a href="tel:+19138147707">(913) 814-7707</a></div>
+      </div>
+      <div class="note">
+        This is a <strong>concept preview</strong> designed by <strong>Gigawatt</strong>, a Kansas City web design + AI studio. It is a redesign demonstration only — not the live Blue Valley Eyecare website. Business details shown are for illustration; please verify hours, services, and booking on the official site.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

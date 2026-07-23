@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Ridgeview Animal Hospital — Whole-Pet Care for Olathe &amp; Lenexa</title>
+  <meta name="description" content="Olathe's integrative animal hospital since 1987. Conventional vet medicine plus acupuncture, Chinese herbs, homeopathy &amp; pet hospice. Book online. 4.7★, 202 reviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage: #4e6a55;         /* deep sage */
+      --sage-mid: #6f8f74;
+      --sage-soft: #e7efe6;
+      --cream: #f6f3ea;        /* warm paper */
+      --bark: #3a3a30;         /* earthy ink */
+      --terracotta: #d98a5f;   /* soft warm accent */
+      --terracotta-dk: #c2734a;
+      --gold: #e6b866;
+      --text: #33362e;
+      --muted: #6a6f61;
+      --line: #e2ddce;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text); line-height: 1.6; background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .serif { font-family: 'Fraunces', Georgia, serif; }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 12.5px;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--sage);
+    }
+
+    /* Header */
+    header { background: rgba(246,243,234,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 14px; }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo .mark {
+      width: 40px; height: 40px; border-radius: 13px; flex: none;
+      background: linear-gradient(150deg, var(--sage) 0%, var(--sage-mid) 100%);
+      display: grid; place-items: center; font-size: 21px; box-shadow: 0 3px 8px rgba(78,106,85,.28);
+    }
+    .logo .name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px; color: var(--sage); line-height: 1.05; }
+    .logo .name small { display: block; font-family: 'Nunito Sans', sans-serif; font-weight: 600;
+      font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone { text-decoration: none; font-weight: 700; color: var(--sage); font-size: 15px; white-space: nowrap; }
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; font-weight: 700;
+      text-decoration: none; font-size: 15px; transition: transform .12s ease, box-shadow .12s ease, background .15s ease; border: none; cursor: pointer; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--terracotta); color: #fff; box-shadow: 0 4px 14px rgba(217,138,95,.38); }
+    .btn-primary:hover { background: var(--terracotta-dk); }
+    .btn-ghost { border: 1.5px solid var(--sage); color: var(--sage); background: transparent; }
+    .btn-ghost:hover { background: var(--sage-soft); }
+    .nav .btn { padding: 11px 20px; }
+    @media (max-width: 620px) { .nav-phone { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 85% -10%, rgba(230,184,102,.30) 0%, transparent 55%),
+        radial-gradient(110% 90% at -10% 110%, rgba(111,143,116,.28) 0%, transparent 50%),
+        var(--cream);
+      padding: 68px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 44px; align-items: center; }
+    .hero h1 { font-size: clamp(33px, 5.4vw, 55px); line-height: 1.05; color: var(--sage); font-weight: 600; letter-spacing: -.01em; }
+    .hero h1 em { font-style: italic; color: var(--terracotta-dk); }
+    .hero .lead { margin: 20px 0 26px; font-size: clamp(16px, 2vw, 18.5px); color: var(--muted); max-width: 520px; }
+    .hero .actions { display: flex; gap: 13px; flex-wrap: wrap; align-items: center; }
+    .stars { margin-top: 26px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14.5px; color: var(--muted); }
+    .stars .s { color: var(--gold); letter-spacing: 1px; font-size: 16px; }
+    .stars b { color: var(--bark); }
+    .stars .dot { opacity: .4; }
+
+    /* Hero visual card */
+    .hero-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 8px;
+      box-shadow: 0 22px 44px -22px rgba(58,58,48,.35); }
+    .hero-illus {
+      border-radius: 16px; padding: 30px 26px; color: #fff; position: relative; overflow: hidden;
+      background: linear-gradient(155deg, var(--sage) 0%, #405845 100%); }
+    .hero-illus .paw { position: absolute; font-size: 120px; right: -18px; bottom: -30px; opacity: .13; }
+    .hero-illus h3 { font-size: 21px; font-weight: 600; margin-bottom: 6px; }
+    .hero-illus p { font-size: 14px; color: #dbe6db; }
+    .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+    .dual .chip { background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px; padding: 12px 13px; }
+    .dual .chip .ic { font-size: 20px; }
+    .dual .chip strong { display: block; font-size: 13.5px; margin-top: 5px; font-weight: 700; }
+    .dual .chip span { font-size: 11.5px; color: #cfdccf; }
+    .hero-card .foot { display: flex; align-items: center; gap: 9px; padding: 13px 14px 8px; }
+    .hero-card .foot .av { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+      font-size: 14px; background: var(--sage-soft); }
+    .hero-card .foot small { font-size: 12px; color: var(--muted); }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-card { max-width: 440px; }
+    }
+
+    /* Trust strip */
+    .strip { background: var(--sage); color: #eaf0e9; }
+    .strip .wrap { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: center;
+      padding: 16px 22px; font-size: 13.5px; font-weight: 600; }
+    .strip span { display: inline-flex; align-items: center; gap: 7px; }
+    .strip .ic { color: var(--gold); }
+
+    section { padding: 66px 0; }
+    .sec-head { max-width: 640px; margin-bottom: 38px; }
+    h2 { font-size: clamp(27px, 3.6vw, 37px); color: var(--sage); font-weight: 600; line-height: 1.12; margin: 12px 0 12px; letter-spacing: -.01em; }
+    .sub { color: var(--muted); font-size: 16.5px; }
+
+    /* Integrative centerpiece */
+    .integrative { background:
+      linear-gradient(180deg, var(--cream) 0%, #efeadd 100%); }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; }
+    .lane { border-radius: 20px; padding: 30px 28px; border: 1px solid var(--line); }
+    .lane.west { background: #fff; }
+    .lane.holistic { background: linear-gradient(160deg, #eef4ec 0%, #e3ece1 100%); border-color: #d5e2d3; }
+    .lane .tag { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .lane.west .tag { color: var(--terracotta-dk); }
+    .lane.holistic .tag { color: var(--sage); }
+    .lane h3 { font-size: 22px; font-weight: 600; color: var(--bark); margin: 8px 0 16px; }
+    .lane ul { list-style: none; display: grid; gap: 11px; }
+    .lane li { display: flex; gap: 11px; font-size: 15px; align-items: flex-start; }
+    .lane li .ic { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-size: 14px; }
+    .lane.west li .ic { background: #fbeee4; }
+    .lane.holistic li .ic { background: #d8e6d5; }
+    .bridge { text-align: center; margin: 30px auto 0; max-width: 560px; }
+    .bridge .plus { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+      background: var(--terracotta); color: #fff; font-size: 22px; font-weight: 700; box-shadow: 0 6px 16px rgba(217,138,95,.4); margin-bottom: 14px; }
+    .bridge p { color: var(--muted); font-size: 16px; }
+    .bridge p strong { color: var(--sage); }
+    @media (max-width: 720px) { .split { grid-template-columns: 1fr; } }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 24px;
+      transition: transform .14s ease, box-shadow .14s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -18px rgba(58,58,48,.4); }
+    .card .ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 24px; background: var(--sage-soft); margin-bottom: 15px; }
+    .card h3 { color: var(--bark); font-size: 19px; font-weight: 600; margin-bottom: 7px; }
+    .card p { color: var(--muted); font-size: 14.5px; }
+
+    /* AI triage band */
+    .triage { background: linear-gradient(150deg, var(--bark) 0%, #2b2c24 100%); color: #f2efe4; }
+    .triage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .triage .eyebrow { color: var(--gold); }
+    .triage h2 { color: #fff; }
+    .triage p.sub { color: #cbcabb; }
+    .triage-demo { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px; padding: 20px; }
+    .msg { display: flex; gap: 10px; margin-bottom: 12px; }
+    .msg .bub { padding: 12px 15px; border-radius: 15px; font-size: 14.5px; max-width: 86%; }
+    .msg.you { justify-content: flex-end; }
+    .msg.you .bub { background: var(--terracotta); color: #fff; border-bottom-right-radius: 4px; }
+    .msg.bot .bub { background: rgba(255,255,255,.1); color: #eef0e8; border-bottom-left-radius: 4px; }
+    .msg .av { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 15px; background: var(--sage); }
+    .triage-demo .note { font-size: 12px; color: #9fa093; margin-top: 6px; text-align: center; }
+    @media (max-width: 760px) { .triage-grid { grid-template-columns: 1fr; gap: 26px; } }
+
+    /* Reviews */
+    .reviews { background: var(--sage-soft); }
+    .qgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .quote { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; position: relative; }
+    .quote .qm { font-family: 'Fraunces', serif; font-size: 46px; color: var(--sage-mid); line-height: .6; opacity: .4; }
+    .quote p { font-size: 15.5px; color: var(--text); margin: 10px 0 16px; }
+    .quote .st { color: var(--gold); font-size: 14px; letter-spacing: 1px; }
+    .quote footer { margin-top: 6px; color: var(--muted); font-size: 13.5px; font-weight: 700; }
+
+    /* Final CTA */
+    .cta-band { text-align: center; background:
+      radial-gradient(100% 120% at 50% 0%, rgba(230,184,102,.18) 0%, transparent 60%), var(--cream); }
+    .cta-card { background: linear-gradient(155deg, var(--sage) 0%, #3f5744 100%); color: #fff;
+      border-radius: 28px; padding: 52px 30px; max-width: 780px; margin: 0 auto; position: relative; overflow: hidden; }
+    .cta-card .paw2 { position: absolute; font-size: 150px; opacity: .08; right: -20px; top: -30px; }
+    .cta-card h2 { color: #fff; margin-bottom: 12px; }
+    .cta-card p { color: #dbe6db; max-width: 480px; margin: 0 auto 26px; font-size: 16.5px; }
+    .cta-card .actions { display: flex; gap: 13px; justify-content: center; flex-wrap: wrap; }
+    .cta-card .btn-ghost { border-color: rgba(255,255,255,.6); color: #fff; }
+    .cta-card .btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+    footer.site { padding: 40px 0 92px; background: #efeadd; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
+    footer.site .frow { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: flex-start; }
+    footer.site strong { color: var(--sage); font-family: 'Fraunces', serif; font-size: 16px; }
+    footer.site .disc { margin-top: 14px; font-size: 12.5px; max-width: 560px; line-height: 1.5; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50;
+      background: var(--bark); color: var(--gold); font: 700 11.5px/1 'Nunito Sans', system-ui;
+      padding: 9px 14px; border-radius: 999px; box-shadow: 0 6px 16px rgba(0,0,0,.28);
+      border: 1px solid rgba(230,184,102,.4); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="mark">🐾</span>
+        <span class="name">Ridgeview<small>Animal Hospital</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19137800078">📞 (913) 780-0078</a>
+        <a class="btn btn-primary" href="#book">Book online</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">🌿 Integrative care · Olathe &amp; Lenexa</span>
+          <h1>Two ways to heal your pet, <em>under one caring roof.</em></h1>
+          <p class="lead">Olathe's privately-owned animal hospital since 1987 — where trusted conventional medicine meets acupuncture, Chinese herbs, homeopathy and gentle hospice care. Whole-pet wellness, tailored to yours.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#book">Book an appointment</a>
+            <a class="btn btn-ghost" href="tel:+19137800078">Call (913) 780-0078</a>
+          </div>
+          <div class="stars">
+            <span><span class="s">★★★★★</span> <b>4.7</b> · 202 Google reviews</span>
+            <span class="dot">•</span>
+            <span>❤️ Nextdoor Favorite in 8 neighborhoods</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-illus">
+            <span class="paw">🐾</span>
+            <h3>One plan. Every option.</h3>
+            <p>We start with your pet, not a protocol.</p>
+            <div class="dual">
+              <div class="chip"><div class="ic">🩺</div><strong>Conventional</strong><span>Surgery · dental · diagnostics</span></div>
+              <div class="chip"><div class="ic">🌿</div><strong>Holistic</strong><span>Acupuncture · herbs · homeopathy</span></div>
+            </div>
+          </div>
+          <div class="foot">
+            <span class="av">👩‍⚕️</span>
+            <small>Doctors who blend both traditions for the outcome your pet needs.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <span><span class="ic">🏡</span> Privately owned since 1987</span>
+        <span><span class="ic">⭐</span> 4.7★ · 202 reviews</span>
+        <span><span class="ic">🌿</span> Conventional + holistic under one roof</span>
+        <span><span class="ic">📍</span> Olathe &amp; Lenexa, KS</span>
+      </div>
+    </div>
+
+    <!-- INTEGRATIVE CENTERPIECE -->
+    <section class="integrative" id="integrative">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">The Ridgeview difference</span>
+          <h2>Most vets pick a side. We give you both.</h2>
+          <p class="sub">For nearly four decades, families across Olathe have come to Ridgeview for a rare kind of care — proven Western medicine and time-honored holistic therapy, working together instead of competing.</p>
+        </div>
+        <div class="split">
+          <div class="lane west">
+            <span class="tag">Conventional medicine</span>
+            <h3>The science your pet counts on</h3>
+            <ul>
+              <li><span class="ic">🔬</span><span>In-house diagnostics &amp; lab work for fast answers</span></li>
+              <li><span class="ic">🦷</span><span>Full dental care &amp; oral surgery</span></li>
+              <li><span class="ic">🏥</span><span>Soft-tissue &amp; routine surgery</span></li>
+              <li><span class="ic">💉</span><span>Wellness exams, vaccines &amp; senior plans</span></li>
+            </ul>
+          </div>
+          <div class="lane holistic">
+            <span class="tag">Holistic &amp; integrative</span>
+            <h3>The gentler tools others don't offer</h3>
+            <ul>
+              <li><span class="ic">🪡</span><span>Veterinary acupuncture for pain &amp; mobility</span></li>
+              <li><span class="ic">🌿</span><span>Chinese herbal medicine for chronic conditions</span></li>
+              <li><span class="ic">💧</span><span>Homeopathy to support the body's own defenses</span></li>
+              <li><span class="ic">🕊️</span><span>Compassionate pet hospice &amp; comfort care</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bridge">
+          <div class="plus">+</div>
+          <p><strong>Integrative by design.</strong> Your veterinarian can combine both approaches — or lean on one — because the best treatment is the one that fits <em>your</em> pet, their diagnosis, and your family.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Full-service care</span>
+          <h2>Everything your pet needs, in one place</h2>
+          <p class="sub">From a first puppy visit to a senior pet's golden years — comprehensive medicine delivered with the individual attention that made us a neighborhood favorite.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="ico">💚</div><h3>Wellness &amp; Vaccines</h3><p>Preventive exams and tailored vaccination plans that keep small problems small.</p></div>
+          <div class="card"><div class="ico">🦷</div><h3>Dentistry</h3><p>Cleanings, extractions and oral health care that protect your pet's whole body.</p></div>
+          <div class="card"><div class="ico">🏥</div><h3>Surgery</h3><p>Spay/neuter, soft-tissue and mass removals in a monitored, low-stress surgical suite.</p></div>
+          <div class="card"><div class="ico">🪡</div><h3>Acupuncture &amp; Herbs</h3><p>Chinese herbal medicine and acupuncture to ease pain and restore balance.</p></div>
+          <div class="card"><div class="ico">🐾</div><h3>Allergies &amp; Skin</h3><p>Dermatology and nutrition plans that get to the root of chronic itching and discomfort.</p></div>
+          <div class="card"><div class="ico">🕊️</div><h3>Senior &amp; Hospice</h3><p>Geriatric care, homeopathy and gentle hospice support for every stage of life.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI TRIAGE -->
+    <section class="triage" id="triage">
+      <div class="wrap triage-grid">
+        <div>
+          <span class="eyebrow">New · 24/7 pet concierge</span>
+          <h2>Not sure if it's an emergency? Ask first.</h2>
+          <p class="sub">Our online assistant helps you decide whether your pet needs to be seen today, can wait for a wellness visit, or might benefit from a holistic consult — then books the right appointment in seconds. Always backed by our real Ridgeview team.</p>
+          <a class="btn btn-primary" href="#book" style="margin-top:20px">Try the pet check-in</a>
+        </div>
+        <div class="triage-demo">
+          <div class="msg you"><div class="bub">My 11-yr-old lab is stiff getting up lately.</div></div>
+          <div class="msg bot"><div class="av">🐾</div><div class="bub">That's common in senior labs. It's not an emergency, but he'd benefit from a mobility exam — we can pair it with acupuncture if it helps. Want the next senior slot?</div></div>
+          <div class="msg you"><div class="bub">Yes please 🙏</div></div>
+          <div class="msg bot"><div class="av">🐾</div><div class="bub">Booked: Thu 9:40 AM with Dr. Beth. Confirmation sent. 🌿</div></div>
+          <p class="note">Concept demo — illustrative triage flow, not medical advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Loved by the neighborhood</span>
+          <h2>202 reviews. One recurring word: caring.</h2>
+          <p class="sub">A Nextdoor Neighborhood Favorite across 8 Olathe communities.</p>
+        </div>
+        <div class="qgrid">
+          <div class="quote">
+            <div class="qm">&ldquo;</div>
+            <p>Phenomenal, caring doctors &amp; staff. They care very much for every animal that enters the clinic — knowledgeable and calming.</p>
+            <div class="st">★★★★★</div>
+            <footer>— J. Robertson, Olathe</footer>
+          </div>
+          <div class="quote">
+            <div class="qm">&ldquo;</div>
+            <p>Ridgeview took my kitty in when the urgent vet wouldn't. They have the best bedside manner I've found anywhere.</p>
+            <div class="st">★★★★★</div>
+            <footer>— Alexis N., Lenexa</footer>
+          </div>
+          <div class="quote">
+            <div class="qm">&ldquo;</div>
+            <p>Great team that took care of my dog. They're all amazing and it's obvious they care deeply for the animals.</p>
+            <div class="st">★★★★★</div>
+            <footer>— Cherie C., Olathe</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band" id="book">
+      <div class="wrap">
+        <div class="cta-card">
+          <span class="paw2">🐾</span>
+          <h2>Give your pet the whole spectrum of care.</h2>
+          <p>Book a visit at Ridgeview Animal Hospital — conventional and holistic options, one trusted Olathe team since 1987.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+19137800078">📞 Call (913) 780-0078</a>
+            <a class="btn btn-ghost" href="#book">Request an appointment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="frow">
+        <div>
+          <strong>Ridgeview Animal Hospital, LLC</strong><br />
+          816 N Ridgeview Rd, Olathe, KS 66061<br />
+          Serving Olathe &amp; Lenexa · (913) 780-0078
+        </div>
+        <div>
+          Integrative veterinary care since 1987<br />
+          Conventional · Acupuncture · Chinese herbs · Homeopathy · Hospice
+        </div>
+      </div>
+      <p class="disc">This is a concept preview designed by <strong style="font-size:13.5px">Gigawatt</strong> — a Kansas City web design &amp; AI studio — to explore a refreshed direction for Ridgeview Animal Hospital. It is not the hospital's live website. Business details are drawn from public listings; contact the practice directly to confirm hours and services.</p>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

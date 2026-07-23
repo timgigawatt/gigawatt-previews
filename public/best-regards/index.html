@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Best Regards Bakery &amp; Café — Overland Park's From-Scratch Cookie Institution</title>
+  <meta name="description" content="Best Regards Bakery & Café in Overland Park, KS — home of The Cookie Man. Custom cookies, cupcakes, cakes & scratch-made café lunch for 30+ years. Order or cater today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:      #fbf3e9;
+      --cream-2:    #f6e8d8;
+      --sugar:      #f4c9d4;   /* sugar-pink icing */
+      --berry:      #c2456a;   /* berry accent */
+      --berry-dark: #a23453;
+      --cocoa:      #4a2f26;   /* warm brown */
+      --cocoa-soft: #6b4a3c;
+      --gold:       #d99b3c;
+      --gold-dark:  #b97e26;
+      --ink:        #3a2620;
+      --muted:      #7c6154;
+      --line:       #e7d4c0;
+      --white:      #fffdfa;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--ink); line-height: 1.6; background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .logo { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; }
+    a { color: inherit; }
+
+    /* ---------- Header ---------- */
+    header {
+      background: rgba(251,243,233,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .logo { display: flex; align-items: center; gap: 11px; font-weight: 900; font-size: 21px; color: var(--cocoa); text-decoration: none; letter-spacing: .2px; line-height: 1.05; }
+    .logo .mark {
+      width: 40px; height: 40px; border-radius: 50%; flex: none;
+      background: radial-gradient(circle at 32% 30%, var(--sugar) 0 42%, var(--berry) 43% 100%);
+      box-shadow: inset 0 0 0 3px var(--cream), 0 2px 6px rgba(74,47,38,.18);
+      display: grid; place-items: center; font-size: 19px;
+    }
+    .logo small { display: block; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--berry); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone { text-decoration: none; font-weight: 700; color: var(--cocoa); font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--berry); }
+    .btn { display: inline-block; font-weight: 700; text-decoration: none; border-radius: 999px; padding: 12px 22px; transition: transform .12s ease, box-shadow .12s ease, background .12s ease; font-family: 'Nunito Sans', sans-serif; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--berry); color: #fff; box-shadow: 0 4px 14px rgba(194,69,106,.32); }
+    .btn-primary:hover { background: var(--berry-dark); box-shadow: 0 6px 18px rgba(194,69,106,.4); }
+    .btn-gold { background: var(--gold); color: var(--cocoa); box-shadow: 0 4px 14px rgba(217,155,60,.32); }
+    .btn-gold:hover { background: var(--gold-dark); color: #fff; }
+    .btn-ghost { border: 2px solid var(--cocoa); color: var(--cocoa); padding: 10px 20px; }
+    .btn-ghost:hover { background: var(--cocoa); color: var(--cream); }
+    .nav-cta { padding: 10px 18px; font-size: 15px; }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; overflow: hidden; background:
+      radial-gradient(120% 90% at 80% -10%, var(--sugar) 0%, transparent 55%),
+      radial-gradient(90% 80% at 0% 110%, var(--cream-2) 0%, transparent 60%),
+      var(--cream); }
+    .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 66px 22px 74px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--line); color: var(--berry); font-weight: 700; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; box-shadow: 0 2px 8px rgba(74,47,38,.06); }
+    .hero h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.06; margin: 20px 0 0; color: var(--cocoa); font-weight: 900; letter-spacing: -.5px; }
+    .hero h1 em { font-style: italic; color: var(--berry); }
+    .hero p.lead { margin: 18px 0 26px; font-size: clamp(16px, 2vw, 19px); color: var(--cocoa-soft); max-width: 520px; }
+    .hero .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .hero .btn { padding: 15px 26px; font-size: 16px; }
+    .stars { margin-top: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: var(--cocoa-soft); }
+    .stars .s { color: var(--gold); letter-spacing: 1px; font-size: 17px; }
+    .stars b { color: var(--cocoa); }
+    .stars .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
+
+    /* Hero art — stacked cookie/cake illustration in pure CSS */
+    .hero-art { position: relative; justify-self: center; width: 100%; max-width: 360px; aspect-ratio: 1; }
+    .platter {
+      position: absolute; inset: 6% 0 auto 0; margin: auto; width: 100%; aspect-ratio: 1;
+      background: radial-gradient(circle at 50% 42%, var(--white) 0 60%, var(--cream-2) 61% 74%, transparent 75%);
+      border-radius: 50%;
+      box-shadow: 0 30px 50px -20px rgba(74,47,38,.35);
+    }
+    .cookie {
+      position: absolute; border-radius: 50%; display: grid; place-items: center;
+      font-size: 30px; box-shadow: 0 8px 18px rgba(74,47,38,.22);
+    }
+    .cookie.c1 { width: 44%; height: 44%; left: 12%; top: 22%; background: radial-gradient(circle at 36% 30%, #f7d9a8 0 55%, #e8b877 56% 100%); border: 6px solid var(--white); }
+    .cookie.c2 { width: 38%; height: 38%; right: 8%; top: 14%; background: radial-gradient(circle at 36% 30%, var(--sugar) 0 58%, var(--berry) 59% 100%); border: 6px solid var(--white); }
+    .cookie.c3 { width: 34%; height: 34%; right: 16%; bottom: 12%; background: radial-gradient(circle at 36% 30%, #fbeecf 0 58%, var(--gold) 59% 100%); border: 6px solid var(--white); }
+    .badge-est {
+      position: absolute; left: -4%; bottom: 6%; z-index: 3;
+      width: 108px; height: 108px; border-radius: 50%;
+      background: var(--berry); color: #fff; display: grid; place-content: center; text-align: center;
+      box-shadow: 0 12px 26px rgba(162,52,83,.4); transform: rotate(-8deg);
+      border: 3px dashed rgba(255,255,255,.5);
+    }
+    .badge-est b { font-family: 'Fraunces', serif; font-size: 30px; line-height: 1; display: block; }
+    .badge-est span { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; opacity: .95; }
+
+    /* ---------- Trust strip ---------- */
+    .strip { background: var(--cocoa); color: var(--cream); }
+    .strip .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; padding: 18px 22px; }
+    .strip .item { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 14px; }
+    .strip .item .ico { color: var(--gold); font-size: 17px; }
+    .strip .item b { color: #fff; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 74px 0; }
+    .section-head { max-width: 620px; margin-bottom: 40px; }
+    .kicker { color: var(--berry); font-weight: 800; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { font-size: clamp(27px, 4vw, 38px); color: var(--cocoa); margin: 8px 0 12px; font-weight: 900; letter-spacing: -.4px; line-height: 1.1; }
+    .section-head p { color: var(--muted); font-size: 17px; }
+
+    /* Services */
+    .services { background: var(--white); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--cream); border: 1px solid var(--line); border-radius: 18px; padding: 26px 24px;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -18px rgba(74,47,38,.4); border-color: var(--sugar); }
+    .card .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; margin-bottom: 15px; background: linear-gradient(135deg, var(--sugar), var(--cream-2)); }
+    .card h3 { color: var(--cocoa); font-size: 20px; margin-bottom: 7px; font-weight: 700; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Story */
+    .story { background:
+      radial-gradient(90% 70% at 100% 0%, var(--cream-2) 0%, transparent 55%), var(--cream); }
+    .story .wrap { display: grid; grid-template-columns: .95fr 1.05fr; gap: 46px; align-items: center; }
+    .story-art { position: relative; border-radius: 22px; min-height: 340px; overflow: hidden;
+      background: linear-gradient(150deg, var(--cocoa) 0%, var(--cocoa-soft) 100%);
+      box-shadow: 0 24px 40px -22px rgba(74,47,38,.6); display: grid; place-items: center; text-align: center; color: var(--cream); padding: 34px; }
+    .story-art .tv { font-size: 60px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.3)); }
+    .story-art .cap { margin-top: 14px; font-family: 'Fraunces', serif; font-size: 25px; font-weight: 700; color: #fff; line-height: 1.2; }
+    .story-art .sub { margin-top: 8px; font-size: 14px; color: var(--sugar); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .story-art .foodnet { position: absolute; top: 16px; left: 16px; background: var(--gold); color: var(--cocoa); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+    .story h2 em { font-style: italic; color: var(--berry); }
+    .story p { color: var(--cocoa-soft); font-size: 16.5px; margin-bottom: 15px; }
+    .story .from-scratch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .story .chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 8px 15px; font-size: 13.5px; font-weight: 700; color: var(--cocoa-soft); }
+    .story .chip::before { content: "✓"; color: var(--berry); font-weight: 900; margin-right: 6px; }
+
+    /* Offers / dual CTA cards */
+    .offers { background: var(--white); }
+    .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .offer {
+      border-radius: 20px; padding: 34px 30px; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .offer.cookie-offer { background: linear-gradient(150deg, var(--sugar) 0%, #f7d9e0 100%); color: var(--cocoa); }
+    .offer.cater-offer { background: linear-gradient(150deg, var(--cocoa) 0%, var(--cocoa-soft) 100%); color: var(--cream); }
+    .offer .oico { font-size: 34px; }
+    .offer h3 { font-size: 24px; font-weight: 800; }
+    .offer.cater-offer h3 { color: #fff; }
+    .offer p { font-size: 15.5px; opacity: .92; flex: 1; }
+    .offer .btn { align-self: flex-start; }
+    .offer.cookie-offer .btn { background: var(--berry); color: #fff; }
+    .offer.cookie-offer .btn:hover { background: var(--berry-dark); }
+    .offer.cater-offer .btn { background: var(--gold); color: var(--cocoa); }
+    .offer.cater-offer .btn:hover { background: #fff; }
+
+    /* Reviews */
+    .reviews { background: var(--cream); }
+    .quote {
+      background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 26px 24px;
+      display: flex; flex-direction: column;
+    }
+    .quote .qs { color: var(--gold); font-size: 16px; letter-spacing: 1px; margin-bottom: 10px; }
+    .quote p { font-size: 16px; color: var(--cocoa-soft); flex: 1; }
+    .quote .who { margin-top: 16px; display: flex; align-items: center; gap: 11px; }
+    .quote .av { width: 38px; height: 38px; border-radius: 50%; flex: none; display: grid; place-items: center; font-weight: 800; color: #fff; font-family: 'Fraunces', serif; }
+    .quote .who b { display: block; color: var(--cocoa); font-size: 14.5px; }
+    .quote .who span { color: var(--muted); font-size: 13px; }
+
+    /* Final CTA band */
+    .cta-band { background:
+      radial-gradient(90% 120% at 15% 20%, var(--berry) 0%, transparent 60%),
+      linear-gradient(140deg, var(--cocoa) 0%, #3a231b 100%);
+      color: var(--cream); text-align: center; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: var(--sugar); margin: 12px auto 28px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-band .btn-ghost { border-color: var(--cream); color: var(--cream); }
+    .cta-band .btn-ghost:hover { background: var(--cream); color: var(--cocoa); }
+    .cta-band .visit { margin-top: 26px; font-size: 14px; color: #d9c3b6; }
+
+    /* Footer */
+    footer.site { background: #2a1a14; color: #c9b3a6; padding: 34px 0; font-size: 13.5px; }
+    footer.site .wrap { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; }
+    footer.site b { color: var(--cream); font-family: 'Fraunces', serif; font-size: 16px; }
+    footer.site .disclaim { max-width: 620px; color: #a68e80; }
+    footer.site a { color: var(--sugar); text-decoration: none; }
+
+    /* Concept badge */
+    .demo-tag {
+      position: fixed; bottom: 14px; right: 14px; z-index: 50;
+      background: #17181b; color: #f5b518; font: 700 11.5px/1 'Nunito Sans', system-ui;
+      padding: 9px 13px; border-radius: 999px; opacity: .94;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3); letter-spacing: .02em;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .hero .wrap { grid-template-columns: 1fr; gap: 30px; padding: 48px 22px 56px; }
+      .hero-art { max-width: 300px; order: -1; }
+      .story .wrap { grid-template-columns: 1fr; gap: 30px; }
+      .story-art { min-height: 240px; order: 2; }
+      .offer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .nav-phone { display: none; }
+      section { padding: 56px 0; }
+      .badge-est { width: 90px; height: 90px; }
+      .badge-est b { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="mark">🍪</span>
+        <span>Best Regards<small>Bakery &amp; Café</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19139127238">📞 <span>913-912-7238</span></a>
+        <a class="btn btn-primary nav-cta" href="#order">Start a Custom Order</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">⭐ Overland Park's from-scratch institution</span>
+          <h1>The cookies Kansas City <em>lines up for</em> — baked fresh on&nbsp;119th.</h1>
+          <p class="lead">For 30+ years, Best Regards Bakery &amp; Café has made Overland Park's favorite iced sugar cookies, custom cakes, cupcakes, and scratch-made café lunch. Order online or let us cater your next gathering.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#order">🎂 Start a Custom Order</a>
+            <a class="btn btn-ghost" href="tel:+19139127238">Call 913-912-7238</a>
+          </div>
+          <div class="stars">
+            <span class="s">★★★★½</span> <b>4.5</b> · 185 reviews
+            <span class="dot"></span>
+            <span><b>20,700+</b> Facebook fans</span>
+            <span class="dot"></span>
+            <span>As seen on <b>Food Network</b></span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="platter"></div>
+          <div class="cookie c1">🍪</div>
+          <div class="cookie c2">🧁</div>
+          <div class="cookie c3">🎂</div>
+          <div class="badge-est"><b>30+</b><span>Years</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <div class="item"><span class="ico">🏆</span> Home of <b>"The Cookie Man"</b></div>
+        <div class="item"><span class="ico">📺</span> Featured on <b>Food Network</b></div>
+        <div class="item"><span class="ico">👨‍👩‍👧</span> <b>Family-owned</b> &amp; operated</div>
+        <div class="item"><span class="ico">🥖</span> Everything <b>made from scratch</b></div>
+        <div class="item"><span class="ico">📍</span> 119th &amp; Glenwood, <b>Overland Park</b></div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">What we bake</span>
+          <h2>One bakery. Every sweet (and savory) occasion.</h2>
+          <p>From a dozen decorated cookies to a wedding cake to a boxed-lunch spread for the whole office — it all comes out of our Overland Park kitchen.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="ico">🍪</div>
+            <h3>Iced Sugar Cookies</h3>
+            <p>The thick, soft shortbread cookies that sell out by noon — including Cherrie's game-day Chiefs designs.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🎂</div>
+            <h3>Custom Cakes &amp; Cupcakes</h3>
+            <p>Birthdays, weddings, showers — hand-decorated cakes and cupcakes made to your theme, colors, and flavors.</p>
+          </div>
+          <div class="card">
+            <div class="ico">✍️</div>
+            <h3>Custom Cookie Orders</h3>
+            <p>From 12 to 2,000+ decorated cookies for weddings, brands, and celebrations, designed just for you.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🥪</div>
+            <h3>Scratch-Made Café Lunch</h3>
+            <p>Grilled cheese done 40 million ways, the Turkey Club, Philly, chicken salad croissant &amp; Roasterie coffee.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🍞</div>
+            <h3>Fresh Daily Bakery</h3>
+            <p>Cinnamon rolls, sticky buns, lemon bars, brownies, Swedish tea ring &amp; French country bread, baked fresh.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🥡</div>
+            <h3>Catering &amp; Box Lunches</h3>
+            <p>Boxed lunches, cookie trays &amp; dessert catering delivered across Kansas City for meetings and events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / DIFFERENTIATOR -->
+    <section class="story">
+      <div class="wrap">
+        <div class="story-art" aria-hidden="true">
+          <span class="foodnet">📺 As seen on Food Network</span>
+          <div>
+            <div class="tv">👨‍🍳</div>
+            <div class="cap">Robert Duensing,<br>"The Cookie Man"</div>
+            <div class="sub">Baking Overland Park happy since the '90s</div>
+          </div>
+        </div>
+        <div class="story-copy">
+          <span class="kicker">Why Best Regards</span>
+          <h2>A neighborhood legend, <em>one cookie at a time.</em></h2>
+          <p>What started as a search for a better cookie to put in a gift basket turned Robert and Cherrie Duensing into a Kansas City institution. Robert's baking earned him local fame as <strong>"The Cookie Man,"</strong> a spot on <strong>Food Network</strong>, and a line out the door on Chiefs Sundays.</p>
+          <p>Thirty-plus years later, it's still a family affair — and everything is still made from scratch, with no mixes, no preservatives, and no shortcuts.</p>
+          <div class="from-scratch">
+            <span class="chip">European butter</span>
+            <span class="chip">Madagascar bourbon vanilla</span>
+            <span class="chip">King Arthur flour</span>
+            <span class="chip">No corn syrup</span>
+            <span class="chip">No artificial flavors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAL CTA OFFERS -->
+    <section class="offers" id="order">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Ready when you are</span>
+          <h2>Order a custom treat — or cater your next event.</h2>
+          <p>Two easy ways to get Best Regards to your table. Tell us what you're celebrating and we'll take it from there.</p>
+        </div>
+        <div class="offer-grid">
+          <div class="offer cookie-offer">
+            <div class="oico">🎂</div>
+            <h3>Start a Custom Order</h3>
+            <p>Decorated cookies, a custom cake, or a batch of cupcakes for your celebration. Pick your theme, colors, and pickup date and we'll bake it fresh.</p>
+            <a class="btn" href="#order">Begin your order →</a>
+          </div>
+          <div class="offer cater-offer">
+            <div class="oico">🥡</div>
+            <h3>Cater Your Gathering</h3>
+            <p>Boxed lunches, sandwich platters, cookie &amp; dessert trays delivered across the KC metro. Perfect for offices, showers, and game-day crowds.</p>
+            <a class="btn" href="#order">Request a catering quote →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Loved by the neighborhood</span>
+          <h2>4.5 stars, 185 reviews, and a whole lot of repeat customers.</h2>
+          <p>Real love from Johnson County — for the cookies, the cakes, and that famous grilled cheese.</p>
+        </div>
+        <div class="cards">
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>"The biggest, softest, most melt-in-your-mouth frosted sugar cookies in Kansas City. We get them for every birthday and they never last the night."</p>
+            <div class="who">
+              <span class="av" style="background:var(--berry)">D</span>
+              <span><b>Dana R.</b><span>Overland Park, KS</span></span>
+            </div>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>"Ordered custom cookies for my daughter's shower and everyone raved. The Espiñaca grilled cheese while I waited was ridiculous. A total gem."</p>
+            <div class="who">
+              <span class="av" style="background:var(--gold)">M</span>
+              <span><b>Megan T.</b><span>Leawood, KS</span></span>
+            </div>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>"Robert really is the Cookie Man. Made-from-scratch you can taste — cinnamon rolls, sticky buns, all of it. Best kept secret in Johnson County."</p>
+            <div class="who">
+              <span class="av" style="background:var(--cocoa)">J</span>
+              <span><b>James P.</b><span>Olathe, KS</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Let's make something sweet.</h2>
+        <p>Start a custom cookie or cake order, book catering for your next event, or just stop by for lunch and a cookie on the way out.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#order">🎂 Start a Custom Order</a>
+          <a class="btn btn-ghost" href="tel:+19139127238">📞 Call 913-912-7238</a>
+        </div>
+        <div class="visit">📍 6759 W. 119th St, Overland Park, KS · Mon–Fri 8–4, Sat 8–2 · Closed Sunday</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <b>Best Regards Bakery &amp; Café</b>
+      <div>Overland Park, Kansas · Serving Johnson County &amp; the KC metro for 30+ years</div>
+      <div class="disclaim">This is an unaffiliated <strong>concept preview</strong> designed by <a href="#">Gigawatt</a>, a Kansas City web design &amp; AI studio — created to show a redesign direction. It is not the official Best Regards website and does not process real orders.</div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

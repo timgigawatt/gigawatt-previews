@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>LDK Lawn Services — Johnson County's Lawn &amp; Landscape Crew Since 2007</title>
+  <meta name="description" content="Full-service lawn care &amp; landscaping for Overland Park, Leawood &amp; Johnson County. Mowing, fertilization, cleanups, irrigation &amp; more. Request a free quote 24/7." />
+  <style>
+    :root{
+      --green:#2f7d34; --green-dark:#1e5a22; --green-deep:#143d17;
+      --lime:#8bc34a; --lime-soft:#c7e6a4;
+      --leaf:#eef5e8; --leaf-2:#e3efd8; --cream:#faf9f4;
+      --text:#182818; --muted:#566759; --line:#dde6d6;
+      --sun:#ffce54;
+    }
+    *{margin:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--text);line-height:1.55;background:var(--cream)}
+    img{max-width:100%}
+    a{color:inherit}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header.site{background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--green-deep);text-decoration:none;letter-spacing:-.3px}
+    .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(150deg,var(--green),var(--lime));display:grid;place-items:center;color:#fff;font-size:18px;box-shadow:0 2px 8px rgba(47,125,52,.35)}
+    .logo b{color:var(--green)}
+    .nav-r{display:flex;align-items:center;gap:14px}
+    .phone-link{text-decoration:none;font-weight:700;color:var(--green-deep);font-size:15px;white-space:nowrap}
+    .phone-link span{color:var(--muted);font-weight:500;font-size:12px;display:block;line-height:1.1}
+    .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-size:15px;transition:transform .12s,box-shadow .12s,background .15s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 4px 14px rgba(47,125,52,.3)}
+    .btn-primary:hover{background:var(--green-dark);box-shadow:0 6px 18px rgba(47,125,52,.4)}
+    .btn-ghost{border:2px solid #ffffff66;color:#fff;background:transparent}
+    .btn-ghost:hover{background:#ffffff1a}
+    .btn-lg{padding:15px 30px;font-size:16px}
+    .nav .btn{padding:10px 18px}
+    .hide-sm{display:none}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--green-deep) 0%,var(--green-dark) 45%,var(--green) 100%)}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 82% 18%,rgba(139,195,74,.35),transparent 45%),
+      radial-gradient(circle at 12% 92%,rgba(139,195,74,.22),transparent 40%);pointer-events:none}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1fr;gap:36px;padding:64px 0 72px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff1f;border:1px solid #ffffff33;color:#eaf6df;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:20px}
+    .hero h1{font-size:clamp(32px,6vw,52px);line-height:1.08;letter-spacing:-.5px;max-width:15ch}
+    .hero h1 em{font-style:normal;color:var(--lime-soft)}
+    .hero p.lead{margin:20px 0 28px;font-size:clamp(16px,2.4vw,19px);color:#dff0d3;max-width:52ch}
+    .actions{display:flex;gap:14px;flex-wrap:wrap}
+    .stars{margin-top:26px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px;color:#eaf6df}
+    .stars .s{color:var(--sun);letter-spacing:2px;font-size:17px}
+    .stars b{color:#fff}
+    .hero-card{position:relative;background:#ffffff14;border:1px solid #ffffff2e;border-radius:18px;padding:22px;backdrop-filter:blur(4px)}
+    .hero-card h3{font-size:16px;margin-bottom:14px;color:#fff}
+    .mini-form{display:grid;gap:10px}
+    .mini-form input,.mini-form select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #ffffff40;background:#ffffffeb;color:#182818;font-size:15px;font-family:inherit}
+    .mini-form input::placeholder{color:#6c7a6d}
+    .mini-form .btn{width:100%;text-align:center}
+    .mini-note{font-size:12px;color:#cfe4bf;text-align:center;margin-top:2px}
+
+    /* Trust strip */
+    .strip{background:#fff;border-bottom:1px solid var(--line)}
+    .strip .wrap{display:flex;gap:14px 30px;flex-wrap:wrap;justify-content:center;padding:18px 20px}
+    .strip .pt{display:flex;align-items:center;gap:8px;color:var(--muted);font-weight:600;font-size:14px}
+    .strip .pt .i{color:var(--green);font-size:16px}
+
+    /* Sections */
+    section{padding:66px 0}
+    .kicker{color:var(--green);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+    h2{font-size:clamp(26px,4vw,36px);color:var(--green-deep);line-height:1.15;letter-spacing:-.4px;margin-bottom:12px}
+    .sub{color:var(--muted);max-width:60ch;font-size:17px;margin-bottom:38px}
+    .center{text-align:center}
+    .center .sub{margin-left:auto;margin-right:auto}
+
+    /* Services */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .15s,box-shadow .15s,border-color .15s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,61,23,.1);border-color:var(--lime-soft)}
+    .card .ico{width:48px;height:48px;border-radius:12px;background:var(--leaf);display:grid;place-items:center;font-size:24px;margin-bottom:14px}
+    .card h3{color:var(--green-deep);font-size:18px;margin-bottom:7px}
+    .card p{color:var(--muted);font-size:15px}
+
+    /* Before / After gallery (CSS only) */
+    .gallery{background:var(--leaf)}
+    .ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .ba{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 18px rgba(20,61,23,.08);cursor:pointer;background:#fff}
+    .ba .pane{position:relative;height:210px}
+    .ba .layer{position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px}
+    .ba .before{background:
+      linear-gradient(180deg,#c9b98a 0%,#a89b6b 55%,#8f8a5a 100%);}
+    .ba .before:after{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 30% 40%,#7c7a45 0 8px,transparent 9px),
+      radial-gradient(circle at 62% 66%,#8a7d4d 0 10px,transparent 11px),
+      radial-gradient(circle at 78% 30%,#6f6c3d 0 7px,transparent 8px);opacity:.7}
+    .ba .after{background:
+      linear-gradient(180deg,#5fa83f 0%,#3f8a2e 60%,#2f7d34 100%);
+      clip-path:inset(0 0 0 100%);transition:clip-path .5s ease}
+    .ba .after:after{content:"";position:absolute;inset:0;background:
+      repeating-linear-gradient(115deg,#57a13a 0 14px,#4b9633 14px 28px);opacity:.45}
+    .ba:hover .after,.ba:focus-within .after{clip-path:inset(0 0 0 0%)}
+    .ba .tag{position:relative;z-index:2;background:#0d2a10cc;color:#fff;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;letter-spacing:.3px}
+    .ba .cap{padding:14px 16px;border-top:1px solid var(--line)}
+    .ba .cap h4{font-size:15px;color:var(--green-deep);margin-bottom:2px}
+    .ba .cap p{font-size:13px;color:var(--muted)}
+    .ba .swipe{position:absolute;top:12px;right:12px;z-index:3;background:#ffffffe6;color:var(--green-dark);font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px}
+    .ga-note{text-align:center;color:var(--muted);font-size:14px;margin-top:22px}
+
+    /* Why us / story */
+    .why{background:linear-gradient(160deg,var(--green-deep),var(--green-dark));color:#fff}
+    .why h2{color:#fff}
+    .why .sub{color:#d3e8c6}
+    .why-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+    .stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:6px}
+    .stat{background:#ffffff12;border:1px solid #ffffff26;border-radius:14px;padding:20px}
+    .stat .n{font-size:30px;font-weight:800;color:var(--lime-soft);line-height:1}
+    .stat .l{font-size:13px;color:#d3e8c6;margin-top:6px}
+    .why ul{list-style:none;display:grid;gap:14px}
+    .why li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#eaf6df}
+    .why li .ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--lime);color:var(--green-deep);display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:1px}
+
+    /* Quote / AI chat combo */
+    .capture{background:var(--cream)}
+    .cap-grid{display:grid;grid-template-columns:1fr;gap:26px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 8px 24px rgba(20,61,23,.06)}
+    .panel h3{color:var(--green-deep);font-size:20px;margin-bottom:6px}
+    .panel .p-sub{color:var(--muted);font-size:15px;margin-bottom:20px}
+    .field{margin-bottom:14px}
+    .field label{display:block;font-size:13px;font-weight:600;color:var(--green-deep);margin-bottom:6px}
+    .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fbfdf9;color:#182818}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(47,125,52,.15)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-btn{width:100%;text-align:center;margin-top:6px}
+    .form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+
+    /* Chat mock */
+    .chat{background:linear-gradient(165deg,#f4f9ef,#eaf4e1);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
+    .chat-head{display:flex;align-items:center;gap:11px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
+    .chat-av{width:40px;height:40px;border-radius:11px;background:linear-gradient(150deg,var(--green),var(--lime));display:grid;place-items:center;color:#fff;font-size:20px}
+    .chat-head h4{font-size:15px;color:var(--green-deep)}
+    .chat-head .on{font-size:12px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:6px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#3fb64a;box-shadow:0 0 0 3px rgba(63,182,74,.25)}
+    .bubbles{display:flex;flex-direction:column;gap:12px}
+    .bub{max-width:82%;padding:11px 15px;border-radius:15px;font-size:14.5px;line-height:1.45}
+    .bub.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px;color:#243425;align-self:flex-start}
+    .bub.usr{background:var(--green);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+    .chat-foot{margin-top:16px;display:flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 8px 8px 14px}
+    .chat-foot input{border:none;flex:1;font-size:14px;font-family:inherit;background:transparent;color:#182818}
+    .chat-foot input:focus{outline:none}
+    .chat-send{width:36px;height:36px;border-radius:9px;background:var(--green);color:#fff;border:none;font-size:16px;cursor:pointer;flex:none}
+
+    /* Reviews */
+    .reviews{background:var(--leaf-2)}
+    .rev-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+    .rev-badge{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 18px;display:inline-flex;align-items:center;gap:10px}
+    .rev-badge .g{font-weight:800;color:#4285F4;font-size:15px}
+    .rev-badge .num{font-weight:800;font-size:22px;color:var(--green-deep)}
+    .rev-badge .st{color:var(--sun);letter-spacing:1px}
+    .quote{background:#fff;border-radius:16px;padding:24px;border:1px solid var(--line);box-shadow:0 4px 14px rgba(20,61,23,.05)}
+    .quote .qs{color:var(--sun);letter-spacing:2px;font-size:15px;margin-bottom:10px}
+    .quote p{font-size:15px;color:#243425}
+    .quote .who{margin-top:14px;color:var(--muted);font-size:13px;font-weight:700}
+
+    /* Final CTA */
+    .cta-band{background:linear-gradient(150deg,var(--green),var(--green-dark));color:#fff;text-align:center}
+    .cta-band h2{color:#fff}
+    .cta-band p{color:#e2f1d7;margin:12px auto 28px;max-width:52ch;font-size:17px}
+    .cta-band .actions{justify-content:center}
+
+    /* Footer */
+    footer.f{padding:34px 0;background:var(--green-deep);color:#b9d3ac;font-size:13px}
+    footer.f .fg{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    footer.f b{color:#fff}
+    footer.f .disc{max-width:60ch;line-height:1.5;margin-top:14px;color:#8fb182;font-size:12px}
+
+    .demo-tag{position:fixed;bottom:12px;right:12px;background:#0e1a0f;color:var(--sun);font:600 11px/1 system-ui;padding:9px 13px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:50}
+
+    @media(min-width:720px){
+      .hide-sm{display:inline-block}
+      .hero-grid{grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:80px 0 88px}
+      .why-grid{grid-template-columns:1fr 1fr;gap:48px}
+      .cap-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="logo" href="#top"><span class="mark">🌿</span>LDK <b style="margin-left:4px">Lawn Services</b></a>
+      <div class="nav-r">
+        <a class="phone-link hide-sm" href="tel:+19135685013">(913) 568-5013<span>Mon–Fri 8–4</span></a>
+        <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">🌱 Serving Johnson County since 2007</span>
+        <h1>A greener lawn in <em>Overland Park</em> — without the phone tag.</h1>
+        <p class="lead">Full-service mowing, fertilization, cleanups and landscaping for Leawood, Overland Park &amp; the finest neighborhoods in Johnson County. Request your quote online, any hour — no waiting for business hours.</p>
+        <div class="actions">
+          <a class="btn btn-primary btn-lg" href="#quote">Request a Free Quote</a>
+          <a class="btn btn-ghost btn-lg" href="tel:+19135685013">📞 (913) 568-5013</a>
+        </div>
+        <div class="stars">
+          <span class="s">★★★★☆</span> <b>4.4</b> · 139 Google reviews · <span>17+ years, referral-built</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>⚡ Get your quote — 24/7</h3>
+        <form class="mini-form" onsubmit="return false">
+          <input type="text" placeholder="Your name" aria-label="Your name" />
+          <input type="text" placeholder="Property address or ZIP" aria-label="Property address" />
+          <select aria-label="Service needed">
+            <option>What do you need?</option>
+            <option>Weekly mowing</option>
+            <option>Fertilization program</option>
+            <option>Spring / fall cleanup</option>
+            <option>Landscaping &amp; beds</option>
+            <option>Irrigation</option>
+            <option>Something else</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Send my request →</button>
+          <p class="mini-note">Typical reply next business morning. After hours? Our AI assistant answers instantly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="pt"><span class="i">🗓️</span> Locally owned since 2007</div>
+      <div class="pt"><span class="i">⭐</span> 4.4★ · 139 reviews</div>
+      <div class="pt"><span class="i">🤝</span> Grown by referral</div>
+      <div class="pt"><span class="i">📍</span> Johnson County specialists</div>
+      <div class="pt"><span class="i">🌿</span> Full-service lawn &amp; landscape</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="center">
+        <p class="kicker">What we do</p>
+        <h2>One crew for the whole property</h2>
+        <p class="sub">From your first mow of the season to snow on the drive — LDK handles it all, so you're not juggling five different vendors.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ico">✂️</div><h3>Mowing &amp; maintenance</h3><p>Reliable weekly mowing, edging and trimming that keeps your lawn crisp all season.</p></div>
+        <div class="card"><div class="ico">🌱</div><h3>Fertilization &amp; weed control</h3><p>Custom feeding programs for the thick, deep-green turf Johnson County lawns are known for.</p></div>
+        <div class="card"><div class="ico">🍂</div><h3>Aeration, seeding &amp; cleanups</h3><p>Spring and fall cleanups, core aeration, overseeding and leaf removal on schedule.</p></div>
+        <div class="card"><div class="ico">🏡</div><h3>Landscaping &amp; beds</h3><p>Mulch, rock, sod, planting, trimming and drainage that lift your whole curb appeal.</p></div>
+        <div class="card"><div class="ico">💧</div><h3>Irrigation</h3><p>Sprinkler installs, tune-ups and repairs so every zone gets exactly what it needs.</p></div>
+        <div class="card"><div class="ico">❄️</div><h3>Snow removal</h3><p>Residential and commercial snow &amp; ice clearing to keep drives and lots safe all winter.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="center">
+        <p class="kicker">The LDK difference</p>
+        <h2>Before &amp; after, up close</h2>
+        <p class="sub">Hover (or tap) each project to reveal the transformation. Real LDK-style results across Johnson County properties.</p>
+      </div>
+      <div class="ba-grid">
+        <div class="ba" tabindex="0">
+          <div class="pane">
+            <span class="swipe">Hover to reveal →</span>
+            <div class="layer before"><span class="tag">Before</span></div>
+            <div class="layer after"><span class="tag">After</span></div>
+          </div>
+          <div class="cap"><h4>Tired turf → lush green lawn</h4><p>Overland Park · fertilization + overseeding program</p></div>
+        </div>
+        <div class="ba" tabindex="0">
+          <div class="pane">
+            <span class="swipe">Hover to reveal →</span>
+            <div class="layer before"><span class="tag">Before</span></div>
+            <div class="layer after"><span class="tag">After</span></div>
+          </div>
+          <div class="cap"><h4>Bare beds → fresh landscape</h4><p>Leawood · mulch, planting &amp; trimming</p></div>
+        </div>
+        <div class="ba" tabindex="0">
+          <div class="pane">
+            <span class="swipe">Hover to reveal →</span>
+            <div class="layer before"><span class="tag">Before</span></div>
+            <div class="layer after"><span class="tag">After</span></div>
+          </div>
+          <div class="cap"><h4>Patchy shade → thick sod</h4><p>Johnson County · sod install &amp; irrigation</p></div>
+        </div>
+      </div>
+      <p class="ga-note">A tap-to-reveal gallery keeps your best Instagram work working for you 24/7 — right where new customers decide.</p>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap why-grid">
+      <div>
+        <p class="kicker" style="color:var(--lime-soft)">Why LDK</p>
+        <h2>17 years of word-of-mouth in the neighborhoods that notice.</h2>
+        <p class="sub">Luke Koenig started LDK in 2007 and grew it almost entirely on referrals — the strongest proof there is. We know what Johnson County's most discerning homeowners expect, and we deliver it week after week.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="n">2007</div><div class="l">Family-owned &amp; local ever since</div></div>
+          <div class="stat"><div class="n">4.4★</div><div class="l">Across 139 Google reviews</div></div>
+          <div class="stat"><div class="n">17+ yrs</div><div class="l">Referral-driven reputation</div></div>
+          <div class="stat"><div class="n">1 crew</div><div class="l">Lawn, landscape &amp; snow — no runaround</div></div>
+        </div>
+      </div>
+      <div>
+        <ul>
+          <li><span class="ck">✓</span><span><b>Affluent-neighborhood expertise.</b> The standards that make a Leawood or Overland Park property shine are second nature to us.</span></li>
+          <li><span class="ck">✓</span><span><b>One point of contact.</b> Mowing, beds, irrigation and snow all under one dependable team.</span></li>
+          <li><span class="ck">✓</span><span><b>Consistency you can set a watch to.</b> Same-day-of-week service and quality equipment, every visit.</span></li>
+          <li><span class="ck">✓</span><span><b>Now easy to reach 24/7.</b> Request a quote or ask a question any time — not just Monday to Friday.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture" id="quote">
+    <div class="wrap">
+      <div class="center">
+        <p class="kicker">Become a customer in 60 seconds</p>
+        <h2>Request a quote — day or night</h2>
+        <p class="sub">No phone tag, no waiting for 8am Monday. Fill out the form and we'll follow up with a tailored quote. Have a quick question after hours? Our AI assistant is standing by.</p>
+      </div>
+      <div class="cap-grid">
+        <div class="panel">
+          <h3>Free quote request</h3>
+          <p class="p-sub">Tell us about your property and we'll take it from there.</p>
+          <form onsubmit="return false">
+            <div class="two">
+              <div class="field"><label>Name</label><input type="text" placeholder="First &amp; last" /></div>
+              <div class="field"><label>Phone</label><input type="tel" placeholder="(913) 000-0000" /></div>
+            </div>
+            <div class="field"><label>Property address</label><input type="text" placeholder="Street, city, ZIP" /></div>
+            <div class="two">
+              <div class="field"><label>Service</label>
+                <select>
+                  <option>Weekly mowing</option>
+                  <option>Fertilization program</option>
+                  <option>Cleanup / aeration</option>
+                  <option>Landscaping</option>
+                  <option>Irrigation</option>
+                  <option>Snow removal</option>
+                </select>
+              </div>
+              <div class="field"><label>Best time to reach you</label>
+                <select><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select>
+              </div>
+            </div>
+            <div class="field"><label>Anything else? (optional)</label><textarea rows="2" placeholder="Gate code, problem areas, timing…"></textarea></div>
+            <button class="btn btn-primary form-btn btn-lg" type="submit">Send my free quote request →</button>
+            <p class="form-note">Concept demo — this form is not connected. On your live site, requests would land straight in your inbox &amp; CRM.</p>
+          </form>
+        </div>
+
+        <div class="chat">
+          <div class="chat-head">
+            <div class="chat-av">🌿</div>
+            <div>
+              <h4>LDK Assistant</h4>
+              <div class="on"><span class="dot"></span> Online · answers 24/7</div>
+            </div>
+          </div>
+          <div class="bubbles">
+            <div class="bub bot">Hi! 👋 I'm the LDK after-hours assistant. What can I help with tonight?</div>
+            <div class="bub usr">Do you handle both mowing and mulch for a house in Leawood?</div>
+            <div class="bub bot">We sure do — LDK is full-service, so one crew covers weekly mowing, mulch &amp; bed work, and more. Want me to start a free quote for your Leawood address?</div>
+            <div class="bub usr">Yes please, it's a bit urgent before a party this weekend.</div>
+            <div class="bub bot">Got it. I've flagged this as time-sensitive and noted your address — Luke's team will reach out first thing to lock in a date. 🌱</div>
+          </div>
+          <div class="chat-foot">
+            <input type="text" placeholder="Ask about pricing, scheduling…" aria-label="Chat message" />
+            <button class="chat-send" type="button" aria-label="Send">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="kicker">Neighbors talk</p>
+      <div class="rev-top">
+        <h2 style="margin:0">Trusted across Johnson County</h2>
+        <div class="rev-badge"><span class="g">G</span><span class="num">4.4</span><span class="st">★★★★☆</span><span style="color:var(--muted);font-size:13px">139 reviews</span></div>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>“LDK has provided lawn care at my home for 17+ years — always prompt, efficient and quality work. High-quality equipment and top-notch results.”</p>
+          <div class="who">— Long-time client, Overland Park</div>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>“We've used LDK for a variety of services and they're always responsive and do high-quality work. Professional and knowledgeable — the best in our area.”</p>
+          <div class="who">— Karen M., Leawood</div>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>“From the minute I requested the quote, everything went perfect — the quality, the communication and the price. A great operation that won't disappoint.”</p>
+          <div class="who">— Dave R., Olathe</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <h2>Your lawn deserves the crew the neighbors already trust.</h2>
+      <p>Start a free quote in under a minute, any hour — or call during business hours. Either way, LDK makes it easy to get on the schedule.</p>
+      <div class="actions">
+        <a class="btn btn-ghost btn-lg" href="tel:+19135685013">📞 (913) 568-5013</a>
+        <a class="btn btn-primary btn-lg" href="#quote" style="background:#fff;color:var(--green-dark)">Request a Free Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="f">
+    <div class="wrap">
+      <div class="fg">
+        <div><b>LDK Lawn Services</b> · Overland Park, KS · Serving Johnson County since 2007</div>
+        <div>Lawn care · Landscaping · Irrigation · Snow removal</div>
+      </div>
+      <p class="disc">Concept preview by <b>Gigawatt</b> — a Kansas City web design &amp; AI studio. This is a redesign concept, not the official LDK Lawn Services website. Business facts (services, service area, ratings) are drawn from public sources; contact details shown for demonstration. Not affiliated with or endorsed by LDK Lawn Services.</p>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

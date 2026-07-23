@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Mountain Landscaping — Kansas City's Premium Hardscape Builders</title>
+  <meta name="description" content="Custom paver patios, retaining walls & outdoor kitchens in Overland Park and the KC metro. Craftsmanship-grade hardscaping at fair pricing. 4.9★, BBB A+." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --charcoal: #23262b;      /* deep mountain charcoal */
+      --slate: #3a4048;         /* slate gray */
+      --stone: #6b7079;         /* muted stone */
+      --sand: #f3ede4;          /* sandstone */
+      --sand-deep: #e7dccb;
+      --paper: #faf7f2;
+      --terra: #c15f34;         /* terracotta accent */
+      --terra-dark: #a34c26;
+      --amber: #d99a4e;         /* warm amber */
+      --text: #23262b;
+      --muted: #6b7079;
+      --line: #e3dccf;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.6; background: var(--paper); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .serif { font-family: 'Fraunces', Georgia, serif; }
+    a { color: inherit; }
+
+    /* Header */
+    header { background: rgba(250,247,242,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; }
+    .logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 21px; color: var(--charcoal); text-decoration: none; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; }
+    .logo .mk { width: 30px; height: 30px; flex: none; }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-phone { text-decoration: none; font-weight: 600; color: var(--slate); font-size: 15px; display: flex; align-items: center; gap: 7px; }
+    .nav-phone:hover { color: var(--terra); }
+    .cta { background: var(--terra); color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 9px; font-weight: 600; font-size: 15px; transition: background .15s, transform .15s; box-shadow: 0 2px 10px rgba(193,95,52,.25); }
+    .cta:hover { background: var(--terra-dark); transform: translateY(-1px); }
+    .nav-phone .lbl { display: none; }
+    @media (min-width: 620px) { .nav-phone .lbl { display: inline; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; color: #fff;
+      background:
+        radial-gradient(120% 90% at 85% -10%, rgba(217,154,78,.30) 0%, rgba(217,154,78,0) 55%),
+        linear-gradient(160deg, #2a2e34 0%, #23262b 45%, #1c1f23 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+      background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.03) 0 2px, transparent 2px 26px); }
+    .hero .wrap { position: relative; z-index: 2; padding: 78px 22px 88px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--amber); background: rgba(217,154,78,.10); border: 1px solid rgba(217,154,78,.3); padding: 6px 14px; border-radius: 999px; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(34px, 6vw, 60px); line-height: 1.05; letter-spacing: -.02em; font-weight: 600; max-width: 720px; }
+    .hero h1 em { font-style: italic; color: var(--amber); }
+    .hero p.lead { margin: 22px 0 32px; font-size: clamp(16px, 2vw, 19px); color: #d7d3cb; max-width: 560px; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 15px 28px; border-radius: 10px; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s, background .15s, border-color .15s; }
+    .btn-primary { background: var(--terra); color: #fff; box-shadow: 0 6px 22px rgba(193,95,52,.35); }
+    .btn-primary:hover { background: var(--terra-dark); transform: translateY(-2px); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+    .stars { margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: #d7d3cb; }
+    .stars .s { color: var(--amber); letter-spacing: 2px; font-size: 17px; }
+    .stars b { color: #fff; }
+    .stars .dot { opacity: .4; }
+
+    /* Trust strip */
+    .strip { background: var(--charcoal); border-top: 1px solid #34383f; }
+    .strip .wrap { display: flex; gap: 14px 34px; flex-wrap: wrap; justify-content: center; padding: 18px 22px; }
+    .strip span { color: #c9c4ba; font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 9px; }
+    .strip .ic { color: var(--amber); font-weight: 700; }
+
+    /* Sections */
+    section { padding: 78px 0; }
+    .kicker { color: var(--terra); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+    h2 { font-size: clamp(28px, 4vw, 40px); color: var(--charcoal); line-height: 1.1; letter-spacing: -.02em; font-weight: 600; margin-bottom: 14px; }
+    .sub { color: var(--muted); font-size: 17px; max-width: 620px; margin-bottom: 44px; }
+
+    /* Services */
+    .services { background: var(--paper); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 30px 28px; transition: transform .18s, box-shadow .18s, border-color .18s; position: relative; overflow: hidden; }
+    .card::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: linear-gradient(90deg, var(--terra), var(--amber)); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(35,38,43,.10); border-color: var(--sand-deep); }
+    .card:hover::before { transform: scaleX(1); }
+    .card .ico { width: 52px; height: 52px; border-radius: 12px; background: var(--sand); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px; }
+    .card h3 { font-size: 21px; color: var(--charcoal); margin-bottom: 9px; font-weight: 600; }
+    .card p { color: var(--muted); font-size: 15.5px; }
+    .card .tag { display: inline-block; margin-top: 14px; font-size: 12.5px; font-weight: 600; color: var(--terra); background: rgba(193,95,52,.08); padding: 4px 11px; border-radius: 999px; }
+
+    /* Story / why us */
+    .story { background: var(--charcoal); color: #ece8e1; }
+    .story .grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    @media (min-width: 900px) { .story .grid { grid-template-columns: 1.05fr .95fr; gap: 64px; } }
+    .story .kicker { color: var(--amber); }
+    .story h2 { color: #fff; }
+    .story p { color: #c9c4ba; font-size: 16.5px; margin-bottom: 16px; max-width: 540px; }
+    .story .pillars { display: grid; gap: 14px; margin-top: 30px; }
+    .pillar { display: flex; gap: 15px; align-items: flex-start; background: #2b2f35; border: 1px solid #383d45; border-radius: 13px; padding: 18px 20px; }
+    .pillar .n { flex: none; width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--terra), var(--amber)); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .pillar h4 { font-family: 'Inter', sans-serif; font-size: 16px; color: #fff; margin-bottom: 3px; font-weight: 600; }
+    .pillar p { font-size: 14.5px; margin: 0; color: #b4afa5; }
+
+    /* Process / estimate flow */
+    .flowcard { background: #2b2f35; border: 1px solid #3a3f47; border-radius: 20px; padding: 30px; }
+    .flowcard h3 { font-family: 'Inter', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--amber); margin-bottom: 22px; font-weight: 700; }
+    .step { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid #383d45; }
+    .step:last-child { border-bottom: none; }
+    .step .num { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--amber); color: var(--amber); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .step .txt strong { display: block; color: #fff; font-size: 15.5px; margin-bottom: 2px; }
+    .step .txt span { color: #b4afa5; font-size: 14px; }
+
+    /* Reviews */
+    .reviews { background: var(--sand); }
+    .rev-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 44px; }
+    .rev-head .sub { margin-bottom: 0; }
+    .badge-google { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; gap: 13px; box-shadow: 0 4px 16px rgba(35,38,43,.06); }
+    .badge-google .big { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 700; color: var(--charcoal); line-height: 1; }
+    .badge-google .s { color: var(--amber); font-size: 14px; letter-spacing: 1px; }
+    .badge-google .cnt { color: var(--muted); font-size: 12.5px; }
+    .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .quote { background: #fff; border-radius: 16px; padding: 28px; border: 1px solid var(--line); display: flex; flex-direction: column; }
+    .quote .qs { color: var(--amber); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .quote p { font-size: 16px; color: var(--slate); flex: 1; line-height: 1.6; }
+    .quote .who { margin-top: 18px; display: flex; align-items: center; gap: 12px; }
+    .quote .av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--stone), var(--slate)); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex: none; }
+    .quote .who b { display: block; font-size: 14.5px; color: var(--charcoal); }
+    .quote .who span { font-size: 13px; color: var(--muted); }
+
+    /* CTA band */
+    .cta-band { position: relative; overflow: hidden; color: #fff; text-align: center;
+      background: radial-gradient(90% 120% at 50% -20%, rgba(193,95,52,.5) 0%, rgba(193,95,52,0) 60%), linear-gradient(160deg, #2a2e34, #1c1f23); }
+    .cta-band .wrap { position: relative; z-index: 2; }
+    .cta-band h2 { color: #fff; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-band p { color: #d7d3cb; margin: 12px auto 30px; max-width: 500px; font-size: 17px; }
+    .cta-band .actions { justify-content: center; }
+    .cta-band .fine { margin-top: 20px; font-size: 13.5px; color: #9d988e; }
+
+    /* Footer */
+    footer.site { background: var(--charcoal); color: #9d988e; padding: 40px 0; font-size: 13.5px; }
+    footer.site .fgrid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
+    footer.site .fname { font-family: 'Fraunces', serif; font-size: 18px; color: #ece8e1; }
+    footer.site .disc { max-width: 520px; line-height: 1.55; }
+    footer.site a { color: var(--amber); text-decoration: none; }
+
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50; background: #17181b; color: #f5b518; font: 600 11.5px/1 'Inter', system-ui; padding: 9px 14px; border-radius: 999px; opacity: .94; box-shadow: 0 4px 14px rgba(0,0,0,.3); display: flex; align-items: center; gap: 6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#">
+        <svg class="mk" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#23262b"/>
+          <path d="M8 29 L17 13 L23 24 L26 19 L33 29 Z" fill="#d99a4e"/>
+          <path d="M8 29 L17 13 L20.5 19.4 L14 29 Z" fill="#c15f34"/>
+        </svg>
+        Mountain <span style="color:var(--terra);margin-left:-3px">Landscaping</span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19133130394">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="lbl">(913) 313-0394</span>
+        </a>
+        <a class="cta" href="#estimate">Get a Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">⛰ Premium Hardscaping · Overland Park & KC Metro</span>
+      <h1>Backyards in Johnson County, <em>built to outlast</em> the seasons.</h1>
+      <p class="lead">Custom paver patios, retaining walls, and outdoor kitchens engineered to the millimeter and installed by one crew — craftsmanship-grade work at pricing that stays fair.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#estimate">Start my free estimate →</a>
+        <a class="btn btn-ghost" href="tel:+19133130394">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (913) 313-0394
+        </a>
+      </div>
+      <div class="stars">
+        <span class="s">★★★★★</span> <b>4.9</b> on Google <span class="dot">·</span> 87 reviews <span class="dot">·</span> <b>BBB A+</b> Accredited
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span><span class="ic">✓</span> Licensed &amp; insured</span>
+      <span><span class="ic">✓</span> Building KC yards since 2014</span>
+      <span><span class="ic">✓</span> BBB A+ accredited</span>
+      <span><span class="ic">✓</span> Engineered retaining walls</span>
+      <span><span class="ic">✓</span> Written project warranty</span>
+    </div>
+  </div>
+
+  <section class="services">
+    <div class="wrap">
+      <p class="kicker">What We Build</p>
+      <h2>Hardscapes that become the reason you stay home.</h2>
+      <p class="sub">From a weekend firepit to a full outdoor living room, every project is designed, engineered for drainage, and installed by the same team start to finish.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="ico">🧱</div>
+          <h3>Paver Patios</h3>
+          <p>Precision-cut paver and natural-stone patios laid on a compacted base built to resist heaving through Kansas freeze-thaw winters.</p>
+          <span class="tag">Most requested</span>
+        </div>
+        <div class="card">
+          <div class="ico">⛰️</div>
+          <h3>Retaining Walls</h3>
+          <p>Engineered block and boulder walls that hold a grade, reclaim usable yard, and manage water where slopes used to erode.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔥</div>
+          <h3>Outdoor Kitchens &amp; Fire</h3>
+          <p>Built-in grills, bars, pergolas, and gas fire features that turn a patio into a full outdoor entertaining space.</p>
+          <span class="tag">Signature work</span>
+        </div>
+        <div class="card">
+          <div class="ico">🪜</div>
+          <h3>Walkways &amp; Steps</h3>
+          <p>Paver walkways, stone steps, and entry approaches that connect the yard and lift curb appeal from the street.</p>
+        </div>
+        <div class="card">
+          <div class="ico">💡</div>
+          <h3>Landscape &amp; Lighting</h3>
+          <p>Planting design and low-voltage lighting that frame the hardscape and keep the space usable long after sunset.</p>
+        </div>
+        <div class="card">
+          <div class="ico">💧</div>
+          <h3>Grading &amp; Drainage</h3>
+          <p>Regrading, French drains, and downspout solutions so water moves away from the house — not into your new patio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <p class="kicker">Why Homeowners Choose Us</p>
+          <h2>The best in KC for quality work — at pricing that stays fair.</h2>
+          <p>Since 2014 we've built a reputation across Overland Park, Leawood, and Olathe on one idea: premium hardscaping shouldn't require a premium runaround. Every wall is engineered, every patio has a plan, and every quote is honest.</p>
+          <p>Most of our $15k–$50k projects start with a neighbor who saw our work two doors down. That's the standard we protect on every job.</p>
+          <div class="pillars">
+            <div class="pillar">
+              <div class="n">📐</div>
+              <div><h4>Designed before we dig</h4><p>You see the layout, materials, and grade plan before a single paver is cut.</p></div>
+            </div>
+            <div class="pillar">
+              <div class="n">🤝</div>
+              <div><h4>Fair, itemized pricing</h4><p>No vague bids. You know what each part of the project costs and why.</p></div>
+            </div>
+            <div class="pillar">
+              <div class="n">👷</div>
+              <div><h4>One crew, start to finish</h4><p>The team that quotes your project is the team that builds it — no subcontractor roulette.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="flowcard">
+          <h3>How your estimate works</h3>
+          <div class="step">
+            <div class="num">1</div>
+            <div class="txt"><strong>Tell us about the space</strong><span>Share a few photos and your vision online — 2 minutes, day or night.</span></div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div class="txt"><strong>On-site design consult</strong><span>We walk the yard, take measurements, and talk materials and budget.</span></div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div class="txt"><strong>Detailed proposal</strong><span>A clear, itemized quote with your layout and material selections.</span></div>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <div class="txt"><strong>We build it</strong><span>One crew, a firm timeline, and a spotless site when we leave.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="rev-head">
+        <div>
+          <p class="kicker">Neighbors Talk</p>
+          <h2>Reviewed by the yards next door.</h2>
+          <p class="sub">Homeowners across Overland Park, Olathe, and Kansas City on what it's like to work with us.</p>
+        </div>
+        <div class="badge-google">
+          <div>
+            <div class="big">4.9</div>
+            <div class="s">★★★★★</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:14px;color:var(--charcoal)">Google Reviews</div>
+            <div class="cnt">87 verified reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"They did a great job on our new patio and stone walls. They do it all — many services, very reliable, and reasonably priced. Couldn't recommend them more."</p>
+          <div class="who"><div class="av">PE</div><div><b>Peggy E.</b><span>Overland Park, KS</span></div></div>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"Professional throughout the whole process and finished the project quickly, exactly as promised. The retaining wall completely changed our backyard."</p>
+          <div class="who"><div class="av">JM</div><div><b>Jeff M.</b><span>Kansas City, MO</span></div></div>
+        </div>
+        <div class="quote">
+          <div class="qs">★★★★★</div>
+          <p>"Very fast and polite. Showed up on time every single day and cleaned up after themselves. The quality of the work speaks for itself."</p>
+          <div class="who"><div class="av">AG</div><div><b>Amy G.</b><span>Olathe, KS</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="estimate">
+    <div class="wrap">
+      <p class="kicker" style="color:var(--amber)">Let's Plan Your Project</p>
+      <h2>Ready to see what your backyard could become?</h2>
+      <p>Start your free estimate online in about two minutes, or call and talk it through. Reach out after hours and our assistant captures your details so nothing slips — a real person follows up next business day.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+19133130394">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (913) 313-0394
+        </a>
+        <a class="btn btn-ghost" href="#estimate">Request a callback</a>
+      </div>
+      <p class="fine">Serving Overland Park · Leawood · Olathe · Lenexa · Prairie Village · the greater KC metro</p>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap fgrid">
+      <div class="fname">Mountain Landscaping</div>
+      <div class="disc">Concept preview by <strong style="color:#ece8e1">Gigawatt</strong> — a Kansas City web design &amp; AI studio. This is a design concept for Mountain Landscaping Inc. of Overland Park, KS, and is not the live website. Details shown for demonstration only.</div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

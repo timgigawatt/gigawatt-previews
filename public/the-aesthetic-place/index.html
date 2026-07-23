@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="The Aesthetic Place — Leawood's 5.0-star med spa for natural-looking Botox, filler & wellness by expert RN injector Kristen Kneidel. Book a consult in Kansas City.">
+<title>The Aesthetic Place — Leawood's Med Spa for Naturally Beautiful Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#faf6f1;
+    --cream:#f3ebe2;
+    --blush:#efd9d2;
+    --blush-deep:#e3bcb2;
+    --nude:#e7d3c4;
+    --taupe:#8c7a6b;
+    --taupe-deep:#6b5c4f;
+    --ink:#3a322c;
+    --ink-soft:#5c5148;
+    --bronze:#b08454;
+    --bronze-deep:#9a6f43;
+    --rosegold:#c99a86;
+    --rosegold-deep:#b77f68;
+    --line:rgba(140,122,107,.22);
+    --white:#fffdfb;
+    --shadow:0 24px 60px -28px rgba(107,92,79,.45);
+    --shadow-sm:0 12px 30px -18px rgba(107,92,79,.5);
+    --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans:'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.65;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:.005em}
+  p{color:var(--ink-soft)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{width:min(1160px,92vw);margin-inline:auto}
+  .eyebrow{
+    font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--bronze-deep);
+  }
+
+  /* ---- Buttons ---- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+    font-family:var(--sans);font-weight:500;font-size:.92rem;letter-spacing:.06em;
+    padding:.95em 1.7em;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    text-transform:uppercase;
+  }
+  .btn-primary{
+    background:linear-gradient(120deg,var(--rosegold) 0%,var(--bronze) 55%,var(--bronze-deep) 100%);
+    color:#fff;box-shadow:0 14px 30px -12px rgba(154,111,67,.65);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 38px -12px rgba(154,111,67,.7)}
+  .btn-ghost{border-color:var(--taupe);color:var(--taupe-deep);background:rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:var(--white);transform:translateY(-2px)}
+  .btn-lg{font-size:1rem;padding:1.05em 2.1em}
+
+  /* ---- Header ---- */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    background:rgba(250,246,241,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0;gap:1rem}
+  .brand{display:flex;align-items:center;gap:.7rem}
+  .brand-mark{
+    width:42px;height:42px;border-radius:50%;flex:none;
+    background:radial-gradient(circle at 32% 30%,#f6e7df,var(--rosegold) 60%,var(--bronze-deep));
+    display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:1.25rem;font-weight:600;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 8px 18px -10px rgba(154,111,67,.7);
+  }
+  .brand-txt{display:flex;flex-direction:column;line-height:1.05}
+  .brand-txt b{font-family:var(--serif);font-weight:600;font-size:1.18rem;letter-spacing:.01em}
+  .brand-txt span{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe)}
+  .nav-links{display:none;gap:2rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--bronze-deep)}
+  .head-cta{display:flex;align-items:center;gap:1rem}
+  .head-phone{display:none;font-size:.9rem;letter-spacing:.05em;color:var(--taupe-deep);font-weight:400}
+  .head-phone b{color:var(--ink);font-weight:500}
+  @media(min-width:900px){
+    .nav-links{display:flex}
+    .head-phone{display:inline-flex;flex-direction:column;text-align:right;line-height:1.2}
+  }
+
+  /* ---- Hero ---- */
+  .hero{position:relative;overflow:hidden;padding:clamp(3rem,7vw,6rem) 0 clamp(3.5rem,7vw,6rem)}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(60% 60% at 82% 12%,rgba(233,211,196,.85),transparent 60%),
+      radial-gradient(50% 55% at 8% 88%,rgba(239,217,210,.7),transparent 60%),
+      linear-gradient(160deg,var(--ivory),var(--cream));
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(min-width:940px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.5rem);letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--bronze-deep)}
+  .hero .lede{font-size:clamp(1.05rem,2.1vw,1.22rem);max-width:34ch;margin:1.4rem 0 1.9rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+  .stars{display:flex;align-items:center;gap:.7rem;margin-top:1.9rem;flex-wrap:wrap}
+  .stars .s{color:var(--bronze);letter-spacing:.12em;font-size:1.1rem}
+  .stars small{color:var(--ink-soft);font-size:.86rem;letter-spacing:.04em}
+  .stars b{color:var(--ink);font-weight:500}
+
+  /* hero visual — CSS only portrait card */
+  .hero-art{position:relative;min-height:clamp(360px,52vw,540px)}
+  .portrait{
+    position:absolute;inset:0;border-radius:26px;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 30% 18%,#f7e9e2 0%,var(--blush) 42%,var(--rosegold) 100%);
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,.6);
+  }
+  .portrait::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(38% 34% at 62% 30%,rgba(255,255,255,.55),transparent 60%),
+      linear-gradient(200deg,transparent 40%,rgba(107,92,79,.25) 100%);
+    mix-blend-mode:screen;
+  }
+  .portrait .glyph{
+    position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);
+    font-family:var(--serif);font-size:clamp(6rem,18vw,11rem);color:rgba(255,255,255,.5);
+    font-weight:500;font-style:italic;
+  }
+  .float-card{
+    position:absolute;background:var(--white);border-radius:16px;padding:.9rem 1.1rem;
+    box-shadow:var(--shadow-sm);border:1px solid var(--line);z-index:2;
+    display:flex;align-items:center;gap:.7rem;font-size:.8rem;
+  }
+  .float-card b{font-family:var(--sans);font-weight:600;color:var(--ink);display:block;font-size:.92rem}
+  .float-card span{color:var(--taupe);letter-spacing:.03em}
+  .fc-1{top:8%;left:-4%}
+  .fc-2{bottom:7%;right:-3%}
+  .fc-ico{
+    width:36px;height:36px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:1.05rem;
+    background:linear-gradient(135deg,var(--blush),var(--rosegold));color:#fff;
+  }
+  @media(max-width:520px){.fc-1{left:2%}.fc-2{right:2%}}
+
+  /* ---- Trust strip ---- */
+  .trust{background:var(--ink);color:#efe6dd}
+  .trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 1rem;padding:1.8rem 0}
+  @media(min-width:760px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
+  .trust-item{text-align:center}
+  .trust-item .n{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.2rem);color:#fff;font-weight:600;line-height:1}
+  .trust-item .n em{font-style:normal;color:var(--rosegold)}
+  .trust-item .l{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#c9b8a8;margin-top:.5rem}
+
+  /* ---- Sections ---- */
+  section.pad{padding:clamp(3.6rem,8vw,6.5rem) 0}
+  .sec-head{max-width:640px;margin-bottom:clamp(2rem,4vw,3rem)}
+  .sec-head.center{margin-inline:auto;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,4.6vw,3.1rem);margin:.6rem 0 .9rem}
+  .sec-head p{font-size:1.05rem}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:1.1rem}
+  @media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+  .svc{
+    background:var(--white);border:1px solid var(--line);border-radius:20px;padding:1.9rem 1.6rem;
+    position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s;
+  }
+  .svc::before{
+    content:"";position:absolute;left:0;top:0;height:3px;width:100%;
+    background:linear-gradient(90deg,var(--rosegold),var(--bronze));transform:scaleX(0);transform-origin:left;
+    transition:transform .35s ease;
+  }
+  .svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:var(--blush-deep)}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc-ico{
+    width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:1.1rem;
+    background:linear-gradient(135deg,var(--cream),var(--blush));color:var(--bronze-deep);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);
+  }
+  .svc h3{font-size:1.42rem;margin-bottom:.4rem}
+  .svc p{font-size:.94rem}
+  .svc .more{display:inline-block;margin-top:.9rem;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze-deep);font-weight:500}
+
+  /* Local authority note */
+  .authority{
+    margin-top:2.2rem;background:linear-gradient(135deg,var(--cream),var(--ivory));
+    border:1px dashed var(--blush-deep);border-radius:18px;padding:1.4rem 1.6rem;
+    font-size:.92rem;color:var(--ink-soft);display:flex;gap:1rem;align-items:flex-start;
+  }
+  .authority .pin{font-size:1.3rem;flex:none}
+
+  /* Story / Why us */
+  .story{background:linear-gradient(165deg,var(--blush) 0%,var(--cream) 55%,var(--ivory) 100%)}
+  .story-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(min-width:900px){.story-grid{grid-template-columns:.9fr 1.1fr}}
+  .story-visual{position:relative;min-height:clamp(320px,44vw,460px)}
+  .story-frame{
+    position:absolute;inset:0;border-radius:22px;
+    background:radial-gradient(110% 90% at 70% 20%,#f8ece5,var(--rosegold) 90%);
+    box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);overflow:hidden;
+  }
+  .story-frame .initials{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    font-family:var(--serif);font-style:italic;font-size:clamp(4.5rem,13vw,8rem);color:rgba(255,255,255,.6);font-weight:500;
+  }
+  .story-badge{
+    position:absolute;bottom:6%;left:50%;transform:translateX(-50%);
+    background:var(--white);border-radius:14px;padding:.8rem 1.3rem;box-shadow:var(--shadow-sm);text-align:center;white-space:nowrap;
+  }
+  .story-badge b{font-family:var(--serif);font-size:1.15rem;color:var(--ink);display:block}
+  .story-badge span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe)}
+  .story h2{font-size:clamp(2rem,4.6vw,3rem);margin:.7rem 0 1.1rem}
+  .story blockquote{
+    font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--taupe-deep);
+    border-left:2px solid var(--bronze);padding-left:1.1rem;margin:1.5rem 0;line-height:1.4;
+  }
+  .cred-list{display:grid;gap:.7rem;margin-top:1.3rem}
+  .cred-list li{list-style:none;display:flex;gap:.7rem;align-items:flex-start;font-size:.96rem;color:var(--ink-soft)}
+  .cred-list .tick{color:var(--bronze-deep);font-weight:600;flex:none}
+
+  /* Before / after gallery (CSS only) */
+  .ba-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
+  @media(min-width:680px){.ba-grid{grid-template-columns:repeat(3,1fr)}}
+  .ba-card{
+    border-radius:18px;overflow:hidden;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow-sm);
+  }
+  .ba-stage{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .ba-half{position:absolute;top:0;height:100%;width:50%;display:grid;place-items:end center;padding-bottom:.6rem}
+  .ba-before{left:0;background:linear-gradient(160deg,#d9c7b8,#b8a290)}
+  .ba-after{right:0;background:linear-gradient(160deg,#f7e6de,var(--rosegold))}
+  .ba-half span{
+    font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;
+    background:rgba(58,50,44,.4);padding:.28em .8em;border-radius:999px;backdrop-filter:blur(2px);
+  }
+  .ba-divider{
+    position:absolute;top:0;left:50%;transform:translateX(-50%);height:100%;width:2px;
+    background:rgba(255,255,255,.85);z-index:3;
+  }
+  .ba-divider::after{
+    content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    background:#fff;color:var(--bronze-deep);width:34px;height:34px;border-radius:50%;
+    display:grid;place-items:center;font-size:.85rem;letter-spacing:-.05em;box-shadow:var(--shadow-sm);
+  }
+  .ba-face{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:3rem;z-index:2;filter:saturate(.9)}
+  .ba-meta{padding:1rem 1.2rem}
+  .ba-meta b{font-family:var(--serif);font-size:1.2rem;display:block;color:var(--ink)}
+  .ba-meta span{font-size:.82rem;color:var(--taupe)}
+  .ba-note{text-align:center;font-size:.8rem;color:var(--taupe);margin-top:1.6rem;font-style:italic}
+
+  /* Reviews */
+  .reviews{background:var(--ink);color:#f0e7de}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head p{color:#cdbcac}
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:1.3rem}
+  @media(min-width:820px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{
+    background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid rgba(201,154,134,.28);border-radius:20px;padding:1.7rem 1.5rem;
+  }
+  .rev .s{color:var(--rosegold);letter-spacing:.15em;margin-bottom:.8rem}
+  .rev p{color:#eaddd2;font-size:1.02rem;font-style:italic;font-family:var(--serif)}
+  .rev .who{margin-top:1.1rem;font-size:.82rem;letter-spacing:.06em;color:#c9b8a8;font-family:var(--sans);font-style:normal}
+  .rev .who b{color:#fff;font-weight:500}
+
+  /* Concierge */
+  .concierge{background:linear-gradient(135deg,var(--cream),var(--ivory))}
+  .conc-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,4vw,3rem);align-items:center}
+  @media(min-width:900px){.conc-grid{grid-template-columns:1.05fr .95fr}}
+  .chat{
+    background:var(--white);border-radius:22px;border:1px solid var(--line);box-shadow:var(--shadow);
+    overflow:hidden;max-width:420px;margin-inline:auto;width:100%;
+  }
+  .chat-top{background:linear-gradient(120deg,var(--rosegold),var(--bronze-deep));color:#fff;padding:1rem 1.2rem;display:flex;align-items:center;gap:.7rem}
+  .chat-top .dot{width:9px;height:9px;border-radius:50%;background:#8ff0b0;box-shadow:0 0 0 3px rgba(143,240,176,.3)}
+  .chat-top b{font-weight:500;letter-spacing:.02em}
+  .chat-top small{margin-left:auto;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .chat-body{padding:1.2rem;display:grid;gap:.8rem;background:var(--ivory)}
+  .bub{padding:.7rem 1rem;border-radius:16px;font-size:.9rem;max-width:82%;line-height:1.5}
+  .bub.ai{background:var(--white);border:1px solid var(--line);border-bottom-left-radius:5px;color:var(--ink-soft)}
+  .bub.me{background:linear-gradient(120deg,var(--blush),var(--nude));color:var(--ink);margin-left:auto;border-bottom-right-radius:5px}
+  .chat-foot{padding:.8rem 1.2rem;border-top:1px solid var(--line);display:flex;gap:.6rem;align-items:center;font-size:.82rem;color:var(--taupe)}
+  .chat-foot .pill{margin-left:auto;background:var(--cream);border-radius:999px;padding:.4em 1em;font-size:.72rem;color:var(--bronze-deep);letter-spacing:.08em}
+
+  /* Final CTA */
+  .final{position:relative;overflow:hidden;color:#fff;text-align:center;padding:clamp(3.5rem,8vw,6rem) 0}
+  .final::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(60% 80% at 20% 10%,rgba(201,154,134,.9),transparent 60%),
+      radial-gradient(60% 80% at 90% 90%,rgba(176,132,84,.85),transparent 60%),
+      linear-gradient(140deg,var(--taupe-deep),var(--ink));
+  }
+  .final h2{font-size:clamp(2.2rem,5.5vw,3.6rem);color:#fff;max-width:20ch;margin-inline:auto}
+  .final p{color:#f0e3d8;font-size:1.1rem;margin:1.1rem auto 2rem;max-width:46ch}
+  .final .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.08)}
+  .final .btn-ghost:hover{background:rgba(255,255,255,.16)}
+  .final-phone{margin-top:1.6rem;font-size:.9rem;letter-spacing:.06em;color:#e9d9cc}
+  .final-phone b{color:#fff}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:#c9b8a8;padding:3rem 0 2rem;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:1.8rem;padding-bottom:2rem;border-bottom:1px solid rgba(201,154,134,.2)}
+  @media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  footer.site h4{font-family:var(--serif);color:#fff;font-size:1.4rem;margin-bottom:.6rem}
+  footer.site a:hover{color:var(--rosegold)}
+  .foot-list{display:grid;gap:.4rem;list-style:none}
+  .foot-list .cap{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);margin-bottom:.3rem}
+  .foot-bottom{padding-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;font-size:.78rem;color:#8c7a6b}
+  .concept-note{color:#a8937f;max-width:60ch}
+
+  /* Concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:200;
+    background:var(--ink);color:#fff;border:1px solid var(--bronze);
+    font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;
+    padding:.55em 1em;border-radius:999px;box-shadow:0 10px 26px -10px rgba(0,0,0,.5);
+    display:flex;align-items:center;gap:.45em;
+  }
+  .concept-badge b{color:var(--rosegold);font-weight:500}
+
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="The Aesthetic Place home">
+      <span class="brand-mark">A</span>
+      <span class="brand-txt">
+        <b>The Aesthetic Place</b>
+        <span>Leawood · Kansas City</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#story">Your Injector</a>
+      <a href="#gallery">Results</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+19133791111">
+        <span style="font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)">Call the studio</span>
+        <b>(913) 379-1111</b>
+      </a>
+      <a class="btn btn-primary" href="#book">Book a Consult</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Leawood · Overland Park · Kansas City</span>
+        <h1>Naturally you,<br>only more <em>radiant</em>.</h1>
+        <p class="lede">Expert, natural-looking Botox, filler, and skin treatments — placed by an RN injector who listens first and never overdoes it.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#book">Book Your Consultation</a>
+          <a class="btn btn-ghost btn-lg" href="tel:+19133791111">📞 (913) 379-1111</a>
+        </div>
+        <div class="stars">
+          <span class="s">★★★★★</span>
+          <small><b>5.0</b> on Google · <b>265</b> five-star reviews</small>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="portrait"><span class="glyph">A</span></div>
+        <div class="float-card fc-1">
+          <span class="fc-ico">💉</span>
+          <span><b>RN Injector</b><span>Since 2014</span></span>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-ico">✨</span>
+          <span><b>Natural results</b><span>No frozen look</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-item"><div class="n">5.0<em>★</em></div><div class="l">Google Rating</div></div>
+      <div class="trust-item"><div class="n">265</div><div class="l">Five-Star Reviews</div></div>
+      <div class="trust-item"><div class="n">RN<em>·</em>BSN</div><div class="l">Nurse Injector</div></div>
+      <div class="trust-item"><div class="n">2020</div><div class="l">Leawood Studio</div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pad" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Treatments, tailored to your face — not a template.</h2>
+        <p>Every plan starts with a real consultation. We recommend only what suits your features and goals, so results look refreshed, balanced, and unmistakably like you.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="svc-ico">🧴</div>
+          <h3>Botox &amp; Dysport</h3>
+          <p>Soft, natural wrinkle relief for forehead lines, crow's feet, and the "11s" — dosed to keep your expressions.</p>
+          <span class="more">Wrinkle Relaxers ›</span>
+        </article>
+        <article class="svc">
+          <div class="svc-ico">💧</div>
+          <h3>Dermal Fillers</h3>
+          <p>Cheeks, chin, jawline, and under-eyes restored with a full range of hyaluronic-acid fillers for structure and balance.</p>
+          <span class="more">Facial Balancing ›</span>
+        </article>
+        <article class="svc">
+          <div class="svc-ico">💋</div>
+          <h3>Lip Filler</h3>
+          <p>Subtle hydration to defined volume — shaped to your proportions. Fuller, never overfilled.</p>
+          <span class="more">Lip Enhancement ›</span>
+        </article>
+        <article class="svc">
+          <div class="svc-ico">🌿</div>
+          <h3>Skincare &amp; Facials</h3>
+          <p>Medical facials, chemical peels, and microneedling to smooth texture, brighten tone, and build collagen.</p>
+          <span class="more">Glow Treatments ›</span>
+        </article>
+        <article class="svc">
+          <div class="svc-ico">⚖️</div>
+          <h3>Weight Loss &amp; Wellness</h3>
+          <p>Physician-guided weight management and wellness support to help you feel as good as you look.</p>
+          <span class="more">Wellness Programs ›</span>
+        </article>
+        <article class="svc">
+          <div class="svc-ico">✨</div>
+          <h3>Sculptra &amp; Collagen</h3>
+          <p>Bio-stimulators like Sculptra and Kybella for gradual, natural rejuvenation that improves over time.</p>
+          <span class="more">Regenerative ›</span>
+        </article>
+      </div>
+      <div class="authority">
+        <span class="pin">📍</span>
+        <div><b style="color:var(--ink);font-weight:600">Built for Kansas City faces.</b> One studio, real local expertise — not a chain reading from a script. Dedicated service pages for Leawood, Overland Park, and Kansas City each speak to the neighborhoods we serve, so you always know who's actually treating you.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="pad story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <div class="story-frame"><span class="initials">KK</span></div>
+        <div class="story-badge"><b>Kristen Kneidel</b><span>RN, BSN · Nurse Injector</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">Why The Aesthetic Place</span>
+        <h2>An artist's eye. A nurse's care.</h2>
+        <p>Kristen Kneidel has been a registered nurse since 1997 and found her passion for injecting in 2014. She founded The Aesthetic Place in Leawood on one belief: that great aesthetics should look like <em>you</em>, refreshed — never done.</p>
+        <blockquote>"She listens to what I want and doesn't overdo it — a truly natural look."</blockquote>
+        <ul class="cred-list">
+          <li><span class="tick">✓</span> Clinical RN, BSN — 25+ years of nursing, injecting since 2014</li>
+          <li><span class="tick">✓</span> Conservative, artistry-first approach that respects your features</li>
+          <li><span class="tick">✓</span> Honest consultations — she'll tell you when <em>less</em> is the right call</li>
+          <li><span class="tick">✓</span> Trusted by clients who have stayed with her for years</li>
+        </ul>
+        <a class="btn btn-primary" href="#book" style="margin-top:1.6rem">Meet with Kristen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER GALLERY -->
+  <section class="pad" id="gallery">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">Real, natural results</span>
+        <h2>Subtle changes, striking difference.</h2>
+        <p>Slide-style before-and-after previews of the balanced, natural outcomes our clients love.</p>
+      </div>
+      <div class="ba-grid">
+        <article class="ba-card">
+          <div class="ba-stage">
+            <div class="ba-half ba-before"><span>Before</span></div>
+            <div class="ba-half ba-after"><span>After</span></div>
+            <div class="ba-face">☺</div>
+            <div class="ba-divider"></div>
+          </div>
+          <div class="ba-meta"><b>Lip Filler</b><span>Hydrated, defined — proportioned to her smile</span></div>
+        </article>
+        <article class="ba-card">
+          <div class="ba-stage">
+            <div class="ba-half ba-before"><span>Before</span></div>
+            <div class="ba-half ba-after"><span>After</span></div>
+            <div class="ba-face">🙂</div>
+            <div class="ba-divider"></div>
+          </div>
+          <div class="ba-meta"><b>Tox · Forehead &amp; 11s</b><span>Smoother lines, expressions intact</span></div>
+        </article>
+        <article class="ba-card">
+          <div class="ba-stage">
+            <div class="ba-half ba-before"><span>Before</span></div>
+            <div class="ba-half ba-after"><span>After</span></div>
+            <div class="ba-face">😌</div>
+            <div class="ba-divider"></div>
+          </div>
+          <div class="ba-meta"><b>Cheek &amp; Chin Filler</b><span>Restored structure and facial balance</span></div>
+        </article>
+      </div>
+      <p class="ba-note">Illustrative concept previews — a full, consented client gallery would appear here on the live site.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pad reviews" id="reviews">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow" style="color:var(--rosegold)">5.0 ★ · 265 reviews</span>
+        <h2>Kansas City keeps coming back.</h2>
+        <p>What clients across Leawood and Johnson County say about their results.</p>
+      </div>
+      <div class="rev-grid">
+        <article class="rev">
+          <div class="s">★★★★★</div>
+          <p>"She is always very good about listening to what I want and not overdoing it. Very natural look."</p>
+          <div class="who"><b>Megan H.</b> · Leawood, KS</div>
+        </article>
+        <article class="rev">
+          <div class="s">★★★★★</div>
+          <p>"Kristen keeps everything natural to my individuality and brings out more beauty within. Symmetry I didn't know I could have."</p>
+          <div class="who"><b>Alyssa T.</b> · Overland Park, KS</div>
+        </article>
+        <article class="rev">
+          <div class="s">★★★★★</div>
+          <p>"Beautiful place with the best injector. Professional, knowledgeable, and always aiming for a natural look."</p>
+          <div class="who"><b>Rachel D.</b> · Kansas City, MO</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCIERGE -->
+  <section class="pad concierge">
+    <div class="wrap conc-grid">
+      <div>
+        <span class="eyebrow">After-hours concierge</span>
+        <h2 style="font-size:clamp(2rem,4.6vw,3rem);margin:.6rem 0 1rem">Questions at 10pm? Get an answer instantly.</h2>
+        <p style="font-size:1.05rem">Most people research treatments after work — long after the phones go quiet. Our AI concierge answers common questions, explains what each treatment does, and books your consult around the clock, then hands everything to Kristen's team for the morning.</p>
+        <ul class="cred-list" style="margin-top:1.4rem">
+          <li><span class="tick">✓</span> Answers pricing, downtime, and "which treatment is right for me?"</li>
+          <li><span class="tick">✓</span> Books consultations 24/7 — no credit card required to hold a spot</li>
+          <li><span class="tick">✓</span> Captures every after-hours lead instead of losing it to voicemail</li>
+        </ul>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">
+          <span class="dot"></span><b>Aesthetic Place Concierge</b><small>Online</small>
+        </div>
+        <div class="chat-body">
+          <div class="bub ai">Hi! I'm here after hours. What are you hoping to improve? 💫</div>
+          <div class="bub me">First time with lip filler — is it painful?</div>
+          <div class="bub ai">Great question! We use numbing for comfort, and Kristen shapes gradually for a natural result. Want to book a free consult to talk options?</div>
+          <div class="bub me">Yes — this Thursday evening?</div>
+          <div class="bub ai">Thursday 6:30pm is open. No card needed to reserve. Shall I book it? ✨</div>
+        </div>
+        <div class="chat-foot">
+          Powered by Gigawatt AI
+          <span class="pill">Booking · no card</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" id="book">
+    <div class="wrap">
+      <h2>Ready to look like the best version of you?</h2>
+      <p>Book a consultation with Kristen — no pressure, no credit card to reserve, just an honest plan for natural-looking results.</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a class="btn btn-primary btn-lg" href="tel:+19133791111">Book Your Consultation</a>
+        <a class="btn btn-ghost btn-lg" href="tel:+19133791111">📞 Call (913) 379-1111</a>
+      </div>
+      <div class="final-phone">The Aesthetic Place · 5416 W 151st St, Leawood, KS · <b>Mon 9–7:30, Tue–Fri 9–5</b></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>The Aesthetic Place</h4>
+        <p style="color:#c9b8a8;max-width:34ch">A Leawood med spa where expert care of the face and self meet. Natural-looking aesthetics for Kansas City.</p>
+      </div>
+      <div>
+        <ul class="foot-list">
+          <li class="cap">Visit</li>
+          <li>5416 W 151st St</li>
+          <li>Leawood, KS 66224</li>
+          <li><a href="tel:+19133791111">(913) 379-1111</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="foot-list">
+          <li class="cap">Explore</li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#story">Your Injector</a></li>
+          <li><a href="#gallery">Results</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="concept-note">⚡ Concept preview by Gigawatt — a design study, not the live website. Business details shown for illustration; not affiliated with or a replacement for the official site.</span>
+      <span>Kansas City web design + AI</span>
+    </div>
+  </div>
+</footer>
+
+<a class="concept-badge" href="#top">⚡ <b>concept</b> preview</a>
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Moon Orthodontics — braces & Invisalign for kids, teens & adults in Overland Park and Olathe, KS. Free consultation with Dr. Joe Moon. A smile you'll love to the moon and back.">
+<title>Moon Orthodontics — Braces & Invisalign in Overland Park & Olathe, KS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#06b6c9;
+    --teal-deep:#0891a3;
+    --teal-ink:#053e46;
+    --violet:#7c5cff;
+    --violet-deep:#5b3ee6;
+    --mint:#e6fbfb;
+    --cloud:#f4fbfc;
+    --ink:#0d2a30;
+    --slate:#496066;
+    --white:#ffffff;
+    --gold:#ffca3a;
+    --line:rgba(6,182,201,.14);
+    --shadow:0 18px 50px -22px rgba(8,145,163,.45);
+    --shadow-sm:0 8px 26px -14px rgba(8,145,163,.4);
+    --radius:22px;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{width:min(1140px,92vw);margin-inline:auto}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-weight:700;font-size:1rem;
+    padding:.9rem 1.5rem;border-radius:100px;
+    border:2px solid transparent;cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(120deg,var(--teal),var(--teal-deep));
+    color:#fff;box-shadow:0 12px 26px -12px rgba(8,145,163,.75);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(8,145,163,.8)}
+  .btn-violet{background:linear-gradient(120deg,var(--violet),var(--violet-deep));color:#fff;box-shadow:0 12px 26px -12px rgba(91,62,230,.7)}
+  .btn-violet:hover{transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:rgba(255,255,255,.24)}
+  .btn-outline{background:#fff;color:var(--teal-deep);border-color:var(--line)}
+  .btn-outline:hover{border-color:var(--teal);transform:translateY(-2px)}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;gap:1rem}
+  .brand{display:flex;align-items:center;gap:.65rem;font-weight:800;font-size:1.18rem;letter-spacing:-.02em}
+  .brand .logo{
+    width:42px;height:42px;border-radius:50%;flex:none;
+    background:radial-gradient(circle at 32% 30%,var(--teal),var(--teal-deep) 70%);
+    position:relative;box-shadow:var(--shadow-sm);
+  }
+  .brand .logo::after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(circle at 72% 34%, transparent 46%, rgba(255,255,255,.9) 47%, rgba(255,255,255,.9) 60%, transparent 61%);
+    mix-blend-mode:screen;
+  }
+  .brand small{display:block;font-size:.62rem;font-weight:600;color:var(--teal-deep);letter-spacing:.14em;text-transform:uppercase}
+  .nav-actions{display:flex;align-items:center;gap:.9rem}
+  .nav-phone{display:none;font-weight:700;color:var(--teal-ink);font-size:.98rem}
+  .nav-phone span{display:block;font-size:.62rem;color:var(--slate);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  @media(min-width:720px){.nav-phone{display:block}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 520px at 78% -8%, rgba(124,92,255,.16), transparent 60%),
+      radial-gradient(900px 480px at 8% 12%, rgba(6,182,201,.16), transparent 62%),
+      linear-gradient(180deg,#f6feff, #ffffff 70%);
+  }
+  .hero::before{
+    content:"";position:absolute;top:-120px;right:-90px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle at 34% 32%, #d8f6f9, #bdeef3 70%);
+    opacity:.55;filter:blur(2px);
+  }
+  .hero-inner{position:relative;display:grid;gap:2.6rem;padding:3.4rem 0 3.8rem;grid-template-columns:1fr}
+  @media(min-width:940px){.hero-inner{grid-template-columns:1.08fr .92fr;align-items:center;padding:4.4rem 0 4.6rem}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:#fff;border:1px solid var(--line);
+    padding:.4rem .85rem;border-radius:100px;
+    font-weight:700;font-size:.78rem;color:var(--teal-deep);
+    letter-spacing:.03em;box-shadow:var(--shadow-sm);
+  }
+  h1{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.04;letter-spacing:-.02em;
+    margin:1.1rem 0 .9rem;color:var(--ink);
+  }
+  h1 em{font-style:italic;color:var(--teal-deep)}
+  .hero p.lead{font-size:clamp(1.02rem,2.2vw,1.2rem);color:var(--slate);max-width:34ch}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.7rem 0 1.3rem}
+  .stars{display:flex;align-items:center;gap:.6rem;font-weight:600;color:var(--slate);font-size:.95rem}
+  .stars .s{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
+  .stars b{color:var(--ink)}
+
+  /* hero card */
+  .hero-card{
+    background:linear-gradient(160deg,#083c45,#0a4f5a 55%,#0d6270);
+    border-radius:28px;padding:2rem 1.8rem;color:#eafcff;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .hero-card::before{
+    content:"";position:absolute;top:-70px;right:-40px;width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle at 36% 34%, rgba(255,255,255,.22), transparent 60%);
+  }
+  .hero-card h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin-bottom:.3rem}
+  .hero-card .sub{color:#9fe3ec;font-size:.92rem;margin-bottom:1.3rem}
+  .free-badge{
+    display:inline-flex;align-items:center;gap:.45rem;background:rgba(124,92,255,.28);
+    border:1px solid rgba(163,141,255,.5);color:#e9e3ff;
+    padding:.35rem .8rem;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.05em;margin-bottom:1.2rem;
+  }
+  .mini-list{display:grid;gap:.7rem;margin:1.2rem 0 1.4rem}
+  .mini-list li{list-style:none;display:flex;gap:.65rem;align-items:flex-start;font-size:.95rem;color:#d7f4f8}
+  .mini-list .ck{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(6,182,201,.35);display:grid;place-items:center;color:#c7fbff;font-size:.7rem;margin-top:.15rem}
+  .hero-card .btn{width:100%;justify-content:center}
+  .hero-card small.fine{display:block;text-align:center;margin-top:.8rem;color:#8fd6e0;font-size:.76rem}
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--teal-ink);color:#dff6fa}
+  .trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 1rem;padding:1.7rem 0}
+  @media(min-width:760px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
+  .trust .item{text-align:center}
+  .trust .n{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:#fff;line-height:1}
+  .trust .l{font-size:.78rem;color:#9fd6df;margin-top:.35rem;letter-spacing:.02em}
+
+  /* ---------- Section base ---------- */
+  section.pad{padding:4rem 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 2.6rem}
+  .kicker{font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep)}
+  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4.4vw,2.6rem);line-height:1.08;letter-spacing:-.02em;margin:.6rem 0 .7rem}
+  .sec-head p{color:var(--slate);font-size:1.04rem}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--cloud)}
+  .cards{display:grid;gap:1.2rem;grid-template-columns:1fr}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.7rem 1.5rem;box-shadow:var(--shadow-sm);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .ico{
+    width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+    font-size:1.55rem;margin-bottom:1rem;
+    background:linear-gradient(140deg,var(--mint),#d4f4f7);
+  }
+  .card:nth-child(2n) .ico{background:linear-gradient(140deg,#efeafe,#e2d9ff)}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:1.28rem;margin-bottom:.4rem}
+  .card p{color:var(--slate);font-size:.96rem}
+
+  /* ---------- Story / family ---------- */
+  .story{background:linear-gradient(180deg,#ffffff,#f6feff)}
+  .story-grid{display:grid;gap:2.4rem;grid-template-columns:1fr;align-items:center}
+  @media(min-width:900px){.story-grid{grid-template-columns:.95fr 1.05fr}}
+  .story h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4.2vw,2.5rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+  .story p{color:var(--slate);margin-bottom:1rem}
+  .story .kicker{margin-bottom:.5rem;display:block}
+  .duo{
+    background:linear-gradient(155deg,#0a4f5a,#0d6270);border-radius:26px;padding:1.9rem;color:#eafcff;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .duo::after{content:"";position:absolute;bottom:-60px;left:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(124,92,255,.4),transparent 62%)}
+  .duo .pair{display:grid;gap:1rem;position:relative;z-index:1}
+  .doc{display:flex;gap:1rem;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:1rem 1.1rem}
+  .doc .av{width:52px;height:52px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:1.15rem;color:#053e46}
+  .doc:nth-child(1) .av{background:linear-gradient(140deg,#7fe9f2,#22c3d6)}
+  .doc:nth-child(2) .av{background:linear-gradient(140deg,#c3b2ff,#8f6bff);color:#2a1a66}
+  .doc h4{font-size:1.02rem;margin-bottom:.1rem}
+  .doc span{font-size:.83rem;color:#a9e2ea}
+  .duo .tie{position:relative;z-index:1;text-align:center;margin-top:1.1rem;font-size:.9rem;color:#cdeef3}
+  .duo .tie b{color:#fff}
+
+  /* ---------- Locations ---------- */
+  .locs{display:grid;gap:1.2rem;grid-template-columns:1fr;margin-top:1.6rem}
+  @media(min-width:640px){.locs{grid-template-columns:1fr 1fr}}
+  .loc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.3rem 1.4rem;box-shadow:var(--shadow-sm)}
+  .loc .tag{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep)}
+  .loc h4{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:.25rem 0 .3rem}
+  .loc p{color:var(--slate);font-size:.92rem;margin:0}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--cloud)}
+  .qcards{display:grid;gap:1.2rem;grid-template-columns:1fr}
+  @media(min-width:820px){.qcards{grid-template-columns:repeat(3,1fr)}}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.5rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+  .quote .s{color:var(--gold);letter-spacing:2px;margin-bottom:.7rem}
+  .quote p{color:var(--ink);font-size:1rem;flex:1}
+  .quote .by{margin-top:1.1rem;font-weight:700;font-size:.9rem;color:var(--teal-ink)}
+  .quote .by span{display:block;font-weight:600;color:var(--slate);font-size:.82rem}
+
+  /* ---------- Final CTA ---------- */
+  .final{
+    background:
+      radial-gradient(700px 340px at 82% 10%, rgba(124,92,255,.28), transparent 60%),
+      linear-gradient(150deg,#083c45,#0a5765 60%,#0c6f7e);
+    color:#eafcff;position:relative;overflow:hidden;
+  }
+  .final::before{content:"";position:absolute;top:-90px;left:-40px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 38% 36%,rgba(255,255,255,.14),transparent 60%)}
+  .final .wrap{position:relative;text-align:center;padding:4rem 0}
+  .final h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:.8rem}
+  .final p{color:#c4ebf1;max-width:44ch;margin:0 auto 1.7rem;font-size:1.06rem}
+  .final .btns{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
+  .final .phone-line{margin-top:1.3rem;font-size:.95rem;color:#a9dfe8}
+  .final .phone-line a{color:#fff;font-weight:700}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:#04262c;color:#9fc7cf;padding:2.6rem 0 3rem;font-size:.9rem}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.4rem;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:.6rem;color:#eafcff;font-weight:800;font-size:1.1rem}
+  .foot-brand .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 32% 30%,var(--teal),var(--teal-deep) 70%);flex:none}
+  .foot-cols{display:flex;flex-wrap:wrap;gap:2rem}
+  .foot-cols div b{display:block;color:#dbeff3;margin-bottom:.4rem;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+  .foot-cols div p{margin:0;line-height:1.7}
+  .disclaimer{margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:#7fadb6;line-height:1.6}
+
+  /* ---------- Concept badge ---------- */
+  .concept-badge{
+    position:fixed;bottom:16px;right:16px;z-index:100;
+    background:#0d2a30;color:#eafcff;border:1px solid rgba(6,182,201,.5);
+    padding:.5rem .85rem;border-radius:100px;font-size:.76rem;font-weight:700;
+    box-shadow:0 10px 30px -10px rgba(0,0,0,.6);letter-spacing:.02em;
+    display:flex;align-items:center;gap:.4rem;
+  }
+  .concept-badge .d{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Moon Orthodontics home">
+      <span class="logo" aria-hidden="true"></span>
+      <span>Moon Orthodontics<small>Overland Park · Olathe</small></span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:+19137827223">(913) 782-7223<span>Call our team</span></a>
+      <a class="btn btn-primary" href="#book">Free Consult</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">🌙 Braces &amp; Invisalign · Johnson County, KS</span>
+        <h1>A Johnson County smile you'll love <em>to the moon and back</em>.</h1>
+        <p class="lead">Straight teeth for kids, teens &amp; adults in Overland Park and Olathe — with a free consultation, digital no-goop scans, and one board-trained orthodontist who knows your whole family.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#book">Book a free consultation →</a>
+          <a class="btn btn-outline" href="tel:+19137827223">📞 (913) 782-7223</a>
+        </div>
+        <div class="stars">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <span><b>4.8</b> from <b>210+</b> Google reviews</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" id="book">
+        <span class="free-badge">✦ $0 consultation · no referral needed</span>
+        <h3>See your new smile — free</h3>
+        <p class="sub">Your first visit includes a full exam, digital scan, and a straight-talk treatment plan with the cost up front.</p>
+        <ul class="mini-list">
+          <li><span class="ck">✓</span> Braces, clear ceramic &amp; Invisalign options reviewed</li>
+          <li><span class="ck">✓</span> Flexible in-house financing &amp; monthly plans</li>
+          <li><span class="ck">✓</span> Choose Overland Park or Olathe — same care team</li>
+        </ul>
+        <a class="btn btn-violet" href="tel:+19137827223">Request my free consult</a>
+        <small class="fine">Prefer online? Ask about a virtual consult from your phone.</small>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="item"><div class="n">4.8★</div><div class="l">210+ Google reviews</div></div>
+      <div class="item"><div class="n">Since 2016</div><div class="l">Independent, family-run</div></div>
+      <div class="item"><div class="n">2</div><div class="l">Johnson County locations</div></div>
+      <div class="item"><div class="n">All ages</div><div class="l">Kids · teens · adults</div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pad services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">What we do</span>
+        <h2>One practice, every path to a straighter smile</h2>
+        <p>Dr. Joe Moon plans each case personally — then matches the treatment to your goals, your age, and your budget.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico" aria-hidden="true">🦷</div>
+          <h3>Invisalign &amp; Clear Aligners</h3>
+          <p>Nearly invisible, removable aligners for teens and adults who want to straighten teeth without anyone noticing.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">⚙️</div>
+          <h3>Modern Metal Braces</h3>
+          <p>Today's low-profile brackets are smaller and more comfortable — the proven, dependable way to fix complex bites.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">✨</div>
+          <h3>Clear Ceramic Braces</h3>
+          <p>Tooth-colored brackets that blend in — the strength of braces with a look that stays subtle in photos.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🧒</div>
+          <h3>Early &amp; Kids Orthodontics</h3>
+          <p>Interceptive treatment that guides growing jaws early, often making later treatment shorter and simpler.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">💻</div>
+          <h3>Digital No-Goop Scans</h3>
+          <p>A quick 3D scan replaces gooey impressions — you preview your projected results before you ever start.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">💳</div>
+          <h3>Flexible Financing</h3>
+          <p>Transparent pricing with in-house monthly plans and insurance help — so a great smile fits the family budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / FAMILY -->
+  <section class="pad story">
+    <div class="wrap story-grid">
+      <div>
+        <span class="kicker">Why Moon</span>
+        <h2>A husband-and-wife practice that cares for the whole family</h2>
+        <p>Dr. Joe Moon opened Moon Orthodontics in 2016 to do orthodontics the personal way — an independent, locally owned practice where you see the same doctor at every visit, not a rotating roster.</p>
+        <p>He trained as both a general dentist and an orthodontist (University of Pennsylvania and University of Minnesota), and is a member of the American Association of Orthodontists. Right alongside him, his wife <b>Dr. Beverly Moon</b> runs the family's general dentistry practice — so cleanings, checkups, and straightening live under one trusted roof.</p>
+        <p>It's the rare setup where your dentist and your orthodontist actually talk to each other. That's better coordination, fewer surprises, and one team that already knows your smile.</p>
+
+        <div class="locs">
+          <div class="loc">
+            <span class="tag">Overland Park</span>
+            <h4>14247 Metcalf Ave</h4>
+            <p>Overland Park, KS 66223</p>
+          </div>
+          <div class="loc">
+            <span class="tag">Olathe</span>
+            <h4>12710 S Pflumm Rd #210</h4>
+            <p>Olathe, KS 66062</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="duo" aria-label="The doctors of the Moon family practice">
+        <div class="pair">
+          <div class="doc">
+            <span class="av" aria-hidden="true">JM</span>
+            <div><h4>Dr. Joe Moon</h4><span>Orthodontist · braces &amp; Invisalign</span></div>
+          </div>
+          <div class="doc">
+            <span class="av" aria-hidden="true">BM</span>
+            <div><h4>Dr. Beverly Moon</h4><span>General &amp; family dentistry</span></div>
+          </div>
+        </div>
+        <p class="tie">💞 One family caring for yours — <b>ortho + dentistry, coordinated</b> from the same team you already trust.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pad reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">4.8★ · 210+ reviews</span>
+        <h2>Overland Park &amp; Olathe families keep smiling</h2>
+        <p>A few words from the neighbors we've treated.</p>
+      </div>
+      <div class="qcards">
+        <div class="quote">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <p>"I was told by several other offices I wasn't a candidate for Invisalign. Dr. Moon took on my case anyway and I absolutely love the result — my smile has never looked better."</p>
+          <div class="by">Alyssa R. <span>Overland Park, KS</span></div>
+        </div>
+        <div class="quote">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <p>"Both of my kids are in braces here and it's been a fantastic, very professional experience. The digital scan was so easy and they explained every step and the cost up front."</p>
+          <div class="by">Megan T. <span>Olathe, KS</span></div>
+        </div>
+        <div class="quote">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <p>"Love that our dentist and orthodontist are one family practice. Getting the whole family's care coordinated in one place has been a huge relief — friendly staff and zero pressure."</p>
+          <div class="by">David K. <span>Overland Park, KS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Your free consultation is one call away</h2>
+      <p>Come see your projected smile, get honest pricing, and meet the team — no referral, no obligation. Kids, teens, and adults welcome in Overland Park and Olathe.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="tel:+19137827223">📞 Call (913) 782-7223</a>
+        <a class="btn btn-ghost" href="#book">Book online →</a>
+      </div>
+      <p class="phone-line">Open Mon–Fri, 8am–5pm · <a href="tel:+19137827223">(913) 782-7223</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand"><span class="logo" aria-hidden="true"></span> Moon Orthodontics</div>
+        <p style="margin-top:.6rem;max-width:32ch">Braces &amp; Invisalign for every age, serving Overland Park &amp; Olathe, Kansas.</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <b>Locations</b>
+          <p>Overland Park · 14247 Metcalf Ave<br>Olathe · 12710 S Pflumm Rd #210</p>
+        </div>
+        <div>
+          <b>Contact</b>
+          <p><a href="tel:+19137827223">(913) 782-7223</a><br>Mon–Fri · 8am–5pm</p>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">
+      Concept preview designed by <b>Gigawatt</b>, a Kansas City web design &amp; AI consulting studio. This is a redesign concept created to illustrate ideas for Moon Orthodontics — it is <b>not</b> the official website and is not affiliated with or endorsed by the practice. Business details shown are drawn from public listings for demonstration only; please verify all information directly with the practice.
+    </p>
+  </div>
+</footer>
+
+<div class="concept-badge" aria-hidden="true"><span class="d"></span>⚡ concept preview</div>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>The Dorsch Law Firm — Overland Park Estate Planning You Can Trust</title>
+  <meta name="description" content="Overland Park estate planning, wills, trusts & elder law from attorney Daniel B. Dorsch. Evening and Saturday home visits. Serving the KC metro since 1986." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #10192a;         /* deep navy/charcoal */
+      --navy: #16263f;
+      --navy-2: #1f3557;
+      --gold: #b48b3f;        /* muted, dignified gold */
+      --gold-dark: #98722f;
+      --gold-soft: #f4ecdd;
+      --cream: #faf7f1;
+      --paper: #ffffff;
+      --text: #24303f;
+      --muted: #5d6b7c;
+      --line: #e7e1d5;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text); line-height: 1.6; background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    a { color: inherit; }
+
+    /* ---------- Header ---------- */
+    header.site {
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .crest {
+      width: 40px; height: 40px; border-radius: 50%; flex: none;
+      background: radial-gradient(circle at 35% 30%, var(--navy-2), var(--ink));
+      border: 1.5px solid var(--gold); color: var(--gold);
+      display: grid; place-items: center; font-family: 'Cormorant Garamond', serif;
+      font-weight: 700; font-size: 20px; letter-spacing: .5px;
+    }
+    .brand .name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: var(--ink); line-height: 1.05; }
+    .brand .kicker { display: block; font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-phone { text-decoration: none; color: var(--ink); font-weight: 600; font-size: 15px; white-space: nowrap; }
+    .nav-phone span { color: var(--muted); font-weight: 500; font-size: 12px; display: block; letter-spacing: .04em; }
+    .btn {
+      display: inline-block; padding: 13px 24px; border-radius: 4px; font-weight: 600;
+      text-decoration: none; font-size: 15px; letter-spacing: .01em; transition: all .18s ease;
+      border: 1.5px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+    .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+    .btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-outline { border-color: var(--gold); color: var(--gold-dark); background: transparent; }
+    .btn-outline:hover { background: var(--gold); color: var(--ink); }
+    .nav .btn { padding: 11px 20px; }
+    @media (max-width: 720px) { .nav-phone { display: none; } .brand .name { font-size: 20px; } }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; color: #fff; overflow: hidden;
+      background:
+        radial-gradient(1100px 520px at 78% -8%, rgba(180,139,63,0.20), transparent 60%),
+        linear-gradient(160deg, var(--ink) 0%, var(--navy) 55%, var(--navy-2) 100%);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 100% 46px; opacity: .5;
+    }
+    .hero .wrap { position: relative; z-index: 1; padding: 80px 22px 88px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 22px;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); display: inline-block; }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 600;
+      font-size: clamp(38px, 6vw, 62px); line-height: 1.06; max-width: 760px; letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero .lead { margin: 24px 0 10px; font-size: clamp(16px, 2vw, 19px); color: #cdd7e4; max-width: 560px; line-height: 1.65; }
+    .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .hero .stars { margin-top: 34px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14.5px; color: #cdd7e4; }
+    .hero .stars .gold { color: #e7c069; letter-spacing: 2px; font-size: 16px; }
+    .hero .stars b { color: #fff; }
+    .hero .stars .divider { width: 1px; height: 15px; background: rgba(255,255,255,.25); }
+
+    /* ---------- Trust strip ---------- */
+    .strip { background: var(--ink); border-top: 1px solid rgba(180,139,63,0.28); }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding: 0; }
+    .strip .item {
+      padding: 22px 18px; text-align: center; color: #dfe6ee;
+      border-left: 1px solid rgba(255,255,255,.06);
+    }
+    .strip .item:first-child { border-left: none; }
+    .strip .item .big { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .strip .item .lbl { font-size: 12px; letter-spacing: .06em; color: #aab6c4; margin-top: 8px; text-transform: uppercase; }
+    @media (max-width: 700px) {
+      .strip .wrap { grid-template-columns: repeat(2, 1fr); }
+      .strip .item:nth-child(3) { border-left: none; }
+      .strip .item:nth-child(odd) { border-left: none; }
+      .strip .item { border-top: 1px solid rgba(255,255,255,.06); }
+      .strip .item:nth-child(1), .strip .item:nth-child(2) { border-top: none; }
+    }
+
+    /* ---------- Sections ---------- */
+    section.pad { padding: 78px 0; }
+    .section-head { max-width: 640px; margin-bottom: 44px; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .tag { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; }
+    h2.serif { font-size: clamp(30px, 4.2vw, 42px); color: var(--ink); font-weight: 600; line-height: 1.12; margin: 12px 0 0; letter-spacing: -0.01em; }
+    .section-head p { color: var(--muted); margin-top: 16px; font-size: 17px; }
+
+    /* Services */
+    .services { background: var(--cream); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 880px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 30px 26px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; position: relative;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(16,25,42,0.08); border-color: var(--gold); }
+    .card .ico {
+      width: 52px; height: 52px; border-radius: 8px; display: grid; place-items: center;
+      background: var(--gold-soft); color: var(--gold-dark); margin-bottom: 18px;
+    }
+    .card .ico svg { width: 26px; height: 26px; }
+    .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    /* Differentiator / home visit */
+    .diff { background: var(--paper); }
+    .diff .grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+    @media (max-width: 860px) { .diff .grid { grid-template-columns: 1fr; gap: 36px; } }
+    .diff h2 { margin-bottom: 18px; }
+    .diff p.body { color: var(--muted); font-size: 17px; margin-bottom: 16px; }
+    .diff ul { list-style: none; margin: 24px 0 8px; }
+    .diff li { display: flex; gap: 13px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15.5px; color: var(--text); }
+    .diff li:first-child { border-top: none; }
+    .diff li .chk { color: var(--gold-dark); flex: none; margin-top: 2px; }
+    .visit-card {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--ink) 100%); color: #fff;
+      border-radius: 12px; padding: 40px 34px; position: relative; overflow: hidden;
+      border: 1px solid rgba(180,139,63,0.3);
+    }
+    .visit-card::before {
+      content: ""; position: absolute; top: -40px; right: -40px; width: 160px; height: 160px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(180,139,63,0.25), transparent 70%);
+    }
+    .visit-card .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(180,139,63,0.18); color: var(--gold); border: 1px solid rgba(180,139,63,0.4); padding: 7px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .visit-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; margin: 20px 0 12px; position: relative; }
+    .visit-card p { color: #cdd7e4; font-size: 15.5px; position: relative; margin-bottom: 22px; }
+    .visit-card .hours { display: flex; gap: 26px; position: relative; }
+    .visit-card .hours .h { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--gold); font-weight: 700; }
+    .visit-card .hours small { display: block; color: #aab6c4; font-size: 12px; font-family: 'Inter', sans-serif; letter-spacing: .04em; }
+
+    /* Attorney bio */
+    .bio { background: var(--ink); color: #fff; }
+    .bio .grid { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 820px) { .bio .grid { grid-template-columns: 1fr; gap: 30px; text-align: center; } }
+    .portrait {
+      aspect-ratio: 1; border-radius: 12px; display: grid; place-items: center;
+      background: linear-gradient(160deg, var(--navy-2), var(--navy)); border: 1px solid rgba(180,139,63,0.35);
+      position: relative; overflow: hidden; max-width: 260px; margin: 0 auto;
+    }
+    .portrait .initials { font-family: 'Cormorant Garamond', serif; font-size: 78px; font-weight: 700; color: var(--gold); }
+    .portrait .ring { position: absolute; inset: 14px; border: 1px solid rgba(180,139,63,0.3); border-radius: 8px; }
+    .bio .tag { color: var(--gold); }
+    .bio h2 { color: #fff; margin-bottom: 16px; }
+    .bio p { color: #cdd7e4; font-size: 16.5px; margin-bottom: 16px; }
+    .bio .cred { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 26px; }
+    @media (max-width: 820px) { .bio .cred { justify-content: center; } }
+    .bio .cred .c { border-left: 2px solid var(--gold); padding-left: 14px; text-align: left; }
+    .bio .cred .c b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #fff; }
+    .bio .cred .c span { font-size: 13px; color: #aab6c4; }
+    .pull { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(20px, 2.6vw, 25px); color: var(--gold); line-height: 1.35; border-left: 3px solid var(--gold); padding-left: 20px; margin: 6px 0 4px; }
+
+    /* Reviews */
+    .reviews { background: var(--cream); }
+    .quote {
+      background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 30px 28px;
+      display: flex; flex-direction: column; position: relative;
+    }
+    .quote .qmark { font-family: 'Cormorant Garamond', serif; font-size: 60px; color: var(--gold); line-height: .5; height: 26px; opacity: .55; }
+    .quote .stars { color: #d9a93f; letter-spacing: 2px; font-size: 14px; margin-bottom: 12px; }
+    .quote p { font-size: 16px; color: var(--text); line-height: 1.65; flex: 1; }
+    .quote .who { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-weight: 600; color: var(--ink); font-size: 14.5px; }
+    .quote .who span { display: block; color: var(--muted); font-weight: 500; font-size: 13px; }
+
+    /* CTA band */
+    .cta-band {
+      color: #fff; text-align: center; position: relative; overflow: hidden;
+      background:
+        radial-gradient(800px 400px at 50% -30%, rgba(180,139,63,0.22), transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--ink) 100%);
+    }
+    .cta-band .wrap { padding: 74px 22px; position: relative; z-index: 1; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #cdd7e4; margin: 16px auto 30px; max-width: 520px; font-size: 17px; }
+    .cta-band .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-band .fine { margin-top: 26px; font-size: 13px; color: #93a1b2; }
+
+    /* Footer */
+    footer.site {
+      background: var(--ink); color: #9aa7b6; padding: 44px 0 30px; border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer.site .top { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-start; padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    footer.site .fbrand { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #fff; font-weight: 700; }
+    footer.site .fbrand span { display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gold); letter-spacing: .12em; text-transform: uppercase; margin-top: 4px; }
+    footer.site .fmeta { font-size: 14px; line-height: 1.9; text-align: right; }
+    @media (max-width: 620px) { footer.site .fmeta { text-align: left; } }
+    footer.site .disclaimer { margin-top: 22px; font-size: 12.5px; line-height: 1.7; color: #7a8797; }
+
+    .demo-tag {
+      position: fixed; bottom: 14px; right: 14px; z-index: 60;
+      background: #17181b; color: #f5b518; font: 600 11px/1 'Inter', system-ui;
+      padding: 9px 13px; border-radius: 999px; opacity: .94; letter-spacing: .04em;
+      box-shadow: 0 4px 14px rgba(0,0,0,.28); border: 1px solid rgba(245,181,24,0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#">
+        <span class="crest">D</span>
+        <span>
+          <span class="name">The Dorsch Law Firm</span>
+          <span class="kicker">Estate Planning · Overland Park</span>
+        </span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19136859190">(913) 685-9190<span>Mon–Sat, evenings too</span></a>
+        <a class="btn btn-primary" href="#consult">Schedule a Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Serving the Kansas City Metro Since 1986</span>
+      <h1>Protect what you've built. <em>Provide</em> for who's next.</h1>
+      <p class="lead">Overland Park families trust attorney Daniel B. Dorsch for wills, living trusts, and elder-law plans built around <em>them</em> — never a template. Clear guidance, at our office or yours.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#consult">Schedule a Consultation</a>
+        <a class="btn btn-ghost" href="tel:+19136859190">Call (913) 685-9190</a>
+      </div>
+      <div class="stars">
+        <span class="gold">★★★★★</span> <b>5.0</b> rating · 69 Google reviews
+        <span class="divider"></span>
+        Named a Top 12 KC Estate Planner by Expertise.com
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><div class="big">40</div><div class="lbl">Years Practicing Law</div></div>
+      <div class="item"><div class="big">5.0★</div><div class="lbl">Across 69 Reviews</div></div>
+      <div class="item"><div class="big">Top 12</div><div class="lbl">KC Estate Planners</div></div>
+      <div class="item"><div class="big">KS &amp; MO</div><div class="lbl">Licensed to Serve</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="pad services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Practice Areas</span>
+        <h2 class="serif">Everything your legacy needs, under one trusted roof</h2>
+        <p>From your first will to guiding your family through probate, Mr. Dorsch handles the full arc of estate planning with clarity and care.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 9h1M9 13h6M9 17h6"/></svg></div>
+          <h3>Wills</h3>
+          <p>Legally sound wills that put your wishes in writing and spare your family the guesswork.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 7.9 8 9 4.6-1.1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Living Trusts</h3>
+          <p>Trusts that protect assets, sidestep probate, and keep private matters private.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></div>
+          <h3>Powers of Attorney &amp; Living Wills</h3>
+          <p>Durable powers of attorney and healthcare directives so the right person can act when it counts.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V9l6-4 6 4v12"/><path d="M10 21v-5h4v5"/></svg></div>
+          <h3>Probate &amp; Trust Administration</h3>
+          <p>Steady, compassionate guidance through probate and settling a loved one's estate.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 22a8 8 0 0 0 8-8c0-4-2-6-8-12C6 8 4 10 4 14a8 8 0 0 0 8 8Z"/></svg></div>
+          <h3>Elder Law &amp; Asset Protection</h3>
+          <p>Long-term-care planning and asset protection that safeguard dignity and hard-earned savings.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3z"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></div>
+          <h3>Small Business &amp; Succession</h3>
+          <p>LLC formation and succession plans that carry your business safely to the next generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATOR: HOME VISITS -->
+  <section class="pad diff" id="home-visits">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="tag">The Dorsch Difference</span>
+          <h2 class="serif">Estate planning that comes to your kitchen table</h2>
+          <p class="body">Life doesn't pause for office hours — and the decisions that shape your family's future deserve to be made where you're most comfortable. That's why Mr. Dorsch is one of the few attorneys in the metro who will meet you at home, in the evening or on a Saturday.</p>
+          <ul>
+            <li><span class="chk">◆</span> Evening and Saturday appointments for working families and caregivers</li>
+            <li><span class="chk">◆</span> Home, hospital, or care-facility visits when travel is difficult</li>
+            <li><span class="chk">◆</span> A single attorney from first call to final signature — never handed off</li>
+            <li><span class="chk">◆</span> Unlimited follow-up questions under a flat, capped-fee arrangement</li>
+          </ul>
+          <a class="btn btn-outline" href="#consult" style="margin-top:14px;">Request a home visit</a>
+        </div>
+        <div class="visit-card">
+          <span class="badge">◷ Evenings &amp; Weekends</span>
+          <h3>We'll come to you.</h3>
+          <p>No taking time off work. No rushing an aging parent across town. Tell us what works, and we'll bring the whole plan to your door.</p>
+          <div class="hours">
+            <div class="h">Weeknights<small>By appointment</small></div>
+            <div class="h">Saturdays<small>By appointment</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTORNEY BIO -->
+  <section class="pad bio">
+    <div class="wrap">
+      <div class="grid">
+        <div class="portrait">
+          <div class="ring"></div>
+          <div class="initials">DD</div>
+        </div>
+        <div>
+          <span class="tag">Meet Your Attorney</span>
+          <h2 class="serif">Daniel B. Dorsch</h2>
+          <p>Since 1986, Dan Dorsch has helped Kansas City families put their affairs in order — and since founding the firm in 2001, he's built a practice on a simple belief: <em>no matter when or how a client walks through the door, something good can always be done to improve their situation.</em></p>
+          <p class="pull">"Every plan is built for the person in front of me — never pulled from a template."</p>
+          <div class="cred">
+            <div class="c"><b>1986</b><span>Licensed to practice law</span></div>
+            <div class="c"><b>Univ. of Kansas</b><span>Juris Doctor</span></div>
+            <div class="c"><b>TCU</b><span>B.B.A., Business</span></div>
+            <div class="c"><b>Expertise.com</b><span>Top 12 KC Estate Planners</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="pad reviews">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="tag">A 5.0 Reputation, Earned Over Decades</span>
+        <h2 class="serif">Kansas City families, in their own words</h2>
+      </div>
+      <div class="cards">
+        <div class="quote">
+          <div class="qmark">"</div>
+          <div class="stars">★★★★★</div>
+          <p>Dan's professionalism, friendly demeanor, and attention to detail made a subject we'd been avoiding feel completely manageable. We left knowing our family is protected.</p>
+          <div class="who">Shelly W.<span>Kansas City, MO</span></div>
+        </div>
+        <div class="quote">
+          <div class="qmark">"</div>
+          <div class="stars">★★★★★</div>
+          <p>He gently guided us through every decision in setting up our trust and took the time to make sure we understood it. For fifteen years he's been the finest the profession has to offer.</p>
+          <div class="who">Janice D.<span>Olathe, KS</span></div>
+        </div>
+        <div class="quote">
+          <div class="qmark">"</div>
+          <div class="stars">★★★★★</div>
+          <p>He came to our home on a Saturday so my mother wouldn't have to travel. Patient, clear, and never once made us feel rushed. Worth every bit of the drive he saved us.</p>
+          <div class="who">Robert H.<span>Overland Park, KS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band" id="consult">
+    <div class="wrap">
+      <span class="eyebrow" style="justify-content:center;">Your Peace of Mind Starts With One Conversation</span>
+      <h2 class="serif">Schedule your estate-planning consultation</h2>
+      <p>Tell us a little about your family and goals. Mr. Dorsch will meet you at the office, your home, or by phone — days, evenings, or Saturdays.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+19136859190">Call (913) 685-9190</a>
+        <a class="btn btn-ghost" href="tel:+19136859190">Request a callback</a>
+      </div>
+      <div class="fine">The Dorsch Law Firm, LLC · 10615 W 148th St, Overland Park, KS 66221 · Serving Overland Park, Olathe &amp; the greater KC metro</div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <div class="fbrand">The Dorsch Law Firm, LLC<span>Estate Planning · Wills &amp; Trusts · Elder Law</span></div>
+        </div>
+        <div class="fmeta">
+          Overland Park, Kansas<br>
+          Serving the Kansas City Metro<br>
+          Evening &amp; Saturday appointments available
+        </div>
+      </div>
+      <div class="disclaimer">
+        Concept preview designed by <strong>Gigawatt</strong> — a Kansas City web design &amp; AI consulting studio. This is a redesign concept created to demonstrate a modern digital presence for The Dorsch Law Firm; it is not the firm's live website and is not affiliated with or endorsed by the firm. Content is illustrative. This page provides general information only and is not legal advice.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

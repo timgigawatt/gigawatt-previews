@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Orman's Furniture — Overland Park's made-to-order solid wood &amp; leather</title>
+  <meta name="description" content="Orman's Furniture in Overland Park, KS: 58 years of made-to-order solid American hardwood, fine leather &amp; quality mattresses. Customize any piece. Call (913) 681-2841." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --walnut: #2e1f16;       /* deepest espresso brown */
+      --walnut-2: #43301f;     /* rich walnut */
+      --cocoa: #5a4230;        /* warm mid brown */
+      --leather: #9c5f37;      /* saddle leather tan */
+      --leather-2: #b57a4a;    /* lighter leather */
+      --tan: #c9a37a;          /* warm tan accent */
+      --gold: #d9a441;         /* brass / stars */
+      --cream: #f6efe3;        /* cream paper */
+      --cream-2: #efe4d2;      /* deeper cream */
+      --paper: #fbf7ef;
+      --ink: #2b2119;
+      --muted: #6e5c4a;
+      --line: #e2d3bd;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--ink); line-height: 1.6; background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+    a { color: inherit; }
+
+    /* ---------- Header ---------- */
+    header.site {
+      background: rgba(251,247,239,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .mark {
+      width: 40px; height: 40px; border-radius: 9px; flex: none;
+      background:
+        repeating-linear-gradient(115deg, rgba(0,0,0,.14) 0 3px, transparent 3px 7px),
+        linear-gradient(150deg, var(--leather-2), var(--walnut-2));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 2px 6px rgba(46,31,22,.25);
+      display: grid; place-items: center; color: #f4e6d2; font-weight: 700;
+      font-family: 'Fraunces', serif; font-size: 20px;
+    }
+    .brand b { font-family: 'Fraunces', serif; font-weight: 600; font-size: 21px; color: var(--walnut); letter-spacing: .2px; line-height: 1; }
+    .brand small { display: block; font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--leather); font-weight: 600; margin-top: 3px; }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-phone { text-decoration: none; font-weight: 700; color: var(--walnut); font-size: 15px; white-space: nowrap; }
+    .nav-phone span { display: block; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .btn { display: inline-block; text-decoration: none; font-weight: 600; border-radius: 10px; transition: transform .12s ease, box-shadow .12s ease, background .2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary {
+      background: linear-gradient(150deg, var(--leather-2), var(--leather)); color: #fff;
+      padding: 12px 22px; box-shadow: 0 4px 14px rgba(156,95,55,.35), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 20px rgba(156,95,55,.45); }
+    .nav .btn-primary { padding: 11px 18px; font-size: 15px; }
+    .btn-ghost { border: 1.5px solid rgba(246,230,210,.5); color: #f6efe3; padding: 13px 24px; }
+    .btn-ghost:hover { border-color: #f6efe3; }
+    .btn-dark { background: var(--walnut); color: var(--cream); padding: 14px 28px; box-shadow: 0 4px 14px rgba(46,31,22,.3); }
+    .btn-dark:hover { background: var(--walnut-2); }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; color: var(--cream); overflow: hidden;
+      background:
+        radial-gradient(1000px 500px at 78% -10%, rgba(217,164,65,.16), transparent 60%),
+        linear-gradient(160deg, var(--walnut) 0%, var(--walnut-2) 55%, var(--cocoa) 100%);
+    }
+    .hero::after { /* subtle wood grain */
+      content:""; position:absolute; inset:0; opacity:.06; pointer-events:none;
+      background: repeating-linear-gradient(97deg, #000 0 2px, transparent 2px 9px);
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr .85fr; gap: 46px; align-items: center; padding: 74px 0 82px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--tan); font-weight: 600; margin-bottom: 20px; }
+    .eyebrow::before { content:""; width: 26px; height: 1.5px; background: var(--gold); display: inline-block; }
+    .hero h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(34px, 5.4vw, 58px); line-height: 1.06; letter-spacing: -.5px; }
+    .hero h1 em { font-style: italic; color: var(--tan); }
+    .hero .lede { margin: 22px 0 30px; font-size: clamp(16px, 2vw, 18.5px); color: #e7d8c2; max-width: 520px; }
+    .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .rating { margin-top: 30px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .rating .stars { color: var(--gold); font-size: 17px; letter-spacing: 2px; }
+    .rating .r-txt { font-size: 14px; color: #e7d8c2; }
+    .rating .r-txt b { color: #fff; }
+
+    /* Hero "showroom" CSS collage (no images) */
+    .showroom { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 74px); gap: 12px; }
+    .piece { border-radius: 12px; position: relative; overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.12); }
+    .piece::after { content: attr(data-label); position: absolute; left: 12px; bottom: 10px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,.9); font-weight: 600; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+    .p-wood { grid-row: span 2; background:
+        repeating-linear-gradient(88deg, rgba(0,0,0,.10) 0 4px, transparent 4px 12px),
+        linear-gradient(145deg, #8a5a34, #5c3a20); }
+    .p-leather { background:
+        radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.10), transparent 55%),
+        linear-gradient(150deg, #a86b41, #6f4327); }
+    .p-cream { grid-row: span 2; background:
+        linear-gradient(150deg, #efe1cb, #d9c3a2);
+      }
+    .p-cream::after { color: #5a4230; text-shadow: none; }
+    .p-oak { background:
+        repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0 3px, transparent 3px 10px),
+        linear-gradient(150deg, #c69a63, #9a6c3c); }
+    .p-espresso { background:
+        repeating-linear-gradient(92deg, rgba(255,255,255,.05) 0 3px, transparent 3px 11px),
+        linear-gradient(150deg, #4a3221, #2c1c11); }
+
+    /* ---------- Trust strip ---------- */
+    .strip { background: var(--walnut); color: var(--cream); border-top: 3px solid var(--gold); }
+    .strip .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 26px; padding: 20px 22px; }
+    .trust { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: #ecdcc6; }
+    .trust b { color: #fff; font-weight: 700; }
+    .trust .ic { color: var(--gold); font-size: 17px; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 78px 0; }
+    .center { text-align: center; }
+    .kicker { font-size: 12.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--leather); font-weight: 700; margin-bottom: 12px; }
+    h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(27px, 4vw, 40px); line-height: 1.12; color: var(--walnut); letter-spacing: -.3px; }
+    .sub { color: var(--muted); margin: 14px auto 0; max-width: 600px; font-size: 16.5px; }
+    .center .sub { margin-inline: auto; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 46px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px 24px 28px;
+      position: relative; overflow: hidden; transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(46,31,22,.13); border-color: var(--tan); }
+    .swatch { height: 76px; border-radius: 11px; margin-bottom: 20px; box-shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(0,0,0,.04); }
+    .sw-living { background: repeating-linear-gradient(120deg, rgba(0,0,0,.05) 0 4px, transparent 4px 13px), linear-gradient(150deg, #b07a4c, #7a4c2b); }
+    .sw-bed { background: linear-gradient(150deg, #ead8bd, #c8a878); }
+    .sw-dining { background: repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 3px, transparent 3px 11px), linear-gradient(150deg, #a26f3f, #6a4324); }
+    .sw-leather { background: radial-gradient(120% 130% at 28% 18%, rgba(255,255,255,.14), transparent 55%), linear-gradient(150deg, #9c5f37, #5f3a22); }
+    .sw-mattress { background: linear-gradient(150deg, #f3ead9, #d7c4a5); }
+    .sw-custom { background: repeating-linear-gradient(88deg, rgba(0,0,0,.09) 0 4px, transparent 4px 12px), linear-gradient(150deg, #7d5330, #3f2817); }
+    .card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 21px; color: var(--walnut); margin-bottom: 7px; }
+    .card p { color: var(--muted); font-size: 14.5px; }
+
+    /* Story */
+    .story { background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); }
+    .story-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: center; }
+    .story-visual { position: relative; }
+    .badge-years {
+      aspect-ratio: 1; max-width: 320px; margin: 0 auto; border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(217,164,65,.18), transparent 60%),
+        conic-gradient(from 210deg, var(--walnut), var(--cocoa), var(--leather), var(--walnut));
+      display: grid; place-content: center; text-align: center; color: var(--cream);
+      box-shadow: 0 18px 50px rgba(46,31,22,.35), inset 0 0 0 8px rgba(246,239,227,.08), inset 0 0 0 10px rgba(217,164,65,.35);
+    }
+    .badge-years .num { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(58px, 12vw, 92px); line-height: .9; color: #fff; }
+    .badge-years .yrs { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--tan); margin-top: 8px; }
+    .badge-years .since { font-size: 12.5px; letter-spacing: 2px; color: #e7d8c2; margin-top: 14px; }
+    .story h2 { margin-bottom: 6px; }
+    .story .signed { font-family: 'Fraunces', serif; font-style: italic; font-size: 19px; color: var(--leather); margin-top: 20px; }
+    .story p { color: #4a3b2c; font-size: 16px; margin-top: 16px; }
+    .story .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill { background: #fff; border: 1px solid var(--line); color: var(--cocoa); font-size: 13.5px; font-weight: 600; padding: 8px 15px; border-radius: 999px; }
+    .pill .ic { color: var(--leather); }
+
+    /* Wood species band */
+    .species { background: var(--walnut-2); color: var(--cream); }
+    .species .kicker { color: var(--gold); }
+    .species h2 { color: #fff; }
+    .species .sub { color: #e2d1bb; }
+    .woodrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 42px; }
+    .wood { border-radius: 13px; padding: 16px; height: 128px; display: flex; align-items: flex-end; position: relative; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 8px 20px rgba(0,0,0,.25); }
+    .wood span { font-size: 14px; font-weight: 700; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.55); letter-spacing: .3px; }
+    .w-maple { background: repeating-linear-gradient(93deg, rgba(0,0,0,.05) 0 4px, transparent 4px 13px), linear-gradient(150deg, #c79b64, #a2733f); }
+    .w-cherry { background: repeating-linear-gradient(93deg, rgba(0,0,0,.07) 0 4px, transparent 4px 12px), linear-gradient(150deg, #9a4f30, #6b3016); }
+    .w-oak { background: repeating-linear-gradient(93deg, rgba(0,0,0,.06) 0 3px, transparent 3px 11px), linear-gradient(150deg, #b98a53, #855c2f); }
+    .w-white { background: repeating-linear-gradient(93deg, rgba(0,0,0,.05) 0 4px, transparent 4px 14px), linear-gradient(150deg, #d8b884, #b18f5c); }
+
+    /* Reviews */
+    .reviews { background: var(--paper); }
+    .qcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; margin-top: 44px; }
+    .quote { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px 26px; position: relative; box-shadow: 0 8px 22px rgba(46,31,22,.06); }
+    .quote .qs { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .quote p { font-family: 'Fraunces', serif; font-size: 17.5px; line-height: 1.5; color: #3a2c1e; font-weight: 400; }
+    .quote cite { display: block; margin-top: 18px; font-style: normal; font-size: 13.5px; font-weight: 700; color: var(--leather); }
+    .quote cite span { color: var(--muted); font-weight: 500; }
+
+    /* Final CTA */
+    .cta-band { position: relative; overflow: hidden; color: var(--cream); text-align: center;
+      background:
+        radial-gradient(800px 400px at 50% 120%, rgba(217,164,65,.18), transparent 60%),
+        linear-gradient(160deg, var(--walnut) 0%, var(--cocoa) 100%);
+    }
+    .cta-band::after { content:""; position:absolute; inset:0; opacity:.06; background: repeating-linear-gradient(97deg, #000 0 2px, transparent 2px 9px); }
+    .cta-band .wrap { position: relative; z-index: 2; }
+    .cta-band h2 { color: #fff; }
+    .cta-band p { color: #e7d8c2; max-width: 520px; margin: 16px auto 30px; font-size: 17px; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 22px; font-size: 13px; color: var(--tan); }
+
+    /* Footer */
+    footer.site-f { background: var(--walnut); color: #cdbba3; padding: 40px 0 34px; font-size: 13.5px; }
+    .foot-grid { display: flex; flex-wrap: wrap; gap: 22px 40px; justify-content: space-between; align-items: flex-start; }
+    .foot-brand b { font-family: 'Fraunces', serif; font-size: 19px; color: #fff; display: block; margin-bottom: 6px; }
+    .foot-col b { color: #f0e2cd; display: block; margin-bottom: 8px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .foot-col a { color: #cdbba3; text-decoration: none; display: block; line-height: 1.9; }
+    .foot-col a:hover { color: #fff; }
+    .disclaimer { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(246,239,227,.14); color: #b09c82; font-size: 12.5px; line-height: 1.7; }
+
+    /* Concept badge */
+    .demo-tag { position: fixed; bottom: 14px; right: 14px; z-index: 50;
+      background: #1c130c; color: var(--gold); font: 600 11.5px/1 'Inter', system-ui;
+      padding: 9px 14px; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.4);
+      border: 1px solid rgba(217,164,65,.4); letter-spacing: .3px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; padding: 56px 0 62px; }
+      .showroom { max-width: 420px; }
+      .story-grid { grid-template-columns: 1fr; gap: 38px; }
+      .badge-years { max-width: 260px; }
+      section { padding: 60px 0; }
+      .nav-phone { display: none; }
+    }
+    @media (max-width: 560px) {
+      .strip .wrap { justify-content: flex-start; }
+      .trust { width: 100%; }
+      .hero .actions .btn, .cta-actions .btn { flex: 1 1 auto; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="mark">O</span>
+        <span><b>Orman's Furniture</b><small>Overland Park · Est. 1967</small></span>
+      </a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+19136812841"><span>Call the showroom</span>(913) 681-2841</a>
+        <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Handcrafted in solid American hardwood</span>
+          <h1>Furniture built to last a lifetime — <em>made to order</em> in Overland Park.</h1>
+          <p class="lede">For 58 years, families across Johnson County have furnished their homes with solid-wood, fine-leather and quality mattress pieces from Orman's — every one customizable to the wood, stain and size you want.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#quote">Design your piece</a>
+            <a class="btn btn-ghost" href="tel:+19136812841">Call (913) 681-2841</a>
+          </div>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="r-txt"><b>4.8</b> average · <b>100+</b> Google reviews · Overland Park, KS</span>
+          </div>
+        </div>
+        <div class="showroom" aria-hidden="true">
+          <div class="piece p-wood" data-label="Solid walnut"></div>
+          <div class="piece p-leather" data-label="Fine leather"></div>
+          <div class="piece p-cream" data-label="Quality mattress"></div>
+          <div class="piece p-oak" data-label="White oak"></div>
+          <div class="piece p-espresso" data-label="Espresso finish"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <div class="trust"><span class="ic">🏛️</span><span><b>58 years</b> family-owned since 1967</span></div>
+        <div class="trust"><span class="ic">🪵</span><span><b>Solid</b> American hardwood</span></div>
+        <div class="trust"><span class="ic">✂️</span><span><b>Made to order</b> &amp; customizable</span></div>
+        <div class="trust"><span class="ic">⭐</span><span><b>4.8★</b> from 100+ reviews</span></div>
+        <div class="trust"><span class="ic">📍</span><span>Metcalf Ave, Overland Park</span></div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="collection">
+      <div class="wrap center">
+        <div class="kicker">The Collection</div>
+        <h2>Every room, built the way you want it</h2>
+        <p class="sub">Browse the showroom floor or order a custom set — bedroom, dining, living, office, leather and mattresses, in the hardwood and finish of your choosing.</p>
+      </div>
+      <div class="wrap">
+        <div class="cards">
+          <div class="card"><div class="swatch sw-living"></div><h3>Living Room</h3><p>Sofas, love seats, accent chairs, TV stands and occasional tables — comfort that's built to hold up.</p></div>
+          <div class="card"><div class="swatch sw-bed"></div><h3>Bedroom</h3><p>Beds, dressers, nightstands, chests and wardrobes in solid maple, cherry, oak and more.</p></div>
+          <div class="card"><div class="swatch sw-dining"></div><h3>Dining Room</h3><p>Heirloom tables, chairs, hutches, benches and islands sized to fit your space exactly.</p></div>
+          <div class="card"><div class="swatch sw-leather"></div><h3>Fine Leather</h3><p>Genuine leather and performance-fabric upholstery — sink into a chair that ages beautifully.</p></div>
+          <div class="card"><div class="swatch sw-mattress"></div><h3>Quality Mattresses</h3><p>Rest easy on a mattress selected for real comfort and value, not showroom gimmicks.</p></div>
+          <div class="card"><div class="swatch sw-custom"></div><h3>Custom &amp; Office</h3><p>Desks, bookcases and bespoke pieces — give us the dimensions and stain, we'll build the quote.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story">
+      <div class="wrap story-grid">
+        <div class="story-visual">
+          <div class="badge-years" aria-hidden="true">
+            <div>
+              <div class="num">58</div>
+              <div class="yrs">Years</div>
+              <div class="since">of craftsmanship · since 1967</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Why Orman's</div>
+          <h2>A furniture man since 1967 — and still choosing every board.</h2>
+          <p>Tim Orman knows solid wood the way few people still do. Since 1967, Orman's has skipped the flat-pack particleboard and the big-box upsell in favor of real American hardwoods — brown maple, cherry, red oak, quartersawn white oak — built by skilled Amish craftsmen to last for generations.</p>
+          <p>Nothing here is take-it-or-leave-it. Pick the piece, the wood species, the stain, the leather or fabric, even the dimensions — and Orman's makes it to order at a price that beats the national chains.</p>
+          <div class="pill-row">
+            <span class="pill"><span class="ic">✦</span> Brown maple &amp; cherry</span>
+            <span class="pill"><span class="ic">✦</span> Amish-built quality</span>
+            <span class="pill"><span class="ic">✦</span> Honest, no-pressure advice</span>
+            <span class="pill"><span class="ic">✦</span> Fair prices vs. big-box</span>
+          </div>
+          <p class="signed">— Tim Orman, owner</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WOOD SPECIES -->
+    <section class="species">
+      <div class="wrap center">
+        <div class="kicker">Choose your hardwood</div>
+        <h2>Solid wood you can pick by name</h2>
+        <p class="sub">Real American hardwoods, each with its own grain and character — finished in the stain that fits your home.</p>
+      </div>
+      <div class="wrap">
+        <div class="woodrow">
+          <div class="wood w-maple"><span>Brown Maple</span></div>
+          <div class="wood w-cherry"><span>Cherry</span></div>
+          <div class="wood w-oak"><span>Red Oak</span></div>
+          <div class="wood w-white"><span>Quartersawn White Oak</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <div class="wrap center">
+        <div class="kicker">Neighbors talk</div>
+        <h2>Trusted across Johnson County</h2>
+        <p class="sub">Real reviews from Overland Park and the surrounding metro — averaging 4.8 stars.</p>
+      </div>
+      <div class="wrap">
+        <div class="qcards">
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“Extremely helpful staff. High quality furniture at great prices — this is where you go for furniture that will last a lifetime.”</p>
+            <cite>David S. <span>· Overland Park, KS</span></cite>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“Tim is incredibly knowledgeable and the prices are more than fair. He was helpful through the whole process, start to finish.”</p>
+            <cite>A satisfied customer <span>· Johnson County, KS</span></cite>
+          </div>
+          <div class="quote">
+            <div class="qs">★★★★★</div>
+            <p>“A large, open warehouse full of beautiful furniture at a good price. Great service and delivery was easy and quick.”</p>
+            <cite>Maryanne S. <span>· Overland Park, KS</span></cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band" id="quote">
+      <div class="wrap">
+        <div class="kicker" style="color:var(--gold)">Made to order</div>
+        <h2>Let's build the piece you've been picturing.</h2>
+        <p>Tell us the room, the wood and the look — Orman's will put together a quote and help you get it exactly right. Stop by the Metcalf Ave showroom or call and we'll walk you through the options.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+19136812841">Call (913) 681-2841</a>
+          <a class="btn btn-ghost" href="#collection">Browse the collection</a>
+        </div>
+        <p class="cta-note">15205 Metcalf Ave, Overland Park, KS 66223 · Mon–Sat 10–6 (closed Wed &amp; Sun)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-f">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand" style="max-width:280px">
+          <b>Orman's Furniture</b>
+          Solid-wood, leather &amp; mattress furniture, made to order in Overland Park, Kansas since 1967.
+        </div>
+        <div class="foot-col">
+          <b>Visit</b>
+          <a href="https://maps.google.com/?q=15205+Metcalf+Ave+Overland+Park+KS+66223" target="_blank" rel="noopener">15205 Metcalf Ave<br>Overland Park, KS 66223</a>
+          <a href="tel:+19136812841">(913) 681-2841</a>
+        </div>
+        <div class="foot-col">
+          <b>Hours</b>
+          <span style="display:block;line-height:1.9">Mon–Tue · 10–6<br>Wed · Closed<br>Thu–Sat · 10–6<br>Sun · Closed</span>
+        </div>
+        <div class="foot-col">
+          <b>Shop</b>
+          <a href="#collection">Living &amp; Bedroom</a>
+          <a href="#collection">Dining &amp; Leather</a>
+          <a href="#collection">Mattresses</a>
+          <a href="#quote">Custom orders</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        This is a concept preview designed by <strong style="color:#e9d9bf">Gigawatt</strong>, a Kansas City web design &amp; AI consulting studio — created to show a redesign direction for Orman's Furniture. It is not the official Orman's website. Business details are drawn from public listings and shown for demonstration only.
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-tag">⚡ concept preview</div>
+</body>
+</html>

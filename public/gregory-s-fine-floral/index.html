@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Gregory's Fine Floral — AIFD-certified floral design in Prairie Village, KS. Weddings, events, sympathy & same-day delivery across the Kansas City metro. Order online or call.">
+<title>Gregory's Fine Floral — Artful blooms, designed by hand in Prairie Village</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#faf6f0;
+    --ivory-2:#f3ece1;
+    --blush:#e9d3d1;
+    --blush-soft:#f6e6e4;
+    --sage:#a7b39a;
+    --sage-deep:#7c8a70;
+    --sage-ink:#4c5645;
+    --plum:#6d2b4e;
+    --plum-deep:#4f1d39;
+    --rose:#a83a63;
+    --ink:#33302c;
+    --ink-soft:#5c564e;
+    --gold:#b89358;
+    --line:rgba(109,43,78,.16);
+    --shadow:0 24px 60px -30px rgba(79,29,57,.45);
+    --shadow-sm:0 12px 34px -20px rgba(79,29,57,.4);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    font-weight:300;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;letter-spacing:.2px}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(20px,5vw,44px)}
+  .eyebrow{
+    font-family:var(--sans);
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:.32em;
+    font-size:.72rem;
+    color:var(--plum);
+  }
+  .eyebrow.on-dark{color:var(--blush)}
+  .script{font-style:italic;color:var(--plum)}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--sans);font-weight:500;font-size:.92rem;
+    letter-spacing:.06em;
+    padding:.95em 1.7em;border-radius:999px;
+    cursor:pointer;border:1px solid transparent;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--plum),var(--rose));
+    color:#fff;box-shadow:var(--shadow-sm);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(168,58,99,.6)}
+  .btn-ghost{
+    background:transparent;color:var(--plum);border-color:var(--line);
+  }
+  .btn-ghost:hover{background:var(--blush-soft);border-color:var(--plum)}
+  .btn-light{background:var(--ivory);color:var(--plum)}
+  .btn-light:hover{transform:translateY(-2px);background:#fff}
+  .btn-outline-light{border-color:rgba(255,255,255,.5);color:#fff}
+  .btn-outline-light:hover{background:rgba(255,255,255,.12)}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,246,240,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-mark{
+    width:44px;height:44px;flex:none;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,var(--blush-soft),var(--blush) 55%,var(--plum) 130%);
+    display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5),var(--shadow-sm);
+  }
+  .brand-mark svg{width:26px;height:26px}
+  .brand-name{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1;letter-spacing:.3px}
+  .brand-name small{display:block;font-family:var(--sans);font-weight:400;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--sage-deep);margin-top:4px}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-phone{display:none;font-weight:400;font-size:.9rem;letter-spacing:.04em;color:var(--ink-soft)}
+  .nav-phone b{color:var(--plum);font-weight:600}
+  .nav-phone span{display:block;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--sage-deep)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--ivory),var(--ivory-2))}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;padding:clamp(48px,8vw,96px) 0 clamp(56px,7vw,88px)}
+  .hero h1{font-size:clamp(2.7rem,7.5vw,5rem);letter-spacing:-.5px}
+  .hero h1 em{font-style:italic;color:var(--plum);font-weight:500}
+  .hero-lead{max-width:34ch;font-size:clamp(1.02rem,2.4vw,1.16rem);color:var(--ink-soft);margin-top:22px}
+  .stars-line{display:flex;align-items:center;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
+  .stars-line small{color:var(--ink-soft);font-size:.9rem;letter-spacing:.02em}
+  .stars-line b{color:var(--ink)}
+  .hero-cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .hero-art{position:relative;min-height:340px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6)}
+  .hero-art .card-tag{
+    position:absolute;left:20px;bottom:20px;z-index:3;
+    background:rgba(250,246,240,.92);backdrop-filter:blur(6px);
+    padding:12px 18px;border-radius:14px;box-shadow:var(--shadow-sm);
+    font-size:.8rem;color:var(--ink-soft);letter-spacing:.02em;
+  }
+  .hero-art .card-tag b{display:block;font-family:var(--serif);font-size:1.05rem;color:var(--plum);font-weight:600}
+
+  /* CSS bouquet (reusable) */
+  .bouquet{position:absolute;inset:0;background:
+     radial-gradient(120% 90% at 78% 118%,var(--plum-deep),transparent 60%),
+     linear-gradient(160deg,var(--blush-soft),var(--sage) 130%);}
+  .bloom{position:absolute;border-radius:50%;filter:drop-shadow(0 6px 14px rgba(79,29,57,.28))}
+  .bloom::before,.bloom::after{content:"";position:absolute;inset:0;border-radius:50%}
+  .petals{position:absolute;width:var(--s);height:var(--s);left:var(--x);top:var(--y);transform:rotate(var(--r,0deg))}
+  .petals i{position:absolute;top:0;left:50%;width:calc(var(--s)*.5);height:calc(var(--s)*.62);
+     background:var(--c);border-radius:60% 60% 45% 45%;transform-origin:bottom center;
+     transform:translateX(-50%) rotate(var(--pr));box-shadow:inset 0 -6px 12px rgba(0,0,0,.12)}
+  .petals .core{width:calc(var(--s)*.34);height:calc(var(--s)*.34);top:auto;left:50%;bottom:calc(var(--s)*.5 - var(--s)*.17);
+     transform:translate(-50%,50%);background:radial-gradient(circle at 40% 35%,#f6e7c9,var(--gold));border-radius:50%;box-shadow:none}
+  .stem{position:absolute;width:4px;background:linear-gradient(var(--sage-deep),var(--sage-ink));border-radius:4px;transform-origin:bottom center}
+
+  /* Sections */
+  section{position:relative}
+  .sec-pad{padding:clamp(56px,9vw,104px) 0}
+  .sec-head{max-width:640px;margin:0 auto clamp(34px,5vw,52px);text-align:center}
+  .sec-head h2{font-size:clamp(2rem,5vw,3.1rem);margin-top:14px}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.04rem}
+
+  /* Trust strip */
+  .trust{background:var(--plum-deep);color:var(--blush-soft)}
+  .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.08)}
+  .trust-cell{background:var(--plum-deep);padding:26px 20px;text-align:center}
+  .trust-cell .n{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);color:#fff;font-weight:600;line-height:1}
+  .trust-cell .l{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blush);margin-top:9px}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  .svc-card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px;
+    box-shadow:var(--shadow-sm);transition:transform .3s ease,box-shadow .3s ease;
+    position:relative;overflow:hidden;
+  }
+  .svc-card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--blush),var(--plum),var(--sage));opacity:0;transition:opacity .3s}
+  .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .svc-card:hover::after{opacity:1}
+  .svc-ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+    background:linear-gradient(135deg,var(--blush-soft),var(--ivory-2));border:1px solid var(--line);font-size:1.5rem}
+  .svc-card h3{font-size:1.5rem;color:var(--ink)}
+  .svc-card p{color:var(--ink-soft);margin-top:8px;font-size:.96rem}
+
+  /* Story / differentiator */
+  .story{background:linear-gradient(160deg,var(--ivory-2),var(--blush-soft))}
+  .story-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  .story h2{font-size:clamp(2rem,5vw,3.2rem);margin-top:14px}
+  .story p{color:var(--ink-soft);margin-top:18px;font-size:1.05rem}
+  .story .sign{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--plum);margin-top:22px}
+  .story .sign small{display:block;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-deep);margin-top:6px}
+  .portrait{
+    position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
+    background:radial-gradient(120% 90% at 30% 20%,var(--blush-soft),var(--sage) 160%);
+    display:grid;place-items:center;border:1px solid rgba(255,255,255,.6);
+  }
+  .portrait .badge-aifd{
+    position:absolute;top:18px;left:18px;background:rgba(250,246,240,.94);
+    border-radius:12px;padding:9px 14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--plum);font-weight:600;box-shadow:var(--shadow-sm)
+  }
+  .monogram{font-family:var(--serif);font-size:clamp(4rem,14vw,7rem);color:rgba(79,29,57,.55);font-weight:600;letter-spacing:2px;text-shadow:0 2px 20px rgba(255,255,255,.4)}
+
+  /* Weddings portfolio */
+  .weddings{background:var(--ink);color:var(--ivory);position:relative;overflow:hidden}
+  .weddings::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(60% 50% at 15% 0%,rgba(168,58,99,.28),transparent 60%),
+    radial-gradient(50% 50% at 90% 100%,rgba(167,179,154,.22),transparent 60%);}
+  .weddings .sec-head h2{color:#fff}
+  .weddings .sec-head p{color:rgba(250,246,240,.72)}
+  .portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;position:relative;z-index:2}
+  .plate{
+    position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1/1;
+    border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);
+  }
+  .plate .label{
+    position:absolute;left:14px;bottom:12px;z-index:4;font-size:.74rem;letter-spacing:.16em;
+    text-transform:uppercase;color:#fff;font-weight:500;text-shadow:0 2px 8px rgba(0,0,0,.5)
+  }
+  .plate .label span{display:block;font-family:var(--serif);font-size:1.1rem;text-transform:none;letter-spacing:.3px;font-weight:500}
+  .p1{background:linear-gradient(150deg,#f6e6e4,#a83a63 130%)}
+  .p2{background:linear-gradient(150deg,#eef0e6,#7c8a70 130%)}
+  .p3{background:linear-gradient(150deg,#f3ece1,#6d2b4e 140%)}
+  .p4{background:linear-gradient(150deg,#efe0e6,#4f1d39 150%)}
+  .wed-cta{display:flex;justify-content:center;margin-top:38px;position:relative;z-index:2}
+
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  .rev-card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px 26px;
+    box-shadow:var(--shadow-sm);position:relative;
+  }
+  .rev-card .quote-mark{font-family:var(--serif);font-size:3.4rem;line-height:.4;color:var(--blush);position:absolute;top:22px;right:24px}
+  .rev-stars{color:var(--gold);letter-spacing:2px;font-size:.95rem}
+  .rev-card p{font-family:var(--serif);font-style:italic;font-size:1.24rem;line-height:1.45;color:var(--ink);margin-top:14px}
+  .rev-card .who{margin-top:18px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);font-weight:500}
+
+  /* Final CTA */
+  .final{background:linear-gradient(135deg,var(--plum),var(--plum-deep));color:#fff;position:relative;overflow:hidden}
+  .final::after{content:"";position:absolute;right:-60px;bottom:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(233,211,209,.4),transparent 65%)}
+  .final .inner{text-align:center;position:relative;z-index:2}
+  .final h2{font-size:clamp(2.1rem,5.5vw,3.4rem);color:#fff}
+  .final p{color:var(--blush-soft);margin-top:16px;font-size:1.06rem;max-width:50ch;margin-left:auto;margin-right:auto}
+  .final .final-cta{display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:rgba(250,246,240,.72);padding:52px 0 40px;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-bottom:30px}
+  footer .brand-name{color:#fff}
+  footer .brand-name small{color:var(--sage)}
+  .foot-col h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;font-weight:600}
+  .foot-col a,.foot-col p{color:rgba(250,246,240,.72);display:block;margin:5px 0}
+  .foot-col a:hover{color:#fff}
+  .foot-note{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.8rem;color:rgba(250,246,240,.5);line-height:1.7}
+  .foot-note b{color:var(--blush)}
+
+  /* concept badge */
+  .concept-badge{
+    position:fixed;right:16px;bottom:16px;z-index:100;
+    background:var(--ink);color:#fff;font-family:var(--sans);font-weight:500;
+    font-size:.74rem;letter-spacing:.1em;padding:9px 15px;border-radius:999px;
+    box-shadow:0 10px 30px -8px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);
+    display:flex;align-items:center;gap:7px;
+  }
+  .concept-badge b{color:var(--gold)}
+
+  @media(min-width:620px){
+    .trust-grid{grid-template-columns:repeat(4,1fr)}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .rev-grid{grid-template-columns:repeat(3,1fr)}
+    .foot-grid{grid-template-columns:2fr 1fr 1fr}
+  }
+  @media(min-width:860px){
+    .nav-phone{display:block}
+    .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center}
+    .hero-art{min-height:520px}
+    .svc-grid{grid-template-columns:repeat(3,1fr)}
+    .story-grid{grid-template-columns:1fr 1fr;gap:64px}
+    .portfolio{grid-template-columns:repeat(4,1fr)}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Gregory's Fine Floral home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12c0-3 2-5 5-5-1 3-2 5-5 5Z" fill="#6d2b4e"/>
+          <path d="M12 12c0-3-2-5-5-5 1 3 2 5 5 5Z" fill="#a83a63"/>
+          <path d="M12 12c-3 0-5-2-5-5 3 1 5 2 5 5Z" fill="#7c8a70"/>
+          <path d="M12 12c3 0 5-2 5-5-3 1-5 2-5 5Z" fill="#a7b39a"/>
+          <circle cx="12" cy="12" r="2.2" fill="#b89358"/>
+          <path d="M12 14v6" stroke="#4c5645" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">Gregory's<small>Fine Floral</small></span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:19132575517"><span>Prairie Village · Call</span><b>(913) 257-5517</b></a>
+      <a class="btn btn-primary" href="#order">Order Flowers</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">AIFD-Certified · Prairie Village, KS</span>
+        <h1>The most <em>beautiful</em> flowers in Kansas City — designed by hand.</h1>
+        <p class="hero-lead">Fresh, fragrant, longer-lasting arrangements crafted one stem at a time by Gregory Banken. Weddings, sympathy, and every-day joy — delivered across the KC metro.</p>
+        <div class="stars-line">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <small><b>4.7</b> on Google · <b>130+</b> reviews from KC neighbors</small>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#order">Order Flowers Online</a>
+          <a class="btn btn-ghost" href="tel:19132575517">📞 (913) 257-5517</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="bouquet">
+          <!-- stems -->
+          <div class="stem" style="left:48%;bottom:6%;height:46%;transform:rotate(-4deg)"></div>
+          <div class="stem" style="left:40%;bottom:6%;height:40%;transform:rotate(-16deg)"></div>
+          <div class="stem" style="left:56%;bottom:6%;height:42%;transform:rotate(12deg)"></div>
+          <div class="stem" style="left:33%;bottom:6%;height:34%;transform:rotate(-26deg)"></div>
+          <div class="stem" style="left:63%;bottom:6%;height:36%;transform:rotate(22deg)"></div>
+          <!-- blooms -->
+          <div class="petals" style="--s:130px;--x:36%;--y:20%;--c:var(--plum)">
+            <i style="--pr:0deg"></i><i style="--pr:60deg"></i><i style="--pr:120deg"></i><i style="--pr:180deg"></i><i style="--pr:240deg"></i><i style="--pr:300deg"></i><span class="core"></span>
+          </div>
+          <div class="petals" style="--s:100px;--x:20%;--y:34%;--c:var(--rose)">
+            <i style="--pr:0deg"></i><i style="--pr:72deg"></i><i style="--pr:144deg"></i><i style="--pr:216deg"></i><i style="--pr:288deg"></i><span class="core"></span>
+          </div>
+          <div class="petals" style="--s:108px;--x:54%;--y:30%;--c:var(--blush)">
+            <i style="--pr:0deg"></i><i style="--pr:72deg"></i><i style="--pr:144deg"></i><i style="--pr:216deg"></i><i style="--pr:288deg"></i><span class="core"></span>
+          </div>
+          <div class="petals" style="--s:82px;--x:14%;--y:20%;--c:var(--sage)">
+            <i style="--pr:0deg"></i><i style="--pr:90deg"></i><i style="--pr:180deg"></i><i style="--pr:270deg"></i><span class="core"></span>
+          </div>
+          <div class="petals" style="--s:88px;--x:62%;--y:16%;--c:#c9648a">
+            <i style="--pr:0deg"></i><i style="--pr:72deg"></i><i style="--pr:144deg"></i><i style="--pr:216deg"></i><i style="--pr:288deg"></i><span class="core"></span>
+          </div>
+          <div class="petals" style="--s:70px;--x:44%;--y:6%;--c:var(--blush-soft)">
+            <i style="--pr:0deg"></i><i style="--pr:90deg"></i><i style="--pr:180deg"></i><i style="--pr:270deg"></i><span class="core"></span>
+          </div>
+        </div>
+        <div class="card-tag">Seasonal Designer's Choice<b>Handcrafted daily</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="trust-cell"><div class="n">38 yrs</div><div class="l">Design Experience</div></div>
+        <div class="trust-cell"><div class="n">AIFD</div><div class="l">Certified Designer</div></div>
+        <div class="trust-cell"><div class="n">4.7★</div><div class="l">130+ Google Reviews</div></div>
+        <div class="trust-cell"><div class="n">Same-Day</div><div class="l">KC Metro Delivery</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec-pad" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Create</span>
+        <h2>Flowers for every chapter of life</h2>
+        <p>From a Tuesday "thinking of you" to the aisle you'll remember forever — each arrangement is designed by hand, never pulled from a shelf.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">💐</div>
+          <h3>Signature Arrangements</h3>
+          <p>Fresh, fragrant, longer-lasting bouquets in the colors and style you love — including our Designer's Choice.</p>
+        </article>
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">💍</div>
+          <h3>Weddings &amp; Events</h3>
+          <p>Bridal bouquets, ceremony pieces and reception florals designed to your vision. Featured on The Knot.</p>
+        </article>
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">🕊️</div>
+          <h3>Sympathy &amp; Funeral</h3>
+          <p>Graceful tributes and standing sprays, arranged with care and delivered on time to services across the metro.</p>
+        </article>
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">🚚</div>
+          <h3>Same-Day Delivery</h3>
+          <p>Order by our daily cutoff and we'll deliver to Prairie Village, Overland Park, Leawood, KC &amp; 20+ nearby cities.</p>
+        </article>
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">🪴</div>
+          <h3>Plants &amp; Keepsakes</h3>
+          <p>Blooming plants, lush greenery and thoughtful add-on gifts to make every delivery feel complete.</p>
+        </article>
+        <article class="svc-card">
+          <div class="svc-ic" aria-hidden="true">🎀</div>
+          <h3>Corporate &amp; Standing Orders</h3>
+          <p>Weekly office florals and recurring designs that keep your space fresh, on-brand and effortless.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story sec-pad" id="story">
+    <div class="wrap story-grid">
+      <div class="portrait" aria-hidden="true">
+        <span class="badge-aifd">AIFD Certified</span>
+        <span class="monogram">GB</span>
+      </div>
+      <div class="story-copy">
+        <span class="eyebrow">The Difference Is In The Hands</span>
+        <h2>Three-plus decades of artistry, in every stem</h2>
+        <p>Gregory Banken opened Gregory's Fine Floral in Prairie Village in 2014, bringing more than 35 years of design experience and a rare AIFD certification to the neighborhood. That craft is why customers keep telling us the same thing.</p>
+        <p><em>"I don't know what Gregory's does that is so different, but the colors are brighter, the flowers are fresher and they last longer."</em> — that's not our marketing. That's a review. Every arrangement is composed by hand, from the freshest available blooms, balanced for color, fragrance and longevity.</p>
+        <div class="sign">Gregory Banken<small>Founder &amp; AIFD Designer</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEDDINGS PORTFOLIO -->
+  <section class="weddings sec-pad" id="weddings">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow on-dark">Weddings &amp; Events</span>
+        <h2>Florals worthy of the moment</h2>
+        <p>From intimate ceremonies to full-scale receptions across the Kansas City metro — designed around your palette, your venue and your story.</p>
+      </div>
+      <div class="portfolio">
+        <div class="plate p1" aria-hidden="true"><span class="label"><span>Bridal Bouquets</span>Garden-style &amp; hand-tied</span></div>
+        <div class="plate p2" aria-hidden="true"><span class="label"><span>Ceremony</span>Arches &amp; aisle florals</span></div>
+        <div class="plate p3" aria-hidden="true"><span class="label"><span>Receptions</span>Centerpieces &amp; tablescapes</span></div>
+        <div class="plate p4" aria-hidden="true"><span class="label"><span>Statement Pieces</span>Installations &amp; accents</span></div>
+      </div>
+      <div class="wed-cta">
+        <a class="btn btn-primary" href="#inquiry">Start a Wedding Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec-pad" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Loved Across The Metro</span>
+        <h2>Kind words from KC neighbors</h2>
+        <p>A 4.7-star reputation built one delighted recipient at a time.</p>
+      </div>
+      <div class="rev-grid">
+        <article class="rev-card">
+          <span class="quote-mark" aria-hidden="true">&rdquo;</span>
+          <div class="rev-stars" aria-hidden="true">★★★★★</div>
+          <p>The lady who received your arrangement loved it. Not only was it beautiful — she said it filled the room with fragrance.</p>
+          <div class="who">— Cinda B., Kansas City</div>
+        </article>
+        <article class="rev-card">
+          <span class="quote-mark" aria-hidden="true">&rdquo;</span>
+          <div class="rev-stars" aria-hidden="true">★★★★★</div>
+          <p>The colors are brighter, the flowers are fresher, and they last longer. I don't know how Gregory's does it.</p>
+          <div class="who">— Debbie O., Overland Park</div>
+        </article>
+        <article class="rev-card">
+          <span class="quote-mark" aria-hidden="true">&rdquo;</span>
+          <div class="rev-stars" aria-hidden="true">★★★★★</div>
+          <p>When you want a beautiful, unique and long-lasting arrangement, turn to Gregory's. Truly the best in the city.</p>
+          <div class="who">— Marcia V., Leawood</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final sec-pad" id="order">
+    <div class="wrap inner">
+      <span class="eyebrow on-dark" id="inquiry">Order · Deliver · Delight</span>
+      <h2>Send something beautiful today</h2>
+      <p>Order online anytime, or call and speak with a designer. Same-day delivery available across Prairie Village and the greater Kansas City metro.</p>
+      <div class="final-cta">
+        <a class="btn btn-light" href="tel:19132575517">📞 Call (913) 257-5517</a>
+        <a class="btn btn-outline-light" href="#weddings">Plan a Wedding</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <span class="brand-name">Gregory's<small>Fine Floral</small></span>
+        <p style="margin-top:16px;max-width:34ch">AIFD-certified floral design, hand-crafted in Prairie Village and delivered across the Kansas City metro since 2014.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <p>8833 Roe Ave<br>Prairie Village, KS 66207</p>
+        <a href="tel:19132575517">(913) 257-5517</a>
+      </div>
+      <div class="foot-col">
+        <h4>Hours</h4>
+        <p>Mon–Fri · 9:00–5:30</p>
+        <p>Saturday · 9:00–3:00</p>
+        <p>Sunday · Closed</p>
+      </div>
+    </div>
+    <p class="foot-note">
+      <b>⚡ Concept preview by Gigawatt</b> — a Kansas City web design &amp; AI consulting studio. This is an unofficial redesign concept created to show what's possible; it is not the live Gregory's Fine Floral website and collects no orders. All names, reviews and details belong to their respective owners.
+    </p>
+  </div>
+</footer>
+
+<div class="concept-badge"><b>⚡</b> concept preview</div>
+
+</body>
+</html>
