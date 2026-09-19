@@ -1,0 +1,54 @@
+{
+  "title": "Home",
+  "description": "Café Provence — classic French country cuisine, family-owned in Prairie Village, KS.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "variant": "centered",
+      "eyebrow": "Prairie Village, KS",
+      "heading": "Classic French Country Cuisine, Family-Owned for More Than 20 Years",
+      "subheading": "4.8 stars from 800+ Google reviews. A Top 100 Restaurant in the U.S.",
+      "primaryCta": { "label": "Reserve a table", "href": "https://www.opentable.com/cafe-provence" },
+      "secondaryCta": { "label": "See the menu", "href": "#services" }
+    },
+    {
+      "block": "CardGrid",
+      "variant": "services",
+      "heading": "The menu",
+      "columns": 3,
+      "cards": [
+        { "title": "Aperitif" },
+        { "title": "Les Soupes" },
+        { "title": "Les Belles du Jardin" },
+        { "title": "Les Petits Plats" },
+        { "title": "Rivières et Océan" },
+        { "title": "Le Terroir" },
+        { "title": "Végétal" },
+        { "title": "Tuesday Prix Fixe" }
+      ]
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "heading": "Why neighbors choose them",
+      "body": [
+        "**\"Thoughtfully prepared, flavorful, and clearly made with care.\"** — Angelina, Kansas City, MO",
+        "**\"Small, quaint setting. Fantastic service. Great food!\"** — Angie P., Kansas City, MO",
+        "**\"The cafe is small, but truly has the feel and look of a French Cafe.\"** — David W., Tulsa, OK"
+      ]
+    },
+    {
+      "block": "CardGrid",
+      "variant": "features",
+      "heading": "Recognized nationally",
+      "columns": 3,
+      "cards": [
+        { "title": "Top 100 Restaurants in the U.S. (OpenTable)" },
+        { "title": "100 Most Romantic Restaurants in America (OpenTable)" },
+        { "title": "Top 10 French Restaurants in the U.S." },
+        { "title": "Family-Owned by the Quillec Family for 20+ Years" }
+      ]
+    }
+  ]
+}

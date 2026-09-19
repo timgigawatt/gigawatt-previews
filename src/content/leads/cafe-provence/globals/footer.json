@@ -1,0 +1,6 @@
+{
+  "columns": [
+    { "heading": "Company", "links": [ { "label": "Home", "href": "/" }, { "label": "Contact", "href": "/contact/" } ] }
+  ],
+  "legal": "© Café Provence. All rights reserved."
+}

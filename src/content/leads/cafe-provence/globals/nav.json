@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "cta": { "label": "Call now", "href": "tel:+19133845998" }
+}

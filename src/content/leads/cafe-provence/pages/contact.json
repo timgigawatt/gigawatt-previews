@@ -1,0 +1,24 @@
+{
+  "title": "Contact",
+  "description": "Contact Café Provence in Prairie Village, KS.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "variant": "centered",
+      "heading": "Contact",
+      "subheading": "3936 W 69th Terrace, Prairie Village, KS 66208 · (913) 384-5998"
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "heading": "Hours & reservations",
+      "body": [
+        "Lunch: Monday – Saturday, 11:00 am – 2:30 pm",
+        "Dinner: Monday – Thursday, 5:00 pm – 9:00 pm · Friday – Saturday, 5:00 pm – 10:00 pm",
+        "Closed Sundays.",
+        "Reservations by phone or [OpenTable](https://www.opentable.com/cafe-provence) — the restaurant is unable to accept reservations by email."
+      ]
+    }
+  ]
+}
