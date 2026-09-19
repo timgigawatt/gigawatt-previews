@@ -1,0 +1,6 @@
+{
+  "columns": [
+    { "heading": "Company", "links": [ { "label": "Home", "href": "/" }, { "label": "Contact", "href": "/contact/" } ] }
+  ],
+  "legal": "© Keeton Auto Repair. All rights reserved."
+}

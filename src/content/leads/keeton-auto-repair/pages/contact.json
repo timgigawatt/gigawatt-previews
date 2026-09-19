@@ -1,0 +1,22 @@
+{
+  "title": "Contact",
+  "description": "Contact Keeton Auto Repair in Overland Park, KS.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "variant": "centered",
+      "heading": "Contact",
+      "subheading": "15100 Glenwood Ave, Overland Park, KS 66223 · (913) 724-5484"
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "heading": "Hours & service area",
+      "body": [
+        "Monday – Friday: 7:30 am – 6:00 pm",
+        "Serving Overland Park, Olathe, and the surrounding Johnson County area."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Home",
+  "description": "Keeton Auto Repair — independent, family-owned auto repair in Overland Park, KS.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "variant": "centered",
+      "eyebrow": "Overland Park, KS",
+      "heading": "Independent, Family-Owned Auto Repair Shop in Overland Park, KS",
+      "subheading": "4.7 stars from 500+ Google reviews. Family-owned since 2016.",
+      "primaryCta": { "label": "Call now", "href": "tel:+19137245484" },
+      "secondaryCta": { "label": "See services", "href": "#services" }
+    },
+    {
+      "block": "CardGrid",
+      "variant": "services",
+      "heading": "What we do",
+      "columns": 3,
+      "cards": [
+        { "title": "AC & Heat Repair" },
+        { "title": "Brake Repair & Replacement" },
+        { "title": "Diagnostics" },
+        { "title": "Electrical System Repair" },
+        { "title": "Engine Repair & Replacement" },
+        { "title": "Oil Change" },
+        { "title": "Suspension & Steering Repair" },
+        { "title": "Tires & Alignments" },
+        { "title": "Transmission Repair & Replacement" }
+      ]
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "heading": "Why neighbors choose them",
+      "body": [
+        "**\"Honest and fair and really, really knows cars.\"** — M.S., Stilwell, KS",
+        "**\"Keeton Auto repair is awesome. Never had any issues.\"** — S.K., Kansas City, MO"
+      ]
+    },
+    {
+      "block": "CardGrid",
+      "variant": "features",
+      "heading": "Why trust your car to them",
+      "columns": 3,
+      "cards": [
+        { "title": "ASE Certified Technicians" },
+        { "title": "3-Year / 36,000-Mile Nationwide Warranty" },
+        { "title": "Family-Owned Since 2016" }
+      ]
+    }
+  ]
+}
