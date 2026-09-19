@@ -1,0 +1,9 @@
+---
+// Rendered by the layout from globals/announcements.json — never placed on a page directly.
+const { title, body, cta, style = 'banner' } = Astro.props;
+---
+<aside class={`announcement announcement--${style}`} role="status">
+  <strong>{title}</strong>
+  <span>{body}</span>
+  {cta && <a href={cta.href}>{cta.label}</a>}
+</aside>

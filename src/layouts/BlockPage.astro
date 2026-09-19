@@ -1,0 +1,15 @@
+---
+// Renders one of a lead's pages: its blocks, in order, through the template's registry.
+import Base from './Base.astro';
+import { blocks } from '../blocks';
+
+const { lead, page } = Astro.props;
+---
+<Base lead={lead} title={page.title === 'Home' ? undefined : page.title} description={page.description}>
+  {page.blocks.map((b: any) => {
+    const Component = (blocks as any)[b.block];
+    if (!Component) throw new Error(`Unknown block "${b.block}" in lead "${lead.slug}" page "${page.title}"`);
+    const { block, ...props } = b;
+    return <Component {...props} leadSlug={lead.slug} />;
+  })}
+</Base>

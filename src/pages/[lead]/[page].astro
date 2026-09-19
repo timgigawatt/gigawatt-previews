@@ -1,0 +1,12 @@
+---
+import BlockPage from '../../layouts/BlockPage.astro';
+import { allLeads } from '../../lib/leads';
+
+export function getStaticPaths() {
+  return allLeads().flatMap((l) =>
+    Object.entries(l.pages).filter(([name]) => name !== 'home').map(([name, page]) => ({ params: { lead: l.slug, page: name }, props: { lead: l, page } })),
+  );
+}
+const { lead, page } = Astro.props;
+---
+<BlockPage lead={lead} page={page} />

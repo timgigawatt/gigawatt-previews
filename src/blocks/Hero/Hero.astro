@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import { resolveMedia } from '../../lib/media';
+
+const { variant = 'centered', eyebrow, heading, subheading, primaryCta, secondaryCta, image, leadSlug } = Astro.props;
+const img = image ? resolveMedia(image.src, leadSlug) : null;
+---
+<section class={`hero hero--${variant}`}>
+  <div class="hero__text">
+    {eyebrow && <p class="hero__eyebrow">{eyebrow}</p>}
+    <h1>{heading}</h1>
+    {subheading && <p class="hero__sub">{subheading}</p>}
+    <p class="hero__ctas">
+      {primaryCta && <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label}</a>}
+      {secondaryCta && <a class="btn" href={secondaryCta.href}>{secondaryCta.label}</a>}
+    </p>
+  </div>
+  {img && (
+    <div class="hero__media">
+      {/* Above the fold: eager + high priority per _config/standards/loading.md */}
+      <Image src={img} alt={image.alt} widths={[640, 1024, 1920]} sizes="100vw" loading="eager" fetchpriority="high" />
+    </div>
+  )}
+</section>

@@ -1,0 +1,6 @@
+{ "title": "Home", "description": "Example Plumbing — Olathe's family-owned plumber since 1998.", "published": true,
+  "blocks": [
+    { "block": "Hero", "variant": "centered", "eyebrow": "Olathe · Johnson County", "heading": "Plumbing done right, the first time", "subheading": "Family-owned since 1998 · 4.8 stars from 210 neighbors", "primaryCta": { "label": "Call (913) 555-0100", "href": "tel:+19135550100" }, "secondaryCta": { "label": "See services", "href": "#services" } },
+    { "block": "CardGrid", "variant": "services", "heading": "What we do", "columns": 3, "cards": [ { "title": "Repairs" }, { "title": "Water heaters" }, { "title": "Drain cleaning" } ] },
+    { "block": "TextSection", "variant": "narrow", "heading": "Why neighbors choose us", "body": [ "**\"Showed up on time and fixed it in an hour.\"** — Dana, Olathe", "**\"Honest pricing, no upsell.\"** — Mike, Overland Park" ] }
+  ] }

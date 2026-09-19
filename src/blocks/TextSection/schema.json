@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "TextSection",
+  "x-version": 1,
+  "x-description": "A heading and one or more paragraphs of markdown-lite text (paragraphs, **bold**, links). The general-purpose content block.",
+  "type": "object",
+  "required": ["block", "body"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "TextSection" },
+    "variant": { "type": "string", "enum": ["narrow", "wide"], "default": "narrow" },
+    "heading": { "type": "string", "maxLength": 90 },
+    "body": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "One string per paragraph" }
+  }
+}

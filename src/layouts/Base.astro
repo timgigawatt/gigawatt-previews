@@ -1,0 +1,43 @@
+---
+// Preview chrome for one lead: that lead's settings/nav/footer, always noindex, always badged.
+const { lead, title, description } = Astro.props;
+const { settings, nav, footer } = lead;
+const pathname = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="preview-badge">⚡ concept preview — not the live site</div>
+    <header class="site-header">
+      <a class="brand" href={`/${lead.slug}/`}>{settings.siteName}</a>
+      <nav>
+        {(nav.items ?? []).map((i: any) => <a href={i.href} aria-current={pathname === i.href ? 'page' : undefined}>{i.label}</a>)}
+        {nav.cta && <a class="btn btn--primary" href={nav.cta.href}>{nav.cta.label}</a>}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      {(footer.columns ?? []).map((col: any) => (
+        <div>
+          <h4>{col.heading}</h4>
+          <ul>{(col.links ?? []).map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        </div>
+      ))}
+      <div>
+        <h4>Contact</h4>
+        <p>{settings.address}<br />{settings.phone}{settings.email && <><br />{settings.email}</>}</p>
+      </div>
+      <p class="legal">{footer.legal ?? `© ${settings.siteName}`} · Concept by Gigawatt Labs</p>
+    </footer>
+  </body>
+</html>

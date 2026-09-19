@@ -1,0 +1,28 @@
+---
+// Index of every preview. For Tim; never linked from a preview, never indexed.
+import { allLeads } from '../lib/leads';
+const leads = allLeads();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gigawatt previews</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section class="text text--narrow">
+      <h1>Gigawatt concept previews</h1>
+      <p class="meta">{leads.length} previews. Each is a concept built from the business's own public content.</p>
+      <ul class="entries">
+        {leads.map((l) => (
+          <li>
+            <a href={`/${l.slug}/`}>{l.settings.siteName ?? l.slug}</a>
+            <small> · {Object.keys(l.pages).join(', ')}</small>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Branch deploys and deploy previews are enabled per site in Netlify (client-onboard
+# 04_site sets allowed_branches to all). Netlify sets CONTEXT to "production",
+# "deploy-preview", or "branch-deploy"; src/lib/content.ts uses it to hide drafts and
+# future-dated entries only in production.

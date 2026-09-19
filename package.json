@@ -1,0 +1,19 @@
+{
+  "name": "gigawatt-previews",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "context": "node scripts/context.mjs",
+    "validate": "node scripts/validate.mjs",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true"
+  },
+  "dependencies": {
+    "astro": "^7.3.3",
+    "sharp": "^0.35.4"
+  },
+  "description": "Concept previews for Gigawatt leads: one mock site per lead at /<slug>/"
+}

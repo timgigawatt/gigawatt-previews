@@ -1,0 +1,8 @@
+---
+import { inline } from '../../lib/inline';
+const { variant = 'narrow', heading, body = [], leadSlug: _leadSlug } = Astro.props;
+---
+<section class={`text text--${variant}`}>
+  {heading && <h2>{heading}</h2>}
+  {body.map((p: string) => <p set:html={inline(p)} />)}
+</section>

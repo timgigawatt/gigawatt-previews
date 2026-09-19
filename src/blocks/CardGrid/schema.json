@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "CardGrid",
+  "x-version": 1,
+  "x-description": "A grid of cards: services, team members, features. Each card has a title, text, optional image and link.",
+  "type": "object",
+  "required": ["block", "cards"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "CardGrid" },
+    "variant": { "type": "string", "enum": ["services", "team", "features"], "default": "services" },
+    "heading": { "type": "string", "maxLength": 90 },
+    "intro": { "type": "string", "maxLength": 300 },
+    "columns": { "type": "integer", "enum": [2, 3, 4], "default": 3 },
+    "cards": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["title"], "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string", "maxLength": 60 },
+          "text": { "type": "string", "maxLength": 300 },
+          "href": { "type": "string" },
+          "image": {
+            "type": "object", "required": ["src", "alt"], "additionalProperties": false,
+            "properties": { "src": { "type": "string" }, "alt": { "type": "string", "maxLength": 160 } }
+          }
+        }
+      }
+    }
+  }
+}

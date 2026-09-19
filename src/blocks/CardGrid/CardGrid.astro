@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import { resolveMedia } from '../../lib/media';
+const { variant = 'services', heading, intro, columns = 3, cards = [], leadSlug } = Astro.props;
+---
+<section class={`cards cards--${variant}`} style={`--cols:${columns}`}>
+  {heading && <h2>{heading}</h2>}
+  {intro && <p class="cards__intro">{intro}</p>}
+  <ul class="cards__grid">
+    {cards.map((c: any) => {
+      const img = c.image ? resolveMedia(c.image.src, leadSlug) : null;
+      return (
+        <li class="card">
+          {img && <Image src={img} alt={c.image.alt} widths={[400, 800]} sizes="(min-width: 900px) 30vw, 100vw" loading="lazy" decoding="async" />}
+          <h3>{c.href ? <a href={c.href}>{c.title}</a> : c.title}</h3>
+          {c.text && <p>{c.text}</p>}
+        </li>
+      );
+    })}
+  </ul>
+</section>

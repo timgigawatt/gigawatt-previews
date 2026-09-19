@@ -1,0 +1,5 @@
+{ "title": "Contact", "description": "Call or visit Example Plumbing.", "published": true,
+  "blocks": [
+    { "block": "Hero", "variant": "centered", "heading": "Contact", "subheading": "123 Main St, Olathe, KS · (913) 555-0100" },
+    { "block": "TextSection", "variant": "narrow", "heading": "Hours", "body": [ "Mon–Fri 7:00 am – 6:00 pm", "Sat 8:00 am – noon" ] }
+  ] }
