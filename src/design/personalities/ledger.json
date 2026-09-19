@@ -1,0 +1,111 @@
+{
+  "name": "ledger",
+  "for": "Professional services — law, accounting, insurance, dental, medical, financial.",
+  "voice": "Quiet, credible, expensive-looking. Deep green on ivory, muted gold used sparingly, wide margins, restrained motion, no gradients.",
+  "move": "Exactly one editorial pull-quote per page — hanging serif, gold hairline, nothing else in the band.",
+  "fonts": {
+    "display": "\"Spectral\", Georgia, \"Times New Roman\", serif",
+    "body": "\"Source Sans 3\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "files": [
+      {
+        "family": "Spectral",
+        "file": "spectral-400.woff2",
+        "weight": "400"
+      },
+      {
+        "family": "Spectral",
+        "file": "spectral-500.woff2",
+        "weight": "500"
+      },
+      {
+        "family": "Spectral",
+        "file": "spectral-600.woff2",
+        "weight": "600"
+      },
+      {
+        "family": "Source Sans 3",
+        "file": "source-sans-3-400-700.woff2",
+        "weight": "400 700"
+      }
+    ]
+  },
+  "colors": {
+    "light": {
+      "bg": "#fbf8f1",
+      "surface": "#ffffff",
+      "surface-2": "#f2ede1",
+      "text": "#14241f",
+      "muted": "#54605b",
+      "border": "#ddd5c4",
+      "primary": "#0f2a24",
+      "primary-hover": "#1d423a",
+      "on-primary": "#fbf8f1",
+      "accent": "#c9a227",
+      "accent-ink": "#86671a",
+      "on-accent": "#14241f",
+      "success": "#1d6b46",
+      "warn": "#86671a",
+      "error": "#9c2a22",
+      "focus": "#86671a",
+      "photo-tint": "rgba(15, 42, 36, 0.12)"
+    },
+    "dark": {
+      "bg": "#0d1a17",
+      "surface": "#132521",
+      "surface-2": "#1b2f2a",
+      "text": "#f1ece0",
+      "muted": "#aeb8b1",
+      "border": "#2a3d37",
+      "primary": "#e8dcc0",
+      "primary-hover": "#fff6e2",
+      "on-primary": "#0d1a17",
+      "accent": "#d7b34a",
+      "accent-ink": "#e2c469",
+      "on-accent": "#0d1a17",
+      "success": "#7fcfa2",
+      "warn": "#e2c469",
+      "error": "#f09a90",
+      "focus": "#d7b34a",
+      "photo-tint": "rgba(215, 179, 74, 0.12)"
+    }
+  },
+  "tokens": {
+    "--gw-weight-display": "500",
+    "--gw-weight-heading": "600",
+    "--gw-display-tracking": "-0.015em",
+    "--gw-display": "clamp(2.25rem, 6.6cqi, 4rem)",
+    "--gw-h1": "clamp(1.9rem, 5cqi, 2.9rem)",
+    "--gw-lh-display": "1.04",
+    "--gw-lh-body": "1.68",
+    "--gw-eyebrow-tracking": "0.2em",
+    "--gw-radius-sm": "2px",
+    "--gw-radius-md": "3px",
+    "--gw-radius-lg": "4px",
+    "--gw-radius-pill": "2px",
+    "--gw-radius-photo": "3px",
+    "--gw-max": "1080px",
+    "--gw-gutter": "clamp(var(--gw-space-5), 7cqi, var(--gw-space-10))",
+    "--gw-shadow-1": "0 1px 0 var(--gw-color-border)",
+    "--gw-shadow-2": "0 1px 2px rgba(15, 42, 36, 0.08)",
+    "--gw-shadow-3": "0 6px 24px rgba(15, 42, 36, 0.10)",
+    "--gw-dur-base": "260ms",
+    "--gw-lift": "none"
+  },
+  "variants": {
+    "services": "list",
+    "stats": "row",
+    "gallery": "none"
+  },
+  "flags": {
+    "pull": true
+  },
+  "composition": [
+    "Hero",
+    "ProofRow",
+    "Services:list",
+    "Stats:row",
+    "PullQuote",
+    "Testimonials",
+    "CtaBand"
+  ]
+}

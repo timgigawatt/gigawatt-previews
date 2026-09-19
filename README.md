@@ -8,13 +8,20 @@ workspace; content is authored in `leads/<slug>/artifacts/preview/` there and co
 | Path | Purpose |
 | --- | --- |
 | `src/content/leads/<slug>/pages/*.json` | the lead's pages (`home.json` → `/<slug>/`, `contact.json` → `/<slug>/contact/`) |
-| `src/content/leads/<slug>/globals/{settings,nav,footer}.json` | that lead's chrome |
+| `src/content/leads/<slug>/globals/{settings,nav,footer,announcements}.json` | that lead's chrome; `settings.personality` picks the GIGAWATT-BLOCKS personality |
 | `src/content/leads/<slug>/media/` | optional images, referenced by filename |
-| `src/blocks/` | the template's block registry (unchanged) |
+| `src/blocks/` | the GIGAWATT-BLOCKS registry: one folder per block, `schema.json` + `.astro` |
+| `src/design/` | `tokens.css` (master scale), `personalities/<name>.json` (foundry · ledger · hearth · kinetic · clarity), `base.css` (chrome) |
+| `public/fonts/` | self-hosted woff2 for the ten families the personalities use |
+| `/system/<personality>/` | the example lead's home in each personality — the design-system check page |
 | `_context/structure.md` | generated per lead (`npm run context`, pre-commit hook) |
 
 `npm run validate` checks every lead against the block schemas. Branch per lead
 (`lead/<date>-<slug>`); the branch deploy is the review URL; merging publishes it at
 `https://gigawatt-previews.netlify.app/<slug>/`.
 
-`example-plumbing` is a fixture to prove the routes — delete it once real leads exist.
+`example-plumbing` is a fixture in the Foundry personality; it proves the routes and feeds
+`/system/<personality>/`. Keep it.
+
+Design reference: `previews/design-system.md` in the workspace; source of record is the Claude
+Design project "Gigawatt System".

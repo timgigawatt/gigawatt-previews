@@ -1,54 +1,121 @@
-/* GIGAWATT-BLOCKS base scale. Personality-independent: type scale, spacing, radius, shadow,
-   motion, measure. Colors and fonts come from src/design/personalities/<name>.json, emitted by
-   Base.astro as custom properties on :root. Blocks style from these tokens only — no block sets
-   a size, colour or duration that isn't one of them. Reference: previews/design-system.md */
+/* ==========================================================================
+   GIGAWATT-BLOCKS — master design tokens (Layer 3: previews/design-system.md)
+   Every block is styled ONLY through these custom properties.
+   The master scale below is shared by every personality. A personality overrides
+   colors, fonts and a few scale values; Base.astro emits those on :root from
+   src/design/personalities/<name>.json. No block markup is personality-aware.
+   Source of record: the Claude Design project "Gigawatt System" (tokens.json).
+   ========================================================================== */
+
 :root {
-  /* type scale — every block picks from this list, never a new size */
-  --gw-text-display: clamp(2.5rem, 6vw, 4.5rem);
-  --gw-text-h1: clamp(2rem, 4.5vw, 3rem);
-  --gw-text-h2: clamp(1.5rem, 3vw, 2.125rem);
-  --gw-text-h3: 1.25rem;
-  --gw-text-h4: 0.8125rem;   /* label: uppercase, tracked */
-  --gw-text-body: 1rem;
-  --gw-text-small: 0.875rem; /* captions, legal, form help */
-  --gw-leading-tight: 1.1;
-  --gw-leading-body: 1.55;
-  --gw-measure: 65ch;        /* line-length cap for running text */
+  /* ---- spacing scale (4px base) ---- */
+  --gw-space-1: 0.25rem;  /* 4  */
+  --gw-space-2: 0.5rem;   /* 8  */
+  --gw-space-3: 0.75rem;  /* 12 */
+  --gw-space-4: 1rem;     /* 16 */
+  --gw-space-5: 1.5rem;   /* 24 */
+  --gw-space-6: 2rem;     /* 32 */
+  --gw-space-7: 3rem;     /* 48 */
+  --gw-space-8: 4rem;     /* 64 */
+  --gw-space-9: 6rem;     /* 96 */
+  --gw-space-10: 8rem;    /* 128 */
 
-  /* spacing — 4px base */
-  --gw-space-1: 4px;
-  --gw-space-2: 8px;
-  --gw-space-4: 16px;
-  --gw-space-6: 32px;
-  --gw-space-8: 64px;
-  --gw-space-10: 128px;
+  /* container-relative rhythm: blocks scale to their container (cqi), not the viewport,
+     so a block renders identically in a 390px phone frame and a 1280px page */
+  --gw-section-y: clamp(var(--gw-space-7), 8cqi, var(--gw-space-9));
+  --gw-gutter: clamp(var(--gw-space-4), 5cqi, var(--gw-space-8));
+  --gw-max: 1200px;
+  --gw-measure: 68ch;
 
-  /* radius · shadow */
-  --gw-radius-sm: 4px;
+  /* ---- type scale — every block picks from this list, never a new size ---- */
+  --gw-display: clamp(2.5rem, 8.5cqi, 5.25rem);
+  --gw-h1: clamp(2rem, 6cqi, 3.25rem);
+  --gw-h2: clamp(1.6rem, 4.2cqi, 2.25rem);
+  --gw-h3: clamp(1.25rem, 2.6cqi, 1.5rem);
+  --gw-h4: 1.0625rem;
+  --gw-body: 1.0625rem;
+  --gw-small: 0.8125rem;
+
+  --gw-lh-display: 0.94;
+  --gw-lh-heading: 1.12;
+  --gw-lh-body: 1.6;
+
+  --gw-weight-display: 800;
+  --gw-weight-heading: 700;
+  --gw-weight-body: 400;
+  --gw-weight-strong: 600;
+  --gw-display-tracking: -0.02em;
+  --gw-display-transform: none;
+  --gw-display-style: normal;
+  --gw-eyebrow-tracking: 0.14em;
+  --gw-eyebrow-transform: uppercase;
+
+  /* ---- radius ---- */
+  --gw-radius-sm: 6px;
   --gw-radius-md: 10px;
-  --gw-radius-lg: 20px;
-  --gw-shadow-1: 0 1px 2px rgba(0, 0, 0, .06);
-  --gw-shadow-2: 0 6px 20px rgba(0, 0, 0, .10);
-  --gw-shadow-3: 0 16px 48px rgba(0, 0, 0, .18);
+  --gw-radius-lg: 18px;
+  --gw-radius-pill: 999px;
+  --gw-radius-photo: 10px;
 
-  /* motion */
-  --gw-motion-fast: 120ms;
-  --gw-motion-base: 220ms;
-  --gw-motion-slow: 420ms;
-  --gw-motion-marquee: 28s;
-  --gw-ease-standard: cubic-bezier(.2, 0, 0, 1);
-  --gw-ease-entrance: cubic-bezier(0, 0, .2, 1);
-  --gw-ease-exit: cubic-bezier(.4, 0, 1, 1);
-  --gw-ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  /* ---- rules / borders ---- */
+  --gw-rule: 1px;
+  --gw-rule-strong: 2px;
 
-  --gw-container: 1280px;
+  /* ---- shadow ---- */
+  --gw-shadow-1: 0 1px 2px rgba(15, 20, 32, 0.06), 0 2px 8px rgba(15, 20, 32, 0.05);
+  --gw-shadow-2: 0 2px 4px rgba(15, 20, 32, 0.06), 0 12px 28px rgba(15, 20, 32, 0.09);
+  --gw-shadow-3: 0 8px 20px rgba(15, 20, 32, 0.10), 0 28px 60px rgba(15, 20, 32, 0.14);
+  --gw-shadow-focus: 0 0 0 3px var(--gw-color-focus);
+
+  /* ---- motion ---- */
+  --gw-dur-fast: 120ms;
+  --gw-dur-base: 220ms;
+  --gw-dur-slow: 420ms;
+  --gw-dur-marquee: 26s;
+  --gw-ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --gw-ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --gw-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --gw-ease-spring: cubic-bezier(0.34, 1.4, 0.52, 1);
+  --gw-lift: translateY(-2px);
+
+  /* ---- fonts + color: fallbacks only (= clarity light). Base.astro overrides them
+          with the lead's personality; these exist so a bare page still renders. ---- */
+  --gw-font-display: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gw-font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --gw-color-bg: #f6f7fa;
+  --gw-color-surface: #ffffff;
+  --gw-color-surface-2: #eceff5;
+  --gw-color-text: #0f1420;
+  --gw-color-muted: #525c70;
+  --gw-color-border: #d8dde7;
+  --gw-color-primary: #2540e8;
+  --gw-color-primary-hover: #1a31c4;
+  --gw-color-on-primary: #ffffff;
+  --gw-color-accent: #6b4bff;
+  --gw-color-accent-ink: #4a2ed6;
+  --gw-color-on-accent: #ffffff;
+  --gw-color-success: #0f7a52;
+  --gw-color-warn: #8a5a00;
+  --gw-color-error: #b3261e;
+  --gw-color-focus: #2540e8;
+  --gw-color-photo-tint: rgba(37, 64, 232, 0.14);
+}
+
+/* Dark mode deepens shadows for every personality; the colours come from the
+   personality's `colors.dark` set, emitted by Base.astro under html[data-mode="dark"]. */
+html[data-mode="dark"] {
+  --gw-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --gw-shadow-2: 0 10px 28px rgba(0, 0, 0, 0.55);
+  --gw-shadow-3: 0 20px 56px rgba(0, 0, 0, 0.65);
 }
 
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --gw-motion-fast: 1ms;
-    --gw-motion-base: 1ms;
-    --gw-motion-slow: 1ms;
-    --gw-motion-marquee: 1ms;
+    --gw-dur-fast: 1ms;
+    --gw-dur-base: 1ms;
+    --gw-dur-slow: 1ms;
+    --gw-dur-marquee: 600s;
+    --gw-lift: none;
   }
 }

@@ -1,17 +1,19 @@
 // GIGAWATT-BLOCKS personalities: src/design/personalities/<name>.json → custom properties on :root.
-// Switching personality changes only these properties and four variant flags; blocks never read
-// the personality name. Reference: previews/design-system.md
+// Switching personality changes only these properties, three variant defaults and the flags;
+// blocks never read the personality name. Reference: previews/design-system.md
 const files = import.meta.glob<{ default: Personality }>('/src/design/personalities/*.json', { eager: true });
 
+export interface FontFile { family: string; file: string; weight: string; style?: 'normal' | 'italic' }
 export interface Personality {
   name: string;
   for: string;
   voice: string;
   move: string;
-  fonts: { display: string; body: string; files?: string[] };
-  colors: Record<string, string>;
-  flags: { hero: string; cards: string; nav: string; footer: string };
+  fonts: { display: string; body: string; files: FontFile[] };
+  colors: { light: Record<string, string>; dark: Record<string, string> };
   tokens?: Record<string, string>;
+  variants: { services: string; stats: string; gallery: string };
+  flags: Record<string, boolean | undefined>;
   composition: string[];
 }
 
@@ -30,22 +32,32 @@ export function getPersonality(name?: string | null): Personality {
   return p;
 }
 
-/** The :root declaration block for a personality: colors, fonts, and any token overrides. */
+const colorLines = (c: Record<string, string>) => Object.entries(c).map(([k, v]) => `--gw-color-${k}:${v};`).join('');
+
+/** The personality's declarations: fonts, light colors, token overrides; dark colors under [data-mode="dark"].
+ *  Emitted on html[data-personality] (not :root) so they beat tokens.css's :root fallbacks regardless
+ *  of where Astro injects the bundled stylesheet. */
 export function personalityCss(p: Personality): string {
-  const lines = [
-    `--gw-font-display: ${p.fonts.display};`,
-    `--gw-font-body: ${p.fonts.body};`,
-    ...Object.entries(p.colors).map(([k, v]) => `--gw-color-${k}: ${v};`),
-    ...Object.entries(p.tokens ?? {}).map(([k, v]) => `${k}: ${v};`),
-  ];
-  return `:root{${lines.join('')}}`;
+  const root = [
+    `--gw-font-display:${p.fonts.display};`,
+    `--gw-font-body:${p.fonts.body};`,
+    colorLines(p.colors.light),
+    ...Object.entries(p.tokens ?? {}).map(([k, v]) => `${k}:${v};`),
+  ].join('');
+  const dark = colorLines(p.colors.dark);
+  const sel = `html[data-personality="${p.name}"]`;
+  return `${sel}{${root}}` + (dark ? `${sel}[data-mode="dark"]{${dark}}` : '');
 }
 
-/** @font-face rules for self-hosted files listed under fonts.files (src/design/fonts/<file>). */
+/** @font-face rules for the self-hosted files under public/fonts/. */
 export function fontFaceCss(p: Personality): string {
-  return (p.fonts.files ?? []).map((f) => {
-    const m = f.match(/^([a-z0-9-]+?)(?:-(\d{3}))?(?:-(italic))?\.woff2$/i);
-    const family = m?.[1].replace(/-/g, ' ') ?? f;
-    return `@font-face{font-family:"${family}";src:url(/fonts/${f}) format("woff2");font-weight:${m?.[2] ?? '400'};font-style:${m?.[3] ?? 'normal'};font-display:swap;}`;
-  }).join('');
+  return p.fonts.files.map((f) =>
+    `@font-face{font-family:"${f.family}";src:url(/fonts/${f.file}) format("woff2");font-weight:${f.weight};font-style:${f.style ?? 'normal'};font-display:swap;}`
+  ).join('');
+}
+
+/** Files to preload: the first display and body file of the personality. */
+export function fontPreloads(p: Personality): string[] {
+  const first = (family: string) => p.fonts.files.find((f) => family.includes(`"${f.family}"`) && (f.style ?? 'normal') === 'normal')?.file;
+  return [first(p.fonts.display), first(p.fonts.body)].filter((f): f is string => !!f);
 }

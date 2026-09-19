@@ -1,32 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-block": "Hero",
-  "x-version": 1,
-  "x-description": "Top-of-page banner: headline, supporting line, one or two calls to action, optional background image. Always the first block on a page.",
+  "x-version": 2,
+  "x-description": "Top-of-page banner: eyebrow (service area), headline in their words, supporting line, up to three proof bullets, two CTAs, and a photo grid on the right — one 4:3 photo, one 1:1 photo, one badge tile. Personality flags: `band` draws the tinted dotted band behind it, `diagonal` cuts into the next section. Always the first block on the home page.",
   "type": "object",
   "required": ["block", "heading"],
   "additionalProperties": false,
   "properties": {
     "block": { "const": "Hero" },
-    "variant": { "type": "string", "enum": ["centered", "split"], "default": "centered", "description": "centered = text over image; split = text left, image right" },
-    "eyebrow": { "type": "string", "maxLength": 60, "description": "Small line above the heading, e.g. the service area" },
+    "eyebrow": { "type": "string", "maxLength": 60, "description": "Small line above the heading, e.g. \"Toledo · since 1994\"" },
     "heading": { "type": "string", "maxLength": 90 },
-    "subheading": { "type": "string", "maxLength": 200 },
+    "subheading": { "type": "string", "maxLength": 220 },
+    "bullets": { "type": "array", "items": { "type": "string", "maxLength": 32 }, "description": "Up to three short proof points (\"Same-day dispatch\")" },
     "primaryCta": { "$ref": "#/$defs/cta" },
     "secondaryCta": { "$ref": "#/$defs/cta" },
-    "image": { "$ref": "#/$defs/image" }
+    "image": { "$ref": "#/$defs/image", "description": "The 4:3 slot; omitted = placeholder" },
+    "image2": { "$ref": "#/$defs/image", "description": "The 1:1 slot; omitted = placeholder" },
+    "badge": {
+      "type": "object", "required": ["big", "small"], "additionalProperties": false,
+      "description": "The solid tile: one big fact and its label (\"2 hr\" / \"Average arrival window\")",
+      "properties": { "big": { "type": "string", "maxLength": 12 }, "small": { "type": "string", "maxLength": 60 } }
+    }
   },
   "$defs": {
-    "cta": {
-      "type": "object", "required": ["label", "href"], "additionalProperties": false,
-      "properties": { "label": { "type": "string", "maxLength": 40 }, "href": { "type": "string" } }
-    },
-    "image": {
-      "type": "object", "required": ["src", "alt"], "additionalProperties": false,
-      "properties": {
-        "src": { "type": "string", "description": "Filename in src/assets/media/" },
-        "alt": { "type": "string", "maxLength": 160 }
-      }
-    }
+    "cta": { "type": "object", "required": ["label", "href"], "additionalProperties": false, "properties": { "label": { "type": "string", "maxLength": 40 }, "href": { "type": "string" } } },
+    "image": { "type": "object", "required": ["src", "alt"], "additionalProperties": false, "properties": { "src": { "type": "string" }, "alt": { "type": "string", "maxLength": 160 }, "caption": { "type": "string", "maxLength": 80 } } }
   }
 }

@@ -1,6 +1,19 @@
 { "title": "Home", "description": "Example Plumbing — Olathe's family-owned plumber since 1998.", "published": true,
   "blocks": [
-    { "block": "Hero", "variant": "centered", "eyebrow": "Olathe · Johnson County", "heading": "Plumbing done right, the first time", "subheading": "Family-owned since 1998 · 4.8 stars from 210 neighbors", "primaryCta": { "label": "Call (913) 555-0100", "href": "tel:+19135550100" }, "secondaryCta": { "label": "See services", "href": "#services" } },
-    { "block": "CardGrid", "variant": "services", "heading": "What we do", "columns": 3, "cards": [ { "title": "Repairs" }, { "title": "Water heaters" }, { "title": "Drain cleaning" } ] },
-    { "block": "TextSection", "variant": "narrow", "heading": "Why neighbors choose us", "body": [ "**\"Showed up on time and fixed it in an hour.\"** — Dana, Olathe", "**\"Honest pricing, no upsell.\"** — Mike, Overland Park" ] }
+    { "block": "Hero", "eyebrow": "Olathe · since 1998", "heading": "Water, drains, and heaters. Fixed right the first time.", "subheading": "Licensed plumbers, flat-rate pricing quoted before we start, and a truck at your door the same day.", "bullets": ["Same-day dispatch", "Flat-rate quotes", "24/7 emergency"], "primaryCta": { "label": "Book a visit", "href": "/example-plumbing/contact/" }, "secondaryCta": { "label": "Call (913) 555-0100", "href": "tel:+19135550100" }, "badge": { "big": "2 hr", "small": "Average arrival window in Johnson County" } },
+    { "block": "ProofRow", "items": ["Licensed & insured", "KS #12345", "BBB A+", "4.8 · 210 reviews"] },
+    { "block": "Services", "heading": "Every job, one flat rate", "more": { "label": "All services", "href": "/example-plumbing/services/" }, "items": [
+      { "title": "Repairs", "desc": "Leaks, faucets, toilets, disposals — diagnosed and quoted before a wrench comes out." , "price": "from $149" },
+      { "title": "Water heaters", "desc": "Tank and tankless, stocked on the truck in the three most common sizes.", "price": "from $1,250" },
+      { "title": "Drain cleaning", "desc": "Camera inspection included so you see what we saw before you approve work.", "price": "from $189" },
+      { "title": "Repipe & gas lines", "desc": "Whole-house copper or PEX, inspected and pressure-tested on completion.", "price": "quoted on site" }
+    ] },
+    { "block": "Stats", "items": [ { "n": "28", "label": "Years in business" }, { "n": "14,200", "label": "Jobs completed" }, { "n": "4.8", "label": "Average review, 210 ratings" } ] },
+    { "block": "Gallery", "heading": "Before and after, same week" },
+    { "block": "Testimonials", "heading": "What Olathe says", "items": [
+      { "text": "Showed up on time and fixed it in an hour. Quoted flat, done by noon.", "who": "Dana", "meta": "Olathe" },
+      { "text": "Honest pricing, no upsell. Third company we called and the only one who showed us the camera footage.", "who": "Mike", "meta": "Overland Park" },
+      { "text": "Pulled the permit, passed inspection first try, hauled the old unit off. No games.", "who": "Terri H.", "meta": "Lenexa" }
+    ] },
+    { "block": "CtaBand", "heading": "No water? Call now.", "text": "A dispatcher picks up, not an answering service. Average arrival under two hours." }
   ] }

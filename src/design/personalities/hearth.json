@@ -1,0 +1,101 @@
+{
+  "name": "hearth",
+  "for": "Food, hospitality, neighbourhood retail — restaurants, cafés, bakeries, salons, boutiques, florists.",
+  "voice": "Warm, handmade, local. Cream base, terracotta primary, olive accent, soft corners, hours and location up front.",
+  "move": "A tinted, dotted surface band behind the hero instead of a full-bleed photo — so a bad photo can never wreck the first screen.",
+  "fonts": {
+    "display": "\"Newsreader\", Georgia, \"Iowan Old Style\", serif",
+    "body": "\"Nunito Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "files": [
+      {
+        "family": "Newsreader",
+        "file": "newsreader-400-500.woff2",
+        "weight": "400 500"
+      },
+      {
+        "family": "Newsreader",
+        "file": "newsreader-400-italic.woff2",
+        "weight": "400",
+        "style": "italic"
+      },
+      {
+        "family": "Nunito Sans",
+        "file": "nunito-sans-400-700.woff2",
+        "weight": "400 700"
+      }
+    ]
+  },
+  "colors": {
+    "light": {
+      "bg": "#fbf3e8",
+      "surface": "#fffaf3",
+      "surface-2": "#f2e4d3",
+      "text": "#2b211a",
+      "muted": "#67544a",
+      "border": "#e3d2bd",
+      "primary": "#a8482a",
+      "primary-hover": "#8d3a20",
+      "on-primary": "#fffaf3",
+      "accent": "#5e6b3b",
+      "accent-ink": "#4c5730",
+      "on-accent": "#fffaf3",
+      "success": "#3f6b32",
+      "warn": "#8a5a12",
+      "error": "#a33122",
+      "focus": "#a8482a",
+      "photo-tint": "rgba(168, 72, 42, 0.14)"
+    },
+    "dark": {
+      "bg": "#1d1712",
+      "surface": "#2a221b",
+      "surface-2": "#362b22",
+      "text": "#f7ece0",
+      "muted": "#c2ab99",
+      "border": "#46372c",
+      "primary": "#ef9070",
+      "primary-hover": "#ffa989",
+      "on-primary": "#1d1712",
+      "accent": "#a8bb6e",
+      "accent-ink": "#b8c983",
+      "on-accent": "#1d1712",
+      "success": "#8fc67c",
+      "warn": "#e0ad5e",
+      "error": "#f0938a",
+      "focus": "#ef9070",
+      "photo-tint": "rgba(239, 144, 112, 0.14)"
+    }
+  },
+  "tokens": {
+    "--gw-weight-display": "500",
+    "--gw-display-tracking": "-0.01em",
+    "--gw-lh-display": "1.0",
+    "--gw-eyebrow-tracking": "0.12em",
+    "--gw-radius-sm": "10px",
+    "--gw-radius-md": "16px",
+    "--gw-radius-lg": "26px",
+    "--gw-radius-pill": "999px",
+    "--gw-radius-photo": "20px",
+    "--gw-shadow-1": "0 1px 2px rgba(74, 45, 28, 0.08)",
+    "--gw-shadow-2": "0 6px 18px rgba(74, 45, 28, 0.10)",
+    "--gw-shadow-3": "0 14px 40px rgba(74, 45, 28, 0.14)",
+    "--gw-dur-base": "240ms",
+    "--gw-ease-standard": "cubic-bezier(0.34, 1.2, 0.52, 1)"
+  },
+  "variants": {
+    "services": "list",
+    "stats": "none",
+    "gallery": "grid"
+  },
+  "flags": {
+    "popup": true,
+    "band": true
+  },
+  "composition": [
+    "Hero",
+    "ProofRow",
+    "Services:list",
+    "Gallery:grid",
+    "Testimonials",
+    "CtaBand"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Team",
+  "x-version": 1,
+  "x-description": "Named people with roles, 3:4 portrait slots — only people the profile names; a slot without a usable photo is a tinted placeholder.",
+  "type": "object",
+  "required": ["block", "heading", "people"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Team" },
+    "heading": { "type": "string", "maxLength": 60 },
+    "people": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["name"], "additionalProperties": false, "properties": { "name": { "type": "string", "maxLength": 40 }, "role": { "type": "string", "maxLength": 60 }, "image": { "$ref": "#/$defs/image" } } }
+    }
+  },
+  "$defs": {
+    "image": { "type": "object", "required": ["src", "alt"], "additionalProperties": false, "properties": { "src": { "type": "string" }, "alt": { "type": "string", "maxLength": 160 }, "caption": { "type": "string", "maxLength": 80 } } }
+  }
+}

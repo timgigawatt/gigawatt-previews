@@ -1,1 +1,5 @@
-{ "columns": [ { "heading": "Site", "links": [ { "label": "Home", "href": "/example-plumbing/" }, { "label": "Contact", "href": "/example-plumbing/contact/" } ] } ], "legal": "© Example Plumbing" }
+{
+  "areas": ["Olathe", "Overland Park", "Lenexa", "Shawnee", "Gardner"],
+  "columns": [ { "heading": "Pages", "links": [ { "label": "Home", "href": "/example-plumbing/" }, { "label": "Services", "href": "/example-plumbing/services/" }, { "label": "Contact", "href": "/example-plumbing/contact/" } ] } ],
+  "legal": "© 2026 Example Plumbing. KS license #12345."
+}

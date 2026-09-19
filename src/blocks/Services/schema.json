@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Services",
+  "x-version": 1,
+  "x-description": "What they do, in their words, with a price signal on every row only when they publish one. `list` = ruled rows (title · description · price); `bento` = one anchor tile plus mixed-span tiles, first four items (Clarity's move); `cards` = uniform cards with a Book link (the Services page). Variant defaults from the personality.",
+  "type": "object",
+  "required": ["block", "heading", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Services" },
+    "variant": { "type": "string", "enum": ["list", "bento", "cards"] },
+    "heading": { "type": "string", "maxLength": 60 },
+    "more": { "$ref": "#/$defs/cta", "description": "Optional \"All services\" link at the top right" },
+    "ctaLabel": { "type": "string", "maxLength": 20, "default": "Book →", "description": "cards only: the link on each card" },
+    "items": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["title"], "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string", "maxLength": 60 },
+          "desc": { "type": "string", "maxLength": 200 },
+          "price": { "type": "string", "maxLength": 24, "description": "Only if they publish it: \"from $149\", \"$8\", \"fixed fee\"" },
+          "href": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cta": { "type": "object", "required": ["label", "href"], "additionalProperties": false, "properties": { "label": { "type": "string", "maxLength": 40 }, "href": { "type": "string" } } }
+  }
+}

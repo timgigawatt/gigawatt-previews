@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "GIGAWATT-BLOCKS personality",
-  "description": "One file per personality. Switching personality changes only these custom properties and four variant flags; no block markup is personality-aware. Reference: previews/design-system.md",
+  "description": "One file per personality. Switching personality changes only custom properties (colors, fonts, token overrides), three block-variant defaults and a set of feature flags; no block markup is personality-aware. Reference: previews/design-system.md",
   "type": "object",
-  "required": ["name", "for", "voice", "move", "fonts", "colors", "flags", "composition"],
+  "required": ["name", "for", "voice", "move", "fonts", "colors", "variants", "flags", "composition"],
   "additionalProperties": false,
   "properties": {
     "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "Filename stem; what globals/settings.json personality names" },
@@ -11,38 +11,87 @@
     "voice": { "type": "string" },
     "move": { "type": "string", "description": "The one distinctive move" },
     "fonts": {
-      "type": "object", "required": ["display", "body"], "additionalProperties": false,
-      "description": "Two typefaces, never more. CSS font-family stacks; files self-hosted in src/design/fonts/",
-      "properties": { "display": { "type": "string" }, "body": { "type": "string" }, "files": { "type": "array", "items": { "type": "string" } } }
-    },
-    "colors": {
-      "type": "object", "additionalProperties": false,
-      "required": ["bg", "surface", "surface-2", "text", "muted", "primary", "on-primary", "accent", "on-accent", "success", "warn", "error"],
+      "type": "object", "required": ["display", "body", "files"], "additionalProperties": false,
+      "description": "Two typefaces, never more. CSS font-family stacks; woff2 files self-hosted in public/fonts/ (no font CDNs — _config/standards/loading.md)",
       "properties": {
-        "bg": { "type": "string" }, "surface": { "type": "string" }, "surface-2": { "type": "string" },
-        "text": { "type": "string" }, "muted": { "type": "string" },
-        "primary": { "type": "string" }, "on-primary": { "type": "string" },
-        "accent": { "type": "string" }, "on-accent": { "type": "string" },
-        "success": { "type": "string" }, "warn": { "type": "string" }, "error": { "type": "string" }
+        "display": { "type": "string" },
+        "body": { "type": "string" },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["family", "file", "weight"], "additionalProperties": false,
+            "properties": {
+              "family": { "type": "string" },
+              "file": { "type": "string", "pattern": "^[a-z0-9-]+\\.woff2$" },
+              "weight": { "type": "string", "pattern": "^\\d{3}( \\d{3})?$", "description": "\"400\" or a variable-font range \"400 700\"" },
+              "style": { "type": "string", "enum": ["normal", "italic"], "default": "normal" }
+            }
+          }
+        }
       }
     },
-    "flags": {
-      "type": "object", "required": ["hero", "cards", "nav", "footer"], "additionalProperties": false,
-      "description": "The four variant flags. Block variant defaults when content doesn't set one; also data-* attributes on <html> for CSS",
+    "colors": {
+      "type": "object", "required": ["light", "dark"], "additionalProperties": false,
       "properties": {
-        "hero": { "type": "string", "enum": ["centered", "split"] },
-        "cards": { "type": "string", "enum": ["soft", "bordered", "flat"] },
-        "nav": { "type": "string", "enum": ["inline", "stacked"] },
-        "footer": { "type": "string", "enum": ["columns", "compact"] }
+        "light": { "$ref": "#/$defs/palette" },
+        "dark": { "$ref": "#/$defs/palettePartial", "description": "Overrides for html[data-mode=\"dark\"]; a dark-base personality deepens only bg/surface/border" }
       }
     },
     "tokens": {
-      "type": "object", "additionalProperties": { "type": "string" },
-      "description": "Optional overrides of tokens.css values, keyed by custom property name (e.g. \"--gw-radius-md\": \"0px\")"
+      "type": "object", "additionalProperties": { "type": "string" }, "propertyNames": { "pattern": "^--gw-" },
+      "description": "Overrides of tokens.css scale values (type, radius, rule, shadow, motion, layout), keyed by custom property name"
+    },
+    "variants": {
+      "type": "object", "required": ["services", "stats", "gallery"], "additionalProperties": false,
+      "description": "Default variant for the blocks that have more than one markup. A page's block may set its own `variant`; \"none\" means the block is left out of the composition.",
+      "properties": {
+        "services": { "type": "string", "enum": ["list", "bento", "cards"] },
+        "stats": { "type": "string", "enum": ["numerals", "row", "none"] },
+        "gallery": { "type": "string", "enum": ["grid", "before-after", "none"] }
+      }
+    },
+    "flags": {
+      "type": "object", "additionalProperties": false,
+      "description": "Feature flags blocks and the chrome read (absent = false)",
+      "properties": {
+        "popup": { "type": "boolean", "description": "Announcement renders as a dismissible bar at the top of the home page" },
+        "band": { "type": "boolean", "description": "Hero: tinted dotted surface band behind the content (Hearth's move)" },
+        "diagonal": { "type": "boolean", "description": "Hero: diagonal cut into the next band (Kinetic)" },
+        "numerals": { "type": "boolean", "description": "Stats: oversized display numerals under a thick rule (Foundry's move)" },
+        "marquee": { "type": "boolean", "description": "Marquee block allowed (Kinetic's move)" },
+        "pull": { "type": "boolean", "description": "PullQuote block allowed — exactly one per page (Ledger's move)" },
+        "bento": { "type": "boolean", "description": "Services default to the bento grid (Clarity's move)" },
+        "beforeAfter": { "type": "boolean", "description": "Gallery defaults to before/after pairs (Foundry)" }
+      }
     },
     "composition": {
-      "type": "array", "minItems": 1, "items": { "type": "string" },
-      "description": "Default homepage composition, in order: \"Block\" or \"Block:variant\" (e.g. \"CardGrid:services\")"
+      "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[A-Z][A-Za-z]+(:[a-z-]+)?$" },
+      "description": "Default homepage composition, in order: \"Block\" or \"Block:variant\". Header, Announcement and Footer are chrome and not listed."
+    }
+  },
+  "$defs": {
+    "palette": {
+      "type": "object", "additionalProperties": false,
+      "required": ["bg", "surface", "surface-2", "text", "muted", "border", "primary", "primary-hover", "on-primary", "accent", "accent-ink", "on-accent", "success", "warn", "error", "focus", "photo-tint"],
+      "properties": {
+        "bg": { "type": "string" }, "surface": { "type": "string" }, "surface-2": { "type": "string" },
+        "text": { "type": "string" }, "muted": { "type": "string" }, "border": { "type": "string" },
+        "primary": { "type": "string" }, "primary-hover": { "type": "string" }, "on-primary": { "type": "string" },
+        "accent": { "type": "string" }, "accent-ink": { "type": "string" }, "on-accent": { "type": "string" },
+        "success": { "type": "string" }, "warn": { "type": "string" }, "error": { "type": "string" },
+        "focus": { "type": "string" }, "photo-tint": { "type": "string" }
+      }
+    },
+    "palettePartial": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "bg": { "type": "string" }, "surface": { "type": "string" }, "surface-2": { "type": "string" },
+        "text": { "type": "string" }, "muted": { "type": "string" }, "border": { "type": "string" },
+        "primary": { "type": "string" }, "primary-hover": { "type": "string" }, "on-primary": { "type": "string" },
+        "accent": { "type": "string" }, "accent-ink": { "type": "string" }, "on-accent": { "type": "string" },
+        "success": { "type": "string" }, "warn": { "type": "string" }, "error": { "type": "string" },
+        "focus": { "type": "string" }, "photo-tint": { "type": "string" }
+      }
     }
   }
 }

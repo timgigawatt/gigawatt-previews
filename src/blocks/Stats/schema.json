@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Stats",
+  "x-version": 1,
+  "x-description": "Two to four numbers the business already publishes: years, jobs, rating + count, loaves a day. `numerals` = oversized display numerals under a thick rule (Foundry's move); `row` = a quieter three-up. Variant defaults from the personality.",
+  "type": "object",
+  "required": ["block", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Stats" },
+    "variant": { "type": "string", "enum": ["numerals", "row"] },
+    "heading": { "type": "string", "maxLength": 60 },
+    "items": {
+      "type": "array", "minItems": 2,
+      "items": { "type": "object", "required": ["n", "label"], "additionalProperties": false, "properties": { "n": { "type": "string", "maxLength": 12 }, "label": { "type": "string", "maxLength": 60 } } }
+    }
+  }
+}

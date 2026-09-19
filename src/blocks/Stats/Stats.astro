@@ -1,0 +1,26 @@
+---
+const { variant: v, heading, items = [], variants = {} } = Astro.props;
+const variant = v ?? (variants.stats === 'numerals' ? 'numerals' : 'row');
+---
+<section class={`stats stats--${variant}`} aria-label={heading ?? 'By the numbers'}>
+  <div class="stats__inner">
+    {heading && <h2 class="stats__heading">{heading}</h2>}
+    <div class="stats__grid">
+      {items.map((s: any) => <div class="stat"><div class="stat__n">{s.n}</div><div class="stat__label">{s.label}</div></div>)}
+    </div>
+  </div>
+</section>
+<style>
+  .stats { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-bg); }
+  .stats__inner { max-width: var(--gw-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--gw-space-6); }
+  .stats__grid { display: grid; gap: var(--gw-space-6); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .stat { border-top: var(--gw-rule-strong) solid var(--gw-color-primary); padding-top: var(--gw-space-3); }
+  .stat__n { font-family: var(--gw-font-display); font-weight: var(--gw-weight-display); font-style: var(--gw-display-style); line-height: .82; letter-spacing: -0.04em; color: var(--gw-color-text); }
+  .stats--numerals .stat__n { font-size: clamp(3rem, 8.5cqi, 5.5rem); } /* design says 12cqi/7rem; five-digit numbers overflow a third column at that size */
+  .stat__label { margin-top: var(--gw-space-3); font-size: var(--gw-small); font-weight: 700; letter-spacing: var(--gw-eyebrow-tracking); text-transform: var(--gw-eyebrow-transform); color: var(--gw-color-muted); max-width: 22ch; }
+  .stats--row { background: var(--gw-color-surface); border-top: var(--gw-rule) solid var(--gw-color-border); border-bottom: var(--gw-rule) solid var(--gw-color-border); }
+  .stats--row .stats__grid { gap: var(--gw-space-4); }
+  .stats--row .stat { border-top: 0; padding: var(--gw-space-5); background: var(--gw-color-bg); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-lg); box-shadow: var(--gw-shadow-1); }
+  .stats--row .stat__n { font-size: var(--gw-h1); line-height: 1; letter-spacing: var(--gw-display-tracking); color: var(--gw-color-primary); }
+  .stats--row .stat__label { margin-top: var(--gw-space-2); }
+</style>

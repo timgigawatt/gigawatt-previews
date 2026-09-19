@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "PullQuote",
+  "x-version": 1,
+  "x-description": "Exactly one editorial pull-quote per page (Ledger's move — only in a personality with the `pull` flag): a hanging serif quote at h1 scale, a gold hairline above, nothing else in the band. The quote is the owner's or the business's own words from the profile, never a review.",
+  "type": "object",
+  "required": ["block", "text", "who"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "PullQuote" },
+    "text": { "type": "string", "maxLength": 160 },
+    "who": { "type": "string", "maxLength": 40 },
+    "role": { "type": "string", "maxLength": 40 },
+    "tone": { "type": "string", "enum": ["surface", "bg"], "default": "surface" }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "CtaBand",
+  "x-version": 1,
+  "x-description": "The closing band on the home page, in the primary colour: a headline, one line, the phone number as a big button and the site CTA beside it (both from globals — settings.phone, nav.cta). Converts the scrollers who ignored the header.",
+  "type": "object",
+  "required": ["block", "heading"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "CtaBand" },
+    "heading": { "type": "string", "maxLength": 60 },
+    "text": { "type": "string", "maxLength": 160 }
+  }
+}

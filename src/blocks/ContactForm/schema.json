@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "ContactForm",
+  "x-version": 1,
+  "x-description": "The Contact page: intro, a short form (never a form they don't have as their real flow — the CTA strategy in the brief decides; the preview form is not wired), and an aside with the phone, address, email, hours (globals/settings.json) and a service-area map placeholder.",
+  "type": "object",
+  "required": ["block", "heading"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "ContactForm" },
+    "eyebrow": { "type": "string", "maxLength": 30, "default": "Contact" },
+    "heading": { "type": "string", "maxLength": 60 },
+    "intro": { "type": "string", "maxLength": 220 },
+    "fields": {
+      "type": "array",
+      "items": { "type": "object", "required": ["label"], "additionalProperties": false, "properties": { "label": { "type": "string", "maxLength": 30 }, "placeholder": { "type": "string", "maxLength": 40 }, "type": { "type": "string", "enum": ["text", "email", "tel"], "default": "text" } } }
+    },
+    "messageLabel": { "type": "string", "maxLength": 40, "default": "How can we help?" },
+    "messagePlaceholder": { "type": "string", "maxLength": 80 },
+    "submit": { "type": "string", "maxLength": 30, "default": "Send" },
+    "note": { "type": "string", "maxLength": 160, "description": "Under the button: response time, or the legal line a professional needs" },
+    "showForm": { "type": "boolean", "default": true, "description": "false = phone-first: the aside only, no form" }
+  }
+}

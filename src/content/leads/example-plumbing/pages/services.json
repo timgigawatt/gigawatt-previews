@@ -1,0 +1,13 @@
+{ "title": "Services", "description": "What Example Plumbing does, and what it costs.", "published": true,
+  "blocks": [
+    { "block": "PageHeader", "eyebrow": "Services", "heading": "What we do, and what it costs", "intro": "Flat-rate pricing on everything we can price in advance. Anything we can't, we quote on site before work starts." },
+    { "block": "Services", "variant": "cards", "heading": "Services", "items": [
+      { "title": "Repairs", "desc": "Leaks, faucets, toilets, disposals.", "price": "from $149" },
+      { "title": "Water heaters", "desc": "Tank and tankless, installed same day.", "price": "from $1,250" },
+      { "title": "Drain cleaning", "desc": "Camera inspection included.", "price": "from $189" }
+    ] },
+    { "block": "Pricing", "heading": "Service plans", "tiers": [
+      { "name": "Per visit", "price": "$89", "per": "diagnostic", "note": "Waived if you book the repair.", "items": ["Full system check", "Flat-rate quote on the spot", "No overtime surcharge"] },
+      { "name": "Comfort plan", "price": "$19", "per": "/ month", "note": "Two inspections a year.", "items": ["Spring + fall visit", "15% off all repairs", "Priority dispatch"] }
+    ] }
+  ] }

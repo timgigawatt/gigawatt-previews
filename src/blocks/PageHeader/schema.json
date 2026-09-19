@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "PageHeader",
+  "x-version": 1,
+  "x-description": "The first block of an inner page (Services, About): eyebrow, h1, one line, on the recessed surface. Never on the home page — that is the Hero.",
+  "type": "object",
+  "required": ["block", "heading"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "PageHeader" },
+    "eyebrow": { "type": "string", "maxLength": 30 },
+    "heading": { "type": "string", "maxLength": 80 },
+    "intro": { "type": "string", "maxLength": 220 }
+  }
+}
