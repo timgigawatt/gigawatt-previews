@@ -2,7 +2,10 @@
 import { Image } from 'astro:assets';
 import { resolveMedia } from '../../lib/media';
 
-const { variant = 'centered', eyebrow, heading, subheading, primaryCta, secondaryCta, image, leadSlug } = Astro.props;
+// `variant` from content wins; otherwise the personality's hero flag. A split hero with no
+// usable photo renders the design system's tinted placeholder — never a stock image.
+const { variant: v, eyebrow, heading, subheading, primaryCta, secondaryCta, image, leadSlug, flags } = Astro.props;
+const variant = v ?? flags?.hero ?? 'centered';
 const img = image ? resolveMedia(image.src, leadSlug) : null;
 ---
 <section class={`hero hero--${variant}`}>
@@ -15,10 +18,12 @@ const img = image ? resolveMedia(image.src, leadSlug) : null;
       {secondaryCta && <a class="btn" href={secondaryCta.href}>{secondaryCta.label}</a>}
     </p>
   </div>
-  {img && (
+  {img ? (
     <div class="hero__media">
       {/* Above the fold: eager + high priority per _config/standards/loading.md */}
       <Image src={img} alt={image.alt} widths={[640, 1024, 1920]} sizes="100vw" loading="eager" fetchpriority="high" />
     </div>
+  ) : variant === 'split' && (
+    <div class="hero__media media-placeholder" aria-hidden="true"></div>
   )}
 </section>

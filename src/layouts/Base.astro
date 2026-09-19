@@ -1,18 +1,27 @@
 ---
 // Preview chrome for one lead: that lead's settings/nav/footer, always noindex, always badged.
+// The look comes from the lead's GIGAWATT-BLOCKS personality (globals/settings.json `personality`,
+// default "default"): Base emits its custom properties on :root and its four variant flags as
+// data-* attributes; every block styles from tokens only. Reference: previews/design-system.md
+import '../design/tokens.css';
+import '../design/base.css';
+import { getPersonality, personalityCss, fontFaceCss } from '../lib/design';
+
 const { lead, title, description } = Astro.props;
 const { settings, nav, footer } = lead;
 const pathname = Astro.url.pathname;
+const persona = getPersonality(settings.personality);
+const css = fontFaceCss(persona) + personalityCss(persona);
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-personality={persona.name} data-hero={persona.flags.hero} data-cards={persona.flags.cards} data-nav={persona.flags.nav} data-footer={persona.flags.footer}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="/styles.css" />
+    <style is:inline set:html={css}></style>
   </head>
   <body>
     <div class="preview-badge">⚡ concept preview — not the live site</div>

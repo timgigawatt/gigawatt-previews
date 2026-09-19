@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GIGAWATT-BLOCKS personality",
+  "description": "One file per personality. Switching personality changes only these custom properties and four variant flags; no block markup is personality-aware. Reference: previews/design-system.md",
+  "type": "object",
+  "required": ["name", "for", "voice", "move", "fonts", "colors", "flags", "composition"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "Filename stem; what globals/settings.json personality names" },
+    "for": { "type": "string", "description": "The kind of business this suits — lead-gen 03_profile matches against this line" },
+    "voice": { "type": "string" },
+    "move": { "type": "string", "description": "The one distinctive move" },
+    "fonts": {
+      "type": "object", "required": ["display", "body"], "additionalProperties": false,
+      "description": "Two typefaces, never more. CSS font-family stacks; files self-hosted in src/design/fonts/",
+      "properties": { "display": { "type": "string" }, "body": { "type": "string" }, "files": { "type": "array", "items": { "type": "string" } } }
+    },
+    "colors": {
+      "type": "object", "additionalProperties": false,
+      "required": ["bg", "surface", "surface-2", "text", "muted", "primary", "on-primary", "accent", "on-accent", "success", "warn", "error"],
+      "properties": {
+        "bg": { "type": "string" }, "surface": { "type": "string" }, "surface-2": { "type": "string" },
+        "text": { "type": "string" }, "muted": { "type": "string" },
+        "primary": { "type": "string" }, "on-primary": { "type": "string" },
+        "accent": { "type": "string" }, "on-accent": { "type": "string" },
+        "success": { "type": "string" }, "warn": { "type": "string" }, "error": { "type": "string" }
+      }
+    },
+    "flags": {
+      "type": "object", "required": ["hero", "cards", "nav", "footer"], "additionalProperties": false,
+      "description": "The four variant flags. Block variant defaults when content doesn't set one; also data-* attributes on <html> for CSS",
+      "properties": {
+        "hero": { "type": "string", "enum": ["centered", "split"] },
+        "cards": { "type": "string", "enum": ["soft", "bordered", "flat"] },
+        "nav": { "type": "string", "enum": ["inline", "stacked"] },
+        "footer": { "type": "string", "enum": ["columns", "compact"] }
+      }
+    },
+    "tokens": {
+      "type": "object", "additionalProperties": { "type": "string" },
+      "description": "Optional overrides of tokens.css values, keyed by custom property name (e.g. \"--gw-radius-md\": \"0px\")"
+    },
+    "composition": {
+      "type": "array", "minItems": 1, "items": { "type": "string" },
+      "description": "Default homepage composition, in order: \"Block\" or \"Block:variant\" (e.g. \"CardGrid:services\")"
+    }
+  }
+}

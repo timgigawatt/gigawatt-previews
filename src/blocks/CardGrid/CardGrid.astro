@@ -11,7 +11,8 @@ const { variant = 'services', heading, intro, columns = 3, cards = [], leadSlug 
       const img = c.image ? resolveMedia(c.image.src, leadSlug) : null;
       return (
         <li class="card">
-          {img && <Image src={img} alt={c.image.alt} widths={[400, 800]} sizes="(min-width: 900px) 30vw, 100vw" loading="lazy" decoding="async" />}
+          {img ? <Image src={img} alt={c.image.alt} widths={[400, 800]} sizes="(min-width: 900px) 30vw, 100vw" loading="lazy" decoding="async" />
+               : variant === 'team' && <div class="card__media media-placeholder" aria-hidden="true"></div>}
           <h3>{c.href ? <a href={c.href}>{c.title}</a> : c.title}</h3>
           {c.text && <p>{c.text}</p>}
         </li>

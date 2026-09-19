@@ -1,5 +1,9 @@
 ---
 // Index of every preview. For Tim; never linked from a preview, never indexed.
+import '../design/tokens.css';
+import '../design/base.css';
+import { getPersonality, personalityCss } from '../lib/design';
+const css = personalityCss(getPersonality('default'));
 import { allLeads } from '../lib/leads';
 const leads = allLeads();
 ---
@@ -9,7 +13,7 @@ const leads = allLeads();
     <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gigawatt previews</title>
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="/styles.css" />
+    <style is:inline set:html={css}></style>
   </head>
   <body>
     <section class="text text--narrow">
