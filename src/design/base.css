@@ -57,7 +57,7 @@ strong { font-weight: var(--gw-weight-strong); }
 /* photo slots. A slot with no usable photo is a tinted placeholder on purpose — never stock.
    A slot with a photo gets the personality's tint wash so uneven originals read as one set. */
 .ph {
-  position: relative; overflow: hidden; border-radius: var(--gw-radius-photo);
+  position: relative; overflow: hidden; margin: 0; border-radius: var(--gw-radius-photo);
   background-color: var(--gw-color-surface);
   background-image: linear-gradient(var(--gw-color-photo-tint), var(--gw-color-photo-tint)), repeating-linear-gradient(135deg, var(--gw-color-border) 0 1px, transparent 1px 12px);
   border: var(--gw-rule) solid var(--gw-color-border);

@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "label": "Home", "href": "/cafe-provence/" },
+    { "label": "Menus", "href": "/cafe-provence/menus/" },
+    { "label": "About", "href": "/cafe-provence/about/" },
+    { "label": "Contact", "href": "/cafe-provence/contact/" }
+  ],
+  "cta": { "label": "Reserve a table", "href": "https://www.opentable.com/cafe-provence" }
+}

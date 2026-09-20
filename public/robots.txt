@@ -1,0 +1,4 @@
+# Concept previews for Gigawatt leads. Every page carries noindex; this file only points at the sitemap.
+User-agent: *
+Disallow:
+Sitemap: https://gigawatt-previews.netlify.app/sitemap.xml

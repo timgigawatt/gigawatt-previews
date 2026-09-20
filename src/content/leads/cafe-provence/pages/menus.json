@@ -1,0 +1,95 @@
+{
+  "title": "Menus",
+  "description": "Café Provence menus — lunch, dinner, dessert, and the Tuesday prix fixe. Classic French country cuisine in Prairie Village; menu subject to change with the season.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "PageHeader",
+      "eyebrow": "Menus",
+      "heading": "Seasonally inspired, classically French",
+      "intro": "Our meat, poultry, and fish come from ranches and fisheries guided by principles of sustainability. Menu subject to change based on season and availability of ingredients. $5.00 split plate charge."
+    },
+    {
+      "block": "Services",
+      "variant": "cards",
+      "heading": "Lunch — Monday to Saturday, 11:00 am – 2:30 pm",
+      "items": [
+        {
+          "title": "Les Soupes",
+          "desc": "Soupe du Jour — Chef Daniel's daily soup selection. Soupe à l'Oignon."
+        },
+        {
+          "title": "Les Belles du Jardin",
+          "desc": "Caesar, Endive au Bleu, Chèvre Chaud, Niçoise, watermelon-tomato."
+        },
+        {
+          "title": "Les Petits Plats",
+          "desc": "Pâté de Campagne, Moules Marinières, Escargots de Bourgogne, Galette de Crabe Bleu, Foie Gras Terrine."
+        },
+        {
+          "title": "Le Terroir",
+          "desc": "Crêpe au Poulet, Quiche Lorraine, Poitrine de Poulet aux Morilles, Escalopes de Veau aux Câpres.",
+          "price": "$15–32"
+        },
+        {
+          "title": "Végétal",
+          "desc": "Quiche de Légumes. Gnocchis aux Légumes du Soleil et Fromage de Chèvre."
+        }
+      ]
+    },
+    {
+      "block": "Services",
+      "variant": "cards",
+      "heading": "Dinner — Mon–Thu 5–9 pm, Fri & Sat 5–10 pm",
+      "items": [
+        {
+          "title": "Aperitif",
+          "desc": "Marcona almonds, marinated olives, date with blue cheese and bacon."
+        },
+        {
+          "title": "Rivières et Océan",
+          "desc": "Pavé de Saumon, Ravioli de Homard, Sole de Douvres Meunière."
+        },
+        {
+          "title": "Le Terroir",
+          "desc": "Magret de Canard, Carré d'Agneau Rôti, Filet Mignon Sauce Bordelaise, Poitrine de Poulet aux Morilles.",
+          "price": "$28–55"
+        },
+        {
+          "title": "Sides",
+          "desc": "Gratin de Pomme de Terre — Daniel's potato gratin. Haricot Vert. Asperges."
+        },
+        {
+          "title": "Tuesday Prix Fixe",
+          "desc": "A seasonally inspired four-course prix fixe dinner, offered every Tuesday night, as availability lasts.",
+          "price": "$50"
+        },
+        {
+          "title": "Monday Night Soufflé",
+          "desc": "Our famous French dessert soufflé special — the perfect sweet note to start your week."
+        }
+      ]
+    },
+    {
+      "block": "Services",
+      "variant": "cards",
+      "heading": "Dessert",
+      "items": [
+        {
+          "title": "Bombe en Chocolat · Crème Brûlée · Tarte Tatin",
+          "desc": "Tarte à la Pêche et Framboise, Glace ou Sorbet, La Fromagerie.",
+          "price": "$9–17"
+        },
+        {
+          "title": "Les Cafés",
+          "desc": "Provence, Parisian, Hot French Nut, Millionaire."
+        }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Reservations recommended.",
+      "text": "Due to capacity limits, reservations are highly recommended — on OpenTable or by phone."
+    }
+  ]
+}
