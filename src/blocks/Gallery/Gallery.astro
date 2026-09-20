@@ -1,0 +1,28 @@
+---
+import Photo from '../_shared/Photo.astro';
+const { variant: v, heading, images = [], placeholders, leadSlug, variants = {} } = Astro.props;
+const variant = v ?? (variants.gallery === 'before-after' ? 'before-after' : 'grid');
+const total = Math.max(images.length, placeholders ?? 4);
+const slots = Array.from({ length: variant === 'before-after' ? 2 : total }, (_, i) => images[i] ?? null);
+---
+<section class={`gallery gallery--${variant}`} aria-label={heading}>
+  <div class="container">
+    <h2>{heading}</h2>
+    <div class="gallery__grid">
+      {variant === 'before-after'
+        ? slots.map((img, i) => <Photo image={img} leadSlug={leadSlug} ratio="4x3" label={img?.caption ?? (i === 0 ? 'Before' : 'After')} class={i === 0 ? 'before' : 'after'} />)
+        : slots.map((img) => <Photo image={img} leadSlug={leadSlug} ratio="1x1" label={img?.caption} sizes="(min-width: 900px) 25vw, 50vw" widths={[320, 640]} class="tile" />)}
+    </div>
+  </div>
+</section>
+<style>
+  .gallery { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-bg); }
+  .gallery h2 { margin-bottom: var(--gw-space-5); }
+  .gallery--grid .gallery__grid { display: grid; gap: var(--gw-space-3); grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .gallery--grid :global(.tile) { box-shadow: var(--gw-shadow-1); transition: transform var(--gw-dur-base) var(--gw-ease-standard); }
+  .gallery--grid :global(.tile:hover) { transform: var(--gw-lift); }
+  .gallery--before-after .gallery__grid { display: grid; gap: var(--gw-space-1); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .gallery--before-after :global(.ph) { border-radius: 0; }
+  .gallery--before-after :global(.ph__label) { left: 0; bottom: 0; padding: var(--gw-space-2) var(--gw-space-4); background: var(--gw-color-text); color: var(--gw-color-bg); letter-spacing: var(--gw-eyebrow-tracking); text-transform: uppercase; }
+  .gallery--before-after :global(.after .ph__label) { background: var(--gw-color-primary); color: var(--gw-color-on-primary); }
+</style>

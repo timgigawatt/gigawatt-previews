@@ -1,0 +1,65 @@
+---
+const { eyebrow = 'Contact', heading, intro, fields = [], messageLabel = 'How can we help?', messagePlaceholder, submit = 'Send', note, showForm = true, lead } = Astro.props;
+const s = lead?.settings ?? {};
+const phoneHref = s.phone ? `tel:${String(s.phone).replace(/[^\d+]/g, '')}` : null;
+const hours: any[] = s.hours ?? [];
+---
+<section class="contact">
+  <div class="contact__inner">
+    <div class="contact__main">
+      <div>
+        <span class="eyebrow">{eyebrow}</span>
+        <h1>{heading}</h1>
+        {intro && <p class="contact__intro">{intro}</p>}
+      </div>
+      {showForm && (
+        <form class="form" method="post" action="#" onsubmit="return false">
+          {fields.map((f: any) => (
+            <label>{f.label}<input type={f.type ?? 'text'} name={f.label} placeholder={f.placeholder} /></label>
+          ))}
+          <label>{messageLabel}<textarea rows="4" name="message" placeholder={messagePlaceholder}></textarea></label>
+          <button type="submit" class="btn btn--primary">{submit}</button>
+          {note && <p class="form__note">{note}</p>}
+        </form>
+      )}
+    </div>
+    <aside class="contact__aside">
+      {(s.phone || s.address || s.email) && (
+        <div class="card card--tinted">
+          <h4>Call us</h4>
+          {phoneHref && <a class="contact__phone" href={phoneHref}>{s.phone}</a>}
+          <span class="small muted">{[s.address, s.email].filter(Boolean).join(' · ')}</span>
+        </div>
+      )}
+      {hours.length > 0 && (
+        <div class="card">
+          <h4>Hours</h4>
+          <dl>{hours.map((h: any) => <><dt>{h.days}</dt><dd>{h.open && h.close ? `${h.open} – ${h.close}` : h.note ?? 'Closed'}</dd></>)}</dl>
+        </div>
+      )}
+      <div class="map ph ph--4x3"><span>Map / service area{s.serviceArea && <><br />{s.serviceArea}</>}</span></div>
+    </aside>
+  </div>
+</section>
+<style>
+  .contact { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-bg); }
+  .contact__inner { max-width: var(--gw-max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--gw-space-7); }
+  .contact__main { flex: 1 1 320px; min-width: min(100%, 300px); display: flex; flex-direction: column; gap: var(--gw-space-5); }
+  h1 { margin: var(--gw-space-3) 0; max-width: 22ch; }
+  .contact__intro { max-width: 46ch; color: var(--gw-color-muted); }
+  .form { display: flex; flex-direction: column; gap: var(--gw-space-4); padding: var(--gw-space-6); background: var(--gw-color-surface); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-lg); box-shadow: var(--gw-shadow-2); }
+  label { display: flex; flex-direction: column; gap: var(--gw-space-2); font-size: var(--gw-small); font-weight: 700; }
+  input, textarea { min-height: 48px; padding: var(--gw-space-3) var(--gw-space-4); background: var(--gw-color-bg); color: var(--gw-color-text); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-sm); font-family: var(--gw-font-body); font-size: var(--gw-body); font-weight: 400; line-height: var(--gw-lh-body); }
+  input { padding-top: 0; padding-bottom: 0; }
+  textarea { resize: vertical; }
+  input:focus, textarea:focus { outline: none; border-color: var(--gw-color-focus); box-shadow: var(--gw-shadow-focus); }
+  .form__note { font-size: var(--gw-small); color: var(--gw-color-muted); }
+  .contact__aside { flex: 1 1 280px; min-width: min(100%, 260px); display: flex; flex-direction: column; gap: var(--gw-space-4); }
+  .card { display: flex; flex-direction: column; gap: var(--gw-space-3); padding: var(--gw-space-5); background: var(--gw-color-surface); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-lg); }
+  .card--tinted { background: var(--gw-color-surface-2); }
+  .contact__phone { font-family: var(--gw-font-display); font-size: var(--gw-h2); font-weight: var(--gw-weight-display); font-style: var(--gw-display-style); line-height: 1; color: var(--gw-color-text); text-decoration: none; letter-spacing: var(--gw-display-tracking); }
+  dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: var(--gw-space-2) var(--gw-space-4); font-size: var(--gw-small); }
+  dt { color: var(--gw-color-muted); } dd { margin: 0; font-weight: 700; text-align: right; }
+  .map { display: grid; place-items: center; text-align: center; padding: var(--gw-space-4); background-image: linear-gradient(var(--gw-color-photo-tint), var(--gw-color-photo-tint)), repeating-linear-gradient(45deg, var(--gw-color-border) 0 1px, transparent 1px 16px), repeating-linear-gradient(-45deg, var(--gw-color-border) 0 1px, transparent 1px 16px); }
+  .map span { font-size: var(--gw-small); font-weight: 700; color: var(--gw-color-muted); }
+</style>

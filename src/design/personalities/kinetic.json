@@ -1,0 +1,98 @@
+{
+  "name": "kinetic",
+  "for": "Sports, fitness, youth programs, coaching — gyms, gymnastics, swim, martial arts, dance.",
+  "voice": "Loud, energetic, motion-forward. Black base, one saturated primary, condensed italic display, diagonal cuts, snappy timing.",
+  "move": "A full-width scrolling marquee of program names and results, with diagonal section cuts between bands.",
+  "fonts": {
+    "display": "\"Saira Condensed\", \"Arial Narrow\", Impact, sans-serif",
+    "body": "\"Saira\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "files": [
+      {
+        "family": "Saira Condensed",
+        "file": "saira-condensed-700.woff2",
+        "weight": "700"
+      },
+      {
+        "family": "Saira Condensed",
+        "file": "saira-condensed-800.woff2",
+        "weight": "800"
+      },
+      {
+        "family": "Saira",
+        "file": "saira-400-700.woff2",
+        "weight": "400 700"
+      }
+    ]
+  },
+  "colors": {
+    "light": {
+      "bg": "#0a0a0b",
+      "surface": "#141418",
+      "surface-2": "#1f1f25",
+      "text": "#ffffff",
+      "muted": "#a7a7b2",
+      "border": "#33333d",
+      "primary": "#c6f03c",
+      "primary-hover": "#d8ff5c",
+      "on-primary": "#0a0a0b",
+      "accent": "#ff4a3d",
+      "accent-ink": "#ff6b60",
+      "on-accent": "#0a0a0b",
+      "success": "#6ddf8f",
+      "warn": "#ffc400",
+      "error": "#ff6b60",
+      "focus": "#c6f03c",
+      "photo-tint": "rgba(198, 240, 60, 0.12)"
+    },
+    "dark": {
+      "bg": "#000000",
+      "surface": "#0e0e12",
+      "surface-2": "#17171d",
+      "border": "#292930"
+    }
+  },
+  "tokens": {
+    "--gw-weight-display": "800",
+    "--gw-display-style": "italic",
+    "--gw-display-transform": "uppercase",
+    "--gw-display-tracking": "-0.01em",
+    "--gw-display": "clamp(2.9rem, 11cqi, 6.5rem)",
+    "--gw-h1": "clamp(2.1rem, 7cqi, 3.75rem)",
+    "--gw-lh-display": "0.86",
+    "--gw-eyebrow-tracking": "0.18em",
+    "--gw-radius-sm": "2px",
+    "--gw-radius-md": "4px",
+    "--gw-radius-lg": "6px",
+    "--gw-radius-pill": "999px",
+    "--gw-radius-photo": "4px",
+    "--gw-rule-strong": "4px",
+    "--gw-shadow-1": "0 2px 0 rgba(198, 240, 60, 0.5)",
+    "--gw-shadow-2": "0 10px 28px rgba(0, 0, 0, 0.6)",
+    "--gw-shadow-3": "0 0 0 2px var(--gw-color-primary), 0 14px 40px rgba(0, 0, 0, 0.7)",
+    "--gw-dur-fast": "90ms",
+    "--gw-dur-base": "160ms",
+    "--gw-dur-marquee": "18s",
+    "--gw-ease-standard": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "--gw-lift": "translateY(-3px) scale(1.01)"
+  },
+  "variants": {
+    "services": "list",
+    "stats": "row",
+    "gallery": "grid"
+  },
+  "flags": {
+    "popup": true,
+    "marquee": true,
+    "diagonal": true
+  },
+  "composition": [
+    "Hero",
+    "ProofRow",
+    "Marquee",
+    "Services:list",
+    "Stats:row",
+    "Gallery:grid",
+    "Testimonials",
+    "CtaBand"
+  ]
+}

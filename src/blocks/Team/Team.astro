@@ -1,0 +1,26 @@
+---
+import Photo from '../_shared/Photo.astro';
+const { heading, people = [], leadSlug } = Astro.props;
+---
+<section class="team" aria-label={heading}>
+  <div class="container">
+    <h2>{heading}</h2>
+    <div class="grid">
+      {people.map((p: any) => (
+        <article>
+          <Photo image={p.image} leadSlug={leadSlug} ratio="3x4" sizes="(min-width: 900px) 20vw, 50vw" widths={[320, 640]} />
+          <div><strong>{p.name}</strong>{p.role && <span>{p.role}</span>}</div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .team { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-surface); }
+  h2 { margin-bottom: var(--gw-space-5); }
+  .grid { display: grid; gap: var(--gw-space-4); grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  article { display: flex; flex-direction: column; gap: var(--gw-space-3); }
+  article :global(.ph) { background-color: var(--gw-color-surface-2); background-image: linear-gradient(var(--gw-color-photo-tint), var(--gw-color-photo-tint)); }
+  strong { display: block; font-family: var(--gw-font-display); font-size: var(--gw-h4); font-weight: var(--gw-weight-heading); font-style: var(--gw-display-style); }
+  span { font-size: var(--gw-small); color: var(--gw-color-muted); }
+</style>

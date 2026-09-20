@@ -5,7 +5,7 @@
 // _config/standards/content-editing.md.
 import { join } from 'node:path';
 import { existsSync } from 'node:fs';
-import { loadBlocks, loadPages, readJson, validate, P, listFiles } from './lib.mjs';
+import { loadBlocks, loadPages, readJson, validate, P, ROOT, listFiles } from './lib.mjs';
 
 const blocks = loadBlocks();
 const errors = [];
@@ -53,6 +53,22 @@ else if (blocks.Announcement) {
 }
 
 if (hasSchemas) for (const g of ['nav.json', 'footer.json', 'settings.json']) if (!existsSync(join(P.globals, g))) errors.push(`globals/${g}: missing`);
+// settings.personality names a GIGAWATT-BLOCKS personality (src/design/personalities/<name>.json); missing = default.
+const PERSONALITIES = join(ROOT, 'src/design/personalities');
+const settingsPath = join(P.globals, 'settings.json');
+if (existsSync(settingsPath)) {
+  const { personality } = readJson(settingsPath);
+  if (personality !== undefined) {
+    const known = readdirSync(PERSONALITIES).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => f.slice(0, -5));
+    if (typeof personality !== 'string' || !known.includes(personality)) errors.push(`globals/settings.json: personality "${personality}" is not one of ${known.join(', ')} (src/design/personalities/)`);
+  }
+}
+const personaSchema = readJson(join(PERSONALITIES, '_schema.json'));
+for (const f of readdirSync(PERSONALITIES).filter((f) => f.endsWith('.json') && !f.startsWith('_'))) {
+  const p = readJson(join(PERSONALITIES, f));
+  errors.push(...validate(personaSchema, p).map((e) => `src/design/personalities/${f} ${e}`));
+  if (p.name !== f.slice(0, -5)) errors.push(`src/design/personalities/${f}: name "${p.name}" must equal the filename`);
+}
 for (const f of listFiles(P.media)) if (f !== f.toLowerCase() || /\s/.test(f)) errors.push(`src/assets/media/${f}: filenames must be lowercase with no spaces`);
 
 if (errors.length) { console.error(errors.map((e) => `✗ ${e}`).join('\n')); process.exit(1); }

@@ -1,24 +1,57 @@
 ---
-import { Image } from 'astro:assets';
-import { resolveMedia } from '../../lib/media';
-
-const { variant = 'centered', eyebrow, heading, subheading, primaryCta, secondaryCta, image, leadSlug } = Astro.props;
-const img = image ? resolveMedia(image.src, leadSlug) : null;
+import Photo from '../_shared/Photo.astro';
+const { eyebrow, heading, subheading, bullets = [], primaryCta, secondaryCta, image, image2, badge, leadSlug, flags = {} } = Astro.props;
 ---
-<section class={`hero hero--${variant}`}>
-  <div class="hero__text">
-    {eyebrow && <p class="hero__eyebrow">{eyebrow}</p>}
-    <h1>{heading}</h1>
-    {subheading && <p class="hero__sub">{subheading}</p>}
-    <p class="hero__ctas">
-      {primaryCta && <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label}</a>}
-      {secondaryCta && <a class="btn" href={secondaryCta.href}>{secondaryCta.label}</a>}
-    </p>
-  </div>
-  {img && (
-    <div class="hero__media">
-      {/* Above the fold: eager + high priority per _config/standards/loading.md */}
-      <Image src={img} alt={image.alt} widths={[640, 1024, 1920]} sizes="100vw" loading="eager" fetchpriority="high" />
+<section class:list={['hero', { 'hero--band': flags.band, 'hero--diagonal': flags.diagonal }]}>
+  {flags.band && <div class="hero__band" aria-hidden="true"></div>}
+  <div class="hero__inner">
+    <div class="hero__text">
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h1 class="hero__title">{heading}</h1>
+      {subheading && <p class="hero__sub">{subheading}</p>}
+      {bullets.length > 0 && (
+        <ul class="hero__bullets">{bullets.slice(0, 3).map((b: string) => <li><span aria-hidden="true"></span>{b}</li>)}</ul>
+      )}
+      {(primaryCta || secondaryCta) && (
+        <div class="hero__ctas">
+          {primaryCta && <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label}</a>}
+          {secondaryCta && <a class="btn" href={secondaryCta.href}>{secondaryCta.label}</a>}
+        </div>
+      )}
     </div>
-  )}
+    <div class="hero__grid">
+      <Photo image={image} leadSlug={leadSlug} ratio="4x3" label={image?.caption} eager class="hero__main" />
+      <Photo image={image2} leadSlug={leadSlug} ratio="1x1" label={image2?.caption} eager sizes="(min-width: 900px) 25vw, 50vw" widths={[320, 640]} />
+      {badge ? (
+        <div class="hero__badge"><strong>{badge.big}</strong><span>{badge.small}</span></div>
+      ) : (
+        <Photo ratio="1x1" />
+      )}
+    </div>
+  </div>
+  {flags.diagonal && <div class="hero__cut" aria-hidden="true"></div>}
 </section>
+
+<style>
+  .hero { position: relative; padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-bg); }
+  .hero__band {
+    position: absolute; inset: var(--gw-space-4) var(--gw-space-4) var(--gw-space-8); border-radius: var(--gw-radius-lg);
+    background-color: var(--gw-color-surface-2); background-image: radial-gradient(var(--gw-color-border) 1px, transparent 1px); background-size: 14px 14px;
+    border: var(--gw-rule) solid var(--gw-color-border);
+  }
+  .hero__inner { position: relative; max-width: var(--gw-max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--gw-space-7); align-items: center; }
+  .hero__text { flex: 1 1 320px; min-width: min(100%, 300px); display: flex; flex-direction: column; gap: var(--gw-space-5); padding: var(--gw-space-4) 0; }
+  .hero__title { font-size: var(--gw-display); line-height: var(--gw-lh-display); }
+  .hero__sub { max-width: 46ch; color: var(--gw-color-muted); font-size: 1.125rem; }
+  .hero__bullets { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: var(--gw-space-2) var(--gw-space-5); }
+  .hero__bullets li { display: flex; align-items: center; gap: var(--gw-space-2); font-size: var(--gw-small); font-weight: var(--gw-weight-strong); }
+  .hero__bullets span { width: 10px; height: 2px; background: var(--gw-color-primary); flex: none; }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: var(--gw-space-3); margin-top: var(--gw-space-2); }
+  .hero__grid { flex: 1 1 300px; min-width: min(100%, 280px); display: grid; gap: var(--gw-space-3); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero__grid :global(.hero__main) { grid-column: span 2; box-shadow: var(--gw-shadow-2); }
+  .hero__badge { aspect-ratio: 1; border-radius: var(--gw-radius-photo); background: var(--gw-color-primary); color: var(--gw-color-on-primary); display: flex; flex-direction: column; justify-content: center; gap: var(--gw-space-1); padding: var(--gw-space-4); }
+  .hero__badge strong { font-family: var(--gw-font-display); font-size: var(--gw-h2); line-height: 1; font-weight: var(--gw-weight-display); font-style: var(--gw-display-style); }
+  .hero__badge span { font-size: var(--gw-small); font-weight: 600; line-height: 1.3; }
+  .hero__cut { position: absolute; left: -4%; right: -4%; bottom: -28px; height: 64px; background: var(--gw-color-surface); transform: skewY(-2.2deg); }
+  .hero--diagonal { padding-bottom: calc(var(--gw-section-y) + var(--gw-space-4)); }
+</style>

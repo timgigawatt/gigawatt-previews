@@ -1,0 +1,17 @@
+---
+const { items = [], tone = 'primary' } = Astro.props;
+const loop = [...items, ...items];
+---
+<div class={`marquee marquee--${tone}`} aria-hidden="true">
+  <div class="marquee__track">{loop.map((m: string) => <span>{m} <i>/</i></span>)}</div>
+</div>
+<style>
+  .marquee { overflow: hidden; padding: var(--gw-space-3) 0; border-top: var(--gw-rule) solid var(--gw-color-border); border-bottom: var(--gw-rule) solid var(--gw-color-border); }
+  .marquee--primary { background: var(--gw-color-primary); color: var(--gw-color-on-primary); }
+  .marquee--surface { background: var(--gw-color-surface-2); color: var(--gw-color-text); }
+  .marquee__track { display: flex; width: max-content; gap: var(--gw-space-6); animation: gw-marquee var(--gw-dur-marquee) linear infinite; }
+  span { font-family: var(--gw-font-display); font-size: clamp(1.5rem, 4cqi, 2.5rem); font-weight: var(--gw-weight-display); font-style: var(--gw-display-style); text-transform: var(--gw-display-transform); letter-spacing: var(--gw-display-tracking); white-space: nowrap; line-height: 1; }
+  i { font-style: inherit; opacity: .55; }
+  .marquee--surface i { color: var(--gw-color-primary); opacity: 1; }
+  @keyframes gw-marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+</style>

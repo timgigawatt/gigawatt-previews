@@ -1,0 +1,36 @@
+---
+const { heading, tiers = [], lead } = Astro.props;
+const siteCta = lead?.nav?.cta;
+---
+<section class="pricing" aria-label={heading}>
+  <div class="container">
+    <h2>{heading}</h2>
+    <div class="grid">
+      {tiers.map((t: any) => { const cta = t.cta ?? siteCta; return (
+        <article>
+          <header>
+            <span class="eyebrow">{t.name}</span>
+            <div class="price"><strong>{t.price}</strong>{t.per && <span>{t.per}</span>}</div>
+            {t.note && <p>{t.note}</p>}
+          </header>
+          {t.items?.length > 0 && <ul>{t.items.map((i: string) => <li><span aria-hidden="true"></span>{i}</li>)}</ul>}
+          {cta && <a class="btn btn--primary" href={cta.href}>{cta.label}</a>}
+        </article>
+      ); })}
+    </div>
+  </div>
+</section>
+<style>
+  .pricing { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-surface); }
+  h2 { margin-bottom: var(--gw-space-6); }
+  .grid { display: grid; gap: var(--gw-space-4); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  article { display: flex; flex-direction: column; gap: var(--gw-space-4); padding: var(--gw-space-6) var(--gw-space-5); border: var(--gw-rule-strong) solid var(--gw-color-border); border-radius: var(--gw-radius-lg); background: var(--gw-color-bg); }
+  header { display: flex; flex-direction: column; gap: var(--gw-space-2); }
+  .price { display: flex; align-items: baseline; gap: var(--gw-space-2); }
+  .price strong { font-family: var(--gw-font-display); font-size: var(--gw-h1); font-weight: var(--gw-weight-display); font-style: var(--gw-display-style); line-height: 1; letter-spacing: var(--gw-display-tracking); }
+  .price span, header p { font-size: var(--gw-small); color: var(--gw-color-muted); }
+  ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--gw-space-3); }
+  li { display: flex; gap: var(--gw-space-3); font-size: var(--gw-small); line-height: 1.5; }
+  li span { flex: none; width: 8px; height: 8px; margin-top: 6px; background: var(--gw-color-primary); border-radius: var(--gw-radius-pill); }
+  article .btn { margin-top: auto; min-height: 48px; }
+</style>

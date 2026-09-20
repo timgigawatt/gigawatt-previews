@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Marquee",
+  "x-version": 1,
+  "x-description": "Full-width scrolling strip of program names or results (Kinetic's move — only in a personality with the `marquee` flag). Decorative: the same words must appear elsewhere on the page.",
+  "type": "object",
+  "required": ["block", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Marquee" },
+    "items": { "type": "array", "minItems": 3, "items": { "type": "string", "maxLength": 40 } },
+    "tone": { "type": "string", "enum": ["primary", "surface"], "default": "primary" }
+  }
+}

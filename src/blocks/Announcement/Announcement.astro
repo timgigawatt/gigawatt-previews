@@ -1,9 +1,12 @@
 ---
 // Rendered by the layout from globals/announcements.json — never placed on a page directly.
-const { title, body, cta, style = 'banner' } = Astro.props;
+// With the personality's `popup` flag: the primary-colour bar at the very top, dismissible.
+// Without: a quiet banner in surface-2. Dismissal is per page load (no storage).
+const { title, body, cta, popup = false } = Astro.props;
 ---
-<aside class={`announcement announcement--${style}`} role="status">
+<aside class={`announcement ${popup ? '' : 'announcement--banner'}`} role="status" data-announcement>
   <strong>{title}</strong>
   <span>{body}</span>
   {cta && <a href={cta.href}>{cta.label}</a>}
+  <button type="button" aria-label="Dismiss announcement" onclick="this.closest('[data-announcement]').hidden = true">×</button>
 </aside>

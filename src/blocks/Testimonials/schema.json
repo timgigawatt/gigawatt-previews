@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Testimonials",
+  "x-version": 1,
+  "x-description": "Three to five review quotes as a scroll-snap carousel of cards (five accent dots, the quote, who + where). Quotes verbatim from public reviews, attributed exactly as shown publicly.",
+  "type": "object",
+  "required": ["block", "heading", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Testimonials" },
+    "heading": { "type": "string", "maxLength": 60 },
+    "items": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["text", "who"], "additionalProperties": false, "properties": { "text": { "type": "string", "maxLength": 320 }, "who": { "type": "string", "maxLength": 40 }, "meta": { "type": "string", "maxLength": 40, "description": "Where it came from or where they are: \"Google\", \"Old Orchard\"" } } }
+    }
+  }
+}

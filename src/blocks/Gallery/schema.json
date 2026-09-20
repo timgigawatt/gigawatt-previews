@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Gallery",
+  "x-version": 1,
+  "x-description": "Proof of work in their own photos. `grid` = square tiles (2–6, captions optional); `before-after` = two 4:3 frames labelled Before / After (Foundry). Slots with no usable photo render as tinted placeholders; a Gallery with no photos at all still reads as finished, so include it only when the profile has at least one usable photo or the composition asks for it.",
+  "type": "object",
+  "required": ["block", "heading"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Gallery" },
+    "variant": { "type": "string", "enum": ["grid", "before-after"] },
+    "heading": { "type": "string", "maxLength": 60 },
+    "images": { "type": "array", "items": { "$ref": "#/$defs/image" } },
+    "placeholders": { "type": "integer", "description": "grid only: number of empty tiles to draw when `images` is short (default 4 total)" }
+  },
+  "$defs": {
+    "image": { "type": "object", "required": ["src", "alt"], "additionalProperties": false, "properties": { "src": { "type": "string" }, "alt": { "type": "string", "maxLength": 160 }, "caption": { "type": "string", "maxLength": 80 } } }
+  }
+}

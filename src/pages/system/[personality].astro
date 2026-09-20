@@ -1,0 +1,15 @@
+---
+// The design-system check page: the example lead's home rendered in each personality at
+// /system/<personality>/. For Tim's review only — noindex like everything here.
+import BlockPage from '../../layouts/BlockPage.astro';
+import { getLead } from '../../lib/leads';
+import { personalityNames } from '../../lib/design';
+
+export function getStaticPaths() {
+  return personalityNames().map((personality) => ({ params: { personality } }));
+}
+const { personality } = Astro.params;
+const base = getLead('example-plumbing')!;
+const lead = { ...base, settings: { ...base.settings, personality } };
+---
+<BlockPage lead={lead} page={base.pages.home} isHome />

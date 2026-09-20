@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-block": "Pricing",
+  "x-version": 1,
+  "x-description": "Two to three tiers, only when they publish prices or plans: name, price, per, note, bullet list, the site CTA. Never invent a price.",
+  "type": "object",
+  "required": ["block", "heading", "tiers"],
+  "additionalProperties": false,
+  "properties": {
+    "block": { "const": "Pricing" },
+    "heading": { "type": "string", "maxLength": 60 },
+    "tiers": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["name", "price"], "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "maxLength": 40 },
+          "price": { "type": "string", "maxLength": 16 },
+          "per": { "type": "string", "maxLength": 20 },
+          "note": { "type": "string", "maxLength": 80 },
+          "items": { "type": "array", "items": { "type": "string", "maxLength": 60 } },
+          "cta": { "type": "object", "required": ["label", "href"], "additionalProperties": false, "properties": { "label": { "type": "string", "maxLength": 40 }, "href": { "type": "string" } } }
+        }
+      }
+    }
+  }
+}

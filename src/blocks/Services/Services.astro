@@ -1,0 +1,85 @@
+---
+const { variant: v, heading, more, ctaLabel = 'Book →', items = [], variants = {}, lead } = Astro.props;
+const variant = v ?? variants.services ?? 'list';
+const ctaHref = lead?.nav?.cta?.href ?? '#contact';
+const [s0, s1, s2, s3] = items;
+---
+<section id="services" class={`services services--${variant}`}>
+  <div class="container">
+    <div class="section__head">
+      <h2>{heading}</h2>
+      {more && <a class="link-more" href={more.href}>{more.label}</a>}
+    </div>
+
+    {variant === 'bento' && (
+      <div class="bento">
+        {s0 && <article class="bento__anchor"><span class="bento__tag">Most requested</span><div><h3>{s0.title}</h3>{s0.desc && <p>{s0.desc}</p>}</div>{s0.price && <span class="bento__price">{s0.price}</span>}</article>}
+        {s1 && <article class="bento__wide"><h3>{s1.title}</h3>{s1.desc && <p>{s1.desc}</p>}{s1.price && <span class="bento__price">{s1.price}</span>}</article>}
+        {s2 && <article><h3>{s2.title}</h3>{s2.desc && <p>{s2.desc}</p>}{s2.price && <span class="bento__price">{s2.price}</span>}</article>}
+        {s3 && <article class="bento__tinted"><h3>{s3.title}</h3>{s3.desc && <p>{s3.desc}</p>}{s3.price && <span class="bento__price">{s3.price}</span>}</article>}
+      </div>
+    )}
+
+    {variant === 'list' && (
+      <div class="list">
+        {items.map((s: any) => (
+          <article class="row">
+            <h3>{s.href ? <a href={s.href}>{s.title}</a> : s.title}</h3>
+            {s.desc && <p>{s.desc}</p>}
+            {s.price && <span class="row__price">{s.price}</span>}
+          </article>
+        ))}
+      </div>
+    )}
+
+    {variant === 'cards' && (
+      <div class="cardgrid">
+        {items.map((s: any) => (
+          <article class="scard">
+            <div class="scard__bar"></div>
+            <h3>{s.title}</h3>
+            {s.desc && <p>{s.desc}</p>}
+            <div class="scard__foot">
+              <span>{s.price ?? ''}</span>
+              <a href={s.href ?? ctaHref}>{ctaLabel}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  .services { padding: var(--gw-section-y) var(--gw-gutter); background: var(--gw-color-surface); }
+  .services h2 { font-size: var(--gw-h1); }
+  /* list */
+  .list { display: grid; border-top: var(--gw-rule) solid var(--gw-color-border); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--gw-space-3) var(--gw-space-6); align-items: baseline; padding: var(--gw-space-5) 0; border-bottom: var(--gw-rule) solid var(--gw-color-border); transition: padding-left var(--gw-dur-base) var(--gw-ease-standard); }
+  .row:hover { padding-left: var(--gw-space-3); }
+  .row h3 { flex: 1 1 220px; font-style: var(--gw-display-style); }
+  .row h3 a { color: inherit; text-decoration: none; }
+  .row p { flex: 2 1 280px; color: var(--gw-color-muted); }
+  .row__price { flex: 0 0 auto; font-weight: 700; color: var(--gw-color-accent-ink); font-size: var(--gw-small); white-space: nowrap; }
+  /* bento */
+  .bento { display: grid; gap: var(--gw-space-4); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .bento article { display: flex; flex-direction: column; gap: var(--gw-space-2); padding: var(--gw-space-5); border-radius: var(--gw-radius-lg); background: var(--gw-color-bg); border: var(--gw-rule) solid var(--gw-color-border); }
+  .bento article p { color: var(--gw-color-muted); font-size: var(--gw-small); line-height: 1.55; }
+  .bento__price { margin-top: auto; font-size: var(--gw-small); font-weight: 700; color: var(--gw-color-accent-ink); }
+  .bento__wide { grid-column: span 2; }
+  .bento__tinted { background: var(--gw-color-surface-2) !important; }
+  .bento__anchor { grid-column: span 2; grid-row: span 2; min-height: 260px; justify-content: space-between; gap: var(--gw-space-5) !important; padding: var(--gw-space-6) !important; background: var(--gw-color-primary) !important; color: var(--gw-color-on-primary); border: 0 !important; box-shadow: var(--gw-shadow-2); }
+  .bento__anchor h3 { font-size: var(--gw-h2); font-weight: var(--gw-weight-display); margin-bottom: var(--gw-space-3); }
+  .bento__anchor p { color: inherit !important; font-size: var(--gw-body) !important; max-width: 34ch; line-height: var(--gw-lh-body) !important; }
+  .bento__anchor .bento__price { color: inherit; font-size: var(--gw-body); }
+  .bento__tag { font-size: var(--gw-small); font-weight: 700; letter-spacing: var(--gw-eyebrow-tracking); text-transform: uppercase; opacity: .85; }
+  @container (max-width: 760px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  /* cards */
+  .cardgrid { display: grid; gap: var(--gw-space-4); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .scard { display: flex; flex-direction: column; gap: var(--gw-space-3); padding: var(--gw-space-5); background: var(--gw-color-bg); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-md); box-shadow: var(--gw-shadow-1); transition: transform var(--gw-dur-base) var(--gw-ease-standard), box-shadow var(--gw-dur-base) var(--gw-ease-standard); }
+  .scard:hover { transform: var(--gw-lift); box-shadow: var(--gw-shadow-2); }
+  .scard__bar { height: var(--gw-space-1); width: 44px; background: var(--gw-color-primary); }
+  .scard h3 { font-style: var(--gw-display-style); }
+  .scard p { color: var(--gw-color-muted); }
+  .scard__foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: var(--gw-space-3); padding-top: var(--gw-space-3); border-top: var(--gw-rule) solid var(--gw-color-border); font-weight: 700; }
+  .scard__foot a { font-size: var(--gw-small); text-decoration: none; }
+</style>

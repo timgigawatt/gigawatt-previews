@@ -1,43 +1,85 @@
 ---
-// Preview chrome for one lead: that lead's settings/nav/footer, always noindex, always badged.
-const { lead, title, description } = Astro.props;
+// Preview chrome for one lead: announcement bar, sticky header (phone + CTA in the first
+// viewport — a hard rule), footer; always noindex, always badged. The look comes from the
+// lead's GIGAWATT-BLOCKS personality (globals/settings.json `personality`, default "default"):
+// Base emits its @font-face rules and custom properties, sets data-personality / data-mode on
+// <html>; every block styles from tokens only. Reference: previews/design-system.md
+import '../design/tokens.css';
+import '../design/base.css';
+import { Image } from 'astro:assets';
+import { getPersonality, personalityCss, fontFaceCss, fontPreloads } from '../lib/design';
+import { activeAnnouncement } from '../lib/leads';
+import { resolveMedia } from '../lib/media';
+import Announcement from '../blocks/Announcement/Announcement.astro';
+
+const { lead, title, description, isHome = false } = Astro.props;
 const { settings, nav, footer } = lead;
 const pathname = Astro.url.pathname;
+const persona = getPersonality(settings.personality);
+const css = fontFaceCss(persona) + personalityCss(persona);
+const phoneHref = settings.phone ? `tel:${String(settings.phone).replace(/[^\d+]/g, '')}` : null;
+const logo = settings.logo ? resolveMedia(settings.logo, lead.slug) : null;
+const announcement = activeAnnouncement(lead);
+const showAnnouncement = announcement && (announcement.placement === 'all-pages' || isHome);
+const areas: string[] = footer.areas ?? [];
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-personality={persona.name} data-mode={settings.mode ?? 'light'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="/styles.css" />
+    {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
+    <style is:inline set:html={css}></style>
   </head>
   <body>
-    <div class="preview-badge">⚡ concept preview — not the live site</div>
-    <header class="site-header">
-      <a class="brand" href={`/${lead.slug}/`}>{settings.siteName}</a>
-      <nav>
-        {(nav.items ?? []).map((i: any) => <a href={i.href} aria-current={pathname === i.href ? 'page' : undefined}>{i.label}</a>)}
-        {nav.cta && <a class="btn btn--primary" href={nav.cta.href}>{nav.cta.label}</a>}
-      </nav>
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer class="site-footer">
-      {(footer.columns ?? []).map((col: any) => (
-        <div>
-          <h4>{col.heading}</h4>
-          <ul>{(col.links ?? []).map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+    <div class="gw">
+      {showAnnouncement && <Announcement {...announcement} popup={!!persona.flags.popup} />}
+      <header class="site-header">
+        <a class="brand" href={`/${lead.slug}/`}>
+          {logo ? <Image src={logo} alt={settings.siteName} height={36} widths={[160, 320]} loading="eager" />
+                : <><span class="brand__name">{settings.siteName}</span><span class="brand__dot" aria-hidden="true"></span></>}
+        </a>
+        <nav class="site-nav" aria-label="Site">
+          {(nav.items ?? []).map((i: any) => <a href={i.href} aria-current={pathname === i.href ? 'page' : undefined}>{i.label}</a>)}
+        </nav>
+        <div class="site-header__actions">
+          {phoneHref && <a class="phone-pill" href={phoneHref}><span class="phone-pill__dot" aria-hidden="true"></span>{settings.phone}</a>}
+          {nav.cta && <a class="btn btn--primary btn--sm" href={nav.cta.href}>{nav.cta.label}</a>}
         </div>
-      ))}
-      <div>
-        <h4>Contact</h4>
-        <p>{settings.address}<br />{settings.phone}{settings.email && <><br />{settings.email}</>}</p>
-      </div>
-      <p class="legal">{footer.legal ?? `© ${settings.siteName}`} · Concept by Gigawatt Labs</p>
-    </footer>
+      </header>
+      <main id="top">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <span class="site-footer__name">{settings.siteName}</span>
+            {settings.tagline && <p>{settings.tagline}</p>}
+            {phoneHref && <a class="site-footer__phone" href={phoneHref}>{settings.phone}</a>}
+            {settings.address && <p class="site-footer__address">{settings.address}</p>}
+          </div>
+          {areas.length > 0 && (
+            <div>
+              <h4>Service area</h4>
+              <ul>{areas.map((a) => <li>{a}</li>)}</ul>
+            </div>
+          )}
+          {(footer.columns ?? []).map((col: any) => (
+            <div>
+              <h4>{col.heading}</h4>
+              <ul>{(col.links ?? []).map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+            </div>
+          ))}
+        </div>
+        <div class="site-footer__legal">
+          <span>{footer.legal ?? `© ${settings.siteName}`}</span>
+          <span>Concept preview by Gigawatt Labs</span>
+        </div>
+      </footer>
+    </div>
+    <div class="preview-badge">⚡ concept preview — not the live site</div>
   </body>
 </html>

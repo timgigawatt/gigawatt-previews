@@ -1,0 +1,16 @@
+---
+const { text, who, role, tone = 'surface' } = Astro.props;
+---
+<section class={`pull pull--${tone}`} aria-label="In their words">
+  <blockquote>
+    <p>“{text}”</p>
+    <footer>{who}{role && <> — {role}</>}</footer>
+  </blockquote>
+</section>
+<style>
+  .pull { padding: var(--gw-section-y) var(--gw-gutter); }
+  .pull--surface { background: var(--gw-color-surface); } .pull--bg { background: var(--gw-color-bg); }
+  blockquote { margin: 0 auto; max-width: 34ch; border-top: var(--gw-rule) solid var(--gw-color-accent); padding-top: var(--gw-space-5); }
+  p { max-width: none; font-family: var(--gw-font-display); font-size: var(--gw-h1); font-weight: var(--gw-weight-display); line-height: 1.18; letter-spacing: var(--gw-display-tracking); text-indent: -0.42em; text-wrap: balance; }
+  footer { margin-top: var(--gw-space-5); font-size: var(--gw-small); font-weight: 700; letter-spacing: var(--gw-eyebrow-tracking); text-transform: var(--gw-eyebrow-transform); color: var(--gw-color-muted); }
+</style>

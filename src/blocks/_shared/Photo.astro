@@ -1,0 +1,13 @@
+---
+// One photo slot. With an image: the lead's media through astro:assets, washed with the
+// personality's photo-tint. Without: the tinted placeholder (never stock). `ratio` is the slot's
+// fixed aspect; `label` is the small caption in the corner.
+import { Image } from 'astro:assets';
+import { resolveMedia } from '../../lib/media';
+const { image, leadSlug, ratio = '4x3', label, eager = false, sizes = '(min-width: 900px) 50vw, 100vw', widths = [480, 960, 1440], class: cls = '' } = Astro.props;
+const img = image?.src ? resolveMedia(image.src, leadSlug) : null;
+---
+<figure class={`ph ph--${ratio} ${img ? 'ph--photo' : ''} ${cls}`} aria-hidden={!img && !label ? 'true' : undefined}>
+  {img && <Image src={img} alt={image.alt} widths={widths} sizes={sizes} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding={eager ? undefined : 'async'} />}
+  {label && <figcaption class="ph__label">{label}</figcaption>}
+</figure>

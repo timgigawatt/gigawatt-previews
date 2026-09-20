@@ -1,1 +1,15 @@
-{ "siteName": "Example Plumbing", "tagline": "Olathe's family plumber", "phone": "(913) 555-0100", "email": "", "address": "123 Main St, Olathe, KS 66062", "hours": [], "timezone": "America/Chicago" }
+{
+  "siteName": "Example Plumbing",
+  "tagline": "Family-owned plumbing, Olathe since 1998. Licensed, bonded, insured.",
+  "phone": "(913) 555-0100",
+  "email": "",
+  "address": "123 Main St, Olathe, KS 66062",
+  "hours": [
+    { "days": "Mon–Fri", "open": "7:00 am", "close": "6:00 pm" },
+    { "days": "Sat", "open": "8:00 am", "close": "noon" },
+    { "days": "Sun", "note": "Emergency only" }
+  ],
+  "serviceArea": "Johnson County",
+  "timezone": "America/Chicago",
+  "personality": "foundry"
+}

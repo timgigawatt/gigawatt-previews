@@ -1,0 +1,12 @@
+---
+const { items = [] } = Astro.props;
+---
+<section class="proof" aria-label="Credentials">
+  <ul>{items.map((t: string) => <li><span aria-hidden="true"></span>{t}</li>)}</ul>
+</section>
+<style>
+  .proof { padding: var(--gw-space-5) var(--gw-gutter); background: var(--gw-color-surface); border-top: var(--gw-rule) solid var(--gw-color-border); border-bottom: var(--gw-rule) solid var(--gw-color-border); position: relative; z-index: 1; }
+  ul { margin: 0 auto; padding: 0; list-style: none; max-width: var(--gw-max); display: flex; flex-wrap: wrap; gap: var(--gw-space-3) var(--gw-space-5); align-items: center; justify-content: center; }
+  li { display: flex; align-items: center; gap: var(--gw-space-2); padding: var(--gw-space-2) var(--gw-space-4); border: var(--gw-rule) solid var(--gw-color-border); border-radius: var(--gw-radius-pill); font-size: var(--gw-small); font-weight: 700; letter-spacing: .04em; text-transform: var(--gw-eyebrow-transform); }
+  li span { width: 6px; height: 6px; background: var(--gw-color-accent); border-radius: var(--gw-radius-pill); flex: none; }
+</style>
