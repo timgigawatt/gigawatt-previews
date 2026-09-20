@@ -1,0 +1,54 @@
+{
+  "title": "About",
+  "description": "For more than 20 years, the Quillec family has owned and operated Café Provence in Prairie Village, Kansas — classic French tradition, Midwest ingredients, unpretentious service.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "PageHeader",
+      "eyebrow": "About us",
+      "heading": "For more than 20 years, the Quillec family has owned and operated Café Provence.",
+      "intro": "Located in Prairie Village, Kansas, in the Shops of Prairie Village."
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "body": [
+        "Even though we do have white table cloths, we don't like to think of the restaurant as \"fancy.\" We work with local farmers, butchers, and artisanal food purveyors to create distinct, delicious, comforting food that combines the fantastic culinary resources of the Midwest with classic French tradition.",
+        "Our award-winning service staff always strives to provide you with a remarkable, unpretentious dining experience, whatever the occasion.",
+        "We are proud to partner with local farmers, suppliers, and premium artisans, including Longevity Farms, Green Dirt Farm, City Bitty Farm, Widgeonwood Farm, Simply Food, Foods in Season, Arrowhead Specialty Meats, D'Artagnan, Paris Brothers Specialty Foods, North American Meats, Euro Gourmet Fine Foods, and Scavuzzo's Premium Foodservice.",
+        "You can also enjoy many of our soups, stews, sauces, desserts, and more to-go from our French Market, just around the corner in the Shops of Prairie Village."
+      ]
+    },
+    {
+      "block": "Gallery",
+      "heading": "The room and the team",
+      "images": [
+        {
+          "src": "gallery-images-20260920-3.webp",
+          "alt": "The Café Provence team in the dining room, 2022",
+          "caption": "The team, 2022"
+        },
+        {
+          "src": "gallery-images-20260920-6.webp",
+          "alt": "A set table in the dining room",
+          "caption": "The dining room"
+        }
+      ]
+    },
+    {
+      "block": "TextSection",
+      "variant": "narrow",
+      "heading": "Awards and press",
+      "body": [
+        "Top 100 Restaurants in the U.S., OpenTable — 2024, 2023, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2013, 2012. 100 Most Romantic Restaurants in America, OpenTable — 2024, 2020, 2019, 2018. 100 Best Restaurants in America for Foodies, OpenTable — 2016.",
+        "Best French Restaurant, Kansas City Star — 2024. Best Restaurant and Best Chef (Philip Quillec), Johnson County Post — 2024. Best Restaurant in Kansas City, Best Service in Kansas City, and 25 Best Restaurant Service in the U.S., Zagat — 2013.",
+        "Featured by KCUR (Best French Food in Kansas City), The Pitch (Kansas City's Best French Onion Soup; Top 50 Dishes), Forbes (100 Most Romantic Restaurants in the U.S.), Kansas City Magazine, Culture Trip, PBS \"Check, Please!\", Fox 4 KC, the Shawnee Mission Post, Feast Magazine, and Explore France."
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Come see us.",
+      "text": "3936 W. 69th Terrace, in the Shops of Prairie Village. Reservations recommended."
+    }
+  ]
+}

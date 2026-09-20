@@ -1,0 +1,17 @@
+{
+  "areas": ["Prairie Village", "Leawood", "Overland Park", "Mission Hills", "Kansas City"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/cafe-provence/" },
+      { "label": "Menus", "href": "/cafe-provence/menus/" },
+      { "label": "About", "href": "/cafe-provence/about/" },
+      { "label": "Contact", "href": "/cafe-provence/contact/" }
+    ] },
+    { "heading": "Also", "links": [
+      { "label": "Reservations (OpenTable)", "href": "https://www.opentable.com/cafe-provence" },
+      { "label": "Gift cards", "href": "https://www.toasttab.com/cafe-provence-pv-3936-west-69th-terrace/giftcards" },
+      { "label": "French Market", "href": "https://frenchmarketkc.com" }
+    ] }
+  ],
+  "legal": "© 2026 Café Provence. Family owned and operated by the Quillec family."
+}

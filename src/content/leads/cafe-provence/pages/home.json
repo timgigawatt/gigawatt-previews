@@ -1,0 +1,153 @@
+{
+  "title": "Home",
+  "description": "Café Provence — classic French country cuisine in Prairie Village, Kansas. Family owned and operated by the Quillec family for more than 20 years. Lunch and dinner Monday–Saturday; reservations recommended.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "eyebrow": "Prairie Village · family owned for more than 20 years",
+      "heading": "Bienvenue! Classic French country cuisine, made with care.",
+      "subheading": "We work with local farmers, butchers, and artisanal food purveyors to create distinct, delicious, comforting food that combines the culinary resources of the Midwest with classic French tradition.",
+      "bullets": [
+        "Lunch & dinner, Mon–Sat",
+        "OpenTable Top 100 — 2024",
+        "Reservations recommended"
+      ],
+      "primaryCta": {
+        "label": "Reserve a table",
+        "href": "https://www.opentable.com/cafe-provence"
+      },
+      "secondaryCta": {
+        "label": "Call (913) 384-5998",
+        "href": "tel:+19133845998"
+      },
+      "image": {
+        "src": "hero-image-20260920-1.webp",
+        "alt": "The dining room at Café Provence — a set table by the blue front door"
+      },
+      "image2": {
+        "src": "hero-image2-20260920-1.webp",
+        "alt": "Coquilles Saint-Jacques"
+      },
+      "badge": {
+        "big": "4.8 ★",
+        "small": "841 Google reviews · #1 in Prairie Village on Tripadvisor"
+      }
+    },
+    {
+      "block": "ProofRow",
+      "items": [
+        "OpenTable Top 100 in the U.S. — 2024",
+        "Best French Restaurant — KC Star 2024",
+        "Best Chef, Philip Quillec — JoCo Post",
+        "Family owned & operated, 20+ years"
+      ]
+    },
+    {
+      "block": "Services",
+      "heading": "Lunch, dinner, and the nights we're known for",
+      "more": {
+        "label": "See the menus",
+        "href": "/cafe-provence/menus/"
+      },
+      "items": [
+        {
+          "title": "Lunch — Monday to Saturday, 11:00–2:30",
+          "desc": "Soupe à l'Oignon, Quiche Lorraine, Crêpe au Poulet, Chèvre Chaud, Niçoise, Moules Marinières.",
+          "price": "entrées $15–32"
+        },
+        {
+          "title": "Dinner — Monday to Saturday from 5:00",
+          "desc": "Magret de Canard, Sole de Douvres Meunière, Carré d'Agneau Rôti, Filet Mignon Sauce Bordelaise, Ravioli de Homard.",
+          "price": "entrées $28–55"
+        },
+        {
+          "title": "Tuesday Prix Fixe",
+          "desc": "A seasonally inspired four-course prix fixe dinner, offered every Tuesday night, as availability lasts.",
+          "price": "$50"
+        },
+        {
+          "title": "Monday Night Soufflé",
+          "desc": "Our famous French dessert soufflé special — the perfect sweet note to start your week."
+        },
+        {
+          "title": "Dessert & Les Cafés",
+          "desc": "Crème Brûlée, Tarte Tatin, Bombe en Chocolat, La Fromagerie, and four coffees — Provence, Parisian, Hot French Nut, Millionaire.",
+          "price": "$9–17"
+        },
+        {
+          "title": "Gift cards",
+          "desc": "Available online, for any occasion.",
+          "href": "https://www.toasttab.com/cafe-provence-pv-3936-west-69th-terrace/giftcards"
+        }
+      ]
+    },
+    {
+      "block": "Gallery",
+      "heading": "From the kitchen and the dining room",
+      "images": [
+        {
+          "src": "gallery-images-20260920-1.webp",
+          "alt": "Pavé de Saumon",
+          "caption": "Pavé de Saumon"
+        },
+        {
+          "src": "gallery-images-20260920-2.webp",
+          "alt": "Magret de Canard",
+          "caption": "Magret de Canard"
+        },
+        {
+          "src": "gallery-images-20260920-6.webp",
+          "alt": "A set table in the dining room",
+          "caption": "The dining room"
+        },
+        {
+          "src": "gallery-images-20260920-5.webp",
+          "alt": "Coquilles Saint-Jacques",
+          "caption": "Coquilles Saint-Jacques"
+        },
+        {
+          "src": "gallery-images-20260920-4.webp",
+          "alt": "The Tuesday prix fixe — plates and wine on a set table by the blue front door",
+          "caption": "Tuesday prix fixe"
+        },
+        {
+          "src": "gallery-images-20260920-3.webp",
+          "alt": "The Café Provence team in the dining room, 2022",
+          "caption": "The team"
+        }
+      ]
+    },
+    {
+      "block": "Testimonials",
+      "heading": "Kind words",
+      "items": [
+        {
+          "text": "One of the best meals I have ever had in my life was at Cafe Provence.",
+          "who": "730jane",
+          "meta": "Iowa City, IA · Tripadvisor"
+        },
+        {
+          "text": "Thoughtfully prepared, flavorful, and clearly made with care.",
+          "who": "Angelina",
+          "meta": "Kansas City, MO · Tripadvisor"
+        },
+        {
+          "text": "Small, quaint setting. Fantastic service. Great food!",
+          "who": "Angie P.",
+          "meta": "Kansas City, MO · Tripadvisor"
+        },
+        {
+          "text": "It's like being in Paris. Nice friendly staff make you feel comfortable. Only restaurant that I'll order French onion soup because no other restaurant comes close to their taste.",
+          "who": "A guest",
+          "meta": "Kind Words, cafeprovencekc.com"
+        }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Reservations recommended.",
+      "text": "Lunch and dinner Monday through Saturday, closed Sunday. Reserve on OpenTable, or call and we'll find you a table."
+    }
+  ]
+}

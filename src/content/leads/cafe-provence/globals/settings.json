@@ -1,0 +1,16 @@
+{
+  "siteName": "Café Provence",
+  "tagline": "Classic French country cuisine in the Shops of Prairie Village — family owned and operated for more than 20 years.",
+  "phone": "(913) 384-5998",
+  "email": "info@cafeprovencekc.com",
+  "address": "3936 W. 69th Terrace, Prairie Village, KS 66208 — in the Shops of Prairie Village",
+  "hours": [
+    { "days": "Lunch, Mon–Sat", "open": "11:00 am", "close": "2:30 pm" },
+    { "days": "Dinner, Mon–Thu", "open": "5:00 pm", "close": "9:00 pm" },
+    { "days": "Dinner, Fri–Sat", "open": "5:00 pm", "close": "10:00 pm" },
+    { "days": "Sunday", "note": "Closed" }
+  ],
+  "serviceArea": "Prairie Village and the Kansas City metro",
+  "timezone": "America/Chicago",
+  "personality": "hearth"
+}
