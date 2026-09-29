@@ -1,0 +1,15 @@
+{
+  "siteName": "FCR Roofing and Construction",
+  "tagline": "Roofing, remodeling, and home improvement for Kansas City homeowners — one crew, every trade.",
+  "phone": "(913) 981-0822",
+  "email": "support@fcrhomeimprovement.com",
+  "address": "9215 Bond St, Overland Park, KS 66214",
+  "hours": [
+    { "days": "Mon–Fri", "open": "9:00 am", "close": "5:00 pm" },
+    { "days": "Sat", "note": "By appointment only" },
+    { "days": "Sun", "note": "Closed" }
+  ],
+  "serviceArea": "Kansas City metro",
+  "timezone": "America/Chicago",
+  "personality": "foundry"
+}

@@ -1,0 +1,36 @@
+---
+// Sitewide privacy notice for the concept-preview site. Every lead's ContactForm links here.
+// Applies to every mock: the forms are not wired (no backend, no submission target — see
+// ContactForm schema) and no analytics or third-party scripts run anywhere on this site
+// (_config/standards/compliance.md — a mock is held to the strictest reading).
+import '../design/tokens.css';
+import '../design/base.css';
+import { getPersonality, personalityCss } from '../lib/design';
+const css = personalityCss(getPersonality('default'));
+const canonical = new URL('/privacy/', Astro.site).href;
+---
+<!doctype html>
+<html lang="en" data-personality="default">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy — Gigawatt concept previews</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="What happens to information entered on a Gigawatt concept preview: nothing. The forms are not wired." />
+    <link rel="canonical" href={canonical} />
+    <style is:inline set:html={css}></style>
+  </head>
+  <body>
+    <section class="text text--narrow">
+      <h1>Privacy</h1>
+      <p class="meta">This page covers every site under gigawatt-previews.netlify.app.</p>
+      <p>Every page here is a concept preview built by Gigawatt Labs to show a business what a
+        redesigned site could look like. None of it is the business's real, live site.</p>
+      <p><strong>Forms on this site are not connected to anything.</strong> Submitting one does
+        nothing — there is no backend, no email, no database, and nothing you type is stored,
+        transmitted, or seen by anyone.</p>
+      <p>No analytics, tracking, or third-party scripts run on this site. Nothing is collected
+        about visitors beyond standard Netlify hosting logs.</p>
+      <p>Questions: <a href="mailto:doc@gigawattlab.com">doc@gigawattlab.com</a>.</p>
+    </section>
+  </body>
+</html>

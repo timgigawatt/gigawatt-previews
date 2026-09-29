@@ -1,0 +1,23 @@
+{ "title": "Home", "description": "FCR Roofing and Construction — Overland Park roofing, remodeling, and home improvement.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Overland Park, KS · 30+ years in business", "heading": "One Crew For Every Trade, Done Right The First Time", "subheading": "Roofing, siding, windows, kitchens, baths, and more — one Overland Park contractor, not five different subs.", "bullets": ["BBB A+ accredited", "4.8★, 528 reviews", "Financing available"], "primaryCta": { "label": "Get a free estimate", "href": "/fcr-roofing-and-construction/contact/" }, "secondaryCta": { "label": "Call (913) 981-0822", "href": "tel:+19139810822" }, "badge": { "big": "4.8★", "small": "528 reviews across Google, BBB & Facebook" } },
+    { "block": "ProofRow", "items": ["BBB A+ accredited since 2012", "4.8★ · 528 reviews", "Serving Kansas City metro", "Financing available"] },
+    { "block": "Services", "heading": "Every trade, one contractor", "more": { "label": "All services", "href": "/fcr-roofing-and-construction/services/" }, "items": [
+      { "title": "Roofing", "desc": "Residential and commercial roofing — asphalt shingle, steel-coated, and concrete shingle systems." },
+      { "title": "Siding", "desc": "Full siding installation and replacement." },
+      { "title": "Kitchens & Baths", "desc": "Full-service kitchen and bathroom remodeling — tub-to-shower conversions, vanities, cabinetry, and more." },
+      { "title": "Windows, Doors & Gutters", "desc": "Replacement windows, entry doors, and gutter installation and repair." },
+      { "title": "Decks & Outdoor Living", "desc": "Decks, outdoor living spaces, and concrete flatwork." },
+      { "title": "Painting & Insulation", "desc": "Interior and exterior painting, plus attic insulation." }
+    ] },
+    { "block": "Stats", "items": [ { "n": "30+", "label": "Years in business" }, { "n": "4.8", "label": "Average rating, 528 reviews" } ] },
+    { "block": "Gallery", "heading": "Before and after" },
+    { "block": "Testimonials", "heading": "What Overland Park says", "items": [
+      { "text": "They minimized the stress of reconstruction after our water leak and left our house nicer than before.", "who": "Sean R.", "meta": "BBB" },
+      { "text": "They worked closely with my insurance company and communicated well with me throughout the process.", "who": "Amanda T.", "meta": "BBB" },
+      { "text": "It was a one day repair and they cleaned up after themselves. Easy to work with.", "who": "Dan B.", "meta": "BBB" },
+      { "text": "This crew showed up early and wasted no time getting to work. I was impressed with the care and detail.", "who": "Frances S.", "meta": "BBB" },
+      { "text": "FCR was an easy contractor to work with; any concerns I had they were very prompt to attend to.", "who": "Margaret C.", "meta": "BBB" }
+    ] },
+    { "block": "CtaBand", "heading": "Need a contractor you can trust?", "text": "One call handles the whole job — roofing to remodel. Free estimates, no pressure." }
+  ] }

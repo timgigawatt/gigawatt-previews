@@ -1,0 +1,20 @@
+{ "title": "Services", "description": "Every service FCR Roofing and Construction offers Kansas City homeowners.", "published": true,
+  "blocks": [
+    { "block": "PageHeader", "eyebrow": "Services", "heading": "Every trade, one contractor", "intro": "One team for the whole project — roofing, remodeling, and everything between. We handle electrical, plumbing, and concrete as part of the job, not a separate call." },
+    { "block": "Services", "variant": "cards", "heading": "Services", "items": [
+      { "title": "Residential Roofing", "desc": "Asphalt shingle, steel-coated, and concrete shingle roofing systems." },
+      { "title": "Commercial Roofing", "desc": "Commercial roof installation and repair." },
+      { "title": "Siding", "desc": "Siding installation and replacement." },
+      { "title": "Windows & Doors", "desc": "Replacement windows and entry doors." },
+      { "title": "Gutters & Skylights", "desc": "Gutter installation and repair, skylight installation." },
+      { "title": "Painting", "desc": "Interior and exterior painting." },
+      { "title": "Flooring", "desc": "Flooring installation and replacement." },
+      { "title": "Insulation", "desc": "Attic and whole-home insulation." },
+      { "title": "Kitchens", "desc": "Full kitchen remodeling and cabinetry." },
+      { "title": "Bathrooms", "desc": "Tub-to-shower conversions, vanities, refinishing, liners and surrounds." },
+      { "title": "Decks & Outdoor Living", "desc": "Decks, outdoor living spaces, and concrete flatwork." },
+      { "title": "Garages", "desc": "Garage construction and installation." },
+      { "title": "HVAC", "desc": "Furnaces, air conditioners, heat pumps, and repairs, in partnership with Champion Heating & Air." },
+      { "title": "Custom Homes", "desc": "Custom home building from the ground up." }
+    ] }
+  ] }

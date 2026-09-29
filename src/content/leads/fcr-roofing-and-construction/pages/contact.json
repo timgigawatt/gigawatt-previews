@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Get a free estimate from FCR Roofing and Construction.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "eyebrow": "Contact", "heading": "Get a free estimate", "intro": "Fill out the form or call — we'll get back to you to schedule a walkthrough.", "fields": [ { "label": "Name" }, { "label": "Email", "type": "email" }, { "label": "Phone", "type": "tel" }, { "label": "Project type" } ], "messagePlaceholder": "What's the project?", "submit": "Request estimate", "note": "We respond to every request — by phone or email.", "showForm": true }
+  ] }

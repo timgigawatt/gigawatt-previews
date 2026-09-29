@@ -1,0 +1,11 @@
+{
+  "areas": ["Overland Park", "Shawnee", "Leawood", "Lenexa", "Mission", "Olathe"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/fcr-roofing-and-construction/" },
+      { "label": "Services", "href": "/fcr-roofing-and-construction/services/" },
+      { "label": "Contact", "href": "/fcr-roofing-and-construction/contact/" }
+    ] }
+  ],
+  "legal": "© 2026 FCR Roofing and Construction. BBB A+ accredited."
+}
