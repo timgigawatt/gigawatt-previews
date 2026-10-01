@@ -1,0 +1,16 @@
+{
+  "siteName": "M&M Bakery & Deli",
+  "tagline": "Family-owned on 31st Street since 1962. It's the bread.",
+  "phone": "(816) 924-9172",
+  "email": "mmbakerydelikc@gmail.com",
+  "address": "1721 E 31st Street, Kansas City, MO 64109",
+  "hours": [
+    { "days": "Mon", "note": "Closed" },
+    { "days": "Tue–Fri", "open": "7:30 am", "close": "3:00 pm" },
+    { "days": "Sat–Sun", "note": "Closed" }
+  ],
+  "serviceArea": "Kansas City, MO",
+  "timezone": "America/Chicago",
+  "personality": "hearth",
+  "logo": "settings-logo-20261001-1.png"
+}

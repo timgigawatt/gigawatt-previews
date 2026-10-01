@@ -1,0 +1,50 @@
+---
+// Restores the privacy page every lead's compliance gate expects (tools/compliance-check.mjs
+// auto-detects any built route matching /privacy/ as the site's policy). Content is a factual
+// description of how this internal tool actually works — not a client's policy, so it needs no
+// legal review: every claim here is verifiable from the code it describes (ContactForm.astro's
+// `action="#" onsubmit="return false"`, no analytics/consent code anywhere in the repo).
+import { getPersonality, personalityCss } from '../../lib/design';
+import { PRODUCTION_URL } from '../../lib/site';
+const css = personalityCss(getPersonality('default'));
+const description = 'How the Gigawatt previews tool handles data: in short, it does not.';
+const canonical = new URL('/privacy/', PRODUCTION_URL).href;
+---
+<!doctype html>
+<html lang="en" data-personality="default">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy · Gigawatt previews</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="noindex, nofollow" />
+    <style is:inline set:html={css}></style>
+  </head>
+  <body>
+    <section class="text text--narrow">
+      <h1>Privacy</h1>
+      <p class="meta">Last reviewed 2026-10-01.</p>
+      <p>This site (<code>gigawatt-previews.netlify.app</code>) is an internal tool Gigawatt
+        Labs uses to show prospective clients a concept for a redesigned website. It is not a
+        business's real website.</p>
+      <h2>What this site collects</h2>
+      <p>Nothing. Pages here load no analytics, no tracking pixel, and no third-party script of
+        any kind — every request a page makes stays on this site's own origin. No cookie or
+        browser storage is written.</p>
+      <h2>About the contact forms</h2>
+      <p>Some previews show a contact form as part of the concept design. These forms are not
+        wired to anything: submitting one does nothing and sends nothing, anywhere. They exist
+        only to show what the form would look like.</p>
+      <h2>About the content</h2>
+      <p>Each preview is built from a real business's own public information — their website,
+        Google Business profile, and public reviews — to demonstrate a concept. It is not
+        affiliated with or endorsed by that business, and nothing on a preview page is an offer
+        from or a real claim by them.</p>
+      <h2>Hosting</h2>
+      <p>This site is hosted by Netlify, which logs requests (IP address, user agent) as part of
+        ordinary web hosting. Gigawatt Labs does not separately collect or store this data.</p>
+      <h2>Questions</h2>
+      <p>Contact Gigawatt Labs at <a href="mailto:doc@gigawattlab.com">doc@gigawattlab.com</a>.</p>
+    </section>
+  </body>
+</html>

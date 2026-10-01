@@ -1,0 +1,20 @@
+{ "title": "Home", "description": "M&M Bakery & Deli — Kansas City's family-owned bakery and deli on 31st Street since 1962.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Kansas City, MO · since 1962", "heading": "Home of the Hook Em' Up Sandwich", "subheading": "Family-owned on 31st Street since 1962 — fresh bread, hand-stacked sandwiches, and the kind of deli where everybody's a regular.", "bullets": ["4.8★ · ~1,550 reviews", "Family-run since 1962", "Missouri's best deli, 2024"], "primaryCta": { "label": "Call (816) 924-9172", "href": "tel:+18169249172" }, "secondaryCta": { "label": "Get Directions", "href": "https://maps.google.com/?daddr=39.0700326,-94.5624023" }, "badge": { "big": "4.8★", "small": "~1,550 Google reviews" } },
+    { "block": "ProofRow", "items": ["4.8★ · ~1,550 Google reviews", "Family-owned since 1962", "Missouri's Best Deli — 2024", "No pork, ever"] },
+    { "block": "Services", "heading": "On the Menu", "items": [
+      { "title": "Hook 'Em Up", "desc": "Turkey, ham, and pastrami on an onion roll with mustard, miracle whip, lettuce, tomato, pickles, onions, hot and American cheeses.", "price": "$10.00+" },
+      { "title": "Reuben", "desc": "Corned beef on rye bread, sauerkraut, pickle, onion, thousand island dressing, and Swiss cheese.", "price": "$10.75+" },
+      { "title": "C.E.O.", "desc": "Turkey ham, pastrami, turkey breast, and beef salami on a steak bun with a full toppings bar and five cheeses.", "price": "$17.00+" },
+      { "title": "Build Your Own", "desc": "Your choice of any toppings, two meats, and two cheeses. Includes small chips.", "price": "$10.00+" },
+      { "title": "Breakfast Sandwich", "desc": "Your choice of one meat with Swiss or American cheese and one egg. Served 7:30–10:30am.", "price": "$7.25+" },
+      { "title": "Fresh Cookies", "desc": "M&M, chocolate chip, peanut butter, snickerdoodle, sugar, oatmeal raisin — baked daily.", "price": "from $1.75" }
+    ] },
+    { "block": "Gallery", "heading": "Behind the Counter" },
+    { "block": "Testimonials", "heading": "What Kansas City Says", "items": [
+      { "text": "My sandwich was delicious. Someone saw me eating it and had to know where I got it.", "who": "Janet Ridgnal", "meta": "Google" },
+      { "text": "The staff are very cordial and professional.", "who": "Rita Burkholder", "meta": "Google" },
+      { "text": "The fresh food... It's like a home. You keep coming back.", "who": "Rob Slaughter", "meta": "65-year regular customer" }
+    ] },
+    { "block": "CtaBand", "heading": "Craving the Hook 'Em Up?", "text": "Call ahead or walk in — Kansas City's bakery and deli since 1962." }
+  ] }

@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Call or stop by M&M Bakery & Deli at 1721 E 31st Street, Kansas City, MO.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "eyebrow": "Contact", "heading": "Visit Us", "intro": "Carryout only, no dining room — call ahead for catering or a large order.", "note": "Closed Monday, Saturday, and Sunday.", "showForm": false }
+  ] }

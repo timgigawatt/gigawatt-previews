@@ -1,0 +1,10 @@
+{
+  "areas": ["Kansas City, MO"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/m-m-bakery-delicatessen/" },
+      { "label": "Contact", "href": "/m-m-bakery-delicatessen/contact/" }
+    ] }
+  ],
+  "legal": "© 2026 M&M Bakery & Deli."
+}

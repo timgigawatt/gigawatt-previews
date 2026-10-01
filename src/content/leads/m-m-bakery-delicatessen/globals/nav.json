@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/m-m-bakery-delicatessen/" },
+    { "label": "Contact", "href": "/m-m-bakery-delicatessen/contact/" }
+  ],
+  "cta": { "label": "Call (816) 924-9172", "href": "tel:+18169249172" }
+}
