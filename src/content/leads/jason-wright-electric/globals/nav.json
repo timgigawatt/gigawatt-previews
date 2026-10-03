@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/jason-wright-electric/" },
+    { "label": "Contact", "href": "/jason-wright-electric/contact/" }
+  ],
+  "cta": { "label": "Call (816) 246-5826", "href": "tel:+18162465826" }
+}

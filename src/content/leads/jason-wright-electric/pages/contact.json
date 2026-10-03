@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Call Jason Wright Electric in Olathe, KS, at (816) 246-5826 for residential electrical wiring, repair, and remodeling.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "eyebrow": "Contact", "heading": "Call today", "intro": "Call (816) 246-5826 about residential electrical wiring, repair, or remodeling.", "showForm": false }
+  ] }

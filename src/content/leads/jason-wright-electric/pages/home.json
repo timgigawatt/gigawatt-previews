@@ -1,0 +1,15 @@
+{ "title": "Home", "description": "Jason Wright Electric — residential electrical wiring, repair, and remodeling in Olathe, KS, since 1995.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Olathe, KS · since 1995", "heading": "The Electricians Who Care", "subheading": "Caring Beyond Your Electrical Needs is Our Mission", "bullets": ["Residential wiring", "Maintenance and repair", "Remodeling"], "primaryCta": { "label": "Call (816) 246-5826", "href": "tel:+18162465826" }, "secondaryCta": { "label": "Contact us", "href": "/jason-wright-electric/contact/" }, "badge": { "big": "1995", "small": "In business since" } },
+    { "block": "ProofRow", "items": ["BBB A+ rated", "In business since 1995", "Johnson County, KS and Lee's Summit, MO"] },
+    { "block": "Services", "variant": "list", "heading": "What we do", "items": [ { "title": "Residential Electrical Wiring" }, { "title": "Electrical Maintenance and Repair" }, { "title": "Electrical Remodeling Services" } ] },
+    { "block": "Stats", "variant": "numerals", "items": [ { "n": "31", "label": "Years in business" }, { "n": "A+", "label": "BBB rating" } ] },
+    { "block": "Testimonials", "heading": "What customers say", "items": [
+      { "text": "Did an excellent job.", "who": "Kimberlee Stein", "meta": "Olathe, KS" },
+      { "text": "Knowledgeable and professional.", "who": "Diane Darby" },
+      { "text": "The team is always available, handled our contract promptly, and treated us all like family.", "who": "Rich Linden" },
+      { "text": "We highly recommend!", "who": "Elizabeth Hjalmarson" },
+      { "text": "John arrived on time and was very courteous the whole time.", "who": "Mike W" }
+    ] },
+    { "block": "CtaBand", "heading": "Call today", "text": "Tell us what needs wiring, repair, or remodeling." }
+  ] }

@@ -1,0 +1,10 @@
+{
+  "areas": ["Olathe", "Overland Park", "Lenexa", "Shawnee", "Leawood", "Prairie Village", "Lee's Summit"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/jason-wright-electric/" },
+      { "label": "Contact", "href": "/jason-wright-electric/contact/" }
+    ] }
+  ],
+  "legal": "© 2026 Jason Wright Electric."
+}
