@@ -1,0 +1,10 @@
+{
+  "areas": ["Lee's Summit", "Kansas City", "Greenwood", "Avon", "Lake Winnebago", "Raymore", "Belton", "Grandview", "Peculiar"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/horizon-lawn-landscape-llc/" },
+      { "label": "Contact", "href": "/horizon-lawn-landscape-llc/contact/" }
+    ] }
+  ],
+  "legal": "© 2026 Horizon Lawn & Landscape, LLC."
+}

@@ -6,10 +6,10 @@ import Base from './Base.astro';
 import { blocks } from '../blocks';
 import { getPersonality } from '../lib/design';
 
-const { lead, page, isHome = false } = Astro.props;
+const { lead, page, isHome = false, title } = Astro.props;
 const persona = getPersonality(lead.settings.personality);
 ---
-<Base lead={lead} title={isHome ? undefined : page.title} description={page.description} isHome={isHome}>
+<Base lead={lead} title={title ?? (isHome ? undefined : page.title)} description={page.description} isHome={isHome}>
   {page.blocks.map((b: any) => {
     const Component = (blocks as any)[b.block];
     if (!Component) throw new Error(`Unknown block "${b.block}" in lead "${lead.slug}" page "${page.title}"`);

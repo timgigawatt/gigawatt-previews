@@ -1,0 +1,23 @@
+{ "title": "Home", "description": "Horizon Lawn & Landscape in Lee's Summit, MO: artificial turf, hardscape, irrigation, and lawn care from a local, family-owned crew since 2000.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Lee's Summit, MO · since 2000", "heading": "Your Property Deserves the Finest Care", "subheading": "Local and family-owned. One call takes care of it all, from routine mowing to a full landscape makeover.", "bullets": ["Artificial turf and hardscape", "Lawn care and irrigation", "Commercial snow removal"], "primaryCta": { "label": "Call (816) 207-3840", "href": "tel:+18162073840" }, "secondaryCta": { "label": "Request service", "href": "/horizon-lawn-landscape-llc/contact/" }, "image": { "src": "hero-image-20261004-1.webp", "alt": "Lakeside backyard with artificial turf, flagstone steps and a rock bed" }, "badge": { "big": "2000", "small": "Serving Kansas City since" } },
+    { "block": "ProofRow", "items": ["Local & family-owned", "OSHA 10 & 30 certified", "Fully licensed and insured", "4.8 stars · 321 reviews", "Mon–Fri 8am–5pm"] },
+    { "block": "Services", "variant": "list", "heading": "What we do", "items": [
+      { "title": "Artificial turf installation" },
+      { "title": "Hardscape", "desc": "Patios, walkways, and retaining walls." },
+      { "title": "Water features" },
+      { "title": "Irrigation", "desc": "Installation and ongoing management." },
+      { "title": "Lawn maintenance", "desc": "Maintenance, aeration, and overseeding." },
+      { "title": "Commercial snow removal" }
+    ] },
+    { "block": "Stats", "variant": "numerals", "items": [ { "n": "26", "label": "Years serving the Kansas City metro" }, { "n": "4.8", "label": "Stars on 321 ratings and reviews" } ] },
+    { "block": "Gallery", "variant": "grid", "heading": "Recent work", "images": [ { "src": "gallery-images-20261004-1.webp", "alt": "Stone waterfall and rock garden beside a lakeside yard", "caption": "Lakeside stone water feature" } ], "placeholders": 3 },
+    { "block": "Testimonials", "heading": "What customers say", "items": [
+      { "text": "Thanks to Horizon for being timely and a job well done.", "who": "david l", "meta": "Customer review" },
+      { "text": "They always do a great job and their workers are kind and friendly.", "who": "Cary C", "meta": "Customer review" },
+      { "text": "Horizon is always on time and does great work. If we have any issues they address them right away.", "who": "Shannon R", "meta": "Customer review" },
+      { "text": "Reliable and quality landscapers are hard to find.", "who": "Michelle Van Liew S", "meta": "Customer review" },
+      { "text": "We continue to use Horizon Lawn & Landscape and have done so for about 10 years.", "who": "Lisa R", "meta": "Customer review" }
+    ] },
+    { "block": "CtaBand", "heading": "Call today for your free estimate", "text": "Same-day estimates may be available. Tell us what your property needs." }
+  ] }

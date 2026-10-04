@@ -5,14 +5,25 @@ import '../design/base.css';
 import { getPersonality, personalityCss } from '../lib/design';
 const css = personalityCss(getPersonality('default'));
 import { allLeads } from '../lib/leads';
+import { PRODUCTION_URL } from '../lib/site';
 const leads = allLeads();
+const description = `${leads.length} concept previews built from each business's own public content.`;
+const canonical = new URL('/', PRODUCTION_URL).href;
+const jsonLd = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Gigawatt previews', description, url: canonical };
 ---
 <!doctype html>
 <html lang="en" data-personality="default">
   <head>
     <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gigawatt previews</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gigawatt previews" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <style is:inline set:html={css}></style>
   </head>
   <body>

@@ -1,0 +1,21 @@
+{
+  "siteName": "Horizon Lawn & Landscape",
+  "tagline": "Artificial turf, hardscape, and lawn care in Lee's Summit since 2000.",
+  "phone": "(816) 207-3840",
+  "address": "2450 MO-150, Lee's Summit, MO 64082",
+  "hours": [
+    {
+      "days": "Mon–Fri",
+      "open": "8:00 am",
+      "close": "5:00 pm"
+    },
+    {
+      "days": "Sat–Sun",
+      "note": "Closed"
+    }
+  ],
+  "serviceArea": "Lee's Summit, Kansas City, Greenwood, Avon, Lake Winnebago, Raymore, Belton, Loch Lloyd, Grandview, Coleman, Peculiar, MO",
+  "timezone": "America/Chicago",
+  "personality": "foundry",
+  "logo": "settings-logo-20261004-1.png"
+}

@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/horizon-lawn-landscape-llc/" },
+    { "label": "Contact", "href": "/horizon-lawn-landscape-llc/contact/" }
+  ],
+  "cta": { "label": "Call (816) 207-3840", "href": "tel:+18162073840" }
+}

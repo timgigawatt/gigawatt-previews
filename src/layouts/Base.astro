@@ -10,6 +10,7 @@ import { Image } from 'astro:assets';
 import { getPersonality, personalityCss, fontFaceCss, fontPreloads } from '../lib/design';
 import { activeAnnouncement } from '../lib/leads';
 import { resolveMedia } from '../lib/media';
+import { PRODUCTION_URL } from '../lib/site';
 import Announcement from '../blocks/Announcement/Announcement.astro';
 
 const { lead, title, description, isHome = false } = Astro.props;
@@ -22,15 +23,41 @@ const logo = settings.logo ? resolveMedia(settings.logo, lead.slug) : null;
 const announcement = activeAnnouncement(lead);
 const showAnnouncement = announcement && (announcement.placement === 'all-pages' || isHome);
 const areas: string[] = footer.areas ?? [];
+
+// SEO per _config/standards/seo.md: absolute self-canonical + Open Graph on every page,
+// always pointing at the production address — a branch deploy's own URL is throwaway, the
+// canonical a lead will keep once "approve <slug>" merges is not.
+const fullTitle = `${title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview`;
+const metaDescription = description || settings.tagline;
+const canonical = new URL(pathname, PRODUCTION_URL).href;
+const jsonLd = isHome
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: settings.siteName,
+      description: settings.tagline,
+      url: canonical,
+      ...(settings.phone ? { telephone: settings.phone } : {}),
+      ...(settings.email ? { email: settings.email } : {}),
+      ...(settings.address ? { address: { '@type': 'PostalAddress', streetAddress: settings.address } } : {}),
+    }
+  : null;
 ---
 <!doctype html>
 <html lang="en" data-personality={persona.name} data-mode={settings.mode ?? 'light'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
-    {description && <meta name="description" content={description} />}
+    <title>{fullTitle}</title>
+    {metaDescription && <meta name="description" content={metaDescription} />}
+    <link rel="canonical" href={canonical} />
     <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={settings.siteName} />
+    <meta property="og:title" content={fullTitle} />
+    {metaDescription && <meta property="og:description" content={metaDescription} />}
+    <meta property="og:url" content={canonical} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
     <style is:inline set:html={css}></style>
   </head>
@@ -76,7 +103,7 @@ const areas: string[] = footer.areas ?? [];
         </div>
         <div class="site-footer__legal">
           <span>{footer.legal ?? `© ${settings.siteName}`}</span>
-          <span>Concept preview by Gigawatt Labs</span>
+          <span>Concept preview by Gigawatt Labs · <a href="/privacy/">Privacy</a></span>
         </div>
       </footer>
     </div>

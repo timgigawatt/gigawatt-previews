@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Call Horizon Lawn & Landscape at (816) 207-3840 for artificial turf, hardscape, irrigation, lawn care, and commercial snow removal in Lee's Summit, MO.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "eyebrow": "Contact", "heading": "Call or text us today", "intro": "Call or text (816) 207-3840. Our office is 2450 MO-150 in Lee's Summit, open Monday to Friday, 8:00 am to 5:00 pm.", "showForm": false }
+  ] }
