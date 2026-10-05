@@ -1,0 +1,14 @@
+{ "title": "Home", "description": "Affordable Moore's Tree Services in Lee's Summit, MO: tree removal, trimming, stump grinding, and 24/7 storm cleanup across the Kansas City metro.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Lee's Summit, MO · Kansas City metro", "heading": "Where quality work meets affordable prices", "subheading": "Specializing in line clearance and tree services of any kind.", "bullets": ["24/7 storm damage care", "Tree removals of any size", "Powerline & driveway clearance"], "primaryCta": { "label": "Call (816) 266-7518", "href": "tel:+18162667518" }, "secondaryCta": { "label": "Contact us", "href": "/affordable-moore-s-tree-services-llc/contact/" }, "image": { "src": "hero-image-20261005-1.webp", "alt": "Arborist rigging up in a tall tree with a rope and harness" }, "badge": { "big": "24|7", "small": "Emergency and storm damage care" } },
+    { "block": "ProofRow", "items": ["24/7 storm response", "Serving the Kansas City metro", "Based in Lee's Summit, MO"] },
+    { "block": "Services", "variant": "list", "heading": "What we do", "items": [
+      { "title": "Tree removals of any size" },
+      { "title": "Tree or bush thinning & shaping" },
+      { "title": "Specific limb removal" },
+      { "title": "Stump grinding" },
+      { "title": "Canopy raise & crowning" },
+      { "title": "Powerline, roof, street & driveway clearance" }
+    ] },
+    { "block": "CtaBand", "heading": "Call or text for a plan that fits your trees", "text": "Tell us what needs doing. We coordinate a plan with you so the work is done right." }
+  ] }

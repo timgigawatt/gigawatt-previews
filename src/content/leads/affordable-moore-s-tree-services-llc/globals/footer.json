@@ -1,0 +1,10 @@
+{
+  "areas": ["Lee's Summit", "Kansas City Metro"],
+  "columns": [
+    { "heading": "Pages", "links": [
+      { "label": "Home", "href": "/affordable-moore-s-tree-services-llc/" },
+      { "label": "Contact", "href": "/affordable-moore-s-tree-services-llc/contact/" }
+    ] }
+  ],
+  "legal": "© 2026 Affordable Moore's Tree Services LLC."
+}
