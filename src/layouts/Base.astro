@@ -22,14 +22,33 @@ const logo = settings.logo ? resolveMedia(settings.logo, lead.slug) : null;
 const announcement = activeAnnouncement(lead);
 const showAnnouncement = announcement && (announcement.placement === 'all-pages' || isHome);
 const areas: string[] = footer.areas ?? [];
+// Canonical is the production URL: after "approve <slug>" the page lives there, so a branch deploy points at it too.
+const canonical = `https://gigawatt-previews.netlify.app${pathname}`;
+const pageTitle = title ? `${title} · ${settings.siteName}` : settings.siteName;
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: settings.siteName,
+  url: canonical,
+  telephone: settings.phone || undefined,
+  address: settings.address || undefined,
+  areaServed: settings.serviceArea || undefined,
+};
 ---
 <!doctype html>
 <html lang="en" data-personality={persona.name} data-mode={settings.mode ?? 'light'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
+    <title>{pageTitle} — concept preview</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={settings.siteName} />
+    <meta property="og:title" content={pageTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusiness)}></script>
     <meta name="robots" content="noindex, nofollow" />
     {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
     <style is:inline set:html={css}></style>

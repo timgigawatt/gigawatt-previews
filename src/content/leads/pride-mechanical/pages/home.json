@@ -1,0 +1,17 @@
+{ "title": "Pride Mechanical — Heating & Cooling in Lenexa, KS", "description": "Family-owned heating and cooling in Lenexa, KS since 2014. Installation, maintenance and repair, with 24-hour emergency service.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Lenexa, KS · since 2014", "heading": "Quality work for a fair price", "subheading": "Family-owned heating and cooling: installation, maintenance and repair.",
+      "bullets": ["24-hour emergency service", "Honeywell Authorized Dealer", "Family-owned since 2014"],
+      "primaryCta": { "label": "Call (913) 362-0051", "href": "tel:+19133620051" },
+      "secondaryCta": { "label": "Contact us", "href": "/pride-mechanical/contact/" },
+      "badge": { "big": "24/7", "small": "Emergency service" } },
+    { "block": "ProofRow", "items": ["Honeywell Authorized Dealer", "Family-owned since 2014", "4.7 stars on Google (61 reviews)", "24-hour emergency service"] },
+    { "block": "Services", "variant": "list", "heading": "What we do",
+      "items": [
+        { "title": "Heating installation, maintenance and repair" },
+        { "title": "Air conditioning installation, maintenance and repair" },
+        { "title": "Residential and light commercial HVAC" },
+        { "title": "24-hour emergency service" }
+      ] },
+    { "block": "CtaBand", "heading": "Call for heating and cooling service", "text": "24-hour emergency service available." }
+  ] }

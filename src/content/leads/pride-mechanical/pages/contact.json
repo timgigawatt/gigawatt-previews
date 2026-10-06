@@ -1,0 +1,4 @@
+{ "title": "Contact — Pride Mechanical", "description": "Call Pride Mechanical in Lenexa, KS for heating and cooling service, installation or emergency help.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "heading": "Call us", "intro": "Call (913) 362-0051 for service, installation or emergency help.", "showForm": false }
+  ] }
