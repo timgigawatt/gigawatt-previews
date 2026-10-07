@@ -1,0 +1,4 @@
+{ "title": "Contact — Mr D's Donut Shop", "description": "Visit or call Mr D's Donut Shop in Shawnee, KS.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "heading": "Visit us", "intro": "Call (913) 631-1282, or stop by 11222 W 75th St in Shawnee.", "showForm": false }
+  ] }

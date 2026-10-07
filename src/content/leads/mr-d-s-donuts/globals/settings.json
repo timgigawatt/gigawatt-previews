@@ -1,0 +1,11 @@
+{
+  "siteName": "Mr D's Donut Shop",
+  "tagline": "Fifty years of doughnuts on the same Shawnee corner.",
+  "phone": "(913) 631-1282",
+  "email": "",
+  "address": "11222 W 75th St, Shawnee, KS 66214",
+  "hours": ["Tue–Fri: 5:30am–12pm", "Sat–Sun: 5:30am–12pm", "Mon: Closed"],
+  "serviceArea": "Shawnee, KS",
+  "timezone": "America/Chicago",
+  "personality": "hearth"
+}

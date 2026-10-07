@@ -1,0 +1,19 @@
+{ "title": "Mr D's Donut Shop — Doughnuts in Shawnee, KS since 1975", "description": "A 50-year-old Shawnee doughnut shop, family-owned since 2018. Honey-dip, pineapple fritters, and Yelp's top-rated doughnuts in Kansas City.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Shawnee, KS · since 1975", "heading": "Fifty years of doughnuts, same Shawnee corner", "subheading": "Family-owned since 2018, still making what Shawnee has lined up for since 1975.",
+      "bullets": ["50 years in Shawnee", "4.8 stars, 478 reviews", "Yelp Top 100 nationally"],
+      "primaryCta": { "label": "Call (913) 631-1282", "href": "tel:+19136311282" },
+      "secondaryCta": { "label": "Contact us", "href": "/mr-d-s-donuts/contact/" },
+      "badge": { "big": "50", "small": "Years in Shawnee" } },
+    { "block": "ProofRow", "items": ["50 years in Shawnee", "4.8 stars on Google (478 reviews)", "Yelp Top 100 Donut Shops in the U.S.", "Family-owned since 2018"] },
+    { "block": "Services", "variant": "list", "heading": "What we make",
+      "items": [
+        { "title": "Honey-dip doughnuts", "desc": "Made with real honey — one of our most popular." },
+        { "title": "Pineapple fritter", "desc": "With a piña colada glaze." },
+        { "title": "Maple bacon long john" },
+        { "title": "Blueberry and maple glazed doughnuts" },
+        { "title": "Sugar raised and buttermilk doughnuts" },
+        { "title": "Coffee", "desc": "At our Lenexa Public Market location." }
+      ] },
+    { "block": "CtaBand", "heading": "Stop in for a dozen", "text": "Open Tuesday–Friday and weekends, 5:30am–12pm. Closed Monday." }
+  ] }
