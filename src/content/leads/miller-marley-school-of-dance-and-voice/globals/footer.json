@@ -1,0 +1,13 @@
+{
+  "areas": ["Overland Park, KS"],
+  "columns": [
+    {
+      "heading": "Pages",
+      "links": [
+        { "label": "Home", "href": "/miller-marley-school-of-dance-and-voice/" },
+        { "label": "Contact", "href": "/miller-marley-school-of-dance-and-voice/contact/" }
+      ]
+    }
+  ],
+  "legal": "© 2026 Miller-Marley School of Dance and Voice"
+}

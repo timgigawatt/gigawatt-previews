@@ -1,0 +1,69 @@
+{
+  "title": "Miller-Marley School of Dance and Voice — Dance Classes in Overland Park, KS",
+  "description": "64-year-old Overland Park dance school founded by Kansas City tap icon Shirley Marley. Tap, jazz, ballet, hip hop, musical theatre and private voice for all ages.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "eyebrow": "Overland Park · since 1962",
+      "heading": "64 years of inspiring passion, nurturing talent, creating stars",
+      "subheading": "Shirley Marley has taught tap, jazz, ballet and musical theatre in Overland Park since the early 1960s — training Broadway performers and a Radio City Rockette along the way.",
+      "bullets": ["64 years, same owner", "600+ students", "3 Demmi Choreography Awards"],
+      "primaryCta": { "label": "Call (913) 492-0004", "href": "tel:+19134920004" },
+      "secondaryCta": { "label": "Contact us", "href": "/miller-marley-school-of-dance-and-voice/contact/" },
+      "image": { "src": "hero-image-20261008-1.webp", "alt": "Lindsay Harris, Miller-Marley faculty member" },
+      "image2": { "src": "hero-image2-20261008-1.webp", "alt": "Sophie Yancey, Miller-Marley faculty member" },
+      "badge": { "big": "64", "small": "Years teaching dance in Overland Park" }
+    },
+    {
+      "block": "ProofRow",
+      "items": [
+        "64 years in business, same owner",
+        "600+ students",
+        "3 Demmi Awards for choreography",
+        "19 years directing the KC Chiefettes",
+        "Mon–Thu 2–8pm, Sat 8am–12pm"
+      ]
+    },
+    {
+      "block": "Marquee",
+      "items": ["Tap", "Jazz", "Ballet", "Hip Hop", "Musical Theatre", "Private Voice", "Acting"]
+    },
+    {
+      "block": "Services",
+      "variant": "list",
+      "heading": "What we teach",
+      "items": [
+        { "title": "Tap", "desc": "Shirley Marley's own specialty — tap instruction from a Kansas City tap icon." },
+        { "title": "Jazz" },
+        { "title": "Ballet", "desc": "Through Miller Marley Youth Ballet and Youth Ballet 2, the studio's own student ballet companies." },
+        { "title": "Hip Hop" },
+        { "title": "Musical Theatre", "desc": "Performing companies by grade band, from TiniTainers (K–2) through Entertainers (7th–high school)." },
+        { "title": "Private Voice" },
+        { "title": "Acting" }
+      ]
+    },
+    {
+      "block": "Stats",
+      "variant": "row",
+      "items": [
+        { "n": "64", "label": "Years in business" },
+        { "n": "600+", "label": "Students" },
+        { "n": "24", "label": "Faculty members" },
+        { "n": "8", "label": "Performing & ballet companies" }
+      ]
+    },
+    {
+      "block": "Testimonials",
+      "heading": "What students have gone on to do",
+      "items": [
+        { "text": "I could not have made it to be a Radio City Rockette without Shirley Marley.", "who": "Mindy Moeller", "meta": "KSHB, 2021" }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Enroll for 2026–2027",
+      "text": "Classes run fall through spring. Call the studio to ask about openings and schedule a visit."
+    }
+  ]
+}

@@ -30,6 +30,10 @@ const areas: string[] = footer.areas ?? [];
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={new URL(pathname, Astro.site)} />
+    <meta property="og:title" content={title ? `${title} · ${settings.siteName}` : settings.siteName} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
     <meta name="robots" content="noindex, nofollow" />
     {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
     <style is:inline set:html={css}></style>

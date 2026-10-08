@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/miller-marley-school-of-dance-and-voice/" },
+    { "label": "Contact", "href": "/miller-marley-school-of-dance-and-voice/contact/" }
+  ],
+  "cta": { "label": "Call now", "href": "tel:+19134920004" }
+}

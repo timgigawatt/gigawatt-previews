@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Call Miller-Marley School of Dance and Voice at (913) 492-0004, or visit 10448 Mastin St in Overland Park, KS.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "heading": "Call the studio", "intro": "Call (913) 492-0004 to ask about openings or schedule a visit. The office is at 10448 Mastin St in Overland Park, open Monday–Thursday 2–8pm and Saturday 8am–12pm.", "showForm": false }
+  ] }

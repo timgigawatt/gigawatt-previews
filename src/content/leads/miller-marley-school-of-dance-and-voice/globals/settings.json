@@ -1,0 +1,17 @@
+{
+  "siteName": "Miller-Marley School of Dance and Voice",
+  "tagline": "64 years of tap, jazz, ballet and musical theatre in Overland Park.",
+  "phone": "(913) 492-0004",
+  "email": "info@millermarley.com",
+  "address": "10448 Mastin St, Overland Park, KS 66212",
+  "hours": [
+    { "days": "Mon–Thu", "open": "2:00 pm", "close": "8:00 pm" },
+    { "days": "Fri", "note": "Office closed" },
+    { "days": "Sat", "open": "8:00 am", "close": "12:00 pm" },
+    { "days": "Sun", "note": "Office closed" }
+  ],
+  "serviceArea": "Overland Park, KS",
+  "timezone": "America/Chicago",
+  "personality": "kinetic",
+  "logo": "settings-logo-20261008-1.png"
+}
