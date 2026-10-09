@@ -1,0 +1,13 @@
+{
+  "areas": ["Olathe, KS"],
+  "columns": [
+    {
+      "heading": "Pages",
+      "links": [
+        { "label": "Home", "href": "/your-olathe-dentist/" },
+        { "label": "Contact", "href": "/your-olathe-dentist/contact/" }
+      ]
+    }
+  ],
+  "legal": "© 2026 Your Olathe Dentist"
+}

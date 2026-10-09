@@ -1,0 +1,13 @@
+{
+  "title": "Contact",
+  "description": "Call Your Olathe Dentist at (913) 780-0011. 11132 S Lone Elm Rd, Olathe, KS. Mon–Thu 8am–5pm, Fri 8am–2pm.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "ContactForm",
+      "heading": "Call the office",
+      "intro": "Call us at (913) 780-0011 to request an appointment. We're at 11132 S Lone Elm Rd in Olathe, open Monday–Thursday 8am–5pm and Friday 8am–2pm.",
+      "showForm": false
+    }
+  ]
+}

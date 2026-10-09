@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/your-olathe-dentist/" },
+    { "label": "Contact", "href": "/your-olathe-dentist/contact/" }
+  ],
+  "cta": { "label": "Call now", "href": "tel:+19137800011" }
+}

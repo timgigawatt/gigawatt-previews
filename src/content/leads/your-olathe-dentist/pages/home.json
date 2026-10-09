@@ -1,0 +1,68 @@
+{
+  "title": "Your Olathe Dentist — Family Dental Care in Olathe, KS",
+  "description": "5.0-star family dental practice in Olathe, KS. Cleanings, cosmetic dentistry, implants, Invisalign, and same-day emergency care. New patients welcome.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "eyebrow": "Olathe, KS",
+      "heading": "Your Family Dentist in Olathe, KS",
+      "subheading": "A family dentist here for you — comfortable, modern dental care for the whole family, from routine cleanings to same-day emergencies.",
+      "bullets": ["5.0★ · 309 Google reviews", "Most major insurance accepted", "Same-day emergency care"],
+      "primaryCta": { "label": "Call (913) 780-0011", "href": "tel:+19137800011" },
+      "secondaryCta": { "label": "Contact us", "href": "/your-olathe-dentist/contact/" },
+      "image": { "src": "hero-image-20261009-1.webp", "alt": "Dr. Tony Raper, DDS, dentist at Your Olathe Dentist" },
+      "badge": { "big": "5.0★", "small": "309 Google reviews" }
+    },
+    {
+      "block": "ProofRow",
+      "items": [
+        "5.0★ on Google · 309 reviews",
+        "Most major insurance accepted",
+        "Mon–Thu 8am–5pm, Fri 8am–2pm",
+        "Digital X-rays & soft tissue lasers"
+      ]
+    },
+    {
+      "block": "Services",
+      "variant": "list",
+      "heading": "What we offer",
+      "items": [
+        { "title": "Family Dentistry", "desc": "Routine cleanings, exams, and custom care plans for every age." },
+        { "title": "Cosmetic Dentistry", "desc": "Veneers, whitening, and gum contouring to brighten your smile." },
+        { "title": "Dental Implants", "desc": "Endosteal, mini, and All-on-4 implants to replace missing teeth." },
+        { "title": "Invisalign", "desc": "Straighten your teeth without metal braces." },
+        { "title": "Metal-Free Dentistry", "desc": "Tooth-colored fillings and crowns, metal-free by design." },
+        { "title": "Full or Partial Dentures", "desc": "Custom-fitted dentures, tailored to your smile." }
+      ]
+    },
+    {
+      "block": "Stats",
+      "variant": "row",
+      "items": [
+        { "n": "5.0", "label": "Google rating" },
+        { "n": "309", "label": "Google reviews" }
+      ]
+    },
+    {
+      "block": "PullQuote",
+      "text": "I discovered my passion for dentistry through its combination of science, artistry, and problem-solving.",
+      "who": "Dr. Tony Raper, DDS",
+      "role": "Lead dentist"
+    },
+    {
+      "block": "Testimonials",
+      "heading": "What our patients say",
+      "items": [
+        { "text": "I have gone to this practice for 10 years! Dr Earp, Kim and staff are amazing. Would not go anywhere else..", "who": "Pam" },
+        { "text": "Great staff. Highly recommend", "who": "Ali Lotia" },
+        { "text": "The staff is amazing and I actually look forward to every appointment. Great team and great service. Would recommend to everyone.", "who": "Adam Hewlett" }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "New patients welcome",
+      "text": "Get a comprehensive exam and x-rays for just $49 — call to schedule your visit."
+    }
+  ]
+}

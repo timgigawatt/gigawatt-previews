@@ -1,0 +1,14 @@
+{
+  "siteName": "Your Olathe Dentist",
+  "tagline": "Family dental care in Olathe, KS — comfortable, modern, and close to home.",
+  "phone": "(913) 780-0011",
+  "address": "11132 S Lone Elm Rd, Olathe, KS 66061",
+  "hours": [
+    { "days": "Mon–Thu", "open": "8:00 am", "close": "5:00 pm" },
+    { "days": "Fri", "open": "8:00 am", "close": "2:00 pm" },
+    { "days": "Sat–Sun", "note": "Closed" }
+  ],
+  "serviceArea": "Olathe, KS",
+  "timezone": "America/Chicago",
+  "personality": "ledger"
+}
