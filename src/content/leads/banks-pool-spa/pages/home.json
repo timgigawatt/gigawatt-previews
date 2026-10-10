@@ -1,0 +1,78 @@
+{
+  "title": "Banks Pool & Spa — Custom Pool Builder in Overland Park, KS",
+  "description": "Family-owned pool and spa builder in Overland Park, KS since 1982. 2,000+ pools built, BBB A+ accredited, Pentair Platinum Dealer. Custom construction, renovation, and service.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "eyebrow": "Overland Park, KS",
+      "heading": "Custom Pools Built to Last",
+      "subheading": "Family-owned pool and spa design, construction, renovation, and service for Overland Park and Leawood — bespoke builds backed by over 50 years in the business.",
+      "bullets": ["4.3★ · 67 Google reviews", "BBB Accredited A+", "Pentair Platinum Dealer"],
+      "primaryCta": { "label": "Call (913) 897-9290", "href": "tel:+19138979290" },
+      "secondaryCta": { "label": "Contact us", "href": "/banks-pool-spa/contact/" },
+      "image": { "src": "hero-image-20261010-1.webp", "alt": "Custom Banks Pool & Spa build at dusk, with twin fire bowls and a tiled waterfall wall" },
+      "image2": { "src": "hero-image2-20261010-1.webp", "alt": "Rock-grotto waterfall and slide with fire features at dusk, a Banks Pool & Spa build" },
+      "badge": { "big": "2,000+", "small": "Pools built in the KC area" }
+    },
+    {
+      "block": "ProofRow",
+      "items": [
+        "4.3★ on Google · 67 reviews",
+        "BBB Accredited A+",
+        "United Aqua Group member, 24 years",
+        "Pentair Platinum Dealer"
+      ]
+    },
+    {
+      "block": "Services",
+      "variant": "list",
+      "heading": "What we do",
+      "items": [
+        { "title": "Custom Pool & Spa Construction", "desc": "Bespoke pool and spa design built around your backyard and your style." },
+        { "title": "Outdoor Living", "desc": "Fire features, waterfalls, grottos, and outdoor kitchens built alongside the pool." },
+        { "title": "Tile & Stone", "desc": "A full showroom of tile and stone for decks, walls, and water features." },
+        { "title": "Renovation", "desc": "Updating an older pool — new surfaces, equipment, and features." },
+        { "title": "Pool Service & Repair", "desc": "Scheduled cleaning, maintenance, and repair from our own technicians." },
+        { "title": "Winterization & Opening", "desc": "Seasonal shutdown and spring startup, done right." }
+      ]
+    },
+    {
+      "block": "Stats",
+      "variant": "numerals",
+      "items": [
+        { "n": "50+", "label": "Years in business" },
+        { "n": "2,000+", "label": "Pools built" }
+      ]
+    },
+    {
+      "block": "Gallery",
+      "variant": "grid",
+      "heading": "Pools we've built",
+      "images": [
+        { "src": "gallery-images-20261010-7.webp", "alt": "Aerial view of a rectangular pool with slide, spa and fire pit, a Banks Pool & Spa build" },
+        { "src": "gallery-images-20261010-3.webp", "alt": "Modern home with a glass-edge waterfall pool feature, a Banks Pool & Spa build" },
+        { "src": "gallery-images-20261010-6.webp", "alt": "Rock-grotto waterfall, slide and fire features, a Banks Pool & Spa build" },
+        { "src": "gallery-images-20261010-1.webp", "alt": "Freeform garden pool with flagstone deck and landscaping, a Banks Pool & Spa build" },
+        { "src": "gallery-images-20261010-4.webp", "alt": "Estate home with a blue-lit pool and spa at twilight, a Banks Pool & Spa build" },
+        { "src": "gallery-images-20261010-2.webp", "alt": "Covered outdoor kitchen and lounge overlooking a Banks-built pool" },
+        { "src": "gallery-images-20261010-5.webp", "alt": "Fire-pit seating wall beside a Banks-built pool at dusk" }
+      ]
+    },
+    {
+      "block": "Testimonials",
+      "heading": "What our customers say",
+      "items": [
+        { "text": "This review is long overdue and more than worthy of the five stars. We have been extremely impressed with Banks pools along the entire journey from design all the way through to completion. I can be a bit picky at times, but Hoyt and his team are just as, if not more critical of their own work and it shows.", "who": "Jonathon S." },
+        { "text": "Have always been treated well by Roger and everyone at Banks. Pool is 10 years old and still working great. Weekly cleaning is always done right.", "who": "David M." },
+        { "text": "These may be some of the most helpful people in the state of Kansas. They are responsible for some truly state-of-the-art creations", "who": "Lex P." },
+        { "text": "Great Company I love how they finish the work on time and very professionally. Even my cat liked it!!", "who": "Jonathan S." }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Start your project",
+      "text": "Call to schedule a consultation — we'll walk your backyard and talk through what's possible."
+    }
+  ]
+}

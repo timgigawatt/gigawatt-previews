@@ -1,0 +1,14 @@
+{
+  "siteName": "Banks Pool & Spa",
+  "tagline": "Custom pools and spas, built and serviced by the same family for 60+ years.",
+  "phone": "(913) 897-9290",
+  "address": "8026 W 151st St, Overland Park, KS 66223",
+  "hours": [
+    { "days": "Mon–Sat", "open": "9:00 am", "close": "6:00 pm" },
+    { "days": "Sun", "open": "11:00 am", "close": "5:00 pm" }
+  ],
+  "serviceArea": "Overland Park & Leawood, KS",
+  "timezone": "America/Chicago",
+  "personality": "foundry",
+  "logo": "settings-logo-20261010-1.png"
+}

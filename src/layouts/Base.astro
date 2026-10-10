@@ -22,15 +22,35 @@ const logo = settings.logo ? resolveMedia(settings.logo, lead.slug) : null;
 const announcement = activeAnnouncement(lead);
 const showAnnouncement = announcement && (announcement.placement === 'all-pages' || isHome);
 const areas: string[] = footer.areas ?? [];
+const pageTitle = title ? `${title} · ${settings.siteName}` : settings.siteName;
+const canonical = new URL(pathname, Astro.site).href;
+// Noindex previews still declare self-canonical + OG (stack.md "every page") and, on the home
+// page, an Organization/LocalBusiness JSON-LD from settings — so a lead that gets approved and
+// merged to production already carries correct search metadata; nothing to add at that point.
+const localBusiness = isHome && {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: settings.siteName,
+  ...(settings.tagline && { description: settings.tagline }),
+  ...(phoneHref && { telephone: settings.phone }),
+  ...(settings.address && { address: settings.address }),
+  url: canonical,
+};
 ---
 <!doctype html>
 <html lang="en" data-personality={persona.name} data-mode={settings.mode ?? 'light'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
+    <title>{pageTitle} — concept preview</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:url" content={canonical} />
+    {description && <meta property="og:description" content={description} />}
+    {localBusiness && <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />}
     {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
     <style is:inline set:html={css}></style>
   </head>

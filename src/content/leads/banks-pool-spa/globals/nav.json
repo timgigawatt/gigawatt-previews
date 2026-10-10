@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/banks-pool-spa/" },
+    { "label": "Contact", "href": "/banks-pool-spa/contact/" }
+  ],
+  "cta": { "label": "Call now", "href": "tel:+19138979290" }
+}

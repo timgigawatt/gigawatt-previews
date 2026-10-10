@@ -4,7 +4,7 @@ const { heading, items = [] } = Astro.props;
 <section class="testimonials" aria-label={heading}>
   <div class="container">
     <h2>{heading}</h2>
-    <div class="track">
+    <div class="track" tabindex="0" role="group" aria-label={`${heading} — scroll for more`}>
       {items.map((t: any) => (
         <figure>
           <div class="dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>

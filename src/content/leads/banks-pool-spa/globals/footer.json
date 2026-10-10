@@ -1,0 +1,13 @@
+{
+  "areas": ["Overland Park, KS", "Leawood, KS"],
+  "columns": [
+    {
+      "heading": "Pages",
+      "links": [
+        { "label": "Home", "href": "/banks-pool-spa/" },
+        { "label": "Contact", "href": "/banks-pool-spa/contact/" }
+      ]
+    }
+  ],
+  "legal": "© 2026 Banks Pool & Spa"
+}
