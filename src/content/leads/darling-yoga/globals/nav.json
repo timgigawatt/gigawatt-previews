@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "label": "Home", "href": "/darling-yoga/" },
+    { "label": "Contact", "href": "/darling-yoga/contact/" }
+  ],
+  "cta": { "label": "Book now", "href": "https://darlingyoga.union.site/" }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Contact",
+  "description": "Book a class online or call Darling Yoga at (913) 291-2886. 11711 College Blvd, Overland Park, KS.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "ContactForm",
+      "heading": "Book a class or ask a question",
+      "intro": "Classes are booked online. For questions, call us at (913) 291-2886 or email info@darlingyoga.com. We're at 11711 College Blvd in Overland Park — the studio opens 20–30 minutes before each class.",
+      "showForm": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "areas": ["Overland Park, KS"],
+  "columns": [
+    {
+      "heading": "Pages",
+      "links": [
+        { "label": "Home", "href": "/darling-yoga/" },
+        { "label": "Contact", "href": "/darling-yoga/contact/" }
+      ]
+    }
+  ],
+  "legal": "© 2026 Darling Yoga"
+}

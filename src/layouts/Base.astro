@@ -22,15 +22,39 @@ const logo = settings.logo ? resolveMedia(settings.logo, lead.slug) : null;
 const announcement = activeAnnouncement(lead);
 const showAnnouncement = announcement && (announcement.placement === 'all-pages' || isHome);
 const areas: string[] = footer.areas ?? [];
+
+// Canonical always points at the production URL (not Astro.site, which on a branch deploy is
+// that branch's own deploy URL) — this is the URL the lead goes live at once Tim approves it.
+const PRODUCTION_URL = 'https://gigawatt-previews.netlify.app';
+const canonicalUrl = `${PRODUCTION_URL}${pathname}`;
+const pageTitle = title ? `${title} · ${settings.siteName}` : settings.siteName;
+const ogDescription = description ?? settings.tagline ?? null;
+const logoUrl = logo ? `${PRODUCTION_URL}${logo.src}` : null;
+const localBusinessLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: settings.siteName,
+  url: `${PRODUCTION_URL}/${lead.slug}/`,
+  ...(settings.phone ? { telephone: settings.phone } : {}),
+  ...(settings.address ? { address: settings.address } : {}),
+  ...(logoUrl ? { image: logoUrl, logo: logoUrl } : {}),
+};
 ---
 <!doctype html>
 <html lang="en" data-personality={persona.name} data-mode={settings.mode ?? 'light'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · ${settings.siteName}` : settings.siteName} — concept preview</title>
+    <title>{pageTitle} — concept preview</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    {ogDescription && <meta property="og:description" content={ogDescription} />}
+    <meta property="og:url" content={canonicalUrl} />
+    {logoUrl && <meta property="og:image" content={logoUrl} />}
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessLd)} />
     {fontPreloads(persona).map((f) => <link rel="preload" href={`/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
     <style is:inline set:html={css}></style>
   </head>

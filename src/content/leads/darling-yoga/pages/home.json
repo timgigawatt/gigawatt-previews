@@ -1,0 +1,78 @@
+{
+  "title": "Darling Yoga — Yoga Studio in Overland Park, KS",
+  "description": "A sister-owned yoga studio in Overland Park since 2007. 4.8★ on Google with 112 reviews. Classes for every level, private lessons, and RYT-200 teacher training.",
+  "published": true,
+  "blocks": [
+    {
+      "block": "Hero",
+      "eyebrow": "Overland Park, KS · since 2007",
+      "heading": "Your Space to Breathe, Belong and Become",
+      "subheading": "A supportive, inspiring, non-competitive space to move, breathe, stretch, strengthen, connect and belong.",
+      "bullets": ["4.8★ · 112 Google reviews", "Sister-owned since 2007", "15th year teaching RYT-200"],
+      "primaryCta": { "label": "Book a class", "href": "https://darlingyoga.union.site/" },
+      "secondaryCta": { "label": "Contact us", "href": "/darling-yoga/contact/" },
+      "image": { "src": "hero-image-20261011-1.webp", "alt": "People participating in a yoga class, practicing downward dog pose on yoga mats in a studio" },
+      "image2": { "src": "hero-image2-20261011-1.png", "alt": "A woman practicing yoga on a mat in a sunlit studio with wooden floors" },
+      "badge": { "big": "15th", "small": "Year of teacher training" }
+    },
+    {
+      "block": "ProofRow",
+      "items": [
+        "4.8★ on Google · 112 reviews",
+        "4.8★ on Yelp · 72 reviews",
+        "Yoga Alliance RYT-200 program",
+        "Sister-owned since 2007"
+      ]
+    },
+    {
+      "block": "Services",
+      "variant": "bento",
+      "heading": "Find the right class",
+      "items": [
+        { "title": "Get Started", "desc": "Yoga Basics, Meditate & Breathe, Chair Yoga and Iyengar Yoga for beginners of every age." },
+        { "title": "Flow & Sweat", "desc": "Mixed Level Flow, Advanced Vinyasa, Heated Vinyasa and Heated Restore & Flow." },
+        { "title": "Stretch & Restore", "desc": "Yin Yoga, Relax & Restore, Yoga Nidra and a monthly crystal-bowl Sound Bath." },
+        { "title": "Growing Families", "desc": "Prenatal Yoga, and Kid's Yoga for ages 3–11." },
+        { "title": "Y12SR", "desc": "A 12-step-based discussion and yoga practice, open to anyone touched by addiction." },
+        { "title": "Private Lessons & Events", "desc": "One-on-one sessions, corporate events, and custom yoga parties for 12 or more." }
+      ]
+    },
+    {
+      "block": "Stats",
+      "variant": "row",
+      "items": [
+        { "n": "4.8★", "label": "Google rating, 112 reviews" },
+        { "n": "4.8★", "label": "Yelp rating, 72 reviews" },
+        { "n": "15th", "label": "Year of teacher training" },
+        { "n": "22", "label": "Published alumni testimonials" }
+      ]
+    },
+    {
+      "block": "Gallery",
+      "variant": "grid",
+      "heading": "In the studio",
+      "images": [
+        { "src": "gallery-images-20261011-1.webp", "alt": "Group of women practicing yoga in a studio, performing a crow pose on yoga mats" },
+        { "src": "gallery-images-20261011-2.png", "alt": "Group of women participating in a yoga teacher training session, sitting and lying on yoga mats and cushions" },
+        { "src": "gallery-images-20261011-3.png", "alt": "Three people practicing yoga teacher training, performing side plank poses" },
+        { "src": "gallery-images-20261011-4.png", "alt": "Two women practicing partner yoga in teacher training, one lying on a mat and the other kneeling nearby" }
+      ]
+    },
+    {
+      "block": "Testimonials",
+      "heading": "What students say",
+      "items": [
+        { "text": "Excellent experience, the studio is very inviting with all instructors very knowledgeable and welcoming. Other students were also friendly, no one was pretentious or cold to a first-timer.", "who": "Sophia" },
+        { "text": "I just started yoga at Darling this spring. I am new to yoga and was not sure what to expect. What a fantastic place! All of the instructors are wonderful and so caring.", "who": "Jennifer" },
+        { "text": "As a newcomer to yoga, I am appreciative of the gentle, patient instruction and welcoming nature of both the teachers and other students that make up this extraordinarily friendly community.", "who": "Patrick" },
+        { "text": "It's a wonderful place! I really love all the class options and all of the instructors are fantastic.", "who": "Monique K.", "meta": "Google" },
+        { "text": "The location is convenient and very welcoming.", "who": "James C.", "meta": "Google" }
+      ]
+    },
+    {
+      "block": "CtaBand",
+      "heading": "Find your exhale",
+      "text": "Book a class online, or stop by 20–30 minutes early to get settled."
+    }
+  ]
+}
