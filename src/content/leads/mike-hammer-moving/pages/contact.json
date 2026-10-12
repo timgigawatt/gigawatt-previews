@@ -1,0 +1,4 @@
+{ "title": "Contact", "description": "Get a free moving quote from Mike Hammer Moving — Lenexa, Kansas.", "published": true,
+  "blocks": [
+    { "block": "ContactForm", "heading": "Get your free quote", "intro": "Tell us about the move and we'll follow up with a full written estimate — no hidden fees, no surprise charges on move day.", "fields": [ { "label": "Name" }, { "label": "Phone", "type": "tel" }, { "label": "Moving date", "placeholder": "e.g. mid-November" } ], "messageLabel": "What are you moving?", "messagePlaceholder": "Home size, origin and destination, anything specialty (piano, safe, etc.)", "submit": "Request a quote", "note": "Licensed, bonded & insured — USDOT #2929832.", "showForm": true }
+  ] }

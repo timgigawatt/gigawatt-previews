@@ -11,5 +11,6 @@ export function getStaticPaths() {
 const { personality } = Astro.params;
 const base = getLead('example-plumbing')!;
 const lead = { ...base, settings: { ...base.settings, personality } };
+const label = `${personality[0].toUpperCase()}${personality.slice(1)} — system example`;
 ---
-<BlockPage lead={lead} page={base.pages.home} isHome />
+<BlockPage lead={lead} page={base.pages.home} isHome title={label} />

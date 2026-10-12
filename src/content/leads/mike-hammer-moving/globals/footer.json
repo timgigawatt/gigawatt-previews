@@ -1,0 +1,5 @@
+{
+  "areas": ["Overland Park", "Lenexa", "Shawnee", "Olathe", "Leawood", "Lee's Summit"],
+  "columns": [ { "heading": "Pages", "links": [ { "label": "Home", "href": "/mike-hammer-moving/" }, { "label": "Services", "href": "/mike-hammer-moving/services/" }, { "label": "Contact", "href": "/mike-hammer-moving/contact/" } ] } ],
+  "legal": "© 2026 Mike Hammer Moving, LLC. USDOT #2929832."
+}

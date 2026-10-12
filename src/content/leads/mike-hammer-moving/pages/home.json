@@ -1,0 +1,25 @@
+{ "title": "Home", "description": "Mike Hammer Moving — family-owned Kansas City movers since 1987. Full-time crews, upfront pricing, 4.8 stars from 389 reviews.", "published": true,
+  "blocks": [
+    { "block": "Hero", "eyebrow": "Lenexa, KS · since 1987", "heading": "Let our family move your family.", "subheading": "Full-service local and long-distance moving — packing, loading, unloading — by full-time crews who are never day labor.", "bullets": ["Full-time crews, not day labor", "Upfront hourly pricing", "Licensed, bonded & insured"], "primaryCta": { "label": "Get a free quote", "href": "/mike-hammer-moving/contact/" }, "secondaryCta": { "label": "Call (913) 927-4347", "href": "tel:+19139274347" }, "image": { "src": "hero-image-20261012-1.webp", "alt": "Aerial view of the Mike Hammer Moving headquarters and branded truck fleet in Lenexa, Kansas" }, "badge": { "big": "39 yrs", "small": "Moving Kansas City families since 1987" } },
+    { "block": "ProofRow", "items": ["Licensed, bonded & insured", "USDOT #2929832", "BBB A rating", "4.8 · 389 Google reviews"] },
+    { "block": "Services", "heading": "What we move", "more": { "label": "All services", "href": "/mike-hammer-moving/services/" }, "items": [
+      { "title": "Residential moving", "desc": "Local and long-distance household moves — packing, loading, transportation, unloading, and furniture placement." },
+      { "title": "Packing & unpacking", "desc": "Pack one room or the whole home. We bring the materials and do as much or as little as you want." },
+      { "title": "Commercial & office moving", "desc": "Flexible scheduling, including after-hours and weekends, to keep your business running." },
+      { "title": "Senior moving", "desc": "A patient, personalized approach for downsizing and retirement-community moves." },
+      { "title": "Specialty moving", "desc": "Pianos, gun safes, and other heavy or awkward items handled with the right equipment." },
+      { "title": "Labor-only moving", "desc": "Just need loading or unloading help with your own truck or storage pod? We do that too." }
+    ] },
+    { "block": "Stats", "items": [ { "n": "39", "label": "Years moving Kansas City families" }, { "n": "389", "label": "Google reviews at a 4.8 average" } ] },
+    { "block": "Gallery", "variant": "grid", "heading": "On the job", "images": [
+      { "src": "gallery-images-20261012-1.webp", "alt": "Mike Hammer Moving crew member carrying boxes and cushions out of a client's home" },
+      { "src": "gallery-images-20261012-2.webp", "alt": "Mike Hammer Moving crew at work during a home move" }
+    ] },
+    { "block": "Testimonials", "heading": "What Kansas City says", "items": [
+      { "text": "Can't say enough about this family owned company. I've moved multiple times and was always charged more than the quoted price. Well, Mike Hammer came and gave me an in-home estimate which ended up being exactly what he quoted. These people are honest and value their employees. Best moving company in Kansas City!", "who": "Samantha" },
+      { "text": "Mike Hammer was prompt on time, professional affordable and overall a great company for our move. They were very flexible and actually ended up coming in under estimate! The crew worked very hard and really appreciate the help. This was my first time using a mover and I'm glad it was Mike Hammer's group.", "who": "John" },
+      { "text": "Cameron, Manny, and Brett did an excellent job in the rain. I had a multi-stop move, across state lines, and it included moving a pretty heavy upright piano. They were on time, careful with each of the items, and provided excellent service. And, I don't think any movers in the KC metro could beat the price.", "who": "Paul" },
+      { "text": "I have recently used Mike Hammer Moving for a large 5-bedroom home move, in addition to unpacking services, and trash haul away. Their service is impeccable. The movers were all very knowledgeable, professional, and courteous. They turned my extremely stressful move into a seamless transition into my new home…", "who": "Erica" }
+    ] },
+    { "block": "CtaBand", "heading": "No move too big or too small.", "text": "Full-time crews, upfront pricing, and a truck in Lenexa ready to go." }
+  ] }

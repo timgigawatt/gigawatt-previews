@@ -1,0 +1,14 @@
+{ "title": "Services", "description": "Residential, commercial, senior, and specialty moving services from Mike Hammer Moving — Kansas City, since 1987.", "published": true,
+  "blocks": [
+    { "block": "PageHeader", "eyebrow": "Services", "heading": "Everything your move needs", "intro": "Full-time, background-checked crews — never temporary day labor — for every size of move." },
+    { "block": "Services", "variant": "cards", "ctaLabel": "Get a quote", "heading": "What we move", "items": [
+      { "title": "Residential moving", "desc": "Local and long-distance household moves — packing, loading, transportation, unloading, and furniture placement.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Packing & unpacking", "desc": "Pack one room or the whole home. We bring the materials and do as much or as little as you want.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Commercial & office moving", "desc": "Flexible scheduling, including after-hours and weekends, to keep your business running.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Senior moving", "desc": "A patient, personalized approach for downsizing and retirement-community moves.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Specialty moving", "desc": "Pianos, gun safes, and other heavy or awkward items handled with the right equipment.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Labor-only moving", "desc": "Just need loading or unloading help with your own truck or storage pod? We do that too.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Packing supplies", "desc": "Boxes and packing materials available on their own, without booking a full move.", "href": "/mike-hammer-moving/contact/" },
+      { "title": "Junk removal", "desc": "Haul-away for the items you're not taking with you.", "href": "/mike-hammer-moving/contact/" }
+    ] }
+  ] }
